@@ -1,0 +1,21 @@
+---
+layout: default_en
+---
+        <div id='main' class='clearfix'>
+          <div id='nav-side-wrapper' class='col col-150'>
+            <div id='nav-side' data-spy="affix" data-offset-top="140">
+            </div>
+          </div>
+          <div class="col col-240 col-end col-filter hidden-phone">
+            <button class="btn btn-large btn-info" type="button">Download full report (.pdf)</button>
+          </div>
+          <div id='prose' class='col-540 content view'>
+            {{ content }}
+          </div>
+        </div>
+        <script type="text/javascript">
+          $('#nav-side').toc({
+            'container': '#prose',
+            'highlightOffset': 180
+          });
+        </script>
