@@ -2,7 +2,7 @@ auto: true
 server: true
 pygments: true
 markdown: rdiscount
-permalink: none
+permalink: /:title/
 root_dir: "http://ovdinfo.github.com/reports"
 baseurl: "http://reports.ovdinfo.org"
 oauth_client_id: caf55c20366465a1332d
