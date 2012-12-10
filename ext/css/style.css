@@ -1,0 +1,266 @@
+/*-----------------------------------
+  Typographic and Inline styles
+-------------------------------------*/
+body {
+  background:#fff;
+  font-size:13px;
+  }
+:focus { outline:0; }
+h1, h2, h3, h4, h5, h6 {
+  color:#333;
+  margin:0;
+  }
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  line-height: 110%;
+  letter-spacing: -2px;
+  padding-bottom: 10px;
+  }
+h2 {
+  line-height:36px;
+  }
+h3 {
+  font-size:18px;
+  line-height:24px;
+  }
+li {
+  line-height:18px;
+  }
+table {
+  background:#fff;
+  max-width:100%;
+  border-spacing:0;
+  width:100%;
+  margin:10px 0;
+  border:1px solid #ddd;
+  border-collapse:separate;
+  *border-collapse:collapsed;
+  -webkit-box-shadow:0 0 4px rgba(0,0,0,0.10);
+     -moz-box-shadow:0 0 4px rgba(0,0,0,0.10);
+          box-shadow:0 0 4px rgba(0,0,0,0.10);
+  }
+  table th,
+  table td {
+    padding:8px;
+    line-height:18px;
+    text-align:left;
+    border-top:1px solid #ddd;
+    }
+  table th {
+    background:#eee;
+    background:-webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eee));
+    background:-moz-linear-gradient(top, #f6f6f6, #eee);
+    text-shadow:0 1px 0 #fff;
+    font-weight:bold;
+    vertical-align:bottom;
+    }
+  table td {
+    vertical-align:top;
+    }
+  table thead:first-child tr th,
+  table thead:first-child tr td {
+    border-top:0;
+    }
+  table tbody + tbody {
+    border-top:2px solid #ddd;
+    }
+  table th + th,
+  table td + td,
+  table th + td,
+  table td + th {
+    border-left:1px solid #ddd;
+    }
+  table thead:first-child tr:first-child th,
+  table tbody:first-child tr:first-child th,
+  table tbody:first-child tr:first-child td {
+    border-top:0;
+    }
+  tbody tr td a {
+    color:#333;
+    display:block;
+    }
+    #project-list tbody tr td a:hover,
+    #project-list tbody tr:hover td {
+      background-color:#f2faff;
+      color:#003366;
+      text-decoration:none;
+      cursor:pointer;
+      }
+#projects td {
+  text-align: right;
+  }
+#projects td:first-child {
+  text-align: left;
+  }
+
+th.sort-header {
+  cursor:pointer;
+  }
+th.sort-header::-moz-selection,
+th.sort-header::selection {
+  background:transparent;
+  color:inherit;
+  }
+table th.sort-header:after {
+  content:'';
+  float:right;
+  margin-top:7px;
+  border-width:4px 4px 0;
+  border-style:solid;
+  border-color:#404040 transparent;
+  visibility:hidden;
+  }
+table th.sort-header:hover:after {
+  visibility:visible;
+  }
+table th.sort-up:after,
+table th.sort-down:after,
+table th.sort-down:hover:after {
+  visibility:visible;
+  opacity:0.4;
+  }
+table th.sort-down:after {
+  border-top:none;
+  border-width:0 4px 4px;
+  }
+
+a {
+  color:#0055AA;
+  }
+  a:hover {
+    color:#F04E23;
+    text-decoration:none;
+    }
+input.button {
+  cursor:pointer;
+  -webkit-appearance:button;
+  margin:0;
+  font-size:100%;
+  vertical-align:middle;
+  *overflow:visible;
+  line-height:normal;
+  border:none;
+  }
+input[readonly] {
+  cursor:default;
+  background-color:#FFF;
+  }
+
+.button {
+  background:#05A;
+  color:#FFF;
+  font-weight:bold;
+  text-transform:uppercase;
+  display:inline-block;
+  text-align:center;
+  padding:10px 40px;
+  margin:20px auto 0;
+  -webkit-border-radius:20px;
+          border-radius:20px;
+  }
+  .button.disabled:hover,
+  .button.disabled {
+    background-color:#ccc;
+    }
+  .button:hover {
+    background:#036;
+    color:#FFF;
+    }
+
+.load {
+  text-align:center;
+  }
+
+#header h1 a {
+  color:#737373;
+  font-size:30px;
+  letter-spacing:-1px;
+  font-weight:bold;
+  position:absolute;
+  top:35px;
+  left:610px;
+  line-height:normal;
+  }
+  #header h1 a:hover {
+    text-decoration:none;
+    }
+#header h2 {
+  font-size: 13px;
+  color: #737373;
+  font-weight: normal;
+  left: 610px;
+  top: 10px;
+  }
+#header li, #footer li {
+  list-style:none;
+  }
+
+
+#footer ul {
+  padding:0;
+  margin:0;
+  }
+  #footer ul li {
+    line-height:normal;
+    }
+
+
+
+/*-----------------------------------
+  Global Layout
+-------------------------------------*/
+#main {
+  position:relative;
+  }
+.container-fluid {
+  margin-bottom:40px;
+  }
+#main-container {
+  position: relative;
+  margin: 0;
+  }
+  #main-container .span2 {
+    padding-top: 20px;
+    }
+
+#app .view {
+  float:left;
+  margin:50px 0 35px;
+  }
+#nav-side-wrapper {
+  margin-top:50px;
+  }
+  #nav-side ul {
+    margin:0;
+    }
+nav-side-wrapper {
+  width:200px;
+}
+
+/*-----------------------------------
+  Clearfix
+-------------------------------------*/
+/*Markup free clearing
+Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
+.clearfix:after {
+  content:'';
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  }
+* html .clearfix { height:1%; }
+*:first-child + html .clearfix { min-height:1%; }
+
+
+body.ie .inner-shadow { display: none; }
+
+
+
+
+
+
+ul.nav li { font-size:13px; }
+.navbar-inner { min-height: 38px; }

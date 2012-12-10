@@ -1,178 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>404 error</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				height: 100%;
-				margin: 0px;
-				overflow: hidden;
-				font-family:Monospace;
-				font-size:13px;
-				text-align:center;
-				font-weight: bold;
-				text-align:center;
-			}
-			.wrapper {
-			  color:white;
-			  position: absolute;
-              width: 90%;
-              height: 300px;
-              top: 50%;
-              left: 50%;
-              margin-top: -150px;
-              margin-left: -45%;
-              text-align: center;
-            }
-		</style>
-	</head>
-	<body>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OvdInfo Reports</title>
+    <link rel='shortcut icon' href='/img/favicon.ico'>
+    <meta name='viewport' content='width=960, initial-scale=1.0' />
+    <link href='/ext/css/reset.css' rel='stylesheet'>
+    <link href='/ext/css/global.css' rel='stylesheet'>
+    <link href='/ext/libs/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='/ext/css/style.css' rel='stylesheet' />
 
-		<script src="three.min.js"></script>
+    <script src='/ext/libs/jquery/jquery.min.js'></script>
+    <script src='/ext/libs/bootstrap/js/bootstrap.min.js'></script>
+    <script src='/ext/libs/toc/jquery.toc.min.js'></script>
+</head>
+<!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
+<!--[if IE 7 ]>    <body class='ie ie7'> <![endif]-->
+<!--[if IE 8 ]>    <body class='ie ie8'> <![endif]-->
+<!--[if IE 9 ]>    <body class='ie ie9'> <![endif]-->
+<!--[if IE 10 ]>   <body class='ie ie10'> <![endif]-->
+<!--[if gt IE 10]><!-->
+<body><!-- <body data-spy="scroll" data-target="#nav-side" data-offset="0"> -->
+<!--<![endif]-->
 
+<div id='container'>
+    <div id='header'>
+      <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="">
+                  <a href="http://ovdinfo.org">Home</a>
+                </li>
+                <li class="active">
+                  <a href="./">Report</a>
+                </li>
+                <li class="">
+                  <a href="./statistics">Statistics</a>
+                </li>
+                <li class="">
+                  <a href="./geo">Geo</a>
+                </li>
+                <li class="">
+                  <a href="./data">Data</a>
+			    </li>
+			  </ul>
+			  <ul class="nav pull-right">
+			    <li class="">
+                  <a href="./about">About</a>
+			    </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class='content'>
+            <a href='http://ovdinfo.org'>
+              <img class='logo png' src='img/global/logo.png' alt='OvdInfo' />
+            </a>
+            <h2>Monitoring of political detentions</h2>
+            <!-- end of #top-navigation -->
+            <!-- end of #languages -->
+            <!-- end of #main-navigation -->
+            <h1 class='site-title'><a href='/'>Report 2012</a></h1>
+        </div>
+        <!-- end of .content -->
+    </div><!-- /#header -->
 
-		<script>
+    <!-- content -->
+    <div id='app'>
+      <div id='main' class='clearfix'>
+        <div id='nav-side-wrapper' class='col col-150'>
+          <div id='nav-side' data-spy="affix" data-offset-top="140">
+          </div>
+        </div>
+        <div class="col col-240 col-end col-filter hidden-phone">
+          <button class="btn btn-large btn-info" type="button">Download full report (.pdf)</button>
+        </div>
+        <div id='prose' class='col-540 content view'>
+<section id='overview'>
+    <h2 class="title">Support Development Seed's Knight News Challenge Submission</h2>
+    <h3 class="subtitle">Data networks are local, new contribution tools for OpenStreetMap</h3>
+<p>Development Seed is applying for the Knight News Challenge with a <a href="http://newschallenge.tumblr.com/post/19450699629/new-contribution-tools-for-openstreetmap">plan to create new, user-friendly contribution tools for OpenStreetMap</a>. We’d like to do for community open data what <a href="http://mapbox.com/tilemill/">TileMill</a>, a previous <a href="http://developmentseed.org/blog/2010/jun/16/tilemill-20-wins-knight-news-challenge-grant-improve-hyper-local-mapping-washington/">Knight news project</a>, has done for map design and publishing. Check out <a href="http://newschallenge.tumblr.com/post/19450699629/new-contribution-tools-for-openstreetmap">our brief submission</a>, and if you want to see these tools funded, like it - every like counts in the voting process.</p>
 
-			
-			var container, stats;
-			var camera, scene, renderer, particles, geometry, material, i, h, color, sprite, size;
-			var mouseX = 0, mouseY = 0;
+<p><a href="http://openstreetmap.org/">OpenStreetMap</a> proves that citizens make maps of their surroundings with greater detail and focus than any company ever could. It’s the dataset that we chose for <a href="http://mapbox.com/blog/announcing-mapbox-streets/">MapBox Streets</a>, and that humanitarian groups like the <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a> base their important work around.</p>
 
-			var windowHalfX = window.innerWidth / 2;
-			var windowHalfY = window.innerHeight / 2;
+<p>OpenStreetMap has already moved incredibly far based on the work of volunteers, large companies, and the open source community working together. Its tools are made not only for simple road corrections, but for the community itself to map cities from scratch, validate that data, and distribute it on a massive scale.</p>
 
-			init();
-			animate();
+<p>However, there’s much further to go. Due to the recent news of large switches like <a href="http://mapbox.com/blog/foursquare-switches-mapbox-streets-openstreetmap/">foursquare</a> and <a href="http://mapbox.com/blog/apple-and-their-maps/">Apple</a>, and coverage in <a href="http://query.nytimes.com/gst/fullpage.html?res=9904E4D61E3AF933A15750C0A9649D8B63">The New York Times</a> and <a href="http://www.guardian.co.uk/theobserver/2012/feb/18/openstreetmap-world-map-radicals">The Guardian</a>, <a href="http://mapbox.com/blog/osm-contributors-surge/">OpenStreetMap garners more attention than ever</a>.</p>
 
-			function init() {
+<p>Our proposal to build new tools around OpenStreetMap targets this wave of contributors as well as the long-term viability of the project: the transition from <a href="http://mapbox.com/blog/satellite-tracing-osm/">mapping cities from scratch</a> to the maintenance, validation, and improvement of local data, <em>by locals</em>.</p>
 
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
+<p>We are proposing three new open source tools for OpenStreetMap - a simplified editor, a geo aware task tracker, and a tiled geo data delivery system. The three tools together are designed to lower the threshold for first time contributors, to facilitate coordination within the OpenStreetMap community, and to make OpenStreetMap data easier to consume by providing a bandwidth optimized data delivery system. The proposed plan with a budget of $910,000 intends to concentrate serious resources on these three key areas of the OpenStreetMap infrastructure to provide polished and solid foundations for OpenStreetMap’s growth.</p>
+</section>
+<section id='simplified'>
+<h2 id="simplified_editor">Simplified editor</h2>
 
-				camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 2, 2000 );
-				camera.position.z = 1000;
+<p>There is a clear need for a simplified web-based editor that focuses on the most common OpenStreetMap tasks - an editor that guides contributor’s first steps and helps advanced users be efficient, precise, and focused. The editor should be simple to deploy and define a plugin system so that it can be tuned for specialized use cases like satellite tracing, street name entry, or validating large-scale changes.</p>
 
-				scene = new THREE.Scene();
-				scene.fog = new THREE.FogExp2( 0x000000, 0.001 );
+<p>In its generalized form this editor could be the default experience for openstreetmap.org - if it earns the broad consent of the OpenStreetMap community - but it could be equally useful as a platform for mapping parties and large scale team mapping efforts like the ones led by the Humanitarian OpenStreetMap team <a href="http://hot.openstreetmap.org/projects/indonesia-0">in Indonesia</a> right now.</p>
 
-				geometry = new THREE.Geometry();
+<p>We propose to use a similar architecture like TileMill, an application that can be equally run offline on the desktop or online from a web server.</p>
 
-				sprite = THREE.ImageUtils.loadTexture( "disc.png" );
+<p>This work is not without precedent. The <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch project</a>, for instance, has served as OpenStreetMap’s web editor for years and has benefited from hundreds of hours of improvements by skilled contributors. Our work aims to build tools within and with the existing community of developers, and to push them to completion so there’s a tangible improvement in the experience of a user initially going to OpenStreetMap.org, clicking edit, and adding their own knowledge to the map.</p>
+</section>
+<section id='geo'>
+<h2 id="geo_aware_task_tracker">Geo aware task tracker</h2>
 
-				for ( i = 0; i < 1000; i ++ ) {
+<p>There is a real opportunity to broaden the OpenStreetMap community by tapping into contributors who are not able to actually add or modify geo data, but who are very well in a position to describe missing or wrong geographic information. OpenStreetMap, like any other worldwide map, is incomplete and imperfect, and so it needs a strong system to monitor, prioritize, and address problems - especially as the number of people using and participating skyrockets.</p>
 
-					var vertex = new THREE.Vector3();
-					vertex.x = 2000 * Math.random() - 1000;
-					vertex.y = 2000 * Math.random() - 1000;
-					vertex.z = 2000 * Math.random() - 1000;
+<p>We propose a nimble geo aware task tracker that helps coordinate tasks around OpenStreetMap data with direct referencing of nodes and geographic areas, task packaging for team mapping efforts, and an easy to use submission form that allows newcomers to provide productive input.</p>
 
-					geometry.vertices.push( vertex );
+<p>Tools like the <a href="http://tasks.hotosm.org/">OSM Tasking Manager</a> or <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a> lead the way here and cover some of the functionality we propose, but we believe there is an opportunity to take coordination to the next level and radically lower the barrier of entry to the OpenStreetMap project by providing a really polished management tool for geo tasks.</p>
+</section>
+<section id='data'>
+<h2 id="data_delivery_system">Data delivery system</h2>
 
-				}
+<p>Processing OpenStreetMap data today takes an individual skilled enough to set up a local <a href="http://www.postgis.org/">PostGIS</a> database and <a href="http://mapbox.com/tilemill">TileMill</a>, if not a more involved <a href="http://mapnik.org/">Mapnik</a> setup. If OpenStreetMap data itself could be delivered in a tiled fashion by a remote server - just like the rendered tiles - a map renderer, on a server or in a browser, could plug directly into a dataserver, avoiding the slow, complex, and manual data conversion process.</p>
 
-				material = new THREE.ParticleBasicMaterial( { size: 15, sizeAttenuation: false, map: sprite } );
-				material.color.setHSV( 1.0, 0.2, 0.8 );
+<p>While this is a low level component, we view this as a huge step towards better leveraging OpenStreetMap’s core strength - its availability as open data.</p>
+</section>
+<section id='next'>
+<h2 id="next_steps_and_your_support">Next steps and your support</h2>
 
-				particles = new THREE.ParticleSystem( geometry, material );
-				particles.sortParticles = true;
-				scene.add( particles );
+<p>In the happy case of an awarded grant, we are looking forward to further refine directions with our OpenStreetMap colleagues. Feedback is more than welcome at this point. We’re excited to see this conversation has already started with <a href="http://twitter.com/wonderchook">Kate Chapman’s</a> post yesterday on <a href="http://www.maploser.com/2012/03/29/all-i-want-for-openstreetmap-is-simple/">All I Want for OpenStreetMap is Simple</a> and <a href="https://twitter.com/#!/mikel">Mikel Maron’s</a> today on <a href="http://brainoff.com/weblog/2012/03/30/1773">All I Want for OpenStreetMap is…Social and Attention</a>.</p>
 
-				//
+<p>If you like where this is going, show us some like-love on the <a href="http://newschallenge.tumblr.com/post/19450699629/new-contribution-tools-for-openstreetmap">Knight tumblr</a> :) Every like, comment, and reblog counts for the decision that judges will be making next week.</p>
+ </section>   
+    <div class="byline">
+      Tom MacWright leads the development of our flagship open source mapping tools and is a frequent presenter at conferences including GOSCON, Where 2.0, and FOSS4G.
+      
+      Follow Tom MacWright at <a target="_blank" href="http://twitter.com/tmcw">twitter.com/tmcw</a>.
+      
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />   
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-				renderer = new THREE.WebGLRenderer( { clearAlpha: 1 } );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				container.appendChild( renderer.domElement );
+        
+        </div>
+      </div>
+    </div>
 
-				//
+    
+    
 
+    <div id='footer'>
+        <div id='contact'>
+            <div class='content'>
+                <div class='clearfix'>
+                </div>
+                <p>&copy; Copyright 2012 OvdInfo.org</p>
+            </div>
+            <!-- end of .content -->
+        </div>
+        <!-- end of #contact -->
+    </div><!-- #footer -->
 
+  
 
-				//
+<!-- Google Analytics -->
+<script type="text/javascript">
+$('#nav-side').toc({
+'container': '#prose',
+'highlightOffset': 180
+});
+</script>
+  </div>
 
-				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-
-				//
-
-				window.addEventListener( 'resize', onWindowResize, false );
-
-			}
-
-			function onWindowResize() {
-
-				windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-				renderer.setSize( window.innerWidth, window.innerHeight );
-
-			}
-
-			function onDocumentMouseMove( event ) {
-
-				mouseX = event.clientX - windowHalfX;
-				mouseY = event.clientY - windowHalfY;
-
-			}
-
-			function onDocumentTouchStart( event ) {
-
-				if ( event.touches.length == 1 ) {
-
-					event.preventDefault();
-
-					mouseX = event.touches[ 0 ].pageX - windowHalfX;
-					mouseY = event.touches[ 0 ].pageY - windowHalfY;
-
-				}
-			}
-
-			function onDocumentTouchMove( event ) {
-
-				if ( event.touches.length == 1 ) {
-
-					event.preventDefault();
-
-					mouseX = event.touches[ 0 ].pageX - windowHalfX;
-					mouseY = event.touches[ 0 ].pageY - windowHalfY;
-
-				}
-
-			}
-
-			//
-
-			function animate() {
-
-				requestAnimationFrame( animate );
-
-				render();
-
-			}
-
-			function render() {
-
-				var time = Date.now() * 0.00005;
-
-				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
-				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
-
-				camera.lookAt( scene.position );
-
-				h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
-				material.color.setHSV( h, 0.75, 0.8 );
-
-				renderer.render( scene, camera );
-
-			}
-
-		</script>
-		
-		<div class="wrapper animated fadeInDown"><span class="icon">!</span><h2>Error: <span>404</span></h2><span class="desc">An error occurred.</span></div>
-	</body>
+</body>
 </html>
