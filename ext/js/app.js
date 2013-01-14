@@ -1,6 +1,6 @@
 // Create map
-var map = mapbox.map('map');
-map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
+//var map = mapbox.map('map');
+mapbox.auto('map', 'integral.map-asmf5yqy');
 
 // Create and add marker layer from a spreadsheet
 mapbox.converters.googledocs('0Am4PLhe13o2JdGJmWUp3WGtLYlh4alBCNTFDWTRidkE', 'od6', function(features) {
