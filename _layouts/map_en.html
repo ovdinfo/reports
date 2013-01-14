@@ -102,14 +102,14 @@ var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
 // Create and add marker layer from a spreadsheet
-mapbox.converters.googledocs('0Am4PLhe13o2JdGJmWUp3WGtLYlh4alBCNTFDWTRidkE', 'od6', function(features) {
+mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
 var markersLayer = mapbox.markers.layer().features(features);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
 
 // Set inital center and zoom
-map.centerzoom({ lat: 38.9, lon: -77.03 }, 5);
+map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 5);
     </script>
   </body>
 </html>
