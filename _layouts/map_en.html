@@ -105,11 +105,6 @@ map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
 //console.log(features);
 var markersLayer = mapbox.markers.layer().features(features);
-markersLayer.factory(function(f) {
-      var m = document.getElementById('marker').cloneNode(true);
-      m.style.display = 'block';
-      return m;
-  });
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
