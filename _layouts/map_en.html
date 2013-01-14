@@ -107,7 +107,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
 var markersLayer = mapbox.markers.layer().features(features);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
-}).factory(function(f) {
+}).factory(function(features) {
     // Define a new factory function. This takes a GeoJSON object
     // as its input and returns an element - in this case an image -
     // that represents the point.
