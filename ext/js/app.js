@@ -1,6 +1,6 @@
 // Make a new map in #map
 var main = Map('map', {
-    api: 'http://a.tiles.mapbox.com/v3/mapbox.integral.map-asmf5yqy.jsonp',
+    api: 'http://a.tiles.mapbox.com/v3/mapbox.integral.map-f7nm5yvh.jsonp',
     zoomRange: [6, 11],
     features: [
         'zoombox',
