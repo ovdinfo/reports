@@ -108,15 +108,8 @@ var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
 
-interaction.formatter(function(f) {
-    return f.properties.points;
-});
-
 // Set inital center and zoom
-map.centerzoom({
-    lat: 34.660322,
-    lon:132.506103
-}, 9);
+map.centerzoom({ lat: 38.9, lon: -77.03 }, 5);
     </script>
   </body>
 </html>
