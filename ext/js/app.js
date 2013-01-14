@@ -500,7 +500,7 @@ function App() {
     }
 }
 
-$(function () {
+/*$(function () {
 
     $.tablesorter.defaults.widgets = ['zebra'];
     $('#table-wrapper table').tablesorter();
@@ -527,4 +527,4 @@ $(function () {
         e.preventDefault();
         $('#overlay, #modal').fadeOut(1);
     });
-});
+});*/
