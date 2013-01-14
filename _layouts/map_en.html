@@ -107,7 +107,15 @@ console.log(features);
 var markersLayer = mapbox.markers.layer().features(features);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
-});
+}).factory(function(f) {
+    // Define a new factory function. This takes a GeoJSON object
+    // as its input and returns an element - in this case an image -
+    // that represents the point.
+        var img = document.createElement('img');
+        img.className = 'marker-image';
+        img.setAttribute('src', f.properties.image);
+        return img;
+    });
 
 // Set inital center and zoom
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
