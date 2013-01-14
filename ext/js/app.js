@@ -65,7 +65,8 @@ function App() {
             .features(features);
 
         m.addLayer(App.ml);
-        m.setCenter(m.center());
+        m.center({ lat: 40.74, lon: -73.98 });
+        //m.setCenter(m.center());
 
         $.ajax({
             url: 'https://spreadsheets.google.com/feeds/list/0ApRKQU2Gi7CrdHBObkhYTEdLUGxvZjF3bXo3REppU0E/ocl/public/values?alt=json-in-script',
