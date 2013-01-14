@@ -80,9 +80,6 @@
       </div><!-- /#header -->
       <div id="app">
         <div id="map" class="" style="padding: 0px; overflow: hidden;">
-        <svg id='marker' xmlns="http://www.w3.org/2000/svg" version="1.1">
-			<circle cx="25" cy="25" r="25" style="fill:#000" />
-		</svg>
         {{content}}
         </div>
       </div>
@@ -111,19 +108,8 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
     // Define a new factory function. This takes a GeoJSON object
     // as its input and returns an element - in this case an image -
     // that represents the point.
-        var circle = document.createElement('circle');
-        //circle.className = 'marker-image';
-        circle.setAttribute('style', 'fill:#000');
-        circle.setAttribute('r', '25');
-        circle.setAttribute('cx', '25');
-        circle.setAttribute('cy', '25');
-        return circle;
+
     });
-  markersLayer.factory(function(f) {
-      var m = document.getElementById('marker').cloneNode(true);
-      m.style.display = 'block';
-      return m;
-  });
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
