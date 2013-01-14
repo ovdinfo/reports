@@ -12,7 +12,22 @@ var main = Map('map', {
     
 // Set up layer switch
 main.layers({
-
+    'afg-journalists': {
+        api: 'http://a.tiles.mapbox.com/v3/internews.afg-journalists.jsonp',
+        toggle: true
+    },
+    'afg-media-outlets': {
+        api: 'http://a.tiles.mapbox.com/v3/internews.afg-media-outlets.jsonp',
+        toggle: true
+    },
+    'afg-security-2011': {
+        api: 'http://a.tiles.mapbox.com/v3/internews.afg-security-2011.jsonp',
+        toggle: true
+    },
+    'afg-safety-index': {
+        api: 'http://a.tiles.mapbox.com/v3/internews.afg-safety-index.jsonp',
+        toggle: true
+    }
 });
 
 function App() {
@@ -20,7 +35,7 @@ function App() {
         filter = 'total',
         annuals = [];
 
-    mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
+    mapbox.converters.googledocs('0ApRKQU2Gi7CrdHBObkhYTEdLUGxvZjF3bXo3REppU0E', 'od5', function(features) {
 
         $('#map').removeClass('loading');
 
@@ -31,7 +46,7 @@ function App() {
         });
 
         // Add year filter links
-        var years = _.pluck(annuals, 'values'),
+        var years = _.pluck(annuals, 'year'),
             allYears = [];
         for (var i = years[0]; i <= years[years.length - 1]; i++) {
             if (!(_.include(years, i.toString()))) {
@@ -43,7 +58,7 @@ function App() {
         App.annuals = annuals;
         
         // Set site title
-        $('h1 a span').text(annuals[0].value + '-' + annuals[annuals.length - 1].value);
+        $('h1 a span').text(annuals[0].year + '-' + annuals[annuals.length - 1].year);
 
         App.ml = mmg()
             .factory(factory)
@@ -485,7 +500,7 @@ function App() {
     }
 }
 
-/*$(function () {
+$(function () {
 
     $.tablesorter.defaults.widgets = ['zebra'];
     $('#table-wrapper table').tablesorter();
@@ -512,4 +527,4 @@ function App() {
         e.preventDefault();
         $('#overlay, #modal').fadeOut(1);
     });
-});*/
+});
