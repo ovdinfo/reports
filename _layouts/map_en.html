@@ -108,9 +108,9 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
     // Define a new factory function. This takes a GeoJSON object
     // as its input and returns an element - in this case an image -
     // that represents the point.
-        var img = document.createElement('img');
-        img.className = 'marker-image';
-        img.setAttribute('src', f.properties.image);
+        var circle = document.createElement('circle');
+        //circle.className = 'marker-image';
+        circle.setAttribute('style', 'fill:#000');
         return img;
     });
 var interaction = mapbox.markers.interaction(markersLayer);
