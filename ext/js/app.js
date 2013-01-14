@@ -34,7 +34,6 @@ function App() {
     var m = MM_map,
         filter = 'total',
         annuals = [];
-console.log('test');
     mapbox.converters.googledocs('0ApRKQU2Gi7CrdHBObkhYTEdLUGxvZjF3bXo3REppU0E', 'od5', function(features) {
 
         $('#map').removeClass('loading');
@@ -66,8 +65,8 @@ console.log('test');
 
         m.addLayer(App.ml);
         m.center({ lat: 40.74, lon: -73.98 });
-        //console.log('test');
-        //m.setCenter(m.center());
+        console.log('test');
+        m.setCenter(m.center());
 
         $.ajax({
             url: 'https://spreadsheets.google.com/feeds/list/0ApRKQU2Gi7CrdHBObkhYTEdLUGxvZjF3bXo3REppU0E/ocl/public/values?alt=json-in-script',
