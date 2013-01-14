@@ -1,7 +1,7 @@
 (function(root) {
     var Map = {},
         layers;
-console.log('test');
+
     Map = function(el, l, callback) {
         wax.tilejson(l.api, function(t) {
             var handlers = [

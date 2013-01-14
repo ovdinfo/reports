@@ -65,7 +65,6 @@ function App() {
 
         m.addLayer(App.ml);
         m.center({ lat: 40.74, lon: -73.98 });
-        console.log('test');
         m.setCenter(m.center());
 
         $.ajax({
@@ -327,6 +326,7 @@ function App() {
     });
 
     function buildTable(data) {
+    console.log(data);
 
         $('.loading').removeClass('loading');
 
