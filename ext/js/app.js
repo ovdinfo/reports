@@ -1,6 +1,6 @@
 // Make a new map in #map
 var main = Map('map', {
-    api: 'http://a.tiles.mapbox.com/v3/integral.map-f7nm5yvh.jsonp',
+    api: 'http://a.tiles.mapbox.com/v3/mapbox.mapbox-lacquer.jsonp',
     zoomRange: [6, 11],
     features: [
         'zoombox',
@@ -485,7 +485,7 @@ function App() {
     }
 }
 
-$(function () {
+/*$(function () {
 
     $.tablesorter.defaults.widgets = ['zebra'];
     $('#table-wrapper table').tablesorter();
@@ -512,4 +512,4 @@ $(function () {
         e.preventDefault();
         $('#overlay, #modal').fadeOut(1);
     });
-});
+});*/
