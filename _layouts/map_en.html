@@ -103,7 +103,7 @@ map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
 // Create and add marker layer from a spreadsheet
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
-console.log(features);
+//console.log(features);
 var markersLayer = mapbox.markers.layer().features(features);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
