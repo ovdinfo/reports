@@ -23,8 +23,11 @@
     <script src='{{site.base_url}}/ext/libs/mapbox/mapbox.converters.googledocs.js'></script>
     <script src='{{site.base_url}}/ext/libs/wax/wax.leaf.min.js'></script>
     <script src='{{site.base_url}}/ext/libs/wax/wax.ext.js'></script>
-    <script src='{{site.base_url}}/ext/js/script.js'></script>
-    <script src='{{site.base_url}}/ext/js/app.js'></script>
+
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
   </head>
   <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
   <!--[if IE 7 ]>    <body class='ie ie7'> <![endif]-->
@@ -95,5 +98,8 @@
     <!-- Google Analytics -->
     <script type="text/javascript">
     </script>
+    <script>
+  mapbox.auto('map', 'mapbox.mapbox-lacquer');
+</script>
   </body>
 </html>
