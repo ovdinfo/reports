@@ -106,10 +106,6 @@ mapbox.converters.googledocs('0Am4PLhe13o2JdGJmWUp3WGtLYlh4alBCNTFDWTRidkE', 'od
 var markersLayer = mapbox.markers.layer().features(features);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
-}).factory(function(f) {
-    //var img = document.createElement('img');
-    //img.className = 'marker-image';
-    return '';
 });
 
 interaction.formatter(function(f) {
