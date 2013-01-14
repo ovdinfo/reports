@@ -119,6 +119,11 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
         circle.setAttribute('cy', '25');
         return circle;
     });
+  markersLayer.factory(function(f) {
+      var m = document.getElementById('marker').cloneNode(true);
+      m.style.display = 'block';
+      return m;
+  });
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
