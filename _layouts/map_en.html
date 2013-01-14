@@ -111,7 +111,7 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
         var circle = document.createElement('circle');
         //circle.className = 'marker-image';
         circle.setAttribute('style', 'fill:#000');
-        return img;
+        return circle;
     });
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
