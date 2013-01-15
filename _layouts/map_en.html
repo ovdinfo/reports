@@ -27,6 +27,14 @@
     <style>
       body { margin:0; padding:0; }
       #map { height: 560px;position: relative; }
+      .marker {
+	  	background: url({{site.base_url}}/ext/img/markers.png) no-repeat 0 100%;
+		position: absolute;
+		text-align: center;
+		font-size: 11px;
+		font-weight: bold;
+		cursor: pointer;
+	  }
     </style>
   </head>
   <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
@@ -109,6 +117,10 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
     // as its input and returns an element - in this case an image -
     // that represents the point.
         console.log(f);
+        
+        var d = document.createElement('div'),
+            marker = document.createElement('div');
+            
         var total = f.properties.value;
         var bgoffset = 0, size = 0;
         
@@ -129,10 +141,8 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
             bgoffset = 0;
             size = 60;
         }
-        var img = document.createElement('img');
-        img.className = 'marker';
-        img.setAttribute('src', '{{site.base_url}}/ext/img/markers.png');
-        img.setAttribute('style', 
+        marker.className = 'marker';
+        marker.setAttribute('style', 
             'width: ' + size + 'px; ' +
             'height: ' + size + 'px; ' +
             'left: ' + size / -2 + 'px; ' +
@@ -140,7 +150,7 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
             'line-height: ' + size + 'px; ' +
             'background-position: ' + bgoffset + 'px 100%;'
         );
-        return img;
+        return marker;
     });
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
