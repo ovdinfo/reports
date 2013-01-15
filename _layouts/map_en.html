@@ -162,7 +162,11 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
             'line-height: ' + size + 'px; ' +
             'background-position: ' + bgoffset + 'px 100%;'
         );
-        return marker;
+        marker.innerHTML = (total > 0) ? total : '';
+        marker.style.pointerEvents = 'all';
+        d.appendChild(marker);
+        d.style.position = 'absolute';
+        return d;
     });
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
