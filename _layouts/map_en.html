@@ -109,9 +109,37 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
     // as its input and returns an element - in this case an image -
     // that represents the point.
         console.log(f);
+        var total = f.properties.value;
+        var bgoffset = 0, size = 0;
+        
+        // Classification scale
+        if (total > 0 && total <=5) {
+            bgoffset = -300;
+            size = 15;
+        }
+        if (total > 5 && total <=14) {
+            bgoffset = -200;
+            size = 30;
+        }
+        if (total > 14 && total <=30) {
+            bgoffset = -100;
+            size = 45;
+        }
+        if (total > 25) {
+            bgoffset = 0;
+            size = 60;
+        }
         var img = document.createElement('img');
-        img.className = 'marker-image';
-        img.setAttribute('src', '{{site.base_url}}/ext/img/markers.png');
+        img.className = 'marker';
+        img.setAttribute('style', 
+            'width: ' + size + 'px; ' +
+            'height: ' + size + 'px; ' +
+            'left: ' + size / -2 + 'px; ' +
+            'top: ' + size / -2 + 'px; ' +
+            'line-height: ' + size + 'px; ' +
+            'background-position: ' + bgoffset + 'px 100%' +
+            'src', '{{site.base_url}}/ext/img/markers.png'
+        );
         return img;
     });
 var interaction = mapbox.markers.interaction(markersLayer);
