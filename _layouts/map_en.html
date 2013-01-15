@@ -102,7 +102,7 @@ var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
 // Create and add marker layer from a spreadsheet
-mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
+mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od5', function(features) {
 //console.log(features);
 var markersLayer = mapbox.markers.layer().features(features).factory(function(f) {
     // Define a new factory function. This takes a GeoJSON object
