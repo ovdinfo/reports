@@ -66,13 +66,13 @@ function factory(f) {
             '</div></div>';
         };
         marker.innerHTML = (total > 0) ? total : '';
-        marker.onmouseover = function() {
+        marker.onclick = function() {
             $('.wax-tooltip').remove();
             $('body').append(_.template(formatter[f.properties.id](), f.properties));
         };
-        marker.onmouseout = function() {
+        /*marker.onmouseout = function() {
             $('.wax-tooltip').remove();
-        };
+        };*/
         marker.style.pointerEvents = 'all';
         d.appendChild(marker);
         d.style.position = 'absolute';
