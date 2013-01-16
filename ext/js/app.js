@@ -16,17 +16,11 @@ var main = Map('map', {
 
 function App() {
     var m = MM_map;
-mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
-//console.log(features);
-var formatter = {};
-        App.ml = mmg()
-            .factory(factory)
-            .features(features);
-
-        m.addLayer(App.ml);
-        m.setCenter(m.center());//var interaction = mapbox.markers.interaction(markersLayer);
-//m.addLayer(markersLayer);
-});
+	mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
+		App.ml = mmg().factory(factory).features(features);
+		m.addLayer(App.ml);
+		m.setCenter(m.center());
+	});
 var formatter = {};
 function factory(f) {
     // Define a new factory function. This takes a GeoJSON object
