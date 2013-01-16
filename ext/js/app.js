@@ -5,9 +5,10 @@ var map = mapbox.map('map');
 
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
-  map.addLayer(markerLayer)
-        .setExtent(markerLayer.extent());
-		});
+  map.addLayer(markerLayer);
+  map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
+});
+
 var formatter = {};
 function factory(f) {
     // Define a new factory function. This takes a GeoJSON object
