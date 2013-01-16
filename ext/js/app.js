@@ -6,6 +6,8 @@ var main = Map('map', {
     api: 'http://a.tiles.mapbox.com/v3/integral.map-asmf5yqy.jsonp',
     zoomRange: [1, 15],
     features: [
+        'zoombox',
+        'zoompan',
         'share'
     ],
     center: {lat: 55.7512419, lon: 37.6184217, zoom: 11}
