@@ -11,7 +11,7 @@ var main = Map('map', {
         'legend',
         'share'
     ],
-    center: [55.7512419,37.6184217, 11]
+    //center: [55.7512419,37.6184217, 11]
 }, App);
 
 
