@@ -36,6 +36,26 @@
 		cursor: pointer;
 		color:#fff;
 	  }
+	  .wax-legends {
+overflow: auto;
+position: absolute;
+left: 10px;
+bottom: 50px;
+z-index: 3;
+}
+.wax-legends .wax-legend {
+padding: 10px;
+background: white;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+border: 1px solid #ccc;
+font-size: 11px;
+line-height: 16px;
+font-weight: normal;
+width: 250px;
+display:block;
+}
 	    .wax-legend .legend-title {
     text-align: left;
     margin-bottom: 8px;
@@ -131,9 +151,10 @@
       </div><!-- /#header -->
       <div id="app">
         <div id="map" class="" style="padding: 0px; overflow: hidden;">
-          <div class='wax-legend'>
-			<div class='legend-title'>Распределение политических задержанных по отделам полиции в Москве: 4 декабря 2011 - 31 декабря 2012</div>
-			<div class='legend-scale'>
+          <div class='wax-legends'>
+            <div class='wax-legend'>
+			  <div class='legend-title'>Распределение политических задержанных по отделам полиции в Москве: 4 декабря 2011 - 31 декабря 2012</div>
+			  <div class='legend-scale'>
   				<ul class='legend-labels'>
     				<li><span style='background:#00E535;'></span>< 1 - 10</li>
     				<li><span style='background:#9BEE03;'></span>< 10 - 100</li>
@@ -141,9 +162,10 @@
     				<li><span style='background:#F77807;'></span>< 200 - 300</li>
     				<li><span style='background:#FA1C08;'></span>300 +</li>
   				</ul>
-			</div>
+			  </div>
 			<div class='legend-source'>Источник: <a href="https://docs.google.com/file/d/0B-4PSkYLKeoTMS1mNDU1YTgxOS1lZTgzLTQ0ODMtYTdhYS05N2YwOTVhZGUzMDI/edit">данные ОВД-Инфо</a></div>
 		  </div>
+		</div>
         {{content}}
         </div>
       </div>
