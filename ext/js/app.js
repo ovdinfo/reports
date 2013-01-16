@@ -1,25 +1,12 @@
+var map = mapbox.map('map');
+    map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
 
-// Create and add marker layer from a spreadsheet
 
-var main = Map('map', {
-    api: 'http://a.tiles.mapbox.com/v3/integral.map-asmf5yqy.jsonp',
-    zoomRange: [9, 17],
-    features: [
-        'zoombox',
-        'zoompan',
-        'share'
-    ],
-    center: {lat: 55.7512419, lon: 37.6184217, zoom: 11}
-}, App);
-
-
-function App() {
-    var m = MM_map;
-	mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
-		App.ml = mmg().factory(factory).features(features);
-		m.addLayer(App.ml);
-		m.setCenter(m.center());
+mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
+  var markerLayer = mapbox.markers.factory(factory).features(features);
+  map.addLayer(markerLayer)
+        .setExtent(markerLayer.extent());
 		});
 var formatter = {};
 function factory(f) {
@@ -93,5 +80,4 @@ function factory(f) {
         return d;
 };
 //m.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
-};
 // Set inital center and zoom
