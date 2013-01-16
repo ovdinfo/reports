@@ -191,6 +191,8 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
 //console.log(features);
 var formatter = {};
 var markersLayer = mapbox.markers.layer().features(features);
+var interaction = mapbox.markers.interaction(markersLayer);
+map.addLayer(markersLayer);
 });
 function factory(f) {
     // Define a new factory function. This takes a GeoJSON object
@@ -248,9 +250,6 @@ function factory(f) {
         d.style.position = 'absolute';
         return d;
 };
-        
-var interaction = mapbox.markers.interaction(markersLayer);
-map.addLayer(markersLayer);
 
 // Set inital center and zoom
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
