@@ -246,13 +246,13 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
         d.style.position = 'absolute';
         return d;
     formatter[f.properties.id] = function() {
-            var marker = '',
+            /*var marker = '',
                 markerOffset = 0,
                 markerLocation = '',
                 shortYears = [],
                 filters = [];
 
-            /*if (year) {
+            if (year) {
                 markerLocation = (parseInt((year + '').substr((year + '').length - 2), 10) - 1);
         
                 if (year === annuals[0].year) {
