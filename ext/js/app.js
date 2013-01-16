@@ -10,7 +10,8 @@ var main = Map('map', {
         'zoompan',
         'legend',
         'share'
-    ]
+    ],
+    center: [55.7512419,37.6184217, 11]
 }, App);
 
 
