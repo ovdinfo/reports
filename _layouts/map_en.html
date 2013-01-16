@@ -245,7 +245,6 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
         d.appendChild(marker);
         d.style.position = 'absolute';
         return d;
-    });
     formatter[f.properties.id] = function() {
             var marker = '',
                 markerOffset = 0,
@@ -295,6 +294,7 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
         marker.onmouseout = function() {
             $('.wax-tooltip').remove();
         };
+        });
         
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
