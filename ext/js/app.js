@@ -6,7 +6,6 @@ var map = mapbox.map('map');
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   map.addLayer(markerLayer);
-  map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
 });
 
 var formatter = {};
@@ -80,5 +79,5 @@ function factory(f) {
         d.style.position = 'absolute';
         return d;
 };
-//m.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
-// Set inital center and zoom
+
+map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
