@@ -20,6 +20,7 @@ function App() {
 		App.ml = mmg().factory(factory).features(features);
 		m.addLayer(App.ml);
 		m.setCenter(m.center());
+		m.ui.zoomer.add();
 		});
 var formatter = {};
 function factory(f) {
