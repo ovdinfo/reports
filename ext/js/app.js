@@ -62,7 +62,9 @@ function factory(f) {
         );
         formatter[f.properties.id] = function() {
         return '<div class="wax-tooltip"><div class="int_total">' +
-                '<h2>Province: <%= name %></h2>' +
+                '<h2>ОВД: <%= name %></h2>' +
+                '<p>Адрес: <i><%= ' + address + '%></i></p>' +
+                '<p>Общее количество задержанных: <strong><%= ' + value + '%></strong></p>' +
             '</div></div>';
         };
         marker.innerHTML = (total > 0) ? total : '';
