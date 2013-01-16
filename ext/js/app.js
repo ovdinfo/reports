@@ -9,6 +9,7 @@ var markersLayer = mapbox.markers.layer().features(features).factory(factory);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
+var formatter = {};
 function factory(f) {
     // Define a new factory function. This takes a GeoJSON object
     // as its input and returns an element - in this case an image -
@@ -64,6 +65,15 @@ function factory(f) {
         d.appendChild(marker);
         d.style.position = 'absolute';
         return d;
+        marker.onmouseover = function() {
+            //$('.wax-tooltip').remove();
+            //$('body').append(_.template(formatter[x.properties.provname](), x.properties));
+            alert('onmouseover');
+        };
+        marker.onmouseout = function() {
+            //$('.wax-tooltip').remove();
+            alert('onmouseout');
+        };
 };
 
 // Set inital center and zoom
