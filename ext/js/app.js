@@ -6,8 +6,6 @@ var main = Map('map', {
     api: 'http://a.tiles.mapbox.com/v3/integral.map-asmf5yqy.jsonp',
     zoomRange: [1, 15],
     features: [
-        'zoombox',
-        'zoompan',
         'share'
     ],
     center: {lat: 55.7512419, lon: 37.6184217, zoom: 11}
@@ -20,7 +18,7 @@ function App() {
 		App.ml = mmg().factory(factory).features(features);
 		m.addLayer(App.ml);
 		m.setCenter(m.center());
-	});
+		});
 var formatter = {};
 function factory(f) {
     // Define a new factory function. This takes a GeoJSON object
