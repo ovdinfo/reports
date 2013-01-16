@@ -126,46 +126,6 @@
   		top:0px;
   		right:0px;
   	  }
-  	  /* Zoom Controls */
-a.zoomer {
-  text-decoration: none;
-  position: absolute;
-  text-align: center;
-  background: #282828;
-  color: white;
-  font-size: 14px;
-  z-index: 1;
-  width: 30px;
-  height: 25px;
-  line-height: 25px;
-  font-weight: bold;
-  top: 80px;
-  left: 10px;
-  }
-a.zoomout {
-  top: 105px;
-  left: 10px;
-  -moz-border-radius: 0px 0px 3px 3px;
-  -webkit-border-radius: 0px 0px 3px 3px;
-  border-radius: 0px 0px 3px 3px;
-  border-top: 1px solid #111;
-  }
-a.zoomin {
-  -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 3px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
-  }
-a.zoomer:active {
-  background-color: #000;
-  }
-a.zoomdisabled:active,
-a.zoomdisabled {
-  opacity: 0.35;
-  -moz-opacity: 0.35;
-  filter:alpha(opacity=35);
-  border: none;
-  cursor: default;
-  }
     </style>
   </head>
   <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
@@ -253,6 +213,7 @@ a.zoomdisabled {
     <script src='{{site.base_url}}/ext/libs/jquery/jquery.min.js'></script>
     <script src='{{site.base_url}}/ext/libs/underscore/underscore-min.js'></script>
     <script src='{{site.base_url}}/ext/libs/bootstrap/js/bootstrap.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/mapbox/mapbox.js'></script>
     <script src='{{site.base_url}}/ext/libs/modestmaps/modestmaps.min.js'></script>
     <script src='{{site.base_url}}/ext/libs/wax/wax.mm.min.js'></script>
     <script src='{{site.base_url}}/ext/libs/wax/wax.ext.js'></script>
