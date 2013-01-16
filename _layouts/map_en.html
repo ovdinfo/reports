@@ -190,7 +190,9 @@ map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
 //console.log(features);
 var formatter = {};
-var markersLayer = mapbox.markers.layer().features(features).factory(function(f) {
+var markersLayer = mapbox.markers.layer().features(features);
+});
+function factory(f) {
     // Define a new factory function. This takes a GeoJSON object
     // as its input and returns an element - in this case an image -
     // that represents the point.
@@ -245,7 +247,7 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
         d.appendChild(marker);
         d.style.position = 'absolute';
         return d;
-});
+};
         
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
