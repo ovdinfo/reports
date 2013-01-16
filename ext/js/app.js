@@ -61,10 +61,6 @@ function factory(f) {
             'background-position: ' + bgoffset + 'px 100%;'
         );
         marker.innerHTML = (total > 0) ? total : '';
-        marker.style.pointerEvents = 'all';
-        d.appendChild(marker);
-        d.style.position = 'absolute';
-        return d;
         marker.onmouseover = function() {
             //$('.wax-tooltip').remove();
             //$('body').append(_.template(formatter[x.properties.provname](), x.properties));
@@ -74,6 +70,10 @@ function factory(f) {
             //$('.wax-tooltip').remove();
             alert('onmouseout');
         };
+        marker.style.pointerEvents = 'all';
+        d.appendChild(marker);
+        d.style.position = 'absolute';
+        return d;
 };
 
 // Set inital center and zoom
