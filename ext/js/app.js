@@ -4,7 +4,7 @@
 
 var main = Map('map', {
     api: 'http://a.tiles.mapbox.com/v3/integral.map-asmf5yqy.jsonp',
-    zoomRange: [1, 15],
+    zoomRange: [9, 17],
     features: [
         'zoombox',
         'zoompan',
