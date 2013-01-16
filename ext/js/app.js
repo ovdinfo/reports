@@ -4,7 +4,7 @@ var map = mapbox.map('map');
 
 
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
-  var markerLayer = mapbox.markers.factory(factory).features(features);
+  var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   map.addLayer(markerLayer)
         .setExtent(markerLayer.extent());
 		});
