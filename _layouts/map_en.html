@@ -190,8 +190,7 @@ map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
 //console.log(features);
 var formatter = {};
-var markersLayer = mapbox.markers.layer().features(features);
-factory(features);
+var markersLayer = mapbox.markers.layer().features(features).factory(f);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
