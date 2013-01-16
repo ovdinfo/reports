@@ -60,15 +60,18 @@ function factory(f) {
             'line-height: ' + size + 'px; ' +
             'background-position: ' + bgoffset + 'px 100%;'
         );
+        formatter[f.properties.id] = function() {
+        return '<div class="wax-tooltip"><div class="int_total">' +
+                '<h2>Province: <%= name %></h2>' +
+            '</div></div>';
+        };
         marker.innerHTML = (total > 0) ? total : '';
         marker.onmouseover = function() {
-            //$('.wax-tooltip').remove();
-            //$('body').append(_.template(formatter[x.properties.provname](), x.properties));
-            alert('onmouseover');
+            $('.wax-tooltip').remove();
+            $('body').append(_.template(formatter[x.properties.id](), x.properties));
         };
         marker.onmouseout = function() {
-            //$('.wax-tooltip').remove();
-            alert('onmouseout');
+            $('.wax-tooltip').remove();
         };
         marker.style.pointerEvents = 'all';
         d.appendChild(marker);
