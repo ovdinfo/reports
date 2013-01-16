@@ -68,7 +68,7 @@ function factory(f) {
         marker.innerHTML = (total > 0) ? total : '';
         marker.onmouseover = function() {
             $('.wax-tooltip').remove();
-            $('body').append(_.template(formatter[f.properties.id](), x.properties));
+            $('body').append(_.template(formatter[f.properties.id](), f.properties));
         };
         marker.onmouseout = function() {
             $('.wax-tooltip').remove();
