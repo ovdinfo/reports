@@ -7,7 +7,6 @@ var main = Map('map', {
     zoomRange: [6, 11],
     features: [
         'zoombox',
-        'zoompan',
         'legend',
         'share'
     ],
