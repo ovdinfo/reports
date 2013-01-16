@@ -191,6 +191,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
 //console.log(features);
 var formatter = {};
 var markersLayer = mapbox.markers.layer().features(features);
+factory(features);
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
