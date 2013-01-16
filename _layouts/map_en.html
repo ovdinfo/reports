@@ -245,6 +245,56 @@ var markersLayer = mapbox.markers.layer().features(features).factory(function(f)
         d.style.position = 'absolute';
         return d;
     });
+    formatter[f.properties.id] = function() {
+            var marker = '',
+                markerOffset = 0,
+                markerLocation = '',
+                shortYears = [],
+                filters = [];
+
+            /*if (year) {
+                markerLocation = (parseInt((year + '').substr((year + '').length - 2), 10) - 1);
+        
+                if (year === annuals[0].year) {
+                    markerOffset = 6;
+                } else if (year === annuals[annuals.length - 1].year) {
+                    markerOffset = (x.properties[filter].length === 2) ? -8 : -5;
+                }
+
+                if (parseInt(x.properties[filter], 10) > 30) {
+                    markerOffset += ':-4';
+                }
+
+                marker = '|o,FFFFFF,0,' + 
+                    markerLocation + ',20,,:' + 
+                    markerOffset + '|t<%=' + filter + '%>,282828,0,' + 
+                    markerLocation + ',12,,hv:0:0';
+            }*/
+
+            /*_.each(App.annuals, function(val) { 
+                shortYears.push(val.year.slice(-2));
+                if (x.properties['sum' + val.year]) {
+                    filters.push('<%= sum' + val.year + '%>');
+                } else {
+                    filters.push('0');
+                }
+            });
+            var shortYear = shortYears.join('|');
+            filters = filters.join(',');*/
+
+            return '<div class="wax-tooltip"><div class="int_total">' +
+                '<h2>ОВД <%= name %></h2>' +
+            '</div></div>';
+        };
+        
+        marker.onmouseover = function() {
+            $('.wax-tooltip').remove();
+            $('body').append(_.template(formatter[f.properties.id](), f.properties));
+        };
+        marker.onmouseout = function() {
+            $('.wax-tooltip').remove();
+        };
+        
 var interaction = mapbox.markers.interaction(markersLayer);
 map.addLayer(markersLayer);
 });
