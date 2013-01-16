@@ -19,9 +19,13 @@ function App() {
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
 //console.log(features);
 var formatter = {};
-var markersLayer = mapbox.markers.layer().features(features).factory(factory);
-var interaction = mapbox.markers.interaction(markersLayer);
-m.addLayer(markersLayer);
+        App.ml = mmg()
+            .factory(factory)
+            .features(features);
+
+        m.addLayer(App.ml);
+        m.setCenter(m.center());//var interaction = mapbox.markers.interaction(markersLayer);
+//m.addLayer(markersLayer);
 });
 var formatter = {};
 function factory(f) {
