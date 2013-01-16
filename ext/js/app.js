@@ -84,6 +84,4 @@ map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
 map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
-var interaction = mapbox.interaction()
-    .map(map)
-    .auto();
+map.interaction.auto();
