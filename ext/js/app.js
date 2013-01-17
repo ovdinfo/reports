@@ -87,7 +87,7 @@ map.ui.fullscreen.add();
 map.interaction.auto();
 
 var config = {
-        element: document.getElementById("map"),
+        element: document.getElementById("app"),
         radius: 30,
         opacity: 50
     };
@@ -102,7 +102,6 @@ var config = {
             { x: 10, y: 20, count: 18 },
             { x: 25, y: 25, count: 14 },
             { x: 50, y: 30, count: 20 }
-            // ...
         ]
     };
  
