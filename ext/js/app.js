@@ -1,4 +1,4 @@
-var map = mapbox.map('map',osm);
+var map = mapbox.map('map');
     map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
 
