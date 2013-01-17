@@ -97,15 +97,14 @@ function buildTable(data) {
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
       org = _.map(ovdData, function(group) {
       	output = {};
-      	output.id = group[0].id;
-      	/*i = 0;
+      	group.id = group[0].id;
+      	i = 0;
       	while (i < group.length) {
-        	sum += parseInt(group[i].value);
-        	name = group[i].name;
+        	group[i].detentions = group[i].date + ',' + group[i].value;
         	i++;
       	}
-      	output.name = name;
-      	output.total = sum;*/
+      	//output.name = name;
+      	//output.total = sum;*/
       	return output;
 		});
     console.log(ovdData);
