@@ -95,6 +95,19 @@ function buildTable(data) {
         i++;
       }
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
+      org = _.map(ovdData, function(group) {
+      	output = {};
+      	output.id = group[0].id;
+      	/*i = 0;
+      	while (i < group.length) {
+        	sum += parseInt(group[i].value);
+        	name = group[i].name;
+        	i++;
+      	}
+      	output.name = name;
+      	output.total = sum;*/
+      	return output;
+		});
     console.log(ovdData);
 };
 
