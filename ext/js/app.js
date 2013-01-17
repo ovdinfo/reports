@@ -94,4 +94,4 @@ var template = new MM.Template('http://tile.openstreetmap.org/{Z}/{X}/{Y}.png');
 var layer = new MM.Layer(template);
 
 // without a size, it will expand to fit the parent:
-var map = new MM.Map(parent, layer);
+var newmap = new MM.Map(parent, layer);
