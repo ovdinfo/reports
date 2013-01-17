@@ -6,6 +6,12 @@ var map = mapbox.map('map');
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   map.addLayer(markerLayer);
+  
+  $.ajax({
+            url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/oda/public/values?alt=json-in-script',
+            dataType: 'jsonp',
+            success: buildTable
+        });
 });
 
 var formatter = {};
@@ -78,6 +84,10 @@ function factory(f) {
         d.appendChild(marker);
         d.style.position = 'absolute';
         return d;
+};
+
+function buildTable(data) {
+  console.log(data);
 };
 
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
