@@ -1,4 +1,4 @@
-var osm = new modLayer(new MM.Template('http://a.tile.openstreetmap.org/{Z}/{X}/{Y}.png?cors=true'), greenFilter);
+var osm = new modLayer(new MM.Template('http://a.tile.openstreetmap.org/{Z}/{X}/{Y}.png?cors=true'));
 var map = mapbox.map('map',osm);
     map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
