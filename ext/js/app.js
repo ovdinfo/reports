@@ -93,4 +93,4 @@ var parent = 'map';
 var template = new MM.Template('http://tile.openstreetmap.org/{Z}/{X}/{Y}.png');
 var layer = new MM.Layer(template);
 
-map.addLayer(new MM.Map(parent, layer));
+map.addLayer(layer);
