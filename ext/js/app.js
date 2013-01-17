@@ -94,7 +94,7 @@ function buildTable(data) {
         ovdData[i]={"id":data.feed.entry[i].gsx$ovdid.$t, "name":data.feed.entry[i].gsx$овд.$t, "date":data.feed.entry[i].gsx$дата.$t, "value":data.feed.entry[i].gsx$количествочеловек.$t};
         i++;
       }
-      ovdData = _.groupBy(org, function(num){ return num.id; });
+      ovdData = _.groupBy(ovdData, function(m){ return m.id; });
     console.log(ovdData);
 };
 
