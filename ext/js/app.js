@@ -1,5 +1,5 @@
 var map = mapbox.map('map');
-    map.addLayer(mapbox.layer().id('mapbox.world-dark'));
+    map.addLayer(lxbarth.layer().id('mapbox.map-9zigz7z2'));
 
 
 
