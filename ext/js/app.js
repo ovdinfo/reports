@@ -85,26 +85,3 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
-
-var config = {
-    "radius": 30,
-    "element": document.getElementById("app"),
-    "visible": true,
-    "opacity": 40,
-    "gradient": { 0.45: "rgb(0,0,255)", 0.55: "rgb(0,255,255)", 0.65: "rgb(0,255,0)", 0.95: "yellow", 1.0: "rgb(255,0,0)" }
-};
-    
-    //creates and initializes the heatmap
-    var heatmap = h337.create(config);
- 
-    // let's get some data
-    var data = {
-        max: 20,
-        data: [
-            { x: 10, y: 20, count: 18 },
-            { x: 25, y: 25, count: 14 },
-            { x: 50, y: 30, count: 20 }
-        ]
-    };
- 
-    heatmap.store.setDataSet(data);
