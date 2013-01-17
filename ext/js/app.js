@@ -85,12 +85,3 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
-
-var parent = 'map';
-
-// defaults to Google-style Mercator projection, so works
-// out of the box with OpenStreetMap and friends:
-var template = new MM.Template('http://tile.openstreetmap.org/{Z}/{X}/{Y}.png');
-var layer = new MM.Layer(template);
-
-map.addLayer(layer);
