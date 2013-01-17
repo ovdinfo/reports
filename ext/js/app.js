@@ -88,6 +88,13 @@ function factory(f) {
 
 function buildTable(data) {
   console.log(data);
+  var ovdData = {};
+	  i = 0;
+      while (i < data.feed.entry.length) {
+        ovdData[i]={"id":data.feed.entry[i].gsx$ovdid, "name":data.feed.entry[i].gsx$овд, "date":data.feed.entry[i].gsx$дата, "value":data.feed.entry[i].gsx$количествочеловек};
+        i++;
+      }
+    console.log(ovdData);
 };
 
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
