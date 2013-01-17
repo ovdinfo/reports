@@ -87,10 +87,12 @@ map.ui.fullscreen.add();
 map.interaction.auto();
 
 var config = {
-        element: document.getElementById("map"),
-        radius: 30,
-        opacity: 50
-    };
+    "radius": 30,
+    "element": document.getElementById("map"),
+    "visible": true,
+    "opacity": 40,
+    "gradient": { 0.45: "rgb(0,0,255)", 0.55: "rgb(0,255,255)", 0.65: "rgb(0,255,0)", 0.95: "yellow", 1.0: "rgb(255,0,0)" }
+};
     
     //creates and initializes the heatmap
     var heatmap = h337.create(config);
