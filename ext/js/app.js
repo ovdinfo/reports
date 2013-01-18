@@ -119,7 +119,7 @@ function drawVisualization(ovd) {
         var data = new google.visualization.DataTable();
         
         data.addColumn('date', 'Date');
-		data.addColumn('integer', 'Value');
+		data.addColumn('number', 'Value');
 		
 		data.addRows([ovd.detentions]);
       
