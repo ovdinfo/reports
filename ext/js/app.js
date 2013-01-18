@@ -102,7 +102,7 @@ function buildTable(data) {
       	i = 0;
       	while (i < group.length) {
         	group[i].detentions = group[i].date + ',' + group[i].value;
-        	group.detentions[i] = [Date.parse(group[i].date,"dd.MM.yyyy"), parseInt(group[i].value)];
+        	group.detentions[i] = Date.parse(group[i].date,"dd.MM.yyyy"), parseInt(group[i].value);
         	i++;
       	}
       	//output.name = name;
@@ -121,7 +121,7 @@ function drawVisualization(ovd) {
         data.addColumn('date', 'Date');
 		data.addColumn('number', 'Value');
 		
-		data.addRows([ovd.detentions]);
+		data.addRows(ovd.detentions);
       
         // Create and draw the visualization.
         new google.visualization.LineChart(document.getElementById('visualization')).
