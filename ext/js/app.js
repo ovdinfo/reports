@@ -102,7 +102,7 @@ function buildTable(data) {
       	i = 0;
       	while (i < group.length) {
         	group[i].detentions = group[i].date + ',' + group[i].value;
-        	group.detentions[i] = [Date.parse(group[i].date,"dd.mm.yyyy"), parseInt(group[i].value)];
+        	group.detentions[i] = [moment(group[i].date,"DD.MM.YYYY"), parseInt(group[i].value)];
         	i++;
       	}
       	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
