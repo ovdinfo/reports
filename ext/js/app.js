@@ -105,7 +105,7 @@ function buildTable(data) {
         	group.detentions[i] = [Date.parse(group[i].date,"dd.MM.yyyy"), parseInt(group[i].value)];
         	i++;
       	}
-      	_.sortBy(group.detentions, function(arr){ console.log(arr);return arr[0]; });
+      	//_.sortBy(group.detentions, function(arr){ console.log(arr);return arr[0]; });
       	//output.name = name;
       	//output.total = sum;*/
       	//return output;
