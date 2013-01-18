@@ -116,7 +116,7 @@ function buildTable(data) {
 function drawVisualization(ovd) {
 		console.log(['x', 'Value'], ovd.detentions);
         // Create and populate the data table.
-        var data = google.visualization.arrayToDataTable([['x', 'Value'], ovd.detentions]);
+        var data = google.visualization.arrayToDataTable([ovd.detentions]);
       
         // Create and draw the visualization.
         new google.visualization.LineChart(document.getElementById('visualization')).
