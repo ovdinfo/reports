@@ -132,7 +132,7 @@ function drawVisualization(ovd) {
           vAxis: {title: 'Количество задержаний', textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
           legend: 'none',
           backgroundColor: { fill:'transparent' },
-          colors: ['#f00000'],
+          colors: ['#ff7070'],
         };
       
         // Create and draw the visualization.
