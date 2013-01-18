@@ -129,12 +129,12 @@ function drawVisualization(ovd) {
 		
 		var options = {
           title: 'Задержания',
-          hAxis: {title: 'Дата', minValue:new Date(2011, 12, 4), maxValue:new Date(2012, 11, 31), textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}},
-          vAxis: {title: 'Количество задержаний', textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}},
+          hAxis: {title: 'Дата', minValue:new Date(2011, 12, 4), maxValue:new Date(2012, 11, 31), textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
+          vAxis: {title: 'Количество задержаний', textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
           legend: 'none',
           backgroundColor: { fill:'transparent' },
-          colors: ['orange', '#f04e23'],
-          animation: {duration:300}
+          colors: ['orange', '#ff6600'],
+          series: {12:{color: 'black', visibleInLegend: false}, 3:{color: 'red', visibleInLegend: false}}
         };
       
         // Create and draw the visualization.
