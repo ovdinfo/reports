@@ -97,6 +97,7 @@ function buildTable(data) {
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
       ovdData = _.map(ovdData, function(group) {
       	//output = {};
+      	_.sortBy(group), function(arr){ return arr.date; });
       	group.id = group[0].id;
       	group.detentions = [];
       	i = 0;
@@ -105,7 +106,6 @@ function buildTable(data) {
         	group.detentions[i] = [Date.parse(group[i].date,"dd.MM.yyyy"), parseInt(group[i].value)];
         	i++;
       	}
-      	group = _.sortBy(group, function(obj){ return obj.date; });
       	//output.name = name;
       	//output.total = sum;*/
       	//return output;
