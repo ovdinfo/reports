@@ -128,12 +128,11 @@ function drawVisualization(ovd) {
 		data.addRows(ovd.detentions);
 		
 		var options = {
-          title: 'Задержания',
           hAxis: {title: 'Дата', minValue:new Date(2011, 12, 4), maxValue:new Date(2012, 11, 31), textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
           vAxis: {title: 'Количество задержаний', textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
           legend: 'none',
           backgroundColor: { fill:'transparent' },
-          colors: ['#F77807'],
+          colors: ['#f00000'],
         };
       
         // Create and draw the visualization.
