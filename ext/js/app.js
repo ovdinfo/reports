@@ -126,13 +126,17 @@ function drawVisualization(ovd) {
 		data.addColumn('number', 'Value');
 		
 		data.addRows(ovd.detentions);
+		
+		var options = {
+          title: 'Задержания',
+          hAxis: {title: 'Количество задержаний'},
+          vAxis: {title: 'Дата'},
+          legend: 'none'
+        };
       
         // Create and draw the visualization.
-        new google.visualization.LineChart(document.getElementById('visualization')).
-            draw(data, {curveType: "function",
-                        width: 300, height: 400,
-                        vAxis: {maxValue: 30}}
-                );
+        new google.visualization.ScatterChart(document.getElementById('visualization')).
+            draw(data, options);
       }
 
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
