@@ -194,6 +194,7 @@
 		    </div>
 		  </div>
         {{content}}
+        <div id="visualization"></div>
         </div>
       </div>
       <div id='footer'>
@@ -218,6 +219,10 @@
     <script src='{{site.base_url}}/ext/libs/mapbox/mapbox.converters.googledocs.js'></script>
     <script src='{{site.base_url}}/ext/libs/heatmap/heatmap.js'></script>
     <script src='{{site.base_url}}/ext/js/app.js'></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
     <script type="text/javascript">
 
     </script>
