@@ -121,7 +121,7 @@ function drawVisualization(ovd) {
         data.addColumn('datetime', 'Date');
 		data.addColumn('number', 'Value');
 		
-		data.addRows([ovd.detentions]);
+		data.addRows(ovd.detentions);
       
         // Create and draw the visualization.
         new google.visualization.LineChart(document.getElementById('visualization')).
