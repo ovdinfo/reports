@@ -142,6 +142,7 @@ function drawVisualization(ovd) {
 
 map.eventHandlers[3].remove();
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
+map.setZoomRange(9, 17);
 map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
