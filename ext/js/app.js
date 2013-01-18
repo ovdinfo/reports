@@ -130,7 +130,7 @@ function drawVisualization(ovd) {
         // Create and draw the visualization.
         new google.visualization.LineChart(document.getElementById('visualization')).
             draw(data, {curveType: "function",
-                        width: 500, height: 400,
+                        width: 300, height: 400,
                         vAxis: {maxValue: 30}}
                 );
       }
