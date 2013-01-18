@@ -129,10 +129,9 @@ function drawVisualization(ovd) {
 		
 		var options = {
           title: 'Задержания',
-          hAxis: {title: 'Дата', minValue:Date(2011, 11, 4), maxValue:Date(2012, 11, 31)},
+          hAxis: {title: 'Дата', minValue: Date(2011, 11, 4), maxValue: Date(2012, 11, 31)},
           vAxis: {title: 'Количество задержаний'},
-          legend: 'none',
-          backgroundColor: { fill:'transparent' }
+          legend: 'none'
         };
       
         // Create and draw the visualization.
