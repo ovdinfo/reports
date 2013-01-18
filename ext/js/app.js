@@ -102,7 +102,7 @@ function buildTable(data) {
       	i = 0;
       	while (i < group.length) {
         	group[i].detentions = group[i].date + ',' + group[i].value;
-        	group.detentions.push(group[i].date + ',' + group[i].value);
+        	group.detentions[i] = group[i].date + ',' + group[i].value;
         	i++;
       	}
       	//output.name = name;
