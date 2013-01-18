@@ -87,7 +87,7 @@ function factory(f) {
 };
 
 function buildTable(data) {
-  console.log(data);
+  //console.log(data);
   var ovdData = {};
 	  i = 0;
       while (i < data.feed.entry.length) {
@@ -109,7 +109,7 @@ function buildTable(data) {
       	//output.total = sum;*/
       	//return output;
 		});
-    console.log(ovdData);
+    //console.log(ovdData);
     drawVisualization(ovdData[7]);
 };
 
