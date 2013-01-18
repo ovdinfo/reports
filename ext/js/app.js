@@ -9,7 +9,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
   map.addLayer(markerLayer);
   
   $.ajax({
-            url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od6/public/values?alt=json-in-script',
+            url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/oda/public/values?alt=json-in-script',
             dataType: 'jsonp',
             success: buildTable
         });
@@ -107,8 +107,8 @@ function buildTable(data) {
         	group.detentions[i] = [moment(group[i].date,"DD.MM.YYYY").toDate(), parseInt(group[i].value)];
         	i++;
       	}
-      	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
-      	console.log(group);
+      	group.detentions = _.sortBy(group.detentions, function(obj){ console.log(obj[0].getTime());return obj[0].getTime(); });
+      	..console.log(group);
       	//output.name = name;
       	//output.total = sum;*/
       	//return output;
