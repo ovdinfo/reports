@@ -95,7 +95,7 @@ function buildTable(data) {
         i++;
       }
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
-      org = _.map(ovdData, function(group) {
+      ovdData = _.map(ovdData, function(group) {
       	//output = {};
       	group.id = group[0].id;
       	group.detentions = [];
@@ -105,11 +105,12 @@ function buildTable(data) {
         	group.detentions[i] = [Date.parse(group[i].date,"dd.MM.yyyy"), parseInt(group[i].value)];
         	i++;
       	}
+      	group = _.sortBy(group, function(obj){ return obj.date; });
       	//output.name = name;
       	//output.total = sum;*/
       	//return output;
 		});
-    //console.log(ovdData);
+    console.log(ovdData);
     drawVisualization(ovdData[7]);
 };
 
@@ -118,7 +119,7 @@ function drawVisualization(ovd) {
         // Create and populate the data table.
         var data = new google.visualization.DataTable();
         
-        data.addColumn('datetime', 'Date');
+        data.addColumn('date', 'Date');
 		data.addColumn('number', 'Value');
 		
 		data.addRows(ovd.detentions);
