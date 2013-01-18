@@ -116,7 +116,7 @@ function buildTable(data) {
 function drawVisualization(ovd) {
 		console.log(ovd.detentions);
         // Create and populate the data table.
-        var data = google.visualization.DataTable();
+        var data = new google.visualization.DataTable();
         
         data.addColumn('DateTime', 'Date');
 		data.addColumn('integer', 'Value');
