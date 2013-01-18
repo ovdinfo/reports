@@ -102,7 +102,7 @@ function buildTable(data) {
       	i = 0;
       	while (i < group.length) {
         	group[i].detentions = group[i].date + ',' + group[i].value;
-        	group.detentions[i] = group[i].date + ',' + group[i].value;
+        	group.detentions[i] = [group[i].date, group[i].value];
         	i++;
       	}
       	//output.name = name;
@@ -114,7 +114,7 @@ function buildTable(data) {
 };
 
 function drawVisualization(ovd) {
-		console.log(['x', 'Value'], ovd.detentions);
+		console.log(ovd.detentions);
         // Create and populate the data table.
         var data = google.visualization.arrayToDataTable([ovd.detentions]);
       
