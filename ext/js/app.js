@@ -1,5 +1,6 @@
 var map = mapbox.map('map');
     map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
+    ovdData = {};
 
 
 
@@ -70,12 +71,14 @@ function factory(f) {
                 '<h2>ОВД: <%= name %></h2>' +
                 '<p>Адрес: <i><%= address %></i></p>' +
                 '<p>Общее количество задержанных: <strong><%= value %></strong></p>' +
+                '<div id="visualization"></div>' +
             '</div></div>';
         };
         marker.innerHTML = (total > 0) ? total : '';
         marker.onmouseover = function() {
             $('.wax-tooltip').remove();
             $('body').append(_.template(formatter[f.properties.id](), f.properties));
+            drawVisualization(ovdData[f.properties.id]);
         };
         marker.onmouseout = function() {
             $('.wax-tooltip').remove();
@@ -88,7 +91,6 @@ function factory(f) {
 
 function buildTable(data) {
   //console.log(data);
-  var ovdData = {};
 	  i = 0;
       while (i < data.feed.entry.length) {
         ovdData[i]={"id":data.feed.entry[i].gsx$ovdid.$t, "name":data.feed.entry[i].gsx$овд.$t, "date":data.feed.entry[i].gsx$дата.$t, "value":data.feed.entry[i].gsx$количествочеловек.$t};
@@ -112,7 +114,7 @@ function buildTable(data) {
       	//return output;
 		});
     //console.log(ovdData);
-    drawVisualization(ovdData[7]);
+    //drawVisualization(ovdData[7]);
 };
 
 function drawVisualization(ovd) {
