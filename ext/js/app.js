@@ -107,7 +107,7 @@ function buildTable(data) {
         	group.detentions[i] = [moment(group[i].date,"DD.MM.YYYY").toDate(), parseInt(group[i].value)];
         	i++;
       	}
-      	group.detentions = _.sortBy(group.detentions, function(obj){ console.log(obj[0].getTime());return obj[0].getTime(); });
+      	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
       	//console.log(group);
       	//output.name = name;
       	//output.total = sum;*/
@@ -118,7 +118,7 @@ function buildTable(data) {
 };
 
 function drawVisualization(ovd) {
-		//console.log(ovd.detentions);
+		console.log(ovd.detentions);
         // Create and populate the data table.
         var data = new google.visualization.DataTable();
         
