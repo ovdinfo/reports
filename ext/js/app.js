@@ -106,7 +106,7 @@ function buildTable(data) {
         	i++;
       	}
       	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
-      	console.log(group.detentions);
+      	console.log(group);
       	//output.name = name;
       	//output.total = sum;*/
       	//return output;
