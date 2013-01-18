@@ -95,7 +95,7 @@ function buildTable(data) {
         i++;
       }
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
-      ovdData = _.map(ovdData, function(group) {
+      org = _.map(ovdData, function(group) {
       	//output = {};
       	group.id = group[0].id;
       	group.detentions = [];
@@ -105,12 +105,12 @@ function buildTable(data) {
         	group.detentions[i] = [Date.parse(group[i].date,"dd.MM.yyyy"), parseInt(group[i].value)];
         	i++;
       	}
-      	//_.sortBy(group.detentions, function(arr){ console.log(arr);return arr[0]; });
+      	
       	//output.name = name;
       	//output.total = sum;*/
       	//return output;
 		});
-    console.log(ovdData);
+    //console.log(ovdData);
     drawVisualization(ovdData[7]);
 };
 
