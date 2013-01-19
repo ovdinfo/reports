@@ -131,3 +131,8 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
+
+$(function () {
+    $.tablesorter.defaults.widgets = ['zebra'];
+    $('#table-wrapper table').tablesorter();
+});
