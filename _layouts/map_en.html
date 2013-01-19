@@ -193,8 +193,34 @@
 			<div class='legend-source'>Источник: <a href="https://docs.google.com/file/d/0B-4PSkYLKeoTMS1mNDU1YTgxOS1lZTgzLTQ0ODMtYTdhYS05N2YwOTVhZGUzMDI/edit">данные ОВД-Инфо</a><a href='http://ovdinfo.org' target=_blank><img align='right' src='{{site.base_url}}/ext/img/logo_oi.png' /></a></div>
 		    </div>
 		  </div>
-        {{content}}
         </div>
+        {{content}}
+        <div id='table-wrapper'>
+  			<div id='interactive-overviews'>
+    			<div class="limiter">
+      				<div id='ovtitle'>
+        				<h2 class='ovheader hider'>Data</h2>
+      				</div>
+      				<table class='hider clearfix tablesorter'>
+        				<thead>
+          					<tr>
+            					<th>Date</th>
+            					<th>Gender</th>
+            					<th>Occupation</th>
+            					<th>Organization</th>
+            					<th>Incident Type</th>
+            					<th>Province</th>
+            					<th>Reason</th>
+            					<th class='last'>Suspected Attacker</th>
+          					</tr>
+        				</thead>
+        				<tbody>
+        					<!-- Content populates here -->
+        				</tbody>
+      				</table>
+    			</div>
+  			</div>
+		</div>
       </div>
       <div id='footer'>
         <div id='contact'>
