@@ -27,8 +27,6 @@ var map = mapbox.map('map');
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   map.addLayer(markerLayer);
-  spinner.stop();
-  $('#loader').remove();
   $.ajax({
             url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/oda/public/values?alt=json-in-script',
             dataType: 'jsonp',
@@ -106,6 +104,8 @@ function factory(f) {
 };
 
 function buildTable(data) {
+	  spinner.stop();
+  	  $('#loader').remove();
 	  i = 0;
       while (i < data.feed.entry.length) {
         ovdData[i]={"id":data.feed.entry[i].gsx$ovdid.$t, "name":data.feed.entry[i].gsx$ovd.$t, "date":data.feed.entry[i].gsx$date.$t, "value":data.feed.entry[i].gsx$ovdvalue.$t};
