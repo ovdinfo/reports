@@ -15,7 +15,7 @@ var opts = {
   top: 'auto', // Top position relative to parent in px
   left: 'auto' // Left position relative to parent in px
 };
-var target = document.getElementById('map');
+var target = document.getElementById('loader');
 var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map');
