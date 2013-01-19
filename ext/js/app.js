@@ -17,11 +17,6 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
 
 var formatter = {};
 function factory(f) {
-    // Define a new factory function. This takes a GeoJSON object
-    // as its input and returns an element - in this case an image -
-    // that represents the point.
-        //console.log(f);
-        
         var d = document.createElement('div'),
             marker = document.createElement('div');
             
@@ -90,15 +85,13 @@ function factory(f) {
 };
 
 function buildTable(data) {
-  //console.log(data);
 	  i = 0;
       while (i < data.feed.entry.length) {
         ovdData[i]={"id":data.feed.entry[i].gsx$ovdid.$t, "name":data.feed.entry[i].gsx$овд.$t, "date":data.feed.entry[i].gsx$дата.$t, "value":data.feed.entry[i].gsx$количествочеловек.$t};
         i++;
       }
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
-      org = _.map(ovdData, function(group) {
-      	//output = {};
+      ovdData = _.map(ovdData, function(group) {
       	group.id = group[0].id;
       	group.detentions = [];
       	i = 0;
@@ -108,18 +101,10 @@ function buildTable(data) {
         	i++;
       	}
       	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
-      	//console.log(group);
-      	//output.name = name;
-      	//output.total = sum;*/
-      	//return output;
 		});
-    //console.log(ovdData);
-    //drawVisualization(ovdData[7]);
 };
 
 function drawVisualization(ovd) {
-		//console.log(ovd.detentions);
-        // Create and populate the data table.
         var data = new google.visualization.DataTable();
         
         data.addColumn('date', 'Date');
@@ -135,7 +120,6 @@ function drawVisualization(ovd) {
           colors: ['#b7e750'],
         };
       
-        // Create and draw the visualization.
         new google.visualization.ScatterChart(document.getElementById('visualization')).
             draw(data, options);
       }
