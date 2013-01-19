@@ -101,7 +101,11 @@ function buildTable(data) {
         	i++;
       	}
       	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
-		});
+	  });
+	  $.each(data.feed.entry, function (key, val) {
+      	var content = '<tr class="vjdata hider"><td>' + val.gsx$ovdid.$t + '</td><td>' + val.gsx$овд.$t + '</td><td>' + val.gsx$дата.$t + '</td><td class="last">' + val.gsx$количествочеловек.$t + '</td></tr>';
+        $('#table-wrapper table tbody').append(content);
+      });
 };
 
 function drawVisualization(ovd) {
