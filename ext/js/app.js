@@ -103,7 +103,7 @@ function buildTable(data) {
       	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
 	  });
 	  $.each(data.feed.entry, function (key, val) {
-      	var content = '<tr class="vjdata hider"><td>' + val.gsx$ovdid.$t + '</td><td>' + val.gsx$овд.$t + '</td><td>' + moment(val.gsx$дата.$t,"DD.MM.YYYY").toDate() + '</td><td class="last">' + val.gsx$количествочеловек.$t + '</td></tr>';
+      	var content = '<tr class="vjdata hider"><td>' + val.gsx$ovdid.$t + '</td><td>' + val.gsx$овд.$t + '</td><td>' + val.gsx$дата.$t + '</td><td class="last">' + val.gsx$количествочеловек.$t + '</td></tr>';
         $('#table-wrapper table tbody').append(content);
       });
       $.tablesorter.defaults.widgets = ['zebra'];
