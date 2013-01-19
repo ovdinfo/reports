@@ -87,7 +87,7 @@ function factory(f) {
 function buildTable(data) {
 	  i = 0;
       while (i < data.feed.entry.length) {
-        ovdData[i]={"id":data.feed.entry[i].gsx$ovdid.$t, "name":data.feed.entry[i].gsx$овд.$t, "date":data.feed.entry[i].gsx$дата.$t, "value":data.feed.entry[i].gsx$количествочеловек.$t};
+        ovdData[i]={"id":data.feed.entry[i].gsx$ovdid.$t, "name":data.feed.entry[i].gsx$ovd.$t, "date":data.feed.entry[i].gsx$date.$t, "value":data.feed.entry[i].gsx$ovdvalue.$t};
         i++;
       }
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
@@ -103,7 +103,7 @@ function buildTable(data) {
       	group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
 	  });
 	  $.each(data.feed.entry, function (key, val) {
-      	var content = '<tr class="vjdata hider"><td>' + val.gsx$ovdid.$t + '</td><td>' + val.gsx$овд.$t + '</td><td>' + val.gsx$дата.$t + '</td><td class="last">' + val.gsx$количествочеловек.$t + '</td></tr>';
+      	var content = '<tr class="data ' + val.gsx$ovdid.$t + ' hider"><td>' + val.gsx$ovd.$t + '</td><td>' + val.gsx$ovdaddress.$t + '</td><td>' + val.gsx$date.$t + '</td><td class="last">' + val.gsx$ovdvalue.$t + '</td></tr>';
         $('#table-wrapper table tbody').append(content);
       });
       $.tablesorter.defaults.widgets = ['zebra'];
