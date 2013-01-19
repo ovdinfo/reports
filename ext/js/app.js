@@ -91,7 +91,7 @@ function buildTable(data) {
         i++;
       }
       ovdData = _.groupBy(ovdData, function(m){ return m.id; });
-      ovdData = _.map(ovdData, function(group) {
+      org = _.map(ovdData, function(group) {
       	group.id = group[0].id;
       	group.detentions = [];
       	i = 0;
