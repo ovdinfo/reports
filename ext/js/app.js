@@ -106,6 +106,8 @@ function buildTable(data) {
       	var content = '<tr class="vjdata hider"><td>' + val.gsx$ovdid.$t + '</td><td>' + val.gsx$овд.$t + '</td><td>' + val.gsx$дата.$t + '</td><td class="last">' + val.gsx$количествочеловек.$t + '</td></tr>';
         $('#table-wrapper table tbody').append(content);
       });
+      $.tablesorter.defaults.widgets = ['zebra'];
+      $('#table-wrapper table').tablesorter();
 };
 
 function drawVisualization(ovd) {
@@ -135,8 +137,3 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
-
-$(function () {
-    $.tablesorter.defaults.widgets = ['zebra'];
-    $('#table-wrapper table').tablesorter();
-});
