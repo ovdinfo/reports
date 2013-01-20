@@ -131,7 +131,14 @@ function buildTable(data) {
     $('#table-wrapper table tbody').append(content);
   });
   $.tablesorter.defaults.widgets = ['zebra'];
-  $('#table-wrapper table').tablesorter({dateFormat : "mm.dd.yyyy"});
+  $('#table-wrapper table').tablesorter({
+  	dateFormat : "mm.dd.yyyy",
+  	headers: { 
+      0: { sorter: "shortDate" } //, dateFormat will parsed as the default above 
+      // 1: { sorter: "shortDate", dateFormat: "ddmmyyyy" }, // set day first format; set using class names 
+      // 2: { sorter: "shortDate", dateFormat: "yyyymmdd" }  // set year first format; set using data attributes (jQuery data) 
+    } 
+  });
 };
 
 function drawVisualization(ovd) {
