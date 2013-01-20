@@ -131,7 +131,7 @@ function buildTable(data) {
     $('#table-wrapper table tbody').append(content);
   });
   $.tablesorter.defaults.widgets = ['zebra'];
-  $('#table-wrapper table').tablesorter();
+  $('#table-wrapper table').tablesorter({dateFormat : "mm.dd.yyyy"});
 };
 
 function drawVisualization(ovd) {
