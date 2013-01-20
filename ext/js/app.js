@@ -97,6 +97,9 @@ function factory(f) {
   marker.onmouseout = function() {
       $('.wax-tooltip').remove();
   };
+  marker.onclick = function() {
+	filterOvd(f.properties.id,f.properties.name);
+  };
   marker.style.pointerEvents = 'all';
   d.appendChild(marker);
   d.style.position = 'absolute';
@@ -155,7 +158,11 @@ function filterOvd(id, name) {
     if ($(this).hasClass(id)) {
       $(this).removeClass('hider');
     }
+    if (id=='all') {
+      $(this).removeClass('hider');
+    }
   });
+  $('#table-wrapper table').removeClass('hider');
 }
 
 map.eventHandlers[3].remove();
@@ -165,3 +172,6 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
+$("#show_data").click(function() {
+  filterOvd('all');
+});
