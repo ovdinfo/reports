@@ -152,9 +152,10 @@ function filterOvd(id, name) {
   $('<h2 class="ovheader">Задержанные в ОВД ' + name + ' с 04.12.2011 по 31.12.2012</h2>').replaceAll('.ovheader');
   $('tr.data').addClass('hider');
   $('tr.data').each(function (i) {
-  if ($(this).hasClass(id)) {
-    $(this).removeClass('hider');
-  };
+    if ($(this).hasClass(id)) {
+      $(this).removeClass('hider');
+    }
+  });
 }
 
 map.eventHandlers[3].remove();
