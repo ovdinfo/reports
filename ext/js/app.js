@@ -134,7 +134,7 @@ function buildTable(data) {
   $('#table-wrapper table').tablesorter({
   	dateFormat : "dd.mm.yyyy",
   	headers: { 
-      //0: { sorter: "shortDate" } //, dateFormat will parsed as the default above 
+      0: { sorter: "shortDate" } //, dateFormat will parsed as the default above 
       // 1: { sorter: "shortDate", dateFormat: "ddmmyyyy" }, // set day first format; set using class names 
       // 2: { sorter: "shortDate", dateFormat: "yyyymmdd" }  // set year first format; set using data attributes (jQuery data) 
     } 
