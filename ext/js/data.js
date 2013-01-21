@@ -10,7 +10,7 @@ function buildTable(data) {
     $('#table-wrapper table tbody').append(content);
   });
   $.tablesorter.defaults.widgets = ['zebra'];
-  $.extend($.tablesorter.themes.bootstrap, { 
+  $.tablesorter.themes.bootstrap = { 
     // these classes are added to the table. To see other table classes available, 
     // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
     table      : 'table table-bordered', 
@@ -26,7 +26,7 @@ function buildTable(data) {
     filterRow  : '', // filter row class 
     even       : '', // odd row zebra striping 
     odd        : ''  // even row zebra striping 
-  }); 
+  }; 
   $('#table-wrapper table').tablesorter({
   	dateFormat : "ddmmyyyy",
   	headers: { 
