@@ -18,7 +18,5 @@ function buildTable(data) {
       // 2: { sorter: "shortDate", dateFormat: "yyyymmdd" }  // set year first format; set using data attributes (jQuery data) 
     } 
   });
-  $('#table-wrapper table').toggle('slow', function() {
-    $(this).toggleClass('hider');
-  });
+  $('#table-wrapper table').show('slow');
 };
