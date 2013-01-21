@@ -16,115 +16,6 @@
     <link href='{{site.base_url}}/ext/libs/mapbox/share.css' rel='stylesheet' />
     <style>
       body { margin:0; padding:0; }
-      #map { height: 560px;position: relative; }
-      .marker {
-	  	background: url({{site.base_url}}/ext/img/markers.png) no-repeat 0 100%;
-		position: absolute;
-		text-align: center;
-		font-size: 11px;
-		font-weight: bold;
-		cursor: pointer;
-		color:#fff;
-	  }
-	  .wax-legends {
-		position: absolute;
-		left: 10px;
-		bottom: 10px;
-		z-index: 3;
-	  }
-	  .wax-legends .wax-legend {
-		padding: 10px;
-		background: white;
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-		-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-		-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-		border: 1px solid #ccc;
-		font-size: 11px;
-		line-height: 16px;
-		font-weight: normal;
-		width: 270px;
-		display:block;
-	  }
-	  .wax-legend .legend-title {
-    	text-align: left;
-    	margin-bottom: 8px;
-    	font-weight: bold;
-    	font-size: 100%;
-      }
-	  .wax-legend .legend-scale ul {
-    	margin: 0;
-    	padding: 0;
-    	float: left;
-    	list-style: none;
-      }
-      .wax-legend .legend-scale ul li {
-    	display: block;
-    	float: left;
-    	width: 50px;
-    	margin-bottom: 6px;
-    	text-align: center;
-    	font-size: 80%;
-    	list-style: none;
-      }
-  	  .wax-legend ul.legend-labels li span {
-    	display: block;
-    	float: left;
-    	height: 15px;
-    	width: 50px;
-      }
-  	  .wax-legend .legend-source {
-    	font-size: 70%;
-    	color: #999;
-    	clear: both;
-      }
-  	  .wax-legend a {
-    	color: #777;
-      }
-	  .wax-legend {
-		overflow: auto;
-		position: absolute;
-		left: 10px;
-		bottom: 10px;
-		z-index: 3;
-	  }
-	  .wax-tooltip {
-  		z-index: 99999999999;
-  		position: absolute;
-  		background: rgb(40,40,40);
-  		background: rgba(40,40,40,.90);
-  		color: #fff;
-  		padding: 10px;
-  		right: 10px;
-  		top: 150px;
-  		width: 340px;
-  		opacity: 1;
-  		-webkit-transition: opacity .3s;
-  		-moz-transition: opacity .3s;
-  	   }
-	  .wax-tooltip h2 {
-  		font-family: Arial, Helvetica, sans-serif;
-  		text-transform: capitalize;
-  		font-weight: bold;
-  		font-size: 18px;
-  		color:#fff;
-  	   }
-	  .wax-tooltip .int_chart img {
-  		margin: 10px 0;
-  	   }
-	  .wax-fade {
-  		opacity: 0;
-  	   }
-	  .wax-fade {
-  		-webkit-animation-name: wax-fade;
-  		-webkit-animation-iteration-count: 1;
-  	  }
-	  .wax-tooltip.hide { opacity:0; }
-	  .wax-tooltip .close {
-  		display:block;
-  		position:absolute;
-  		top:0px;
-  		right:0px;
-  	  }
   	  .limiter {
   		width: 960px;
   		margin: 0 auto;
@@ -190,25 +81,8 @@
         </div>
         <!-- end of .content -->
       </div><!-- /#header -->
+      {{content}}
       <div id="app">
-        <div id="map" class="" style="padding: 0px; overflow: hidden;">
-          <div id="loader"></div>
-          <div class='wax-legends'>
-            <div class='wax-legend'>
-			  <div class='legend-title'>Распределение политических задержанных по отделам полиции в Москве: 4 декабря 2011 - 31 декабря 2012</div>
-			  <div class='legend-scale'>
-  				<ul class='legend-labels'>
-    				<li><span style='background:#00E535;'></span>< 1 - 10</li>
-    				<li><span style='background:#9BEE03;'></span>< 10 - 100</li>
-    				<li><span style='background:#F3D205;'></span>< 100 - 200</li>
-    				<li><span style='background:#F77807;'></span>< 200 - 300</li>
-    				<li><span style='background:#FA1C08;'></span>300 +</li>
-  				</ul>
-			  </div>
-			<div class='legend-source'>Источник: <a href="https://docs.google.com/file/d/0B-4PSkYLKeoTMS1mNDU1YTgxOS1lZTgzLTQ0ODMtYTdhYS05N2YwOTVhZGUzMDI/edit">данные ОВД-Инфо</a><a href='http://ovdinfo.org' target=_blank><img align='right' src='{{site.base_url}}/ext/img/logo_oi.png' /></a></div>
-		    </div>
-		  </div>
-        </div>
         <div id='table-wrapper'>
   			<div id='interactive-overviews'>
     			<div class="limiter">
@@ -219,9 +93,13 @@
         				<thead>
           					<tr>
             					<th>Дата</th>
-            					<th>ОВД</th>
-            					<th>Адрес ОВД</th>
-            					<th>Задержали</th>
+            					<th>Согласованность</th>
+            					<th>Тип</th>
+            					<th>Тематика</th>
+            					<th>Организатор</th>
+            					<th>Описание</th>
+            					<th>Задержано</th>
+            					<th>Ссылки</th>
           					</tr>
         				</thead>
         				<tbody>
@@ -231,8 +109,6 @@
     			</div>
   			</div>
 		</div>
-		<a id='show_data'>Показать все данные</a>
-		{{content}}
       </div>
       <div id='footer'>
         <div id='contact'>
@@ -253,16 +129,7 @@
     <script src='{{site.base_url}}/ext/libs/bootstrap/js/bootstrap.min.js'></script>
     <script src='{{site.base_url}}/ext/libs/spin/spin.min.js'></script>
     <script src='{{site.base_url}}/ext/libs/moment/moment.min.js'></script>
-    <script src='{{site.base_url}}/ext/libs/mapbox/mapbox.js'></script>
-    <script src='{{site.base_url}}/ext/libs/mapbox/mapbox.jquery.js'></script>
-    <script src='{{site.base_url}}/ext/libs/mapbox/share.js'></script>
-    <script src='{{site.base_url}}/ext/libs/mapbox/mapbox.converters.googledocs.js'></script>
-    <script src='{{site.base_url}}/ext/libs/heatmap/heatmap.js'></script>
-    <script src='{{site.base_url}}/ext/js/map.js'></script>
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
-    </script>
+    <script src='{{site.base_url}}/ext/js/data.js'></script>
     <script type="text/javascript">
 
     </script>
