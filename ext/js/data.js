@@ -9,9 +9,7 @@ function buildTable(data) {
     var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a>' + val.gsx$date.$t + '</td><td>' + val.gsx$agreement.$t + '</td><td>' + val.gsx$eventtype.$t + '</td><td>' + val.gsx$subject.$t + '</td><td>' + val.gsx$organizer.$t + '</td><td>' + val.gsx$description.$t + '</td><td>' + val.gsx$numberofdetentions.$t + '</td><td>' + val.gsx$links.$t + '</td></tr>';
     $('#table-wrapper table tbody').append(content);
   });
-  $.extend($.tablesorter.themes.bootstrap, { 
-    // these classes are added to the table. To see other table classes available, 
-    // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
+  $.tablesorter.themes.bootstrap = { 
     table      : 'table table-bordered', 
     header     : 'bootstrap-header', // give the header a gradient background 
     footerRow  : '', 
@@ -25,7 +23,7 @@ function buildTable(data) {
     filterRow  : '', // filter row class 
     even       : '', // odd row zebra striping 
     odd        : ''  // even row zebra striping 
-  });
+  };
   $.tablesorter.defaults.widgets = ['zebra'];
   $('#table-wrapper table').tablesorter({
   	dateFormat : "ddmmyyyy",
