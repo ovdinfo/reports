@@ -9,7 +9,11 @@ function buildTable(data) {
     var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a>' + val.gsx$date.$t + '</td><td>' + val.gsx$agreement.$t + '</td><td>' + val.gsx$eventtype.$t + '</td><td>' + val.gsx$subject.$t + '</td><td>' + val.gsx$organizer.$t + '</td><td>' + val.gsx$description.$t + '</td><td>' + val.gsx$numberofdetentions.$t + '</td><td>' + val.gsx$links.$t + '</td></tr>';
     $('#table-wrapper table tbody').append(content);
   });
-  $.tablesorter.themes.bootstrap = { 
+  $(function() { 
+ 
+  $.extend($.tablesorter.themes.bootstrap, { 
+    // these classes are added to the table. To see other table classes available, 
+    // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
     table      : 'table table-bordered', 
     header     : 'bootstrap-header', // give the header a gradient background 
     footerRow  : '', 
@@ -23,13 +27,10 @@ function buildTable(data) {
     filterRow  : '', // filter row class 
     even       : '', // odd row zebra striping 
     odd        : ''  // even row zebra striping 
-  };
-  $.tablesorter.defaults.widgets = ['zebra'];
-  $('#table-wrapper table').tablesorter({
-  	dateFormat : "ddmmyyyy",
-  	headers: { 
-      0: { sorter: "shortDate" }
-    }
+  }); 
+ 
+  // call the tablesorter plugin and apply the uitheme widget 
+  $("table").tablesorter({ 
     theme : "bootstrap", // this will  
  
     widthFixed: true, 
@@ -50,7 +51,28 @@ function buildTable(data) {
  
       // set the uitheme widget to use the bootstrap theme class names 
       // uitheme : "bootstrap" 
-  });
+ 
+    } 
+  }) 
+  .tablesorterPager({ 
+ 
+    // target the pager markup - see the HTML block below 
+    container: $(".pager"), 
+ 
+    // target the pager page select dropdown - choose a page 
+    cssGoto  : ".pagenum", 
+ 
+    // remove rows from the table to speed up the sort of large tables. 
+    // setting this to false, only hides the non-visible rows; needed if you plan to add/remove rows with the pager enabled. 
+    removeRows: false, 
+ 
+    // output string - default is '{page}/{totalPages}'; 
+    // possible variables: {page}, {totalPages}, {filteredPages}, {startRow}, {endRow}, {filteredRows} and {totalRows} 
+    output: '{startRow} - {endRow} / {filteredRows} ({totalRows})' 
+ 
+  }); 
+ 
+});
   $('#table-wrapper table').show('slow');
   if(window.location.hash) {
       var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
