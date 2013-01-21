@@ -51,7 +51,7 @@ function buildTable(data) {
       filter_reset : ".reset", 
  
       // set the uitheme widget to use the bootstrap theme class names 
-      uitheme : "bootstrap" 
+      // uitheme : "bootstrap" 
   });
   $('#table-wrapper table').show('slow');
   if(window.location.hash) {
