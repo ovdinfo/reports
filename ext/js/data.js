@@ -10,7 +10,7 @@ function buildTable(data) {
     $('#table-wrapper table tbody').append(content);
   });
   $.tablesorter.defaults.widgets = ['zebra'];
-  $.tablesorter.themes.bootstrap = { 
+  $.extend($.tablesorter.themes.bootstrap, { 
     // these classes are added to the table. To see other table classes available, 
     // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
     table      : 'table table-bordered', 
@@ -26,13 +26,13 @@ function buildTable(data) {
     filterRow  : '', // filter row class 
     even       : '', // odd row zebra striping 
     odd        : ''  // even row zebra striping 
-  }; 
+  }); 
   $('#table-wrapper table').tablesorter({
   	dateFormat : "ddmmyyyy",
   	headers: { 
       0: { sorter: "shortDate" }
     }
-    theme : "bootstrap", // this will  
+    //theme : "bootstrap", // this will  
  
     widthFixed: true, 
  
@@ -51,7 +51,7 @@ function buildTable(data) {
       filter_reset : ".reset", 
  
       // set the uitheme widget to use the bootstrap theme class names 
-      // uitheme : "bootstrap" 
+      uitheme : "bootstrap" 
   });
   $('#table-wrapper table').show('slow');
   if(window.location.hash) {
