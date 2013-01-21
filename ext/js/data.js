@@ -9,7 +9,7 @@ function buildTable(data) {
     var links = '',
         datalinks = val.gsx$links.$t.split(', '),
         i = 0;
-    while i < datalinks.length {
+    while (i < datalinks.length) {
       links .= '<a href=' + datalinks[i] + '>исчтоник ' + (i + 1) + '</a>';
       i++;
     }
