@@ -24,7 +24,7 @@ function buildTable(data) {
       scrollToAnchor(hash);
 };
 
-function scrollToAnchor(target){
+function scrollToAnchor(target) {
     var aTag = $("a[id='"+ target +"']");
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-}
+};
