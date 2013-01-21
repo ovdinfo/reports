@@ -19,4 +19,12 @@ function buildTable(data) {
     } 
   });
   $('#table-wrapper table').show('slow');
+  if(window.location.hash) {
+      var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+      scrollToAnchor(hash);
 };
+
+function scrollToAnchor(target){
+    var aTag = $("a[id='"+ target +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
