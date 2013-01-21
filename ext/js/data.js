@@ -19,5 +19,4 @@ function buildTable(data) {
     } 
   });
   $('#table-wrapper table').show('slow');
-  });
 };
