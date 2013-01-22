@@ -68,6 +68,7 @@ function buildTable(data) {
   $('#table-wrapper table').show('slow');
   if(window.location.hash) {
       var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+      $('tr.' + hash).css({'background-color': '#99FF00', 'font-weight': 'bold'});
       scrollToAnchor(hash);
   }
 };
