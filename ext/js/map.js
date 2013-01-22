@@ -130,7 +130,6 @@ function buildTable(data) {
     var content = '<tr class="data ' + val.gsx$ovdid.$t + ' hider"><td>' + val.gsx$date.$t + '</td><td>' + val.gsx$ovd.$t + '</td><td>' + val.gsx$description.$t + '</td><td>' + val.gsx$ovdvalue.$t + '</td><td><a href="/2012/data/#' + val.gsx$ovdid.$t + '">источник</a></td></tr>';
     $('#table-wrapper table tbody').append(content);
   });
-  $.tablesorter.defaults.widgets = ['zebra'];
   $.extend($.tablesorter.themes.bootstrap, { 
     // these classes are added to the table. To see other table classes available, 
     // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
@@ -154,9 +153,20 @@ function buildTable(data) {
       0: { sorter: "shortDate" }, 
     },
     theme : "bootstrap",
-    widthFixed: true,
-    headerTemplate : '{content} {icon}',
-    widgets : [ "uitheme"], 
+ 
+    widthFixed: false, 
+ 
+    headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon! 
+ 
+    // widget code contained in the jquery.tablesorter.widgets.js file 
+    // use the zebra stripe widget if you plan on hiding any rows (filter widget) 
+    widgets : [ "uitheme", "zebra" ], 
+ 
+    widgetOptions : { 
+      // using the default zebra striping class name, so it actually isn't included in the theme variable above 
+      // this is ONLY needed for bootstrap theming if you are using the filter widget, because rows are hidden 
+      zebra : ["even", "odd"], 
+    }
   });
 };
 
