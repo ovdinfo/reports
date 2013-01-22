@@ -154,7 +154,7 @@ function buildTable(data) {
     },
     theme : "bootstrap",
  
-    widthFixed: false, 
+    widthFixed: true, 
  
     headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon! 
  
