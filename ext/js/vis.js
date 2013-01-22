@@ -567,5 +567,5 @@ $(function() {
       return root.display_type();
     }
   };
-  return d3.csv("data/data.csv", render_vis);
+  return d3.csv("https://docs.google.com/spreadsheet/pub?key=0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc&single=true&gid=0&output=csv", render_vis);
 });
