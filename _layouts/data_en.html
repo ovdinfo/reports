@@ -37,6 +37,14 @@
 		z-index: 100000;
 		position: relative;
 	  }
+	  #prose {
+	    font-size: 20px;
+		margin-top: 10px;
+		line-height: 28px;
+		margin: 20px 0 0;
+		font-weight: normal;
+		color: #666;
+	  }
     </style>
   </head>
   <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
@@ -89,7 +97,7 @@
         <!-- end of .content -->
       </div><!-- /#header -->
       <div id="app">
-        <div class="limiter">{{content}}</div>
+        <div class="limiter"><div id='prose'>{{content}}</div></div>
         <div id='table-wrapper'>
   			<div id='interactive-overviews'>
     			<div class="limiter">
