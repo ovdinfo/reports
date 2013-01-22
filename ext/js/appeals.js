@@ -1,24 +1,12 @@
 $.ajax({
-	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od6/public/values?alt=json-in-script',
+	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/ocx/public/values?alt=json-in-script',
     dataType: 'jsonp',
     success: buildTable
 });
 
 function buildTable(data) {
   $.each(data.feed.entry, function (key, val) {
-    var links = '',
-        datalinks = val.gsx$links.$t.split(', '),
-        i = 0;
-    while (i < datalinks.length) {
-      if (i + 1 != datalinks.length) {
-        links += '<a href=' + datalinks[i] + '>' + (i + 1) + ', </a>';
-      }
-      else {
-        links += '<a href=' + datalinks[i] + '>' + (i + 1) + '</a>';
-      }
-      i++;
-    }
-    var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a>' + val.gsx$date.$t + '</td><td>' + val.gsx$agreement.$t + '</td><td>' + val.gsx$eventtype.$t + '</td><td>' + val.gsx$subject.$t + '</td><td>' + val.gsx$organizer.$t + '</td><td>' + val.gsx$description.$t + '</td><td>' + val.gsx$numberofdetentions.$t + '</td><td>' + links + '</td></tr>';
+    var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a>' + val.gsx$dateofreceipt.$t + '</td><td>' + val.gsx$offense.$t + '</td><td>' + val.gsx$judge.$t + '</td><td>' + val.gsx$dateofdecision.$t + '</td><td>' + val.gsx$decision.$t + '</td><td>' + val.gsx$court.$t + '</td><td>' + val.gsx$article.$t + '</td></tr>';
     $('#table-wrapper table tbody').append(content);
   });
   $.extend($.tablesorter.themes.bootstrap, { 
