@@ -1,7 +1,7 @@
 if (window.location.pathname == "/2012/data/") {
   var sheet = 'od6';
 }
-else if (window.location.pathname == "/2012/data/appeals") {
+else if (window.location.pathname == "/2012/data/appeals/") {
   var sheet = 'ocx';
 }
 
