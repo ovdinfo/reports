@@ -1,3 +1,10 @@
+if (window.location.pathname == "/2012/data/") {
+  var list = 'od6';
+}
+else if (window.location.pathname == "/2012/data/appeals") {
+  var list = 'ocx';
+}
+
 $.ajax({
 	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od6/public/values?alt=json-in-script',
     dataType: 'jsonp',
