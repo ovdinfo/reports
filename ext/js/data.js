@@ -77,7 +77,7 @@ function scrollToAnchor(target) {
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 };
 
-$(document).ready(function() {
-  var desiredHeight = $(window).height()-$('#header').height()-$('#footer').height();
+$(function(){
+  var desiredHeight = $(window).height() - $('#header').height() - $('#footer').height();
   $("#app").css("min-height", desiredHeight );
 });
