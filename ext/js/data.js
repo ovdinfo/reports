@@ -78,6 +78,6 @@ function scrollToAnchor(target) {
 };
 
 $(document).ready(function() {
-  var desiredHeight = $("body").height() - $('#header').height() - $('#footer').height();
+  var desiredHeight = window.height() - $('#header').height() - $('#footer').height();
   $("#app").css("min-height", desiredHeight );
 });
