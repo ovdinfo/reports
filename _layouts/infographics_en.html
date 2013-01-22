@@ -1,0 +1,146 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OvdInfo Reports</title>
+    <link rel='shortcut icon' href='{{site.base_url}}/ext/img/favicon.ico'>
+    <meta name='viewport' content='width=960, initial-scale=1.0' />
+    <link href='{{site.base_url}}/ext/css/reset.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/css/global.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/libs/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='{{site.base_url}}/ext/css/style.css' rel='stylesheet' />
+    <style>
+      #vis {
+  margin-left: -40px;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 196px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+    </style>
+  </head>
+  <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
+  <!--[if IE 7 ]>    <body class='ie ie7'> <![endif]-->
+  <!--[if IE 8 ]>    <body class='ie ie8'> <![endif]-->
+  <!--[if IE 9 ]>    <body class='ie ie9'> <![endif]-->
+  <!--[if IE 10 ]>   <body class='ie ie10'> <![endif]-->
+  <!--[if gt IE 10]><!-->
+  <body><!-- <body data-spy="scroll" data-target="#nav-side" data-offset="0"> -->
+    <!--<![endif]-->
+    <div id='container'>
+      <div id='header'>
+        <div class="navbar navbar-static-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li class="">
+                    <a href="http://ovdinfo.org">Home</a>
+                  </li>
+                  <li class="active">
+                    <a href="/2012/report">Report</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/statistics">Statistics</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/geo">Geo</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/data">Data</a>
+			      </li>
+			    </ul>
+			      <ul class="nav pull-right">
+			        <li class="">
+                      <a href="/about">About</a>
+			        </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='content'>
+            <a href='http://ovdinfo.org'>
+              <img class='logo png' src='{{site.base_url}}/ext/img/global/logo.png' alt='OvdInfo' />
+            </a>
+          <h2>Monitoring of political detentions</h2>
+          <h1 class='site-title'><a href='/'>Report 2012</a></h1>
+        </div>
+        <!-- end of .content -->
+      </div><!-- /#header -->
+      <div id="app">
+        <div id="main" role="main">
+          <div id="view_selection" class="btn-group">
+            <a href="#" id="all" class="btn active">All detentions</a>
+            <a href="#" id="cons" class="btn">Event consistency</a>
+            <a href="#" id="chron" class="btn">Detention's chronology</a>
+            <a href="#" id="type" class="btn">Detention's types</a>
+          </div>
+          <div id="vis"></div>
+        </div>
+		<div class="limiter"><div id='prose'>{{content}}</div></div>
+      </div>
+      <div id='footer'>
+        <div id='contact'>
+          <div class='content'>
+            <div class='clearfix'>
+            </div>
+            <p>&copy; Copyright 2012 OvdInfo.org</p>
+          </div>
+          <!-- end of .content -->
+        </div>
+        <!-- end of #contact -->
+      </div><!-- #footer -->
+    </div>
+    <!-- Google Analytics -->
+    <script src='{{site.base_url}}/ext/libs/jquery/jquery.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/underscore/underscore-min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/bootstrap/js/bootstrap.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/moment/moment.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/jqrangeslider/jQAllRangeSliders-min.js'></script>
+    <script src="{site.base_url}}/ext/libs/d3/d3.v2.min.js"></script>
+    <script src="{site.base_url}}/ext/libs/d3/d3.legend.js"></script>
+    <script src='{{site.base_url}}/ext/js/CustomTooltip.js'></script>
+    <script src='{{site.base_url}}/ext/js/vis.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(document).ready(function() {
+          $('#view_selection a').click(function() {
+            var view_type = $(this).attr('id');
+            $('#view_selection a').removeClass('active');
+            $(this).toggleClass('active');
+            toggle_view(view_type);
+            return false;
+          });
+        });
+      });
+    </script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>
