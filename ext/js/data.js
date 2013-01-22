@@ -75,7 +75,7 @@ function buildTable(data) {
 
 function scrollToAnchor(target) {
     var aTag = $("a[id='"+ target +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    $('html,body').animate({scrollTop: (aTag.offset().top - $(window).height() + $('#header').height() + $('#footer').height())},'slow');
 };
 
 $(function(){
