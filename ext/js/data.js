@@ -1,12 +1,12 @@
 if (window.location.pathname == "/2012/data/") {
-  var list = 'od6';
+  var sheet = 'od6';
 }
 else if (window.location.pathname == "/2012/data/appeals") {
-  var list = 'ocx';
+  var sheet = 'ocx';
 }
 
 $.ajax({
-	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od6/public/values?alt=json-in-script',
+	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/' + sheet + '/public/values?alt=json-in-script',
     dataType: 'jsonp',
     success: buildTable
 });
