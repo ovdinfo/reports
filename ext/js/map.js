@@ -151,12 +151,12 @@ function buildTable(data) {
   $('#table-wrapper table').tablesorter({
   	dateFormat : "ddmmyyyy",
   	headers: { 
-      0: { sorter: "shortDate" },
-      theme : "bootstrap",
-      widthFixed: false,
-      headerTemplate : '{content} {icon}',
-      widgets : [ "uitheme"],  
-    } 
+      0: { sorter: "shortDate" }, 
+    },
+    theme : "bootstrap",
+    widthFixed: true,
+    headerTemplate : '{content} {icon}',
+    widgets : [ "uitheme"], 
   });
 };
 
