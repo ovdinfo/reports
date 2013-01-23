@@ -176,7 +176,7 @@ BubbleChart = (function() {
     var that,
       _this = this;
     this.vis = d3.select("#vis").append("svg").attr("width", this.width + 200).attr("height", this.height).attr("id", "svg_vis");
-    //this.vis.append("defs").append("clipPath").attr("id", "clip").append("rect").attr("width", width).attr("height", height).attr("x",50);
+    this.vis.append("defs").append("clipPath").attr("id", "clip").append("rect").attr("width", width).attr("height", height).attr("x",50);
     
     this.circles = this.vis.selectAll("circle").data(this.nodes, function(d) {
       return d.id;
