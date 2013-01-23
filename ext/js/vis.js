@@ -219,9 +219,6 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_label = function() {
     var legend;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(750,30)").style("font-size", "12px").call(d3.legend);
-    return setTimeout((function() {
-      return legend.call(d3.legend);
-    }), 100);
       d3.select("svg").append("circle")
         .attr('r', this.radiusScale(500))
         .attr('class',"nytg-scaleKeyCircle")
@@ -237,6 +234,9 @@ BubbleChart = (function() {
         .attr('class',"nytg-scaleKeyCircle")
         .attr('cx', 30)
         .attr('cy', 55);
+    return setTimeout((function() {
+      return legend.call(d3.legend);
+    }), 100);
   };
 
   BubbleChart.prototype.hide_label = function() {
