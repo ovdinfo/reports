@@ -147,8 +147,8 @@ BubbleChart = (function() {
         date: d.date,
         comment: d.description,
         subject: d.subject,
-        x: 0,
-        y: 0
+        x: Math.random() * 900,
+        y: Math.random() * 800
       };
 	  /*if (_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
 		  _this.orginizers[node.org]++;
