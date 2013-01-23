@@ -331,14 +331,7 @@ BubbleChart = (function() {
     });
     return this.display_axis();
   };
-	xScale.domain([
-		d3.min(this.nodes, function (d) { return $("#date-slider").dateRangeSlider("values").min; }),
-		d3.max(this.nodes, function (d) { return $("#date-slider").dateRangeSlider("values").max; })
-	]);
-	yScale.domain([
-		d3.min(this.nodes, function (d) { return $("#det-slider").rangeSlider("values").min; }),
-		d3.max(this.nodes, function (d) { return $("#det-slider").rangeSlider("values").max; })
-	]);
+
   BubbleChart.prototype.move_towards_date = function(alpha) {
     var _this = this;
     return function(d) {
@@ -348,6 +341,8 @@ BubbleChart = (function() {
       //console.log(xScale);
       x = xScale(d.date2);
       y = yScale(d.value);
+      alert(x);
+      alert(y);
       d.x = d.x + (x - d.x) * (_this.damper + 0.001);
       return d.y = d.y + (y - d.y) * (_this.damper + 1);
     };
@@ -363,6 +358,14 @@ BubbleChart = (function() {
       });
     });
 	var date = d3.time.format("%d.%m.%Y");
+	xScale.domain([
+		d3.min(this.nodes, function (d) { return $("#date-slider").dateRangeSlider("values").min; }),
+		d3.max(this.nodes, function (d) { return $("#date-slider").dateRangeSlider("values").max; })
+	]);
+	yScale.domain([
+		d3.min(this.nodes, function (d) { return $("#det-slider").rangeSlider("values").min; }),
+		d3.max(this.nodes, function (d) { return $("#det-slider").rangeSlider("values").max; })
+	]);
 	var t = this.vis.transition().duration(1500).ease("exp-in-out");
     t.select(".x.axis").call(xAxis);
     t.select(".y.axis").call(yAxis);
