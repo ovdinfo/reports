@@ -56,6 +56,16 @@ stroke: #999;
 stroke-dasharray: 2 2;
 fill: none;
 }
+#data-sizeKey {
+position: relative;
+height: 110px;
+width: 200px;
+}
+.data-circleKeyLabel {
+position: absolute;
+border-top: solid 1px #DDD;
+width: 40px;
+}
     </style>
   </head>
   <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
@@ -117,6 +127,11 @@ fill: none;
             <a href="#" id="format" class="btn">Фомат мероприятий</a>
           </div>
           <div id="vis"></div>
+          <div id="data-sizeKey">
+			<div style="left:52px;top:10px;width:20px;" class="data-circleKeyLabel"><span style="left:25px;">500 человек</span></div>
+			<div style="left:32px;top:42px;" class="data-circleKeyLabel"><span>200 человек</span></div>
+			<div style="left:32px;top:57px;" class="data-circleKeyLabel"><span>10 человек</span></div>
+		  </div>
         </div>
 		<div class="limiter"><div id='prose'>{{content}}</div></div>
       </div>
