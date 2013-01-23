@@ -144,12 +144,11 @@ BubbleChart = (function() {
         org: d.organizer,
         group: d.event_type,
         year: d.agreement,	
-
         date: d.date,
         comment: d.description,
         subject: d.subject,
-        x: Math.random() * 900,
-        y: Math.random() * 800
+        x: 0,
+        y: 0
       };
 	  /*if (_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
 		  _this.orginizers[node.org]++;
