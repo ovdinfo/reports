@@ -555,7 +555,7 @@ $(function() {
     	min: new Date(2011, 9, 4),
     	max: new Date(2012, 11, 21)
     }});
-    return chart.display_by_date();
+    //return chart.display_by_date();
   };
   root.display_type = function() {
     return chart.display_by_type();
