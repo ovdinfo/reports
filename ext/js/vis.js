@@ -64,7 +64,7 @@ BubbleChart = (function() {
 	  org = org.reverse();
 		
 	 max_amount = d3.max(this.data, function(d) {
-      return parseInt(d.total);
+      return parseInt(d.number_of_detentions);
     });
     window.max_amount = max_amount;
     
