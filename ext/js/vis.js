@@ -6,7 +6,6 @@ BubbleChart = (function() {
   var B, J, xScale, yScale;
 
   function BubbleChart(data) {
-    console.log(data);
     this.hide_details = __bind(this.hide_details, this);
     this.show_details = __bind(this.show_details, this);
     this.hide_years = __bind(this.hide_years, this);
