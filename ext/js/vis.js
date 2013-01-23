@@ -370,7 +370,7 @@ BubbleChart = (function() {
     this.force.start();
   }
   
-  var margin, xAxis, yAxis;
+ /* var margin, xAxis, yAxis;
     margin = {
       top: 19.5,
       right: 19.5,
@@ -382,9 +382,9 @@ BubbleChart = (function() {
     xScale = d3.time.scale().range([10, this.width]);
     yScale = d3.scale.linear().range([this.height, 0]);
     xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d"));
-    yAxis = d3.svg.axis().scale(yScale).orient("left");
+    yAxis = d3.svg.axis().scale(yScale).orient("left");*/
     
- /* BubbleChart.prototype.display_axis = function() {
+  BubbleChart.prototype.display_axis = function() {
     B = new Date(2011, 9, 4);
     J = new Date(2012, 12, 4);
     xScale.domain([$("#date-slider").dateRangeSlider("values").min, $("#date-slider").dateRangeSlider("values").max]);
