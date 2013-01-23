@@ -76,7 +76,7 @@ BubbleChart = (function() {
 			org[i].radius = this.radius_scale(org[i].total);
 			totalRadSum+=org[i].radius*2;
 			//org[i].startAngle = totalRadSum/2
-			//console.log(totalRadSum*180/Math.PI)
+			//console.log(totalRadSum*180/Math.PI)	
 			
 		}
 		var curAngle = 0;
@@ -139,15 +139,15 @@ BubbleChart = (function() {
       var node;
       node = {
         id: d.id,
-        radius: _this.radius_scale(parseInt(d.total)),
-        value: d.total,
+        radius: _this.radius_scale(parseInt(d.number_of_detentions)),
+        value: d.number_of_detentions,
         name: d.subject,
-        org: d.organizator,
-        group: d.type,
+        org: d.organizer,
+        group: d.event_type,
         year: d.agreement,	
 
         date: d.date,
-        comment: d.comment,
+        comment: d.description,
         subject: d.subject,
         x: Math.random() * 900,
         y: Math.random() * 800
