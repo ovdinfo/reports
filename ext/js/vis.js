@@ -35,15 +35,6 @@ BubbleChart = (function() {
 	this.orginizers = [];
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
-	
-	var margin = {
-      top: 19.5,
-      right: 19.5,
-      bottom: 19.5,
-      left: 39.5
-    };
-    this.width = 990;
-    this.height = 600;
 
    /*var org = {};
 	  i = 0;
