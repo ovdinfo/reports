@@ -40,11 +40,11 @@ d3.legend = function(g) {
         .call(function(d) { d.exit().remove()})
         .attr("y",function(d,i) { return (i*20)})
         .attr("x",0)
-        .attr("width","30")
-        .attr("height","16")
+        .attr("width","15")
+        .attr("height","10")
         .style("stroke","black")
         .style("stroke-width","1")
-        .style("stroke-opacity","0.7")
+        .style("stroke-opacity","0.5")
         .style("fill",function(d) { return d.value.color})  
     
     // Reposition and resize the box
