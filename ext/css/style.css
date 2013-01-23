@@ -264,3 +264,132 @@ body.ie .inner-shadow { display: none; }
 
 ul.nav li { font-size:13px; }
 .navbar-inner { min-height: 38px; }
+
+
+/*-----------------------------------
+  Infographics
+-------------------------------------*/
+
+
+
+#vis {
+  width: 940px;
+  height: 630px;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.years {
+  font-size: 21px;
+  fill: #aaa;
+}
+
+#data-report {
+  text-align:center;  
+  z-index: 1000;
+  position: absolute;
+  opacity: .9;
+}
+
+#tooltipContainer {
+  position: absolute;
+  bottom: 0;
+  width: 230px;
+  left: -125px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.9);
+  color: #000;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);  
+  border:1px solid rgba(200,200,200,0.85);
+  text-align:center;
+}
+
+.tooltip .data-tail {
+  position: absolute;
+  bottom: -8px;
+  left: 105px;
+  width: 40px;
+  height: 8px;
+  background: url(../img/tail_white.png) 50% 0%;
+}
+
+.tooltip .data-type {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 10px;
+  margin-bottom: 2px;
+  color:#666;
+  text-align:center;  
+
+}
+.tooltip .data-rule {
+  height:1px;
+  margin:1px auto 3px;
+  background:#ddd;
+  width:130px;
+}
+
+.tooltip .data-desc {
+  color:#666;
+/*   text-transform:uppercase;*/
+  font-size: 11px;   
+  text-align:center;  
+  font-style:italic;
+}
+.tooltip .data-date {
+  text-align: left;
+  font-size: 13px;
+/*  width:170px;*/
+ text-align:center;  
+}
+.tooltip .data-value {
+/*  position:absolute;*/
+ text-align:center;
+  right:10px;
+  top:28px;
+  font-size: 16px;
+/*  width:100px;*/
+ text-align:center;  
+  overflow:hidden;
+  font-weight:bold;
+}
+
+.tooltip .data-valuesContainer {
+  padding-top:7px; 
+}
+
+.legend rect {
+  fill: white;
+  stroke: black;
+  opacity: 0.8;
+}
+
+text {
+  font-size: 1em;
+  font-family: Arial;
+  fill: #666;
+}
+
+#count {
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#dates {
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#date-slider, #det-slider {
+  height:80px;
+}
+
+div.ui-rangeSlider-label {
+  bottom:90px;
+}
