@@ -315,6 +315,7 @@ BubbleChart = (function() {
         alert(d.x);
         return d.x;
       }).attr("cy", function(d) {
+        alert(d.y);
         return d.y;
       });
     });
