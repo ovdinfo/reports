@@ -218,7 +218,7 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.display_label = function() {
     var legend;
-    legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(50,30)").style("font-size", "12px").call(d3.legend);
+    legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(750,30)").style("font-size", "12px").call(d3.legend);
     return setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);

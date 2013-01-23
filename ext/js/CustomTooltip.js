@@ -24,7 +24,7 @@ function CustomTooltip(tooltipId, width){
 	    var cy = $(obj).attr("cy");
 	    var r = $(obj).attr("r");
 	    r = Math.round(r);
-	    var tttop = 55 - r;
+	    var tttop = 300 - r;
 	    cx = Math.round(cx) + ttleft;
 	    cy = Math.round(cy) + tttop;
 		var ttid = "#"+tooltipId;
