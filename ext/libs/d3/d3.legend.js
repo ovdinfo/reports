@@ -41,9 +41,9 @@ d3.legend = function(g) {
         .attr("y",function(d,i) { return (i-0.5)+"em"})
         .attr("x",0)
         .attr("width","30")
-        .attr("height","10")
-        .style("stroke","gray")
-        .style("stroke-width","2")
+        .attr("height","16")
+        .style("stroke","black")
+        .style("stroke-width","1")
         .style("stroke-opacity","0.7")
         .style("fill",function(d) { return d.value.color})  
     
