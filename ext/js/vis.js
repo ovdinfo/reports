@@ -384,7 +384,7 @@ BubbleChart = (function() {
     xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d"));
     yAxis = d3.svg.axis().scale(yScale).orient("left");
     
-  BubbleChart.prototype.display_axis = function() {
+ /* BubbleChart.prototype.display_axis = function() {
     B = new Date(2011, 9, 4);
     J = new Date(2012, 12, 4);
     xScale.domain([$("#date-slider").dateRangeSlider("values").min, $("#date-slider").dateRangeSlider("values").max]);
