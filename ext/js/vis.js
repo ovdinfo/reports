@@ -323,11 +323,12 @@ BubbleChart = (function() {
     this.hide_label();
     this.hide_years();
     this.hide_orgs();
-    /*$("#det-slider").bind("valuesChanged", function(e, data){ 
+    $("#det-slider").bind("valuesChanged", function(e, data){ 
+      console.log(data);
       _this.update();
       $( "#count" ).empty().append( "задержания от " + Math.round(data.values.min) +  " до " + Math.round(data.values.max) + " человек" );
     });
-    $("#date-slider").bind("valuesChanged", function(e, data){ 
+    /*$("#date-slider").bind("valuesChanged", function(e, data){ 
     _this.update(); 
     $( "#dates" ).empty().append( "задержания с " + moment(data.values.min).format("DD.MM.YYYY") + " по " + moment(data.values.max).format("DD.MM.YYYY"));
     });*/
