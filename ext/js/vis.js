@@ -241,6 +241,7 @@ BubbleChart = (function() {
 
   BubbleChart.prototype.hide_label = function() {
     var legend;
+    $('#data-overview').hide();
     return legend = this.vis.selectAll(".legend").remove();
   };
   BubbleChart.prototype.hide_orgs = function() {
@@ -535,7 +536,7 @@ $(function() {
     	min: 0,
     	max: 700
     }});
-    $( "#count" ).empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
+    $("#count").empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
     $("#date-slider").dateRangeSlider({
       defaultValues:{
     	min: new Date(2011, 9, 4),
