@@ -323,7 +323,7 @@ BubbleChart = (function() {
     this.hide_label();
     this.hide_years();
     this.hide_orgs();
-    /*$("#det-slider").bind("valuesChanged", function(e, data){ 
+    $("#det-slider").bind("valuesChanged", function(e, data){ 
       console.log(data);
       //return;
       _this.update();
@@ -332,7 +332,7 @@ BubbleChart = (function() {
     $("#date-slider").bind("valuesChanged", function(e, data){ 
     _this.update(); 
     $( "#dates" ).empty().append( "задержания с " + moment(data.values.min).format("DD.MM.YYYY") + " по " + moment(data.values.max).format("DD.MM.YYYY"));
-    });*/
+    });
     return this.display_axis();
   };
 
@@ -555,7 +555,7 @@ $(function() {
     	min: new Date(2011, 9, 4),
     	max: new Date(2012, 11, 21)
     }});
-    //return chart.display_by_date();
+    return chart.display_by_date();
   };
   root.display_type = function() {
     return chart.display_by_type();
