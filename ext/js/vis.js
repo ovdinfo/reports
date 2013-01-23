@@ -312,6 +312,7 @@ BubbleChart = (function() {
     var _this = this;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_date(e.alpha)).transition().duration(100).ease("easing").attr("cx", function(d) {
+        alert(d.x);
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
@@ -341,8 +342,6 @@ BubbleChart = (function() {
       //console.log(xScale);
       x = xScale(d.date2);
       y = yScale(d.value);
-      alert(x);
-      alert(y);
       d.x = d.x + (x - d.x) * (_this.damper + 0.001);
       return d.y = d.y + (y - d.y) * (_this.damper + 1);
     };
