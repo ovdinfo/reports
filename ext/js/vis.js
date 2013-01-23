@@ -62,14 +62,14 @@ BubbleChart = (function() {
 	  org = _.sortBy(org, function(obj){ return obj.total; });
 	  org = org.reverse();
 		*/
-	 max_amount = d3.max(this.data, function(d) {
+	/* max_amount = d3.max(this.data, function(d) {
       return parseInt(d.number_of_detentions);
     });
     window.max_amount = max_amount;
     
     this.radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
 	
-	/*
+	
 	var totalRadSum = 0;
 		for(i=0;i<org.length;i++){
 			org[i].radius = this.radius_scale(org[i].total);
