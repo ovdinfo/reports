@@ -42,9 +42,9 @@ d3.legend = function(g) {
         .attr("cx",0)
         .attr("width","30")
         .attr("height","10")
-        .attr("stroke","gray")
-        .attr("stroke-width","2")
-        .attr("stroke-opacity","0.7")
+        .style("stroke","gray")
+        .style("stroke-width","2")
+        .style("stroke-opacity","0.7")
         .style("fill",function(d) { return d.value.color})  
     
     // Reposition and resize the box
