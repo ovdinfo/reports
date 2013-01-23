@@ -151,7 +151,7 @@ BubbleChart = (function() {
         x: Math.random() * 900,
         y: Math.random() * 800
       };
-	  if (_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
+	  /*if (_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
 		  _this.orginizers[node.org]++;
 	  	var obj = _this.getOrganizators[_this.getOrganizatorsArray.indexOf(node.org)];
 		  node.angle = (_this.prevOrginizerRadius[node.org]+node.radius)/(4*obj.radius)*Math.PI+_this.prevOrginizerAngle[node.org];
@@ -162,7 +162,7 @@ BubbleChart = (function() {
 	  }
 		_this.prevOrginizerRadius[node.org] = node.radius;
 		_this.prevOrginizerAngle[node.org] = node.angle;
-	 node.inOrgID = _this.orginizers[node.org];
+	 node.inOrgID = _this.orginizers[node.org];*/
 	
       return _this.nodes.push(node);
     });
@@ -429,7 +429,7 @@ BubbleChart = (function() {
     return this.hide_axis();
   };
 
-  BubbleChart.prototype.move_towards_type = function(alpha) {
+ /* BubbleChart.prototype.move_towards_type = function(alpha) {
     var _this = this;
     console.log(this.circles);
     var orgs = _this.getOrganizators;
@@ -455,7 +455,7 @@ BubbleChart = (function() {
       targetX = 200 + 200 * (position % 4);*/
       //d.y = d.y + (targetY - d.y) * Math.sin(Math.PI * (1 - alpha * 10)) * 0.009;
 	  //alert(targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin((d.radius*d.id)*Math.PI));
-	  if(alpha > 0.05){
+	/*  if(alpha > 0.05){
 		  d.y = d.y +(targetY-d.y)*(1-alpha*10)*2+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle);
 		  return d.x = d.x + (targetX-d.x)*(1-alpha*10)*2+(obj.radius-d.radius)*(1-alpha)*Math.cos(d.angle+obj.startAngle);
 	  }
@@ -470,7 +470,7 @@ BubbleChart = (function() {
 	  
     };
   };
-  
+  */
 /////////////////////////////////
 
 // TOOLTIP
