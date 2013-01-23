@@ -220,17 +220,17 @@ BubbleChart = (function() {
     var legend;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(750,30)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
-        .attr('r', this.radiusScale(500))
+        .attr('r', this.radius_scale(500))
         .attr('class',"nytg-scaleKeyCircle")
         .attr('cx', 30)
         .attr('cy', 30);
       d3.select("svg").append("circle")
-        .attr('r', this.radiusScale(200))
+        .attr('r', this.radius_scale(200))
         .attr('class',"nytg-scaleKeyCircle")
         .attr('cx', 30)
         .attr('cy', 50);
       d3.select("svg").append("circle")
-        .attr('r', this.radiusScale(10))
+        .attr('r', this.radius_scale(10))
         .attr('class',"nytg-scaleKeyCircle")
         .attr('cx', 30)
         .attr('cy', 55);
