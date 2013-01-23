@@ -36,11 +36,15 @@ d3.legend = function(g) {
     
     li.selectAll("circle")
         .data(items,function(d) { return d.key})
-        .call(function(d) { d.enter().append("circle")})
+        .call(function(d) { d.enter().append("rect")})
         .call(function(d) { d.exit().remove()})
         .attr("cy",function(d,i) { return (i-0.25)+"em"})
         .attr("cx",0)
-        .attr("r","0.4em")
+        .attr("width","30")
+        .attr("height","10")
+        .attr("stroke","gray")
+        .attr("stroke-width","2")
+        .attr("stroke-opacity","0.7")
         .style("fill",function(d) { return d.value.color})  
     
     // Reposition and resize the box
