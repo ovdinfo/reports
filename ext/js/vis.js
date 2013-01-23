@@ -151,12 +151,12 @@ BubbleChart = (function() {
         x: Math.random() * 900,
         y: Math.random() * 800
       };
-	  if(_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
+	  if (_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
 		  _this.orginizers[node.org]++;
 	  	var obj = _this.getOrganizators[_this.getOrganizatorsArray.indexOf(node.org)];
 		  node.angle = (_this.prevOrginizerRadius[node.org]+node.radius)/(4*obj.radius)*Math.PI+_this.prevOrginizerAngle[node.org];
 	  }
-	  else{
+	  else {
 		  _this.orginizers[node.org] = 0;
 		  node.angle = 0;
 	  }
@@ -335,6 +335,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.move_towards_date = function(alpha) {
     var _this = this;
     return function(d) {
+      console.log(d);
       var date, x, y;
       date = d3.time.format("%d.%m.%Y");
       d.date2 = date.parse(d.date);
