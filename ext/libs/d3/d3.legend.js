@@ -38,7 +38,7 @@ d3.legend = function(g) {
         .data(items,function(d) { return d.key})
         .call(function(d) { d.enter().append("rect")})
         .call(function(d) { d.exit().remove()})
-        .attr("y",function(d,i) { return (i-0.5)+"em"})
+        .attr("y",function(d,i) { return (i)+"em"})
         .attr("x",0)
         .attr("width","30")
         .attr("height","16")
