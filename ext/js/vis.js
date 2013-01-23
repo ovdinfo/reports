@@ -370,7 +370,7 @@ BubbleChart = (function() {
     this.force.start();
   }
   
- /* var margin, xAxis, yAxis;
+  var margin, xAxis, yAxis;
     margin = {
       top: 19.5,
       right: 19.5,
@@ -379,7 +379,7 @@ BubbleChart = (function() {
     };
     this.width = 990;
     this.height = 600;
-    xScale = d3.time.scale().range([10, this.width]);
+    /*xScale = d3.time.scale().range([10, this.width]);
     yScale = d3.scale.linear().range([this.height, 0]);
     xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d"));
     yAxis = d3.svg.axis().scale(yScale).orient("left");*/
