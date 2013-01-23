@@ -6,27 +6,7 @@ BubbleChart = (function() {
   var B, J, xScale, yScale;
 
   function BubbleChart(data) {
-    //this.hide_details = __bind(this.hide_details, this);
-    //this.show_details = __bind(this.show_details, this);
-    //this.hide_years = __bind(this.hide_years, this);
-    //this.display_years = __bind(this.display_years, this);
-    //this.hide_axis = __bind(this.hide_axis, this);
-    //this.display_axis = __bind(this.display_axis, this);
-    //this.hide_label = __bind(this.hide_label, this);
-    //this.display_label = __bind(this.display_label, this);
-    //this.move_towards_type = __bind(this.move_towards_type, this);
-    //this.display_by_type = __bind(this.display_by_type, this);
-    //this.move_towards_date = __bind(this.move_towards_date, this);
-    //this.display_by_date = __bind(this.display_by_date, this);
-    this.move_towards_year = __bind(this.move_towards_year, this);
-    this.display_by_year = __bind(this.display_by_year, this);
-    this.move_towards_center = __bind(this.move_towards_center, this);
-    this.display_group_all = __bind(this.display_group_all, this);
-	//this.update = __bind(this.update, this);    
-    //d3.select("footer").on("click", this.display_by_date, false);
-    this.start = __bind(this.start, this);
-    this.create_vis = __bind(this.create_vis, this);
-    this.create_nodes = __bind(this.create_nodes, this);
+
 
     var i, max_amount, organizators;
     this.data = data;
