@@ -94,9 +94,9 @@ BubbleChart = (function() {
 		//alert(curAngle);
 	*/
 	
-	this.getOrganizators = org;
+	/*this.getOrganizators = org;
 	
-    this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });
+    this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });*/
 	
     
     this.tooltip = CustomTooltip("data-report", 240);
