@@ -312,10 +312,10 @@ BubbleChart = (function() {
     var _this = this;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_date(e.alpha)).transition().duration(100).ease("easing").attr("cx", function(d) {
-        alert(d.x);
+        //alert(d.x);
         return d.x;
       }).attr("cy", function(d) {
-        alert(d.y);
+        //alert(d.y);
         return d.y;
       });
     });
@@ -324,6 +324,7 @@ BubbleChart = (function() {
     this.hide_years();
     this.hide_orgs();
     $("#det-slider").bind("valuesChanged", function(e, data){ 
+      console.log(data);
       _this.update();
       $( "#count" ).empty().append( "задержания от " + Math.round(data.values.min) +  " до " + Math.round(data.values.max) + " человек" );
     });
