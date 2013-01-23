@@ -1,5 +1,4 @@
-var BubbleChart, root,
-  __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+var BubbleChart, root;
 
 // MAIN FUNCTION
 BubbleChart = (function() {
