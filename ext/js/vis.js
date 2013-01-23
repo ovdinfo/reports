@@ -193,7 +193,7 @@ BubbleChart = (function() {
     }).on("mouseout", function(d, i) {
       return that.hide_details(d, i, this);
     });
-    return this.circles.transition().duration(2000).attr("r", function(d) {
+    return this.circles.attr("r", function(d) {
       return d.radius;
     });
   };
