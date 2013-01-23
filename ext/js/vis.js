@@ -222,6 +222,21 @@ BubbleChart = (function() {
     return setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
+      d3.select("svg").append("circle")
+        .attr('r', this.radiusScale(500))
+        .attr('class',"nytg-scaleKeyCircle")
+        .attr('cx', 30)
+        .attr('cy', 30);
+      d3.select("svg").append("circle")
+        .attr('r', this.radiusScale(200))
+        .attr('class',"nytg-scaleKeyCircle")
+        .attr('cx', 30)
+        .attr('cy', 50);
+      d3.select("svg").append("circle")
+        .attr('r', this.radiusScale(10))
+        .attr('class',"nytg-scaleKeyCircle")
+        .attr('cx', 30)
+        .attr('cy', 55);
   };
 
   BubbleChart.prototype.hide_label = function() {
