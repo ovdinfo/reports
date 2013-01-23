@@ -81,7 +81,7 @@ BubbleChart = (function() {
     this.tooltip = CustomTooltip("data-report", 240);
 
     this.center = {
-      x: this.width / 2,
+      x: (this.width / 3)*2,
       y: this.height / 2
     };
 
