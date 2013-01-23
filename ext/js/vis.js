@@ -69,7 +69,7 @@ BubbleChart = (function() {
     
     this.radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
 	
-	
+	/*
 	var totalRadSum = 0;
 		for(i=0;i<org.length;i++){
 			org[i].radius = this.radius_scale(org[i].total);
@@ -92,7 +92,7 @@ BubbleChart = (function() {
 		org[i].angle = curAngle;
 		org[i].startAngle = org[i].angle+Math.PI/2
 		//alert(curAngle);
-	
+	*/
 	
 	this.getOrganizators = org;
 	
