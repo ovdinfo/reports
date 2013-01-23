@@ -219,7 +219,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_label = function() {
     var legend;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(750,30)").style("font-size", "12px").call(d3.legend);
-      d3.select("svg g").append("circle")
+      d3.select("g").append("circle")
         .attr('r', this.radius_scale(500))
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 750)
