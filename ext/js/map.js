@@ -179,7 +179,7 @@ function drawVisualization(ovd) {
     vAxis: {title: 'Количество задержаний', textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
     legend: 'none',
     backgroundColor: { fill:'transparent' },
-    colors: ['#fff'],
+    colors: ['#b7e750'],
   };
       
   new google.visualization.ScatterChart(document.getElementById('visualization')).draw(data, options);
