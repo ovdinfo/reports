@@ -9,10 +9,8 @@ d3.legend = function(g) {
         items = {},
         svg = d3.select(g.property("nearestViewportElement")),
         legendPadding = g.attr("data-style-padding") || 5,
-        lb = g.selectAll(".legend-box").data([true]),
         li = g.selectAll(".legend-items").data([true])
 
-    lb.enter().append("rect").classed("legend-box",true)
     li.enter().append("g").classed("legend-items",true)
 
     svg.selectAll("[data-legend]").each(function() {
@@ -46,13 +44,6 @@ d3.legend = function(g) {
         .style("stroke-width","1")
         .style("stroke-opacity","0.5")
         .style("fill",function(d) { return d.value.color})  
-    
-    // Reposition and resize the box
-    var lbbox = li[0][0].getBBox()  
-    lb.attr("x",(lbbox.x-legendPadding))
-        .attr("y",(lbbox.y-legendPadding))
-        .attr("height",(lbbox.height+2*legendPadding))
-        .attr("width",(lbbox.width+2*legendPadding))
   })
   return g
 }
