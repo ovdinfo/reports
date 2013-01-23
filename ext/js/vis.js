@@ -218,22 +218,22 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.display_label = function() {
     var legend;
-    legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(20,400)").style("font-size", "12px").call(d3.legend);
+    legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(20,200)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(500))
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 100)
-        .attr('cy', 300);
+        .attr('cy', 500);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(200))
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 100)
-        .attr('cy', 325);
+        .attr('cy', 525);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(10))
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 100)
-        .attr('cy', 360);
+        .attr('cy', 560);
     return setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
