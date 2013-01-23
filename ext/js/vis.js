@@ -36,7 +36,7 @@ BubbleChart = (function() {
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
 
-   var org = {};
+   /*var org = {};
 	  i = 0;
       while (i < this.data.length) {
         org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
@@ -61,7 +61,7 @@ BubbleChart = (function() {
 		});
 	  org = _.sortBy(org, function(obj){ return obj.total; });
 	  org = org.reverse();
-		
+		*/
 	 max_amount = d3.max(this.data, function(d) {
       return parseInt(d.number_of_detentions);
     });
