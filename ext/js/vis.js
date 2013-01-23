@@ -36,7 +36,7 @@ BubbleChart = (function() {
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
 
-   /*var org = {};
+   var org = {};
 	  i = 0;
       while (i < this.data.length) {
         org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
@@ -61,7 +61,7 @@ BubbleChart = (function() {
 		});
 	  org = _.sortBy(org, function(obj){ return obj.total; });
 	  org = org.reverse();
-		*/
+		
 	 max_amount = d3.max(this.data, function(d) {
       return parseInt(d.number_of_detentions);
     });
@@ -69,7 +69,7 @@ BubbleChart = (function() {
     
     this.radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
 	
-	/*
+	
 	var totalRadSum = 0;
 		for(i=0;i<org.length;i++){
 			org[i].radius = this.radius_scale(org[i].total);
@@ -96,7 +96,7 @@ BubbleChart = (function() {
 	
 	this.getOrganizators = org;
 	
-    this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });*/
+    this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });
 	
     
     this.tooltip = CustomTooltip("data-report", 240);
@@ -151,7 +151,7 @@ BubbleChart = (function() {
         x: Math.random() * 900,
         y: Math.random() * 800
       };
-	  /*if (_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
+	  if (_this.orginizers[node.org] || _this.orginizers[node.org] == 0){
 		  _this.orginizers[node.org]++;
 	  	var obj = _this.getOrganizators[_this.getOrganizatorsArray.indexOf(node.org)];
 		  node.angle = (_this.prevOrginizerRadius[node.org]+node.radius)/(4*obj.radius)*Math.PI+_this.prevOrginizerAngle[node.org];
@@ -162,7 +162,7 @@ BubbleChart = (function() {
 	  }
 		_this.prevOrginizerRadius[node.org] = node.radius;
 		_this.prevOrginizerAngle[node.org] = node.angle;
-	 node.inOrgID = _this.orginizers[node.org];*/
+	 node.inOrgID = _this.orginizers[node.org];
 	
       return _this.nodes.push(node);
     });
@@ -379,10 +379,10 @@ BubbleChart = (function() {
     };
     this.width = 990;
     this.height = 600;
-    /*xScale = d3.time.scale().range([10, this.width]);
+    xScale = d3.time.scale().range([10, this.width]);
     yScale = d3.scale.linear().range([this.height, 0]);
     xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d"));
-    yAxis = d3.svg.axis().scale(yScale).orient("left");*/
+    yAxis = d3.svg.axis().scale(yScale).orient("left");
     
   BubbleChart.prototype.display_axis = function() {
     B = new Date(2011, 9, 4);
@@ -429,7 +429,7 @@ BubbleChart = (function() {
     return this.hide_axis();
   };
 
- /* BubbleChart.prototype.move_towards_type = function(alpha) {
+  BubbleChart.prototype.move_towards_type = function(alpha) {
     var _this = this;
     console.log(this.circles);
     var orgs = _this.getOrganizators;
@@ -455,7 +455,7 @@ BubbleChart = (function() {
       targetX = 200 + 200 * (position % 4);*/
       //d.y = d.y + (targetY - d.y) * Math.sin(Math.PI * (1 - alpha * 10)) * 0.009;
 	  //alert(targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin((d.radius*d.id)*Math.PI));
-	/*  if(alpha > 0.05){
+	  if(alpha > 0.05){
 		  d.y = d.y +(targetY-d.y)*(1-alpha*10)*2+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle);
 		  return d.x = d.x + (targetX-d.x)*(1-alpha*10)*2+(obj.radius-d.radius)*(1-alpha)*Math.cos(d.angle+obj.startAngle);
 	  }
@@ -470,7 +470,7 @@ BubbleChart = (function() {
 	  
     };
   };
-  */
+  
 /////////////////////////////////
 
 // TOOLTIP
