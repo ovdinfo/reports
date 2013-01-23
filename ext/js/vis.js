@@ -307,7 +307,7 @@ BubbleChart = (function() {
 /////////////////////////////////
   
 // DATE DISPLAY
-/*
+
   BubbleChart.prototype.display_by_date = function() {
     var _this = this;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
