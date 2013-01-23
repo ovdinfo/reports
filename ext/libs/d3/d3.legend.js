@@ -34,7 +34,7 @@ d3.legend = function(g) {
         .attr("x","1em")
         .text(function(d) { ;return d.key})
     
-    li.selectAll("circle")
+    li.selectAll("rect")
         .data(items,function(d) { return d.key})
         .call(function(d) { d.enter().append("rect")})
         .call(function(d) { d.exit().remove()})
