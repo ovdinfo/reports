@@ -92,11 +92,11 @@ BubbleChart = (function() {
 		org[i].angle = curAngle;
 		org[i].startAngle = org[i].angle+Math.PI/2
 		//alert(curAngle);
-	*/
+	
 	
 	this.getOrganizators = org;
 	
-    this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });
+    this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });*/
 	
     
     this.tooltip = CustomTooltip("data-report", 240);
@@ -307,7 +307,7 @@ BubbleChart = (function() {
 /////////////////////////////////
   
 // DATE DISPLAY
-
+/*
   BubbleChart.prototype.display_by_date = function() {
     var _this = this;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
