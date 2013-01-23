@@ -324,7 +324,7 @@ BubbleChart = (function() {
     this.hide_years();
     this.hide_orgs();
     $("#det-slider").bind("valuesChanged", function(e, data){ 
-      console.log(data);
+      alert(data.values.min);
       _this.update();
       $( "#count" ).empty().append( "задержания от " + Math.round(data.values.min) +  " до " + Math.round(data.values.max) + " человек" );
     });
