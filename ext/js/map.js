@@ -175,8 +175,8 @@ function drawVisualization(ovd) {
   data.addColumn('number', 'Value');
   data.addRows(ovd.detentions);
   var options = {
-    hAxis: {title: 'Дата', minValue:new Date(2011, 12, 4), maxValue:new Date(2012, 11, 31), textStyle: {color: '#fff'}, titleTextStyle: {color: '#fff'}, baselineColor: '#fff'},
-    vAxis: {title: 'Количество задержаний', textStyle: {color: '#fff'}, titleTextStyle: {color: '#fff'}, baselineColor: '#fff'},
+    hAxis: {title: 'Дата', minValue:new Date(2011, 12, 4), maxValue:new Date(2012, 11, 31), textStyle: {color: '#ffffff'}, titleTextStyle: {color: '#ffffff'}, baselineColor: '#ffffff'},
+    vAxis: {title: 'Количество задержаний', textStyle: {color: '#ffffff'}, titleTextStyle: {color: '#ffffff'}, baselineColor: '#ffffff'},
     legend: 'none',
     backgroundColor: { fill:'transparent' },
     colors: ['#b7e750'],
