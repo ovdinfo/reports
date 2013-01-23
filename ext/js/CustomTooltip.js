@@ -19,7 +19,7 @@ function CustomTooltip(tooltipId, width){
 	}
 	
 	function updatePosition(obj){
-	    var ttleft = ($(window).width() - $('#vis').width())/2 - 30;
+	    var ttleft = ($(window).width() - $('#vis').width())/2 - 55;
 	    var cx = $(obj).attr("cx");
 	    var cy = $(obj).attr("cy");
 	    var r = $(obj).attr("r");
