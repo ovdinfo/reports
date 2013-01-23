@@ -30,7 +30,7 @@ d3.legend = function(g) {
         .data(items,function(d) { return d.key})
         .call(function(d) { d.enter().append("text")})
         .call(function(d) { d.exit().remove()})
-        .attr("y",function(d,i) { return (i*10+8)})
+        .attr("y",function(d,i) { return (i*15+8)})
         .attr("x","3em")
         .text(function(d) { ;return d.key})
     
