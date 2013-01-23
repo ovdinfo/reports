@@ -99,12 +99,13 @@
       </div><!-- /#header -->
       <div id="app">
         <div id="main" role="main">
-          <div id="view_selection" class="btn-group">
-            <a href="#" id="all" class="btn active">All detentions</a>
-            <a href="#" id="cons" class="btn">Event consistency</a>
-            <a href="#" id="chron" class="btn">Detention's chronology</a>
-            <a href="#" id="type" class="btn">Detention's types</a>
-          </div>
+          
+          <ul class="nav nav-tabs">
+    		<li class="active"><a href="#all" id="all" data-toggle="tab">Section 1</a></li>
+    		<li><a href="#cons" id="cons" data-toggle="tab">Section 2</a></li>
+    		<li><a href="#chron" id="chron" data-toggle="tab">Section 3</a></li>
+    		<li><a href="#type" id="type" data-toggle="tab">Section 4</a></li>
+  		  </ul>
           <div id="vis"></div>
         </div>
 		<div class="limiter"><div id='prose'>{{content}}</div></div>
