@@ -175,11 +175,11 @@ function drawVisualization(ovd) {
   data.addColumn('number', 'Value');
   data.addRows(ovd.detentions);
   var options = {
-    hAxis: {title: 'Дата', minValue:new Date(2011, 12, 4), maxValue:new Date(2012, 11, 31), textStyle: {color: '#ffffff'}, titleTextStyle: {color: '#ffffff'}, baselineColor: '#ffffff'},
-    vAxis: {title: 'Количество задержаний', textStyle: {color: '#ffffff'}, titleTextStyle: {color: '#ffffff'}, baselineColor: '#ffffff'},
+    hAxis: {title: 'Дата', minValue:new Date(2011, 12, 4), maxValue:new Date(2012, 11, 31), textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
+    vAxis: {title: 'Количество задержаний', textStyle: {color: 'white'}, titleTextStyle: {color: 'white'}, baselineColor: 'white'},
     legend: 'none',
     backgroundColor: { fill:'transparent' },
-    colors: ['#b7e750'],
+    colors: ['#fff'],
   };
       
   new google.visualization.ScatterChart(document.getElementById('visualization')).draw(data, options);
