@@ -40,7 +40,7 @@ BubbleChart = (function() {
    var org = {};
 	  i = 0;
       while (i < this.data.length) {
-        org[i]={"name":this.data[i].organizator, "value":this.data[i].total};
+        org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
         i++;
       }
       org = _.groupBy(org, function(num){ return num.name; });
