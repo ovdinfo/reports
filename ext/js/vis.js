@@ -65,7 +65,7 @@ BubbleChart = (function() {
 			org[i].angle = curAngle
 			org[i].startAngle = org[i].angle+Math.PI/2
 			//alert(org[i].angle)
-			console.log(260*Math.sin(org[i].angle))
+			//console.log(260*Math.sin(org[i].angle))
 			curAngle+=(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
 		}
 		org[i].angle = curAngle;
