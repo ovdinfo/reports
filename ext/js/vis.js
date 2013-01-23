@@ -234,6 +234,7 @@ BubbleChart = (function() {
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 120)
         .attr('cy', 560);
+    $('#data-overview').show('slow');
     return setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
@@ -241,7 +242,7 @@ BubbleChart = (function() {
 
   BubbleChart.prototype.hide_label = function() {
     var legend;
-    $('#data-overview').hide();
+    $('#data-overview').hide('slow');
     return legend = this.vis.selectAll(".legend").remove();
   };
   BubbleChart.prototype.hide_orgs = function() {
