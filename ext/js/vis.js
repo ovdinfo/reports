@@ -222,18 +222,18 @@ BubbleChart = (function() {
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(500))
         .attr('class',"data-scaleKeyCircle")
-        .attr('cx', 850)
-        .attr('cy', 400);
+        .attr('cx', 100)
+        .attr('cy', 300);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(200))
         .attr('class',"data-scaleKeyCircle")
-        .attr('cx', 850)
-        .attr('cy', 425);
+        .attr('cx', 100)
+        .attr('cy', 325);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(10))
         .attr('class',"data-scaleKeyCircle")
-        .attr('cx', 850)
-        .attr('cy', 460);
+        .attr('cx', 100)
+        .attr('cy', 360);
     return setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
