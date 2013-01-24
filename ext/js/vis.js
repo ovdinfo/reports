@@ -410,9 +410,10 @@ BubbleChart = (function() {
       .delay(100);
     $('#data-sizeKey').animate({
       opacity: 0.25,
-      left: '150',
-      top: '835'
-    }, 5000);
+      left: '835',
+      top: '150',
+      opacity: '1'
+    }, 600);
     B = new Date(2011, 9, 4);
     J = new Date(2012, 12, 4);
     xScale.domain([$("#date-slider").dateRangeSlider("values").min, $("#date-slider").dateRangeSlider("values").max]);
