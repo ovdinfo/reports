@@ -556,11 +556,11 @@ $(function() {
   render_vis = function(csv) {
     chart = new BubbleChart(csv);
     chart.start();
-    root.display_all();
-    return root.display_label();
+    return root.display_all();
   };
   root.display_all = function() {
-    return chart.display_group_all();
+    chart.display_group_all();
+    return chart.display_init();
   };
   root.display_year = function() {
     return chart.display_by_year();
