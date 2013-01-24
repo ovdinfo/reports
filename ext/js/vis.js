@@ -510,7 +510,7 @@ BubbleChart = (function() {
 	  else{
 		  d.y = targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle);
 		  if(d.id==61){
-			  //console.log(alpha);
+			  console.log(alpha);
 		  }
 		  //return d.x = d.x + (targetX - d.x) * Math.sin(Math.PI * (1 - alpha * 10)) * 0.009;
 		  return d.x = targetX+(obj.radius-d.radius)*(1-alpha)*Math.cos(d.angle+obj.startAngle);
@@ -618,3 +618,11 @@ $(function() {
   };
   return d3.csv("https://docs.google.com/spreadsheet/pub?key=0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc&single=true&gid=0&output=csv", render_vis);
 });
+
+/*position = orgsArr.indexOf(d.org);
+var obj = orgs[position];
+targetX = centerX+Math.cos(obj.angle)*radius;
+targetY = centerY+Math.sin(obj.angle)*radius;
+
+54line radius;
+*/
