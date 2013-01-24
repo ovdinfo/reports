@@ -247,9 +247,7 @@ BubbleChart = (function() {
   };
   BubbleChart.prototype.hide_orgs = function() {
  	 this.vis.selectAll(".orgTotal").remove();
-     this.vis.selectAll(".orgLabel")
-     .style("opacity", 1)
-	 .transition().duration(400).style("opacity", 0);
+    return this.vis.selectAll(".orgLabel").fadeOut(400, function() { plot("wiggle")});
   };
   
 /////////////////////////////////
