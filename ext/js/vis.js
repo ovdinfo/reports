@@ -216,7 +216,7 @@ BubbleChart = (function() {
     };
   };
   
-  BubbleChart.prototype.display_label = function() {
+  BubbleChart.prototype.display_init = function() {
     var legend;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(73,218)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
@@ -237,15 +237,18 @@ BubbleChart = (function() {
         .attr('cx', 120)
         .attr('cy', 560)
         .style("opacity", 0);
-    $('#data-overview').fadeIn('slow');
-    $('#data-sizeKey').fadeIn('slow');
     setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
-    this.vis.selectAll(".legend")
+    return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
     .transition().duration(600).style("opacity", 1);
-    return this.vis.selectAll(".data-scaleKeyCircle")
+    $('#data-sizeKey').fadeIn('slow');
+  };
+  
+  BubbleChart.prototype.display_label = function() {
+    $('#data-overview').fadeIn('slow');
+    return this.vis.selectAll(".legend")
     .style("opacity", 0)
     .transition().duration(600).style("opacity", 1);
   };
@@ -255,7 +258,7 @@ BubbleChart = (function() {
     $('#data-overview').fadeOut('slow');
     return legend = this.vis.selectAll(".legend")
     .style("opacity", 1)
-	.transition().duration(600).style("opacity", 0).remove();
+	.transition().duration(600).style("opacity", 0);
   };
   BubbleChart.prototype.hide_orgs = function() {
  	this.vis.selectAll(".orgTotal").remove();
@@ -553,7 +556,8 @@ $(function() {
   render_vis = function(csv) {
     chart = new BubbleChart(csv);
     chart.start();
-    return root.display_all();
+    root.display_all();
+    return this.display_label();
   };
   root.display_all = function() {
     return chart.display_group_all();
