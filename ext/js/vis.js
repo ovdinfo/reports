@@ -246,8 +246,7 @@ BubbleChart = (function() {
     return legend = this.vis.selectAll(".legend").remove();
   };
   BubbleChart.prototype.hide_orgs = function() {
- 	 this.vis.selectAll(".orgTotal").remove();
-    return this.vis.selectAll(".orgLabel").fadeOut(400, function() { plot("wiggle")});
+ 	 this.vis.selectAll(".orgTotal").fadeOut(400, function() { plot("wiggle")});
   };
   
 /////////////////////////////////
