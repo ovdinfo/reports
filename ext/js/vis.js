@@ -393,9 +393,19 @@ BubbleChart = (function() {
     yAxis = d3.svg.axis().scale(yScale).orient("left");
     
   BubbleChart.prototype.display_axis = function() {
-    this.vis.selectAll(".data-scaleKeyCircle").transition()
+    this.vis.selectAll(".scaleKey-1").transition()
       .attr("cx",920)
-      .attr("cy",100)
+      .attr("cy",80)
+      .duration(500)
+      .delay(100);
+    this.vis.selectAll(".scaleKey-2").transition()
+      .attr("cx",920)
+      .attr("cy",105)
+      .duration(500)
+      .delay(100);
+    this.vis.selectAll(".scaleKey-3").transition()
+      .attr("cx",920)
+      .attr("cy",140)
       .duration(500)
       .delay(100);
     B = new Date(2011, 9, 4);
