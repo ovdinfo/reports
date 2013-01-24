@@ -114,6 +114,7 @@ BubbleChart = (function() {
     var _this = this;
 	
     this.data.forEach(function(d) {
+      console.log(d);
       var node;
       node = {
         id: d.id,
@@ -123,7 +124,6 @@ BubbleChart = (function() {
         org: d.organizer,
         group: d.event_type,
         year: d.agreement,	
-
         date: d.date,
         comment: d.description,
         subject: d.subject,
