@@ -393,7 +393,7 @@ BubbleChart = (function() {
     yAxis = d3.svg.axis().scale(yScale).orient("left");
     
   BubbleChart.prototype.display_axis = function() {
-    this.vis.selectAll(".data-scaleKeyCircle")
+    this.vis.selectAll(".data-scaleKeyCircle").transition()
       .attr("cx",920)
       .attr("cy",100)
       .duration(500);
