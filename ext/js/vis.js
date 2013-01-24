@@ -245,7 +245,7 @@ BubbleChart = (function() {
     $('#data-overview').fadeOut('slow');
     return legend = this.vis.selectAll(".legend")
     .style("opacity", 1)
-	.transition().duration(1000).style("opacity", 0);
+	.transition().duration(1000).style("opacity", 0).remove();
   };
   BubbleChart.prototype.hide_orgs = function() {
  	return this.vis.selectAll(".orgTotal").remove();
