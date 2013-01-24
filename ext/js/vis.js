@@ -241,7 +241,11 @@ BubbleChart = (function() {
     setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
-    return legend = this.vis.selectAll(".legend")
+    this.vis.selectAll(".legend")
+    .style("opacity", 0)
+    .transition().duration(600).style("opacity", 1);
+    return this.vis.selectAll(".data-scaleKeyCircle")
+    .style("opacity", 0)
     .transition().duration(600).style("opacity", 1);
   };
 
