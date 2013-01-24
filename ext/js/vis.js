@@ -464,7 +464,7 @@ BubbleChart = (function() {
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+25*i).attr("x", 760).text(orgs[i].total);
 		//alert(orgs[i].name);
 	}
-    this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
+    this.force.on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
         return d.x;
       }).attr("cy", function(d) {
@@ -505,8 +505,8 @@ BubbleChart = (function() {
 	  //alert(targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin((d.radius*d.id)*Math.PI));
 	  console.log(alpha);
 	  if(alpha > 0.05){
-		  d.y = d.y +(targetY-d.y)*(1-alpha*10)*2+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle);
-		  return d.x = d.x + (targetX-d.x)*(1-alpha*10)*2+(obj.radius-d.radius)*(1-alpha)*Math.cos(d.angle+obj.startAngle);
+		  d.y = d.y + 1;
+		  return d.x = d.x + 1;
 	  }
 	  else{
 		  d.y = targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle);
