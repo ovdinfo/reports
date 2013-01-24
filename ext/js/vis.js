@@ -243,12 +243,12 @@ BubbleChart = (function() {
   BubbleChart.prototype.hide_label = function() {
     var legend;
     $('#data-overview').fadeOut('slow');
-    return legend = this.vis.selectAll(".legend").remove();
+    return legend = this.vis.selectAll(".legend")
+    .style("opacity", 1)
+	.transition().duration(1000).style("opacity", 0);
   };
   BubbleChart.prototype.hide_orgs = function() {
- 	 this.vis.selectAll(".orgTotal")
- 	 .style("opacity", 1)
-	 .transition().duration(400).style("opacity", 0);
+ 	return this.vis.selectAll(".orgTotal").remove();
   };
   
 /////////////////////////////////
