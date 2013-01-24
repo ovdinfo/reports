@@ -223,21 +223,26 @@ BubbleChart = (function() {
         .attr('r', this.radius_scale(500))
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 120)
-        .attr('cy', 500);
+        .attr('cy', 500)
+        .style("opacity", 0);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(200))
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 120)
-        .attr('cy', 525);
+        .attr('cy', 525)
+        .style("opacity", 0);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(10))
         .attr('class',"data-scaleKeyCircle")
         .attr('cx', 120)
-        .attr('cy', 560);
+        .attr('cy', 560)
+        .style("opacity", 0);
     $('#data-overview').fadeIn('slow');
-    return setTimeout((function() {
+    setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
+    return legend = this.vis.selectAll(".legend")
+    .transition().duration(600).style("opacity", 1);
   };
 
   BubbleChart.prototype.hide_label = function() {
@@ -245,7 +250,7 @@ BubbleChart = (function() {
     $('#data-overview').fadeOut('slow');
     return legend = this.vis.selectAll(".legend")
     .style("opacity", 1)
-	.transition().duration(1000).style("opacity", 0).remove();
+	.transition().duration(600).style("opacity", 0).remove();
   };
   BubbleChart.prototype.hide_orgs = function() {
  	return this.vis.selectAll(".orgTotal").remove();
