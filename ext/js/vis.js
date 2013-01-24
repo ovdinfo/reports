@@ -114,10 +114,10 @@ BubbleChart = (function() {
     var _this = this;
 	
     this.data.forEach(function(d) {
-      console.log(d);
+      //console.log(d);
       var node;
       node = {
-        id: d.id,
+        id: d.Id,
         radius: _this.radius_scale(parseInt(d.number_of_detentions)),
         value: d.number_of_detentions,
         name: d.subject,
