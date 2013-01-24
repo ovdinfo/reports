@@ -239,8 +239,8 @@ BubbleChart = (function() {
         .style("opacity", 0);
     $('#data-overview').fadeIn('slow');
     $('#data-sizeKey').animate({
-      left: '835',
-      top: '150'
+      left: '35',
+      top: '570'
     }, 600);
     $('#data-sizeKey').fadeIn('slow');
     setTimeout((function() {
