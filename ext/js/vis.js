@@ -557,7 +557,7 @@ $(function() {
     chart = new BubbleChart(csv);
     chart.start();
     root.display_all();
-    return this.display_label();
+    return root.display_label();
   };
   root.display_all = function() {
     return chart.display_group_all();
