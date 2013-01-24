@@ -427,6 +427,21 @@ BubbleChart = (function() {
   };
 
   BubbleChart.prototype.hide_axis = function() {
+    this.vis.selectAll(".scaleKey-1").transition()
+      .attr("cx",120)
+      .attr("cy",500)
+      .duration(500)
+      .delay(100);
+    this.vis.selectAll(".scaleKey-2").transition()
+      .attr("cx",120)
+      .attr("cy",525)
+      .duration(500)
+      .delay(100);
+    this.vis.selectAll(".scaleKey-3").transition()
+      .attr("cx",120)
+      .attr("cy",560)
+      .duration(500)
+      .delay(100);
     $('#data-sizeKey').animate({
       left: '35',
       top: '570'
