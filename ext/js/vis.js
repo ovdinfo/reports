@@ -503,14 +503,9 @@ BubbleChart = (function() {
       targetX = 200 + 200 * (position % 4);*/
       //d.y = d.y + (targetY - d.y) * Math.sin(Math.PI * (1 - alpha * 10)) * 0.009;
 	  //alert(targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin((d.radius*d.id)*Math.PI));
-	  console.log(alpha);
 	  if(alpha > 0.01){
-d.y = d.y +(targetY-d.y)*Math.pow((1-alpha)*100/99,85);
-return d.x = d.x + (targetX-d.x)*Math.pow((1-alpha)*100/99,85);
-}
-else if(alpha > 0.005){
-d.y = targetY+(obj.radius-d.radius)*(0.01-alpha)*1000/5*Math.sin(d.angle+obj.startAngle);
-return d.x = targetX+(obj.radius-d.radius)*(0.01-alpha)*1000/5*Math.cos(d.angle+obj.startAngle);
+d.y = d.y +(targetY-d.y+Math.sin(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
+return d.x = d.x + (targetX-d.x+Math.cos(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
 }
 else{
 d.y = targetY+(obj.radius-d.radius)*Math.sin(d.angle+obj.startAngle);
@@ -520,7 +515,6 @@ if(d.id==61){
 //return d.x = d.x + (targetX - d.x) * Math.sin(Math.PI * (1 - alpha * 10)) * 0.009;
 return d.x = targetX+(obj.radius-d.radius)*Math.cos(d.angle+obj.startAngle);
 }
-	  
     };
   };
   
