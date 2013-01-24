@@ -352,7 +352,7 @@ BubbleChart = (function() {
       x = xScale(d.date2);
       y = yScale(d.value);
       d.x = d.x + (x - d.x) * (_this.damper + 0.001);
-      return d.y = d.y + (y - d.y) * (_this.damper + 1);
+      return d.y = d.y + (y - d.y) * (_this.damper + 0.001);
     };
   };
   
