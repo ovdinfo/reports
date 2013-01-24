@@ -479,7 +479,7 @@ BubbleChart = (function() {
 
   BubbleChart.prototype.move_towards_type = function(alpha) {
     var _this = this;
-    console.log(this.circles);
+    //console.log(this.circles);
     var orgs = _this.getOrganizators;
     var orgsArr = _this.getOrganizatorsArray;
     return function(d) {
