@@ -238,6 +238,10 @@ BubbleChart = (function() {
         .attr('cy', 560)
         .style("opacity", 0);
     $('#data-overview').fadeIn('slow');
+    $('#data-sizeKey').animate({
+      left: '835',
+      top: '150'
+    }, 600);
     $('#data-sizeKey').fadeIn('slow');
     setTimeout((function() {
       return legend.call(d3.legend);
@@ -424,7 +428,7 @@ BubbleChart = (function() {
   };
 
   BubbleChart.prototype.hide_axis = function() {
-    $('#data-sizeKey').fadeOut('slow').remove();
+    $('#data-sizeKey').fadeOut('slow');
     var axis, label;
     axis = this.vis.selectAll(".axis").remove();
     $("#det-slider,#date-slider,#dates,#count").remove();
