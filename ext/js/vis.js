@@ -240,10 +240,10 @@ BubbleChart = (function() {
     setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
+    $('#data-sizeKey').fadeIn('slow');
     return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
     .transition().duration(600).style("opacity", 1);
-    $('#data-sizeKey').fadeIn('slow');
   };
   
   BubbleChart.prototype.display_label = function() {
