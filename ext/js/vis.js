@@ -238,6 +238,10 @@ BubbleChart = (function() {
         .attr('cy', 560)
         .style("opacity", 0);
     $('#data-overview').fadeIn('slow');
+    $('#data-sizeKey').animate({
+      left: '35',
+      top: '570'
+    }, 600);
     $('#data-sizeKey').fadeIn('slow');
     setTimeout((function() {
       return legend.call(d3.legend);
