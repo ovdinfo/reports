@@ -505,8 +505,8 @@ BubbleChart = (function() {
 	  //alert(targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin((d.radius*d.id)*Math.PI));
 	  console.log(alpha);
 	  if(alpha > 0.001){
-		  d.y = targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle) + (targetY - d.y) * (_this.damper + 0.1);;
-		  return d.x = targetX+(obj.radius-d.radius)*(1-alpha)*Math.cos(d.angle+obj.startAngle) + (targetX- d.x) * (_this.damper + 0.1);;
+		  d.y = targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle) + (targetY - d.y) * (_this.damper + 0.0001);;
+		  return d.x = targetX+(obj.radius-d.radius)*(1-alpha)*Math.cos(d.angle+obj.startAngle) + (targetX- d.x) * (_this.damper + 0.0001);;
 	  }
 	  else{
 		  d.y = targetY+(obj.radius-d.radius)*(1-alpha)*Math.sin(d.angle+obj.startAngle);
