@@ -409,10 +409,8 @@ BubbleChart = (function() {
       .duration(500)
       .delay(100);
     $('#data-sizeKey').animate({
-      opacity: 0.25,
       left: '835',
-      top: '150',
-      opacity: '1'
+      top: '150'
     }, 600);
     B = new Date(2011, 9, 4);
     J = new Date(2012, 12, 4);
@@ -426,6 +424,7 @@ BubbleChart = (function() {
   };
 
   BubbleChart.prototype.hide_axis = function() {
+    $('#data-sizeKey').fadeOut('slow').remove();
     var axis, label;
     axis = this.vis.selectAll(".axis").remove();
     $("#det-slider,#date-slider,#dates,#count").remove();
