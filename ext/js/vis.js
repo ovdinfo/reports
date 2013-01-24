@@ -154,14 +154,14 @@ BubbleChart = (function() {
   BubbleChart.prototype.create_vis = function() {
     var that,
       _this = this;
-    this.vis = d3.select("#vis").append("svg").attr("width", this.width + 200).attr("height", this.height).attr("id", "svg_vis");
+    this.vis = d3.select("#vis").append("svg").attr("width", this.width + 200).attr("height", this.height).attr("id", "svg_vis").attr("clip-path", "url(#clip)");
     this.vis.append("defs").append("clipPath").attr("id", "clip").append("rect").attr("width", width).attr("height", height).attr("x",50);
     
     this.circles = this.vis.selectAll("circle").data(this.nodes, function(d) {
       return d.id;
     });
     that = this;
-    this.circles.enter().append("circle").attr("r", 0).attr("clip-path", "url(#clip)").attr("fill", function(d) {
+    this.circles.enter().append("circle").attr("r", 0).attr("fill", function(d) {
       return _this.fill_color(d.subject);
     }).attr("stroke-width", 2).attr("fill-opacity", 0.9).attr("stroke-opacity", 0.5).attr("stroke", function(d) {
       return d3.rgb(_this.fill_color(d.subject)).darker();
