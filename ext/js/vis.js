@@ -201,11 +201,11 @@ BubbleChart = (function() {
         return d.subject;
       });
     });
-    this.force.start();
     this.display_label();
     this.hide_years();
     this.hide_orgs();
-    return this.hide_axis();
+    this.hide_axis();
+    return this.force.start();
   };
 
   BubbleChart.prototype.move_towards_center = function(alpha) {
@@ -238,10 +238,6 @@ BubbleChart = (function() {
         .attr('cy', 560)
         .style("opacity", 0);
     $('#data-overview').fadeIn('slow');
-    $('#data-sizeKey').animate({
-      left: '35',
-      top: '570'
-    }, 600);
     $('#data-sizeKey').fadeIn('slow');
     setTimeout((function() {
       return legend.call(d3.legend);
