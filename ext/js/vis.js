@@ -221,19 +221,19 @@ BubbleChart = (function() {
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(50,218)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(500))
-        .attr('class',"data-scaleKeyCircle")
+        .attr('class',"data-scaleKeyCircle scaleKey-1")
         .attr('cx', 120)
         .attr('cy', 500)
         .style("opacity", 0);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(200))
-        .attr('class',"data-scaleKeyCircle")
+        .attr('class',"data-scaleKeyCircle scaleKey-2")
         .attr('cx', 120)
         .attr('cy', 525)
         .style("opacity", 0);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(10))
-        .attr('class',"data-scaleKeyCircle")
+        .attr('class',"data-scaleKeyCircle scaleKey-3")
         .attr('cx', 120)
         .attr('cy', 560)
         .style("opacity", 0);
@@ -396,7 +396,8 @@ BubbleChart = (function() {
     this.vis.selectAll(".data-scaleKeyCircle").transition()
       .attr("cx",920)
       .attr("cy",100)
-      .duration(500);
+      .duration(500)
+      .delay(100);
     B = new Date(2011, 9, 4);
     J = new Date(2012, 12, 4);
     xScale.domain([$("#date-slider").dateRangeSlider("values").min, $("#date-slider").dateRangeSlider("values").max]);
