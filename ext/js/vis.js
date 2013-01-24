@@ -201,11 +201,11 @@ BubbleChart = (function() {
         return d.subject;
       });
     });
-    this.display_label();
+    this.force.start();
+    this.hide_axis();
     this.hide_years();
     this.hide_orgs();
-    this.hide_axis();
-    return this.force.start();
+    return this.display_label();
   };
 
   BubbleChart.prototype.move_towards_center = function(alpha) {
