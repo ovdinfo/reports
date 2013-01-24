@@ -464,7 +464,7 @@ BubbleChart = (function() {
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+25*i).attr("x", 760).text(orgs[i].total);
 		//alert(orgs[i].name);
 	}
-    this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.1).on("tick", function(e) {
+    this.force.gravity(0.1).charge(this.charge).friction(0.1).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
         return d.x;
       }).attr("cy", function(d) {
