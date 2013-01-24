@@ -238,6 +238,7 @@ BubbleChart = (function() {
         .attr('cy', 560)
         .style("opacity", 0);
     $('#data-overview').fadeIn('slow');
+    $('#data-sizeKey').fadeIn('slow');
     setTimeout((function() {
       return legend.call(d3.legend);
     }), 100);
@@ -257,7 +258,8 @@ BubbleChart = (function() {
 	.transition().duration(600).style("opacity", 0).remove();
   };
   BubbleChart.prototype.hide_orgs = function() {
- 	return this.vis.selectAll(".orgTotal").remove();
+ 	this.vis.selectAll(".orgTotal").remove();
+ 	return this.vis.selectAll(".orgLabel").remove();
   };
   
 /////////////////////////////////
@@ -391,6 +393,10 @@ BubbleChart = (function() {
     yAxis = d3.svg.axis().scale(yScale).orient("left");
     
   BubbleChart.prototype.display_axis = function() {
+    this.vis.selectAll(".data-scaleKeyCircle")
+      .attr("cx",920)
+      .attr("cy",100)
+      .duration(500);
     B = new Date(2011, 9, 4);
     J = new Date(2012, 12, 4);
     xScale.domain([$("#date-slider").dateRangeSlider("values").min, $("#date-slider").dateRangeSlider("values").max]);
