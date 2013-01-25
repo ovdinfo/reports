@@ -507,9 +507,8 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.display_groups = function(groups) {
-    console.log(groups);
     var i = 0;
-    while (i < groups.lenght) {
+    while (i < groups.length) {
       console.log(groups[i]);
       i++;
     };
