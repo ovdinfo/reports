@@ -461,10 +461,8 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
-		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
-		this.vis.selc
-		//alert(orgs[i].name);
+		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).style('cursor','pointer').text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
@@ -513,7 +511,7 @@ BubbleChart = (function() {
       console.log(groups[i]);
       d3.select("svg").append("circle")
         .attr('id', 'group_' + i)
-        .attr('r', groups[i].radius + 3)
+        .attr('r', groups[i].radius + 10)
         .attr('class',"group-circle")
         .attr('cx', 600+Math.cos(groups[i].angle)*260)
         .attr('cy', 300+Math.sin(groups[i].angle)*260)
@@ -524,7 +522,7 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
     d3.select('#group_' + d).transition()
-	  .style('opacity', '0.5')
+	  .style('opacity', '0.3')
 	  .duration(300);
   };
   
