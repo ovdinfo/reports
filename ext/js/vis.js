@@ -511,7 +511,7 @@ BubbleChart = (function() {
     while (i < groups.length) {
       console.log(groups[i]);
       d3.select("svg").append("circle")
-        .attr('r', groups[i].radius + groups[i].radius/2)
+        .attr('r', groups[i].radius + 3)
         .attr('class',"group-circle")
         .attr('cx', 400+Math.cos(groups[i].angle)*260)
         .attr('cy', 300+Math.sin(groups[i].angle)*260)
