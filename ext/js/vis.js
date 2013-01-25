@@ -461,13 +461,7 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).on("mouseover", function(i) {
-		  _this.vis.selectAll('#group_' + i).transition()
-		    .style('opacity', '0.5')
-		    .duration(500)
-		    .delay(100);
-		  console.log('#group_' + i);
-		});
+		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).on("mouseover", mouseOverGroup(i));
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total);
 		//alert(orgs[i].name);
 	}
@@ -525,6 +519,13 @@ BubbleChart = (function() {
         .style("opacity", 0);
       i++;
     };
+  };
+  
+  BubbleChart.prototype.mouseOverGroup = function(id) {
+		  _this.vis.selectAll('#group_' + id).transition()
+		    .style('opacity', '0.5')
+		    .duration(500)
+		    .delay(100);
   };
   
 /////////////////////////////////
