@@ -523,8 +523,7 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
-    console.log(d);
-    d3.select('#group_' + d).transition()
+    this.select('#group_' + d).transition()
 	  .style('opacity', '0.5')
 	  .duration(500)
 	  .delay(100);
