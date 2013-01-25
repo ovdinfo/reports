@@ -5,7 +5,7 @@ BubbleChart = (function() {
   var B, J, xScale, yScale;
 
   function BubbleChart(data) {
-	$('#loader').data('spinner').stop();
+	$('#loader').spin(false);
     $('#loader').remove();
 
     var i, max_amount, organizators;
