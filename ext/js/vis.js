@@ -5,7 +5,7 @@ BubbleChart = (function() {
   var B, J, xScale, yScale;
 
   function BubbleChart(data) {
-    $('#loader').hide('slow').remove();
+    $('#loader').remove();
 
     var i, max_amount, organizators;
     this.data = data;
