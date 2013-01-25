@@ -461,7 +461,7 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).on("mouseover", function(){_this.vis.selectAll('#' + i).style('opacity', '0.3');});
+		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).on("mouseover", function(){_this.vis.selectAll('#group_' + i).transition().style('opacity', '0.3').duration(500).delay(100);});
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total);
 		//alert(orgs[i].name);
 	}
@@ -511,7 +511,7 @@ BubbleChart = (function() {
     while (i < groups.length) {
       console.log(groups[i]);
       d3.select("svg").append("circle")
-        .attr('id', i)
+        .attr('id', 'group_' + i)
         .attr('r', groups[i].radius + 3)
         .attr('class',"group-circle")
         .attr('cx', 600+Math.cos(groups[i].angle)*260)
