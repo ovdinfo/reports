@@ -461,8 +461,7 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-	    var group = i;
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).on('mousedown', function() { return alert(group); });
+		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).data([i]).on('mousedown', _this.mouseOverGroup);
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total);
 		this.vis.selc
 		//alert(orgs[i].name);
@@ -523,9 +522,9 @@ BubbleChart = (function() {
     };
   };
   
-  BubbleChart.prototype.mouseOverGroup = function(id) {
-    console.log(id);
-    this.vis.selectAll('#group_' + id).transition()
+  BubbleChart.prototype.mouseOverGroup = function(d) {
+    console.log(d);
+    this.vis.selectAll('#group_' + d).transition()
 	  .style('opacity', '0.5')
 	  .duration(500)
 	  .delay(100);
