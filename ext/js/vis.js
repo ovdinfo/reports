@@ -515,7 +515,7 @@ BubbleChart = (function() {
         .attr('class',"group-circle")
         .attr('cx', 400+Math.cos(groups[i].angle)*260)
         .attr('cy', 300+Math.sin(groups[i].angle)*260)
-        .style("opacity", 1);
+        .style("opacity", 0.3);
       i++;
     };
   };
