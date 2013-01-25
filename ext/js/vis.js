@@ -633,6 +633,12 @@ $(function() {
     }
   };
   
+  var main_height = $('#main').height();
+  var main_width = $(window).width();
+  
+  $('#loader').css('height', main_height).css('width', main_width);
+  
+  
   var opts = {
     lines: 13, // The number of lines to draw
     length: 13, // The length of each line
