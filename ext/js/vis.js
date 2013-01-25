@@ -16,7 +16,6 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 
    var org = {};
-   var orgs = {};
 	  i = 0;
       while (i < this.data.length) {
         org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
@@ -459,7 +458,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_by_type = function() {
     var _this = this;
 	this.hide_orgs();
-	orgs = _this.getOrganizators;
+	var orgs = _this.getOrganizators
 	for(i=0;i<orgs.length;i++){
 		this.vis.append("text").attr("class", "orgLabel").attr("y",50+25*i).attr("x", 800).text(orgs[i].name);
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+25*i).attr("x", 760).text(orgs[i].total);
@@ -481,7 +480,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.move_towards_type = function(alpha) {
     var _this = this;
     //console.log(this.circles);
-    orgs = _this.getOrganizators;
+    var orgs = _this.getOrganizators;
     var orgsArr = _this.getOrganizatorsArray;
     return function(d) {
 		//console.log(d);
@@ -507,6 +506,7 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.display_groups = function() {
+    var orgs = this.getOrganizators;
     var i = 0;
     while (i < orgs.lenght) {
       console.log(orgs[i]);
