@@ -16,6 +16,7 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 
    var org = {};
+   var radius = 260;
 	  i = 0;
       while (i < this.data.length) {
         org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
@@ -481,7 +482,7 @@ BubbleChart = (function() {
     return function(d) {
 		//console.log(d);
 	  //alert(d.radius);
-	   var position, targetX, targetY, radius, delta, centerX, centerY;
+	   var position, targetX, targetY, delta, centerX, centerY;
 	  centerX = 550;
 	  centerY = 300;
 	  radius = 260
@@ -510,8 +511,8 @@ BubbleChart = (function() {
         .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
         .attr('class','group-circle')
-        .attr('cx', 550+Math.cos(groups[i].angle)*260)
-        .attr('cy', 300+Math.sin(groups[i].angle)*260)
+        .attr('cx', 550+Math.cos(groups[i].angle)*radius)
+        .attr('cy', 300+Math.sin(groups[i].angle)*radius)
         .style("opacity", 0);
       i++;
     };
