@@ -510,6 +510,12 @@ BubbleChart = (function() {
     var i = 0;
     while (i < groups.length) {
       console.log(groups[i]);
+      d3.select("svg").append("circle")
+        .attr('r', this.groups[i].radius)
+        .attr('class',"group-circle")
+        .attr('cx', 400+Math.cos(groups[i].angle)*groups[i].radius)
+        .attr('cy', 300+Math.sin(groups[i].angle)*groups[i].radius)
+        .style("opacity", 1);
       i++;
     };
   };
