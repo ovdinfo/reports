@@ -461,8 +461,8 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOverGroup);
-		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOverGroup);
+		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 		this.vis.selc
 		//alert(orgs[i].name);
 	}
@@ -525,15 +525,13 @@ BubbleChart = (function() {
   BubbleChart.prototype.mouseOverGroup = function(d) {
     d3.select('#group_' + d).transition()
 	  .style('opacity', '0.5')
-	  .duration(300)
-	  .delay(100);
+	  .duration(300);
   };
   
   BubbleChart.prototype.mouseOutGroup = function(d) {
     d3.select('#group_' + d).transition()
 	  .style('opacity', '0')
-	  .duration(300)
-	  .delay(100);
+	  .duration(300);
   };
   
 /////////////////////////////////
