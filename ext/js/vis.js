@@ -459,6 +459,7 @@ BubbleChart = (function() {
     var _this = this;
 	this.hide_orgs();
 	var orgs = _this.getOrganizators;
+	console.log(orgs);
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
 		this.vis.append("text").attr("class", "orgLabel").attr("y",50+25*i).attr("x", 800).text(orgs[i].name);
