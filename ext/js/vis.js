@@ -47,7 +47,7 @@ BubbleChart = (function() {
     });
     window.max_amount = max_amount;
     
-    this.radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
+    this.radius_scale = d3.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
 	
 	
 	var totalRadSum = 0;
@@ -488,8 +488,8 @@ BubbleChart = (function() {
 	 // delta = Math.PI/8;
       position = orgsArr.indexOf(d.org);
 	  var obj = orgs[position];
-	  targetX = centerX+Math.cos(obj.angle)*260;
-	  targetY = centerY+Math.sin(obj.angle)*260;
+	  targetX = centerX+Math.cos(obj.angle)*radius;
+	  targetY = centerY+Math.sin(obj.angle)*radius;
 	  if (alpha > 0.01) {
 		d.y = d.y +(targetY-d.y+Math.sin(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
 		return d.x = d.x + (targetX-d.x+Math.cos(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
@@ -510,8 +510,8 @@ BubbleChart = (function() {
         .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
         .attr('class','group-circle')
-        .attr('cx', 550+Math.cos(groups[i].angle)*260)
-        .attr('cy', 300+Math.sin(groups[i].angle)*260)
+        .attr('cx', 550+Math.cos(groups[i].angle)*radius)
+        .attr('cy', 300+Math.sin(groups[i].angle)*radius)
         .style("opacity", 0);
       i++;
     };
