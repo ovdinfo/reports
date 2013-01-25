@@ -461,8 +461,8 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 800).text(orgs[i].name);
-		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 760).text(orgs[i].total);
+		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name);
+		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total);
 		//alert(orgs[i].name);
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
@@ -487,7 +487,7 @@ BubbleChart = (function() {
 		//console.log(d);
 	  //alert(d.radius);
 	   var position, targetX, targetY, radius, delta, centerX, centerY;
-	  centerX = 400;
+	  centerX = 600;
 	  centerY = 300;
 	  radius = 260
 	 // delta = Math.PI/8;
