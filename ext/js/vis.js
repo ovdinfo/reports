@@ -505,6 +505,14 @@ BubbleChart = (function() {
     };
   };
   
+  BubbleChart.prototype.display_groups = function() {
+    var i = 0;
+    while (i < orgs.lenght) {
+      console.log(orgs[i]);
+      i++;
+    };
+  };
+  
 /////////////////////////////////
 
 // TOOLTIP
@@ -589,6 +597,7 @@ $(function() {
     return chart.display_by_date();
   };
   root.display_type = function() {
+    chart.display_groups();
     return chart.display_by_type();
   };
   root.toggle_view = function(view_type) {
