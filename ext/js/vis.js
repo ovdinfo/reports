@@ -482,7 +482,7 @@ BubbleChart = (function() {
 		//console.log(d);
 	  //alert(d.radius);
 	   var position, targetX, targetY, radius, delta, centerX, centerY;
-	  centerX = 600;
+	  centerX = 550;
 	  centerY = 300;
 	  radius = 260
 	 // delta = Math.PI/8;
@@ -510,7 +510,7 @@ BubbleChart = (function() {
         .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
         .attr('class','group-circle')
-        .attr('cx', 600+Math.cos(groups[i].angle)*260)
+        .attr('cx', 550+Math.cos(groups[i].angle)*260)
         .attr('cy', 300+Math.sin(groups[i].angle)*260)
         .style("opacity", 0);
       i++;
