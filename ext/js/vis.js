@@ -458,7 +458,8 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_by_type = function() {
     var _this = this;
 	this.hide_orgs();
-	var orgs = _this.getOrganizators
+	var orgs = _this.getOrganizators;
+	this.display_groups();
 	for(i=0;i<orgs.length;i++){
 		this.vis.append("text").attr("class", "orgLabel").attr("y",50+25*i).attr("x", 800).text(orgs[i].name);
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+25*i).attr("x", 760).text(orgs[i].total);
@@ -598,7 +599,6 @@ $(function() {
     return chart.display_by_date();
   };
   root.display_type = function() {
-    chart.display_groups();
     return chart.display_by_type();
   };
   root.toggle_view = function(view_type) {
