@@ -5,7 +5,8 @@ BubbleChart = (function() {
   var B, J, xScale, yScale;
 
   function BubbleChart(data) {
-
+	spinner.stop();
+    $('#loader').remove();
 
     var i, max_amount, organizators;
     this.data = data;
@@ -259,10 +260,6 @@ BubbleChart = (function() {
     return legend = this.vis.selectAll(".legend")
 	.transition().duration(600).style("opacity", 0);
   };
-  BubbleChart.prototype.hide_orgs = function() {
- 	this.vis.selectAll(".orgTotal").remove();
- 	return this.vis.selectAll(".orgLabel").remove();
-  };
   
 /////////////////////////////////
 
@@ -511,13 +508,20 @@ BubbleChart = (function() {
       console.log(groups[i]);
       d3.select("svg").append("circle")
         .attr('id', 'group_' + i)
+        .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
-        .attr('class',"group-circle")
+        .attr('class','group-circle')
         .attr('cx', 600+Math.cos(groups[i].angle)*260)
         .attr('cy', 300+Math.sin(groups[i].angle)*260)
         .style("opacity", 0);
       i++;
     };
+  };
+  
+  BubbleChart.prototype.hide_orgs = function() {
+ 	this.vis.selectAll(".orgTotal").remove();
+ 	this.selectAll('.group-circle').remove();
+ 	return this.vis.selectAll(".orgLabel").remove();
   };
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
@@ -629,6 +633,26 @@ $(function() {
       return root.display_type();
     }
   };
+  
+  var opts = {
+    lines: 13, // The number of lines to draw
+    length: 13, // The length of each line
+    width: 8, // The line thickness
+    radius: 29, // The radius of the inner circle
+    corners: 1, // Corner roundness (0..1)
+    rotate: 0, // The rotation offset
+    color: '#fff', // #rgb or #rrggbb
+    speed: 1, // Rounds per second
+    trail: 58, // Afterglow percentage
+    shadow: true, // Whether to render a shadow
+    hwaccel: false, // Whether to use hardware acceleration
+    className: 'spinner', // The CSS class to assign to the spinner
+    zIndex: 2e9, // The z-index (defaults to 2000000000)
+    top: 'auto', // Top position relative to parent in px
+    left: 'auto' // Left position relative to parent in px
+  };
+  var target = document.getElementById('loader');
+  var spinner = new Spinner(opts).spin(target);
   return d3.csv("https://docs.google.com/spreadsheet/pub?key=0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc&single=true&gid=0&output=csv", render_vis);
 });
 

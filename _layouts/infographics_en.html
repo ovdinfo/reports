@@ -98,6 +98,13 @@ margin: 3px 0px;
 		font-weight: normal;
 		color: #666;
 	  }
+	  #loader {
+	    width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 100000;
+		position: relative;
+	  }
     </style>
   </head>
   <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
@@ -151,6 +158,7 @@ margin: 3px 0px;
       </div><!-- /#header -->
       <div id="app">
         <div id="main" role="main">
+          <div id="loader"></div>
           <div id="view_selection" class="btn-group">
             <a href="#" id="all" class="btn active">Все задержания</a>
             <a href="#" id="cons" class="btn">Согласованность мероприятий</a>
