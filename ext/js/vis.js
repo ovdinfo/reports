@@ -505,7 +505,7 @@ BubbleChart = (function() {
     var i = 0;
     while (i < groups.length) {
       console.log(groups[i]);
-      d3.select("svg").append("circle")
+      d3.select("svg").insert("circle",":first-child")
         .attr('id', 'group_' + i)
         .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
