@@ -462,7 +462,7 @@ BubbleChart = (function() {
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
 	    var group = i;
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).on('mousedown', function() {alert(group)});
+		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).text(orgs[i].name).on('mousedown', function() { return alert(group); });
 		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).text(orgs[i].total);
 		this.vis.selc
 		//alert(orgs[i].name);
