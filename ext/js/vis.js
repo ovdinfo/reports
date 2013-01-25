@@ -16,6 +16,7 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 
    var org = {};
+   var orgs = {};
 	  i = 0;
       while (i < this.data.length) {
         org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
@@ -480,7 +481,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.move_towards_type = function(alpha) {
     var _this = this;
     //console.log(this.circles);
-    var orgs = _this.getOrganizators;
+    orgs = _this.getOrganizators;
     var orgsArr = _this.getOrganizatorsArray;
     return function(d) {
 		//console.log(d);
