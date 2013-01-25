@@ -513,7 +513,7 @@ BubbleChart = (function() {
       d3.select("svg").append("circle")
         .attr('r', groups[i].radius + 3)
         .attr('class',"group-circle")
-        .attr('cx', 400+Math.cos(groups[i].angle)*260)
+        .attr('cx', 600+Math.cos(groups[i].angle)*260)
         .attr('cy', 300+Math.sin(groups[i].angle)*260)
         .style("opacity", 0.3);
       i++;
