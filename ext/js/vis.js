@@ -522,10 +522,11 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.mouseOverGroup = function(id) {
-		  _this.vis.selectAll('#group_' + id).transition()
-		    .style('opacity', '0.5')
-		    .duration(500)
-		    .delay(100);
+    console.log(id);
+    this.vis.selectAll('#group_' + id).transition()
+	  .style('opacity', '0.5')
+	  .duration(500)
+	  .delay(100);
   };
   
 /////////////////////////////////
