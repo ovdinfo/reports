@@ -519,7 +519,7 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.hide_orgs = function() {
  	this.vis.selectAll(".orgTotal").remove();
- 	this.selectAll('.group-circle').remove();
+ 	this.vis.selectAll('.group-circle').remove();
  	return this.vis.selectAll(".orgLabel").remove();
   };
   
