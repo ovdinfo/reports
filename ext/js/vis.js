@@ -10,7 +10,7 @@ BubbleChart = (function() {
     var i, max_amount, organizators;
     this.data = data;
     this.width = 940;
-    this.height = 600;
+    this.height = 640;
 	this.orginizers = [];
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
@@ -384,7 +384,7 @@ BubbleChart = (function() {
       left: 39.5
     };
     this.width = 990;
-    this.height = 600;
+    this.height = 640;
     xScale = d3.time.scale().range([10, this.width]);
     yScale = d3.scale.linear().range([this.height, 0]);
     xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d"));
