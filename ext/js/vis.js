@@ -149,6 +149,7 @@ BubbleChart = (function() {
 		_this.prevOrginizerRadius[node.org] = node.radius;
 		_this.prevOrginizerAngle[node.org] = node.angle;
 	 node.inOrgID = _this.orginizers[node.org];
+	         console.log(_this.orginizers);
 	
       return _this.nodes.push(node);
     });
@@ -470,7 +471,6 @@ BubbleChart = (function() {
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
-        console.log(d);
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
