@@ -149,7 +149,7 @@ BubbleChart = (function() {
 		_this.prevOrginizerRadius[node.org] = node.radius;
 		_this.prevOrginizerAngle[node.org] = node.angle;
 	 node.inOrgID = _this.orginizers[node.org];
-	         console.log(_this.getOrganizators);
+	         console.log(_this.getOrganizatorsArray.indexOf(node.org));
 	
       return _this.nodes.push(node);
     });
