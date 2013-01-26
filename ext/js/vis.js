@@ -405,7 +405,7 @@ BubbleChart = (function() {
       }
       else{
 	      d.x = x;
-	      return y;
+	      return d.y = y;
       }
     };
   };
