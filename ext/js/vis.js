@@ -539,7 +539,6 @@ BubbleChart = (function() {
  	d3.selectAll('circle').on("mouseover", function(d,i) {
       return that.show_details(d, i, this);
     }).on("mouseout", function(d, i) {
-      that.mouseOutGroup(d.inOrgID);
       return that.show_details(d, i, this);
     });
  	return this.vis.selectAll(".orgLabel").remove();
