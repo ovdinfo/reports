@@ -149,7 +149,7 @@ BubbleChart = (function() {
 		_this.prevOrginizerRadius[node.org] = node.radius;
 		_this.prevOrginizerAngle[node.org] = node.angle;
 	 node.inOrgID = _this.orginizers[node.org];
-	         console.log(_this.orginizers);
+	         console.log(_this.getOrganizators);
 	
       return _this.nodes.push(node);
     });
@@ -510,7 +510,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_groups = function(groups) {
     var i = 0;
     while (i < groups.length) {
-      console.log(groups[i]);
+      //console.log(groups[i]);
       d3.select("svg").insert("circle",":first-child")
         .attr('id', 'group_' + i)
         .attr('class', 'group_circles')
