@@ -496,7 +496,7 @@ BubbleChart = (function() {
 
 // DISPLAY BY ORGANIZATORS
 
-  BubbleChart.prototype.display_by_type = function() {
+  BubbleChart.prototype.display_by_group = function() {
     var _this = this;
 	this.hide_orgs();
 	var orgs = _this.getOrganizators;
@@ -507,7 +507,7 @@ BubbleChart = (function() {
 		this.vis.append("text").attr("class", "orgTotal total_" + i).attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
-      return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
+      return _this.circles.each(_this.move_towards_group(e.alpha)).attr("cx", function(d) {
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
@@ -516,7 +516,7 @@ BubbleChart = (function() {
     this.force.start();
   };
 
-  BubbleChart.prototype.move_towards_type = function(alpha) {
+  BubbleChart.prototype.move_towards_group = function(alpha) {
     var _this = this;
     //console.log(this.circles);
     var orgs = _this.getOrganizators;
@@ -620,6 +620,13 @@ BubbleChart = (function() {
   
 /////////////////////////////////
 
+// DISPLAY BY TYPES
+
+
+
+  
+/////////////////////////////////
+
 // TOOLTIP
 
   BubbleChart.prototype.show_details = function(data, i, element) {
@@ -708,7 +715,7 @@ $(function() {
   };
   root.display_type = function() {
     chart.changeState(this.state,this.state = 3);
-    return chart.display_by_type();
+    return chart.display_by_group();
   };
   root.toggle_view = function(view_type) {
     if (view_type === 'cons') {
