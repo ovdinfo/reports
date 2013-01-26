@@ -15,17 +15,19 @@ BubbleChart = (function() {
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
 
-   var org = {};
+   var org = {},
+       types = {};
    this.radius = 267.5;
    this.centerX = 550;
    this.centerY = 300;
    this.circleMargin = 3;
  
-	  i = 0;
-      while (i < this.data.length) {
-        org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
+	i = 0;
+    while (i < this.data.length) {
+        org[i] = {"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
+        types[i] = {"name":this.data[i].event_type, "value":this.data[i].number_of_detentions};
         i++;
-      }
+    }
       org = _.groupBy(org, function(num){ return num.name; });
       org = _.map(org, function(group) {
       	var sum = 0, name = '', output = {};
@@ -40,50 +42,56 @@ BubbleChart = (function() {
 		output.maxRad = d3.max(group, function(d) {
 		  return parseInt(d.value);
 		});
-		//alert(output.maxRad);
       	return output;
-		});
+	  });
 	  org = _.sortBy(org, function(obj){ return obj.total; });
 	  org = org.reverse();
+	  
+	  types = _.groupBy(types, function(type){ return type.name; });
+	  types = _.map(types, function(group) {
+      	var sum = 0, name = '', output = {};
+      	i = 0;
+      	while (i < group.length) {
+        	sum += parseInt(group[i].value);
+        	name = group[i].name;
+        	i++;
+      	}
+      	output.name = name;
+      	output.total = sum;
+      	return output;
+	  });
+	  types = _.sortBy(types, function(obj){ return obj.total; });
+	  types = types.reverse();
 		
 	 max_amount = d3.max(this.data, function(d) {
       return parseInt(d.number_of_detentions);
-    });
+     });
     window.max_amount = max_amount;
     
     this.radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
 	
 	
 	var totalRadSum = 0;
-		for(i=0;i<org.length;i++){
-			org[i].radius = this.radius_scale(org[i].total);
-			totalRadSum+=org[i].radius*2;
-			//org[i].startAngle = totalRadSum/2
-			//console.log(totalRadSum*180/Math.PI)	
-			
-		}
-		var curAngle = 0;
-		var angleMargin = 1/360;
-		var withoutMargins = 1-2*org.length*angleMargin;
-		for(i=0;i<org.length-1;i++){
-			//org[i].rel = org[i].total/totalSum;
-			org[i].angle = curAngle
-			org[i].startAngle = org[i].angle+Math.PI/2
-			//alert(org[i].angle)
-			//console.log(260*Math.sin(org[i].angle))
-		//	console.log((org[i].radius+org[i+1].radius)/(2*this.radius));
-			//console.log(2*Math.asin((org[i].radius+org[i+1].radius)/(2*this.radius)));
-			curAngle+=2*Math.asin((org[i].radius+org[i+1].radius+2*this.circleMargin)/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
-		}
-		org[i].angle = curAngle;
+	for (i=0;i<org.length;i++) {
+		org[i].radius = this.radius_scale(org[i].total);
+		totalRadSum+=org[i].radius*2;	
+	}
+	var curAngle = 0;
+	var angleMargin = 1/360;
+	var withoutMargins = 1-2*org.length*angleMargin;
+	for (i=0;i<org.length-1;i++) {
+		org[i].angle = curAngle
 		org[i].startAngle = org[i].angle+Math.PI/2
-		//alert(curAngle);
-	
+		curAngle+=2*Math.asin((org[i].radius+org[i+1].radius+2*this.circleMargin)/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
+	}
+	org[i].angle = curAngle;
+	org[i].startAngle = org[i].angle+Math.PI/2
 	
 	this.getOrganizators = org;
-	
     this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });
-	
+    
+    this.getTypes = types;
+    this.getTypesArray = _.map(this.getTypes, function(group) { return group.name; });
     	
     this.tooltip = CustomTooltip("data-report", 240);
 
@@ -111,7 +119,6 @@ BubbleChart = (function() {
     this.circles = null;
     this.fill_color = d3.scale.ordinal().domain(["За честные выборы", "Стратегия-31", "другое", "Pussy Riot", "антиПутин", "политзеки", "закон о митингах", "социальная", "экология", "марш миллионов", "ЛГБТ", "оккупай"]).range(["#ecf8ff", "#fea61b", "#e4e4e4", "#fc78ea", "#323232", "#cc91f9", "#98a422", "#e33320", "#20cc1a", "#f8fdb3", "#76f7fb", "#6e72f7"]);
 
-   
     this.create_nodes();
     this.create_vis();
   }
