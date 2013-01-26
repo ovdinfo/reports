@@ -646,20 +646,20 @@ BubbleChart = (function() {
     return function(d) {
       var x, y;
       switch (parseInt(d.inTypeID)) {
-        case 0: x=200; y=300; break;
-        case 1: x=400; y=300; break;
-        case 2: x=600; y=300; break;
-        case 3: x=800; y=300; break;
-        case 4: x=200; y=500; break;
-        case 5: x=350; y=500; break;
-        case 6: x=650; y=500; break;
-        case 7: x=800; y=500; break;
-        case 8: x=200; y=700; break;
-        case 9: x=300; y=700; break;
-        case 10: x=400; y=700; break;
-        case 11: x=500; y=700; break;
-        case 12: x=600; y=700; break;
-        case 13: x=700; y=700; break;
+        case 0: x=300; y=200; break;
+        case 1: x=600; y=200; break;
+        case 2: x=800; y=200; break;
+        case 3: x=200; y=400; break;
+        case 4: x=350; y=400; break;
+        case 5: x=500; y=400; break;
+        case 6: x=650; y=400; break;
+        case 7: x=800; y=400; break;
+        case 8: x=200; y=500; break;
+        case 9: x=300; y=500; break;
+        case 10: x=400; y=500; break;
+        case 11: x=500; y=500; break;
+        case 12: x=600; y=500; break;
+        case 13: x=700; y=500; break;
         default: ;
       } 
       
