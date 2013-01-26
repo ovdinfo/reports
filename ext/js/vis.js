@@ -488,8 +488,8 @@ BubbleChart = (function() {
 	 // delta = Math.PI/8;
       position = orgsArr.indexOf(d.org);
 	  var obj = orgs[position];
-	  targetX = centerX+Math.cos(obj.angle)*this.radius;
-	  targetY = centerY+Math.sin(obj.angle)*this.radius;
+	  targetX = centerX+Math.cos(obj.angle)*_this.radius;
+	  targetY = centerY+Math.sin(obj.angle)*_this.radius;
 	  if (alpha > 0.01) {
 		d.y = d.y +(targetY-d.y+Math.sin(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
 		return d.x = d.x + (targetX-d.x+Math.cos(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
