@@ -248,7 +248,7 @@ BubbleChart = (function() {
 // START BUBLING
   BubbleChart.prototype.start = function() {
     _this = this;
-    return this.force = d3.layout.force().nodes(this.nodes).size([this.width, this.height]).on("complete",function(e){console.log("FIN"); _this.started = true;});
+    //return this.force = d3.layout.force().nodes(this.nodes).size([this.width, this.height]).on("complete",function(e){console.log("FIN"); _this.started = true;});
   };
 
 // MAIN SLIDE - CENTER BUBLES
