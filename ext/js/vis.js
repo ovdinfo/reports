@@ -645,6 +645,24 @@ BubbleChart = (function() {
     var _this = this;
     return function(d) {
       var x, y;
+      switch (d.inTypeID) {
+        case 0: x=200; y=300;
+        case 1: x=400; y=300;
+        case 2: x=600; y=300;
+        case 3: x=800; y=300;
+        case 4: x=200; y=500;
+        case 5: x=350; y=500;
+        case 6: x=650; y=500;
+        case 7: x=800; y=500;
+        case 8: x=200; y=700;
+        case 9: x=300; y=700;
+        case 10: x=400; y=700;
+        case 11: x=500; y=700;
+        case 12: x=600; y=700;
+        case 13: x=700; y=700;
+        default: ;
+      } 
+      
       x = (d.inTypeID%4)*200+200;
       y = parseInt(d.inTypeID/4)*100+200;
       //alert(d.inTypeID + ', ' + y);
@@ -676,7 +694,7 @@ BubbleChart = (function() {
    	case 1: return this.hide_agrs();
    	case 2: return this.hide_axis();
    	case 3: return this.hide_orgs();
-   	//case 4: true;
+   	case 4: return true;
    	default: ;
    };
   };
