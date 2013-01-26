@@ -363,7 +363,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_by_date = function() {
     var _this = this;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
-      return _this.circles.each(_this.move_towards_date(e.alpha)).transition().duration(100).ease("easing").attr("cx", function(d) {
+      return _this.circles.each(_this.move_towards_date(e.alpha)).transition().duration(1000).ease("easing").attr("cx", function(d) {
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
@@ -615,7 +615,7 @@ BubbleChart = (function() {
    	case 2: return this.hide_axis();
    	case 3: return this.hide_orgs();
    	default: ;
-   } 
+   };
   };
   
 /////////////////////////////////
@@ -762,11 +762,3 @@ $(function() {
   var spinner = new Spinner(opts).spin(target);
   return d3.csv("https://docs.google.com/spreadsheet/pub?key=0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc&single=true&gid=0&output=csv", render_vis);
 });
-
-/*position = orgsArr.indexOf(d.org);
-var obj = orgs[position];
-targetX = centerX+Math.cos(obj.angle)*radius;
-targetY = centerY+Math.sin(obj.angle)*radius;
-
-54line radius;
-*/
