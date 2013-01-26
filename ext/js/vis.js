@@ -648,8 +648,14 @@ BubbleChart = (function() {
       x = (d.inTypeID%4)*200+200;
       y = parseInt(d.inTypeID/4)*100+200;
       //alert(d.inTypeID + ', ' + y);
-      d.x = d.x + (x - d.x) * (_this.damper + 0.02) * alpha * 1.1;
-      return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * alpha * 1.1;
+      if(alpha > 0.01){
+      	d.x = d.x + (x - d.x) * (_this.damper + 0.02) * (1-alpha) * 100/99;
+      return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * (1-alpha) * 100/99;
+      }
+      else{
+	      d.x = d.x;
+	      return d.y = d.y;
+      }
     };
   };  
 
