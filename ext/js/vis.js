@@ -15,6 +15,7 @@ BubbleChart = (function() {
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
 	this.state = -1;
+	this.started = false;
 
    var org = {},
        types = {};
@@ -246,7 +247,8 @@ BubbleChart = (function() {
 
 // START BUBLING
   BubbleChart.prototype.start = function() {
-    return this.force = d3.layout.force().nodes(this.nodes).size([this.width, this.height]);
+    _this = this;
+    return this.force = d3.layout.force().nodes(this.nodes).size([this.width, this.height]).on("complete",function(e){console.log("FIN"); _this.started = true;});
   };
 
 // MAIN SLIDE - CENTER BUBLES
@@ -721,46 +723,56 @@ $(function() {
     return chart.display_init();
   };
   root.display_all = function() {
-    chart.changeState(0);
-    return chart.display_group_all();
+    if(chart.state != 0){
+	    chart.changeState(0);
+	    return chart.display_group_all();
+    }
   };
   root.display_agr = function() {
-    chart.changeState(1);
-    return chart.display_by_agr();
+    if(chart.started && chart.state != 1){
+    	chart.changeState(1);
+    	return chart.display_by_agr();
+    }
   };
   root.display_chron = function() {
-    $('#main').append('<p id="count"></p><div id="det-slider"></div><p id="dates"><div id="date-slider"></div>');
-    $("#det-slider").rangeSlider({
-      defaultValues:{
-    	min: 0,
-    	max: 700
-  	  },
-      bounds:{
-    	min: 0,
-    	max: 700
+    if(chart.started && chart.state != 2){
+	    $('#main').append('<p id="count"></p><div id="det-slider"></div><p id="dates"><div id="date-slider"></div>');
+	    $("#det-slider").rangeSlider({
+	      defaultValues:{
+	    	min: 0,
+	    	max: 700
+	  	  },
+	      bounds:{
+	    	min: 0,
+	    	max: 700
+	    }
+	    });
+	    $("#count").empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
+	    $("#date-slider").dateRangeSlider({
+	      defaultValues:{
+	    	min: new Date(2011, 9, 4),
+	    	max: new Date(2012, 11, 21)
+	  	  },
+	      bounds:{
+	    	min: new Date(2011, 9, 4),
+	    	max: new Date(2012, 11, 21)
+	    }
+	    });
+	    chart.changeState(2);
+	    return chart.display_by_date();
     }
-    });
-    $("#count").empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
-    $("#date-slider").dateRangeSlider({
-      defaultValues:{
-    	min: new Date(2011, 9, 4),
-    	max: new Date(2012, 11, 21)
-  	  },
-      bounds:{
-    	min: new Date(2011, 9, 4),
-    	max: new Date(2012, 11, 21)
-    }
-    });
-    chart.changeState(2);
-    return chart.display_by_date();
   };
   root.display_orgs = function() {
-    chart.changeState(3);
-    return chart.display_by_group();
+    if(chart.started && chart.state != 3){
+	    chart.changeState(3);
+	    return chart.display_by_group();
+    }
   };
   root.display_types = function() {
-    chart.changeState(4);
-    return chart.display_by_type();
+    if(chart.started && chart.state != 4){
+	    chart.changeState(4);
+	    return chart.display_by_type();
+    }
   };
   root.toggle_view = function(view_type) {
     if (view_type === 'cons') {
