@@ -417,7 +417,7 @@ BubbleChart = (function() {
     t.select(".x.axis").call(xAxis);
     t.select(".y.axis").call(yAxis);
     this.force.start();
-  }
+  };
   
   var margin, xAxis, yAxis;
     margin = {
@@ -622,6 +622,10 @@ BubbleChart = (function() {
 
 // DISPLAY BY TYPES
 
+  BubbleChart.prototype.display_by_group = function() {
+  
+  
+  };
 
 
   
@@ -699,7 +703,8 @@ $(function() {
       bounds:{
     	min: 0,
     	max: 700
-    }});
+    }
+    });
     $("#count").empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
     $("#date-slider").dateRangeSlider({
       defaultValues:{
@@ -709,7 +714,8 @@ $(function() {
       bounds:{
     	min: new Date(2011, 9, 4),
     	max: new Date(2012, 11, 21)
-    }});
+    }
+    });
     chart.changeState(this.state,this.state = 2);
     return chart.display_by_date();
   };
