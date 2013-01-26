@@ -648,6 +648,7 @@ BubbleChart = (function() {
    	default: ;
    };
    this.state = newState;
+   console.log('new2: ' + this.state);
   };
 
   
