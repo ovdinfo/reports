@@ -690,7 +690,7 @@ BubbleChart = (function() {
    	case 2: this.hide_axis(); break;
    	case 3: this.hide_orgs(); break;
    	case 4: true; break;
-   	default: ; break;
+   	default: ;
    };
   };
 
