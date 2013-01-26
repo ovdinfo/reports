@@ -235,9 +235,9 @@ BubbleChart = (function() {
     });
     
     
-    return this.circles.transition().duration(2000).attr("r", function(d) {
+    /*return this.circles.transition().duration(2000).attr("r", function(d) {
       return d.radius;
-    });
+    });*/
   };
 
 // CHARGE BUBLES
@@ -277,7 +277,7 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.display_init = function() {
-    /*var legend;
+    var legend;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(73,218)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(500))
@@ -303,7 +303,7 @@ BubbleChart = (function() {
     $('#data-sizeKey').fadeIn('slow');
     return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
-    .transition().duration(600).style("opacity", 1);*/
+    .transition().duration(600).style("opacity", 1);
   };
   
   BubbleChart.prototype.display_label = function() {
