@@ -464,8 +464,9 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.append("text").attr("class", "orgLabel").attr("y",50+15*i).attr("x", 100).style('cursor','pointer').text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
-		this.vis.append("text").attr("class", "orgTotal").attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.append("text").attr("class", "orgLabel label_" + i).attr("y",50+15*i).attr("x", 100).style('cursor','pointer').text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.append("text").attr("class", "orgTotal total_" + i).attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.append("rect").attr("class", "row").attr("y",50+15*i).attr("x", 50).style('cursor','pointer').style('fill','blue').data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
