@@ -194,6 +194,7 @@ BubbleChart = (function() {
 		_this.prevOrginizerRadius[node.org] = node.radius;
 		_this.prevOrginizerAngle[node.org] = node.angle;
 	  node.inOrgID = _this.getOrganizatorsArray.indexOf(node.org);
+	  node.inTypeID = _this.getTypesArray.indexOf(node.group);
 	
       return _this.nodes.push(node);
     });
@@ -389,8 +390,8 @@ BubbleChart = (function() {
       d.date2 = date.parse(d.date);
       x = xScale(d.date2);
       y = yScale(d.value);
-      d.x = d.x + (x - d.x) * Math.cos(alpha);
-      return d.y = d.y + (y - d.y) * Math.cos(alpha);
+      d.x = d.x + (x - d.x) * (0.005/alpha);
+      return d.y = d.y + (y - d.y) * (0.005/alpha);
     };
   };
   
@@ -600,8 +601,37 @@ BubbleChart = (function() {
 	  .duration(300);
   };
   
+/////////////////////////////////
+
+// DISPLAY BY TYPES
+
+  BubbleChart.prototype.display_by_type = function() {
+    var _this = this;
+    this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
+      return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
+        return d.x;
+      }).attr("cy", function(d) {
+        return d.y;
+      });
+    });
+    this.force.start(); 
+  };
   
-  
+  BubbleChart.prototype.move_towards_type = function(alpha) {
+    var _this = this;
+    return function(d) {
+      var x, y;
+      x = (d.inTypeID%4)*200+50;
+      y = (d.inTypeID/4)*200+50;
+      d.x = d.x + (x - d.x) * (_this.damper + 0.02) * alpha * 1.1;
+      return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * alpha * 1.1;
+    };
+  };  
+
+/////////////////////////////////
+
+// STATES SWITCHER
+
   BubbleChart.prototype.changeState = function(oldState,newState) {
   //states:
   //-1 - start
@@ -613,19 +643,10 @@ BubbleChart = (function() {
    	case 1: return this.hide_agrs();
    	case 2: return this.hide_axis();
    	case 3: return this.hide_orgs();
+   	case 3: return true;
    	default: ;
    };
   };
-  
-/////////////////////////////////
-
-// DISPLAY BY TYPES
-
-  BubbleChart.prototype.display_by_type = function() {
-  
-  
-  };
-
 
   
 /////////////////////////////////
@@ -722,6 +743,10 @@ $(function() {
     chart.changeState(this.state,this.state = 3);
     return chart.display_by_group();
   };
+  root.display_types = function() {
+    chart.changeState(this.state,this.state = 4);
+    return chart.display_by_type();
+  };
   root.toggle_view = function(view_type) {
     if (view_type === 'cons') {
       return root.display_agr();
@@ -731,6 +756,8 @@ $(function() {
       return root.display_chron();
     } else if (view_type === 'org') {
       return root.display_orgs();
+    } else if (view_type === 'format') {
+      return root.display_types;
     }
   };
   
