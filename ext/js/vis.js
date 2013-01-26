@@ -363,7 +363,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_by_date = function() {
     var _this = this;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
-      return _this.circles.each(_this.move_towards_date(e.alpha)).transition().duration(1000).ease("easing").attr("cx", function(d) {
+      return _this.circles.each(_this.move_towards_date(e.alpha)).transition().duration(10).ease("easing").attr("cx", function(d) {
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
