@@ -509,8 +509,9 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_groups = function(groups) {
     var that = this;
     var i = 0;
-    d3.selectAll('circle').on("mouseover", function(d) {
-      return that.mouseOverGroup(d.inOrgID);
+    d3.selectAll('circle').on("mouseover", function(d,i) {
+      that.mouseOverGroup(d.inOrgID);
+      return that.show_details(d, i, this);
     }).on("mouseout", function(d) {
       return that.mouseOutGroup(d.inOrgID);
     });
