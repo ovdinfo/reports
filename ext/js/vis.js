@@ -237,7 +237,7 @@ BubbleChart = (function() {
     _this.started = true;
     return this.circles.transition().duration(2000).attr("r", function(d) {
       return d.radius;
-    });
+    }).call(function() {_this.started = false;};);
   };
 
 // CHARGE BUBLES
