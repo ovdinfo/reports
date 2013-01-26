@@ -655,7 +655,7 @@ BubbleChart = (function() {
         case 6: x=800; y=330; break;
         case 7: x=200; y=500; break;
         case 8: x=350; y=500; break;
-        case 9: x=500; y=520; break;
+        case 9: x=500; y=510; break;
         case 10: x=650; y=520; break;
         case 11: x=800; y=530; break;
         default: x=500;y=500;
