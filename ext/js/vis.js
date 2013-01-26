@@ -235,9 +235,9 @@ BubbleChart = (function() {
     });
     
     
-    /*return this.circles.transition().duration(2000).attr("r", function(d) {
+    return this.circles.transition().duration(2000).on("complete",function(e){console.log("FIN"); _this.started = true;}).attr("r", function(d) {
       return d.radius;
-    });*/
+    });
   };
 
 // CHARGE BUBLES
