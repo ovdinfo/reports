@@ -533,6 +533,7 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.hide_orgs = function() {
+    var that = this;
  	this.vis.selectAll(".orgTotal").remove();
  	this.vis.selectAll('.group-circle').remove();
  	d3.selectAll('circle').on("mouseover", function(d,i) {
