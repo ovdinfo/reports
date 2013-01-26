@@ -651,11 +651,11 @@ BubbleChart = (function() {
         case 2: x=800; y=200; break;
         case 3: x=200; y=330; break;
         case 4: x=400; y=330; break;
-        case 5: x=600; y=360; break;
+        case 5: x=600; y=345; break;
         case 6: x=800; y=360; break;
         case 7: x=400; y=470; break;
-        case 8: x=500; y=470; break;
-        case 9: x=600; y=480; break;
+        case 8: x=500; y=480; break;
+        case 9: x=600; y=490; break;
         case 10: x=700; y=500; break;
         case 11: x=800; y=510; break;
         default: x=500;y=500;
