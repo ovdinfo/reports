@@ -757,7 +757,7 @@ $(function() {
     } else if (view_type === 'org') {
       return root.display_orgs();
     } else if (view_type === 'format') {
-      return root.display_types;
+      return root.display_types();
     }
   };
   
