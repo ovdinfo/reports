@@ -92,7 +92,7 @@ BubbleChart = (function() {
       y: this.height / 2
     };
 
-    this.year_centers = {
+    this.agr_centers = {
       "согласовано": {
         x: this.width / 3,
         y: this.height / 2
@@ -130,7 +130,7 @@ BubbleChart = (function() {
         name: d.subject,
         org: d.organizer,
         group: d.event_type,
-        year: d.agreement,	
+        agr: d.agreement,	
         date: d.date,
         comment: d.description,
         subject: d.subject,
@@ -210,7 +210,7 @@ BubbleChart = (function() {
     });
     this.force.start();
     this.hide_axis();
-    this.hide_years();
+    this.hide_agrs();
     this.hide_orgs();
     return this.display_label();
   };
@@ -270,10 +270,10 @@ BubbleChart = (function() {
 /////////////////////////////////
 
 // DISPLAY TWO GROUPS OF EVENTS
-  BubbleChart.prototype.display_by_year = function() {
+  BubbleChart.prototype.display_by_agr = function() {
     var _this = this;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
-      return _this.circles.each(_this.move_towards_year(e.alpha)).attr("cx", function(d) {
+      return _this.circles.each(_this.move_towards_agr(e.alpha)).attr("cx", function(d) {
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
@@ -283,38 +283,38 @@ BubbleChart = (function() {
     this.hide_label();
     this.hide_axis();
     this.hide_orgs();
-    return this.display_years();
+    return this.display_agrs();
   };
 
-  BubbleChart.prototype.move_towards_year = function(alpha) {
+  BubbleChart.prototype.move_towards_agr = function(alpha) {
     var _this = this;
     return function(d) {
       var target;
-      target = _this.year_centers[d.year];
+      target = _this.agr_centers[d.agr];
       d.x = d.x + (target.x - d.x) * (_this.damper + 0.02) * alpha * 1.1;
       return d.y = d.y + (target.y - d.y) * (_this.damper + 0.02) * alpha * 1.1;
     };
   };  
 
-  BubbleChart.prototype.display_years = function() {
-    var years, years_data, years_x,
+  BubbleChart.prototype.display_agrs = function() {
+    var agrs, agrs_data, agrs_x,
       _this = this;
-    years_x = {
+    agrs_x = {
       "согласовано": 160,
       "не согласовано": this.width - 160
     };
-    years_data = d3.keys(years_x);
-    years = this.vis.selectAll(".years").data(years_data);
-    return years.enter().append("text").attr("class", "years").attr("x", function(d) {
-      return years_x[d];
+    agrs_data = d3.keys(agrs_x);
+    agrs = this.vis.selectAll(".agrs").data(agrs_data);
+    return agrs.enter().append("text").attr("class", "agrs").attr("x", function(d) {
+      return agrs_x[d];
     }).attr("y", 40).attr("text-anchor", "middle").text(function(d) {
       return d;
     });
   };
 
-  BubbleChart.prototype.hide_years = function() {
-    var years;
-    return years = this.vis.selectAll(".years").remove();
+  BubbleChart.prototype.hide_agrs = function() {
+    var agrs;
+    return agrs = this.vis.selectAll(".agrs").remove();
   };
 
 /////////////////////////////////
@@ -332,7 +332,7 @@ BubbleChart = (function() {
     });
     this.force.start();
     this.hide_label();
-    this.hide_years();
+    this.hide_agrs();
     this.hide_orgs();
     $("#det-slider").bind("valuesChanged", function(e, data){ 
       _this.update();
@@ -479,7 +479,7 @@ BubbleChart = (function() {
     });
     this.force.start();
     this.hide_label();
-    this.hide_years();
+    this.hide_agrs();
     return this.hide_axis();
   };
 
@@ -625,8 +625,8 @@ $(function() {
   root.display_all = function() {
     return chart.display_group_all();
   };
-  root.display_year = function() {
-    return chart.display_by_year();
+  root.display_agr = function() {
+    return chart.display_by_agr();
   };
   root.display_chron = function() {
     $('#main').append('<p id="count"></p><div id="det-slider"></div><p id="dates"><div id="date-slider"></div>');
@@ -656,7 +656,7 @@ $(function() {
   };
   root.toggle_view = function(view_type) {
     if (view_type === 'cons') {
-      return root.display_year();
+      return root.display_agr();
     } else if (view_type === 'all') {
       return root.display_all();
     } else if (view_type === 'chron') {
