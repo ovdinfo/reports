@@ -509,6 +509,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_groups = function(groups) {
     var i = 0;
     d3.selectAll('circles').on("mouseover", function(d) {
+      console.log(d);
       return this.mouseOverGroup(d.inOrgId);
       });
     
