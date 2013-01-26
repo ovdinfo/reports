@@ -16,7 +16,7 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 
    var org = {};
-   this.radius = 260;
+   this.radius = 270;
    this.centerX = 550;
    this.centerY = 300;
    this.circleMargin = 3;
