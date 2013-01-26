@@ -512,8 +512,9 @@ BubbleChart = (function() {
     d3.selectAll('circle').on("mouseover", function(d,i) {
       that.mouseOverGroup(d.inOrgID);
       return that.show_details(d, i, this);
-    }).on("mouseout", function(d) {
-      return that.mouseOutGroup(d.inOrgID);
+    }).on("mouseout", function(d, i) {
+      that.mouseOutGroup(d.inOrgID);
+      return that.show_details(d, i, this);
     });
     
     //.data([d.inOrgId]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
@@ -534,6 +535,11 @@ BubbleChart = (function() {
   BubbleChart.prototype.hide_orgs = function() {
  	this.vis.selectAll(".orgTotal").remove();
  	this.vis.selectAll('.group-circle').remove();
+ 	d3.selectAll('circle').on("mouseover", function(d,i) {
+      return that.show_details(d, i, this);
+    }).on("mouseout", function(d, i) {
+      return that.show_details(d, i, this);
+    });
  	return this.vis.selectAll(".orgLabel").remove();
   };
   
