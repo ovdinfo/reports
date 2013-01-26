@@ -14,6 +14,7 @@ BubbleChart = (function() {
 	this.orginizers = [];
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
+	this.state = -1;
 
    var org = {},
        types = {};
@@ -632,20 +633,21 @@ BubbleChart = (function() {
 
 // STATES SWITCHER
 
-  BubbleChart.prototype.changeState = function(oldState,newState) {
+  BubbleChart.prototype.changeState = function(newState) {
   //states:
   //-1 - start
   //0 - 
-   console.log('old: ' + oldState);
+   console.log('old: ' + this.state);
    console.log('new: ' + newState);
-   switch(oldState){
+   switch(this.state){
    	case 0: return this.hide_label();
    	case 1: return this.hide_agrs();
    	case 2: return this.hide_axis();
    	case 3: return this.hide_orgs();
-   	case 3: return true;
+   	case 4: return true;
    	default: ;
    };
+   this.state = newState;
   };
 
   
@@ -694,23 +696,21 @@ BubbleChart = (function() {
 root = typeof exports !== "undefined" && exports !== null ? exports : this;
 
 $(function() {
-  this.state = -1;
   var chart, render_vis,
     _this = this;
   chart = null;
   render_vis = function(csv) {
     chart = new BubbleChart(csv);
     chart.start();
-    this.state = -1
     root.display_all();
     return chart.display_init();
   };
   root.display_all = function() {
-    chart.changeState(this.state,this.state = 0);
+    chart.changeState(0);
     return chart.display_group_all();
   };
   root.display_agr = function() {
-    chart.changeState(this.state,this.state = 1);
+    chart.changeState(1);
     return chart.display_by_agr();
   };
   root.display_chron = function() {
@@ -736,15 +736,15 @@ $(function() {
     	max: new Date(2012, 11, 21)
     }
     });
-    chart.changeState(this.state,this.state = 2);
+    chart.changeState(2);
     return chart.display_by_date();
   };
   root.display_orgs = function() {
-    chart.changeState(this.state,this.state = 3);
+    chart.changeState(3);
     return chart.display_by_group();
   };
   root.display_types = function() {
-    chart.changeState(this.state,this.state = 4);
+    chart.changeState(4);
     return chart.display_by_type();
   };
   root.toggle_view = function(view_type) {
