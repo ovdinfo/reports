@@ -607,9 +607,6 @@ BubbleChart = (function() {
   //states:
   //-1 - start
   //0 - 
-    this.hide_axis();
-    this.hide_agrs();
-    this.hide_orgs();
    console.log(oldState);
    console.log(newState);
    switch(oldState){
