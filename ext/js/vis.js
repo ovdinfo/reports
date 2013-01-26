@@ -614,6 +614,19 @@ BubbleChart = (function() {
 	  .duration(300);
   };
   
+  
+  
+  BubbleChart.prototype.changeState = function(oldState,newState) {
+  //states:
+  //-1 - start
+  //0 - 
+   console.log(oldState);
+   console.log(newState);
+   switch(oldState){
+   	
+   }
+  };
+  
 /////////////////////////////////
 
 // TOOLTIP
@@ -659,6 +672,7 @@ BubbleChart = (function() {
 root = typeof exports !== "undefined" && exports !== null ? exports : this;
 
 $(function() {
+  this.state = -1;
   var chart, render_vis,
     _this = this;
   chart = null;
@@ -669,9 +683,11 @@ $(function() {
     return chart.display_init();
   };
   root.display_all = function() {
+    chart.changeState(this.state,this.state = 0);
     return chart.display_group_all();
   };
   root.display_agr = function() {
+    chart.changeState(this.state,this.state = 1);
     return chart.display_by_agr();
   };
   root.display_chron = function() {
@@ -695,9 +711,11 @@ $(function() {
     	min: new Date(2011, 9, 4),
     	max: new Date(2012, 11, 21)
     }});
+    chart.changeState(this.state,this.state = 2);
     return chart.display_by_date();
   };
   root.display_type = function() {
+    chart.changeState(this.state,this.state = 3);
     return chart.display_by_type();
   };
   root.toggle_view = function(view_type) {
