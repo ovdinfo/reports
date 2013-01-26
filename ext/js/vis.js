@@ -645,8 +645,8 @@ BubbleChart = (function() {
     var _this = this;
     return function(d) {
       var x, y;
-      x = (d.inTypeID%4)*200+50;
-      y = Math.round(d.inTypeID/4)*200+50;
+      x = (d.inTypeID%4)*200+200;
+      y = Math.round(d.inTypeID/4)*200+200;
       d.x = d.x + (x - d.x) * (_this.damper + 0.02) * alpha * 1.1;
       return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * alpha * 1.1;
     };
