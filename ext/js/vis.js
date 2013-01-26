@@ -464,9 +464,9 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.append("rect").attr("class", "row").attr("y",35+15*i).attr("x", 50).attr("width","230").attr("height","20").style('cursor','pointer').style('fill','#F04E23').data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
-		this.vis.append("text").attr("class", "orgLabel label_" + i).attr("y",50+15*i).attr("x", 100).style('cursor','pointer').text(orgs[i].name);
-		this.vis.append("text").attr("class", "orgTotal total_" + i).attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total);
+		this.vis.append("rect").attr("class", "row_" + i).attr("y",35+15*i).attr("x", 50).attr("width","230").attr("height","20").style('cursor','pointer').style('fill','#F04E23').style('opacity','0').data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.append("text").attr("class", "orgLabel label_" + i).attr("y",50+15*i).attr("x", 100).style('cursor','pointer').text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.append("text").attr("class", "orgTotal total_" + i).attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
@@ -530,6 +530,12 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
     d3.select('#group_' + d).transition()
+	  .style('opacity', '0.3')
+	  .duration(300);
+	d3.select('.row_' + d).transition()
+	  .style('opacity', '0.3')
+	  .duration(300);
+	d3.select('.total_' + d + ',.label_' + d).transition()
 	  .style('opacity', '0.3')
 	  .duration(300);
   };
