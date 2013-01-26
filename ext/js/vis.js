@@ -47,7 +47,7 @@ BubbleChart = (function() {
     });
     window.max_amount = max_amount;
     
-    this.radius_scale = d3.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
+    this.radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([1, 80]);
 	
 	
 	var totalRadSum = 0;
