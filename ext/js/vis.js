@@ -236,7 +236,16 @@ BubbleChart = (function() {
     
     return this.circles.transition().duration(2000).attr("r", function(d) {
       return d.radius;
-    }).each("end",function() {_this.started = true;console.log(_this.started);});
+    }).each("end",function() {
+      _this.started = true;
+      $('#view_selection a').click(function() {
+        var view_type = $(this).attr('id');
+        $('#view_selection a').removeClass('active');
+        $(this).toggleClass('active');
+        toggle_view(view_type);
+        return false;
+      });  
+    });
   };
 
 // CHARGE BUBLES
