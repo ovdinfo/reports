@@ -656,7 +656,7 @@ BubbleChart = (function() {
    	default: ;
    };
    this.state = newState;
-   return true;
+   return this.force.start();
   };
 
   
