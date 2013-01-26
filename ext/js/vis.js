@@ -17,7 +17,6 @@ BubbleChart = (function() {
 
    var org = {},
        types = {};
-   this.radius = 267.5;
    this.centerX = 550;
    this.centerY = 300;
    this.circleMargin = 3;
@@ -72,17 +71,57 @@ BubbleChart = (function() {
 	
 	
 	var totalRadSum = 0;
+	var sides = [];
 	for (i=0;i<org.length;i++) {
 		org[i].radius = this.radius_scale(org[i].total);
+		if(i != 0){
+			sides[i-1]=org[i].radius+org[i-1].radius+2*this.circleMargin;
+		}
 		totalRadSum+=org[i].radius*2;	
 	}
+	sides[org.length-1]=org[org.length-1].radius+org[0].radius+2*this.circleMargin;
+	//////////// poisk idealnogo radiusa
+	this.radiusSearch = function (maxRad,sidesArr,maxError){
+	   if(sidesArr.length == 1){
+		   return 0
+	   }
+	   else if(this.radiusFunc(maxRad,sidesArr)){
+		   return maxRad
+	   }
+		else{//massiv otsortirovan k etomu momentu!
+			var left = sidesArr[0];
+			var right = maxRad;
+			var mid;
+			while(right-left > maxError){
+				mid = (left+right)/2;
+				console.log(mid);
+				if(this.radiusFunc(mid,sidesArr)){
+					left = mid
+				}
+				else{
+					right = mid
+				}
+			}
+			return mid;
+		}
+   	}
+	this.radiusFunc = function (rad,sidesArr){//ubyvaet
+		   var sum = -Math.PI;
+		   for(var j=0;j<sidesArr.length;j++){
+			   sum+=Math.asin(sidesArr[j]/(2*rad))
+		   }
+		   if(sum > 0){
+			   return sum > 0
+		   }
+	   }
+	this.radius = this.radiusSearch(600,sides,0.5);
+	////////////
+	
 	var curAngle = 0;
-	var angleMargin = 1/360;
-	var withoutMargins = 1-2*org.length*angleMargin;
 	for (i=0;i<org.length-1;i++) {
 		org[i].angle = curAngle
 		org[i].startAngle = org[i].angle+Math.PI/2
-		curAngle+=2*Math.asin((org[i].radius+org[i+1].radius+2*this.circleMargin)/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
+		curAngle+=2*Math.asin(sides[i]/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
 	}
 	org[i].angle = curAngle;
 	org[i].startAngle = org[i].angle+Math.PI/2
