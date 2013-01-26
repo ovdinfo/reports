@@ -10,7 +10,7 @@ BubbleChart = (function() {
     var i, max_amount, organizators;
     this.data = data;
     this.width = 940;
-    this.height = 640;
+    this.height = 650;
 	this.orginizers = [];
 	this.prevOrginizerRadius = [];
 	this.prevOrginizerAngle = [];
@@ -391,7 +391,7 @@ BubbleChart = (function() {
       left: 39.5
     };
     this.width = 990;
-    this.height = 640;
+    this.height = 650;
     xScale = d3.time.scale().range([10, this.width]);
     yScale = d3.scale.linear().range([this.height, 0]);
     xAxis = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d"));
@@ -470,6 +470,7 @@ BubbleChart = (function() {
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
+        console.log(d);
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
