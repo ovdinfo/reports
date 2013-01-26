@@ -663,8 +663,8 @@ BubbleChart = (function() {
         default: ;
       } 
       
-      x = (d.inTypeID%4)*200+200;
-      y = parseInt(d.inTypeID/4)*100+200;
+      //x = (d.inTypeID%4)*200+200;
+      //y = parseInt(d.inTypeID/4)*100+200;
       //alert(d.inTypeID + ', ' + y);
       if(alpha > 0.01){
       	d.x = d.x + (x - d.x) * (_this.damper + 0.02) * (1-alpha) * 100/99;
