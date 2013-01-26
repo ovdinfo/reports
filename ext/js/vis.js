@@ -234,10 +234,9 @@ BubbleChart = (function() {
       return that.hide_details(d, i, this);
     });
     
-    _this.started = true;
     return this.circles.transition().duration(2000).attr("r", function(d) {
       return d.radius;
-    }).call(function() {_this.started = false;};);
+    }).call(function() {_this.started = true;console.log(_this.started);};);
   };
 
 // CHARGE BUBLES
