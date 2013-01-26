@@ -640,15 +640,16 @@ BubbleChart = (function() {
    console.log('old: ' + this.state);
    console.log('new: ' + newState);
    switch(this.state){
-   	case 0: return this.hide_label();
-   	case 1: return this.hide_agrs();
-   	case 2: return this.hide_axis();
-   	case 3: return this.hide_orgs();
-   	case 4: return true;
+   	case 0: this.hide_label();
+   	case 1: this.hide_agrs();
+   	case 2: this.hide_axis();
+   	case 3: this.hide_orgs();
+   	//case 4: true;
    	default: ;
    };
    this.state = newState;
    console.log('new2: ' + this.state);
+   return true;
   };
 
   
