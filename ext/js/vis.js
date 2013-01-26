@@ -488,8 +488,8 @@ BubbleChart = (function() {
 	 // delta = Math.PI/8;
       position = orgsArr.indexOf(d.org);
 	  var obj = orgs[position];
-	  targetX = centerX+Math.cos(obj.angle)*radius;
-	  targetY = centerY+Math.sin(obj.angle)*radius;
+	  targetX = centerX+Math.cos(obj.angle)*this.radius;
+	  targetY = centerY+Math.sin(obj.angle)*this.radius;
 	  if (alpha > 0.01) {
 		d.y = d.y +(targetY-d.y+Math.sin(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
 		return d.x = d.x + (targetX-d.x+Math.cos(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
@@ -510,8 +510,8 @@ BubbleChart = (function() {
         .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
         .attr('class','group-circle')
-        .attr('cx', 550+Math.cos(groups[i].angle)*radius)
-        .attr('cy', 300+Math.sin(groups[i].angle)*radius)
+        .attr('cx', 550+Math.cos(groups[i].angle)*this.radius)
+        .attr('cy', 300+Math.sin(groups[i].angle)*this.radius)
         .style("opacity", 0);
       i++;
     };
