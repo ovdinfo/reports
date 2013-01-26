@@ -390,14 +390,8 @@ BubbleChart = (function() {
       //console.log(xScale);
       x = xScale(d.date2);
       y = yScale(d.value);
-      if (alpha > 0.0001) {
-        d.x = d.x + (x - d.x) * (_this.damper + 0.02) * (1 - alpha);
-        return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * (1 - alpha);
-      }
-      else {
-        d.x = d.x + (x - d.x) * (_this.damper + 0.02) * (1 - alpha);
-        return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * (1 - alpha);
-      }
+      d.x = d.x + (x - d.x) * (_this.damper + 0.02) * (alpha/1);
+      return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * (alpha/1);
     };
   };
   
