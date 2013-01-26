@@ -16,9 +16,10 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 
    var org = {};
-   this.radius = 280;
+   this.radius = 260;
    this.centerX = 550;
    this.centerY = 300;
+   this.circleMargin = 3;
  
 	  i = 0;
       while (i < this.data.length) {
@@ -72,7 +73,7 @@ BubbleChart = (function() {
 			//console.log(260*Math.sin(org[i].angle))
 		//	console.log((org[i].radius+org[i+1].radius)/(2*this.radius));
 			//console.log(2*Math.asin((org[i].radius+org[i+1].radius)/(2*this.radius)));
-			curAngle+=2*Math.asin((org[i].radius+org[i+1].radius+6)/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
+			curAngle+=2*Math.asin((org[i].radius+org[i+1].radius+2*this.circleMargin)/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
 		}
 		org[i].angle = curAngle;
 		org[i].startAngle = org[i].angle+Math.PI/2
@@ -511,7 +512,7 @@ BubbleChart = (function() {
       d3.select("svg").insert("circle",":first-child")
         .attr('id', 'group_' + i)
         .attr('class', 'group_circles')
-        .attr('r', groups[i].radius + 10)
+        .attr('r', groups[i].radius + this.circleMargin)
         .attr('class','group-circle')
         .attr('cx', this.centerX+Math.cos(groups[i].angle)*this.radius)
         .attr('cy', this.centerY+Math.sin(groups[i].angle)*this.radius)
