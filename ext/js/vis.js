@@ -16,7 +16,7 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 
    var org = {};
-   var radius = 260;
+   this.radius = 260;
 	  i = 0;
       while (i < this.data.length) {
         org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
