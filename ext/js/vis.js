@@ -400,8 +400,8 @@ BubbleChart = (function() {
       x = xScale(d.date2);
       y = yScale(d.value);
       if(alpha > 0.01){
-      	d.x = d.x + (x - d.x) * (0.01/alpha);
-      	return d.y = d.y + (y - d.y) * (0.01/alpha);
+      	d.x = d.x + (x - d.x) * (1-alpha)*100/99;
+      	return d.y = d.y + (y - d.y) * (1-alpha)*100/99;
       }
       else{
 	      d.x = x;
