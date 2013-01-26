@@ -610,8 +610,8 @@ BubbleChart = (function() {
    console.log(oldState);
    console.log(newState);
    switch(oldState){
-   	case 0: this.hide_label();this.hide_orgs();
-   	case 1: this.hide_agrs(); this.hide_orgs();
+   	case 0: this.hide_orgs();
+   	case 1: this.hide_orgs();
    	case 2: this.hide_axis();
    	case 3: this.hide_orgs();
    	default: ;
