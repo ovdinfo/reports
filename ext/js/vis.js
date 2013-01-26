@@ -622,7 +622,7 @@ BubbleChart = (function() {
 
 // DISPLAY BY TYPES
 
-  BubbleChart.prototype.display_by_group = function() {
+  BubbleChart.prototype.display_by_type = function() {
   
   
   };
@@ -719,7 +719,7 @@ $(function() {
     chart.changeState(this.state,this.state = 2);
     return chart.display_by_date();
   };
-  root.display_type = function() {
+  root.display_orgs = function() {
     chart.changeState(this.state,this.state = 3);
     return chart.display_by_group();
   };
@@ -730,8 +730,8 @@ $(function() {
       return root.display_all();
     } else if (view_type === 'chron') {
       return root.display_chron();
-    } else if (view_type === 'type') {
-      return root.display_type();
+    } else if (view_type === 'org') {
+      return root.display_orgs();
     }
   };
   
