@@ -513,8 +513,8 @@ BubbleChart = (function() {
         .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
         .attr('class','group-circle')
-        .attr('cx', _this.centerX+Math.cos(groups[i].angle)*this.radius)
-        .attr('cy', _this.centerY+Math.sin(groups[i].angle)*this.radius)
+        .attr('cx', this.centerX+Math.cos(groups[i].angle)*this.radius)
+        .attr('cy', this.centerY+Math.sin(groups[i].angle)*this.radius)
         .style("opacity", 0.5);
       i++;
     };
