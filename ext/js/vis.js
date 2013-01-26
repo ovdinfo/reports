@@ -94,7 +94,6 @@ BubbleChart = (function() {
 			var mid;
 			while(right-left > maxError){
 				mid = (left+right)/2;
-				console.log(mid);
 				if(this.radiusFunc(mid,sidesArr)){
 					left = mid
 				}
@@ -255,9 +254,6 @@ BubbleChart = (function() {
       });
     });
     this.force.start();
-    this.hide_axis();
-    this.hide_agrs();
-    this.hide_orgs();
     return this.display_label();
   };
 
@@ -326,9 +322,6 @@ BubbleChart = (function() {
       });
     });
     this.force.start();
-    this.hide_label();
-    this.hide_axis();
-    this.hide_orgs();
     return this.display_agrs();
   };
 
@@ -377,9 +370,6 @@ BubbleChart = (function() {
       });
     });
     this.force.start();
-    this.hide_label();
-    this.hide_agrs();
-    this.hide_orgs();
     $("#det-slider").bind("valuesChanged", function(e, data){ 
       _this.update();
       $( "#count" ).empty().append( "задержания от " + Math.round(data.values.min) +  " до " + Math.round(data.values.max) + " человек" );
@@ -524,9 +514,6 @@ BubbleChart = (function() {
       });
     });
     this.force.start();
-    this.hide_label();
-    this.hide_agrs();
-    return this.hide_axis();
   };
 
   BubbleChart.prototype.move_towards_type = function(alpha) {
@@ -620,10 +607,17 @@ BubbleChart = (function() {
   //states:
   //-1 - start
   //0 - 
+    this.hide_axis();
+    this.hide_agrs();
+    this.hide_orgs();
    console.log(oldState);
    console.log(newState);
    switch(oldState){
-   	
+   	case 0: this.hide_label();
+   	case 1: this.hide_axis();
+   	case 2: this.hide_agrs();
+   	case 3: this.hide_orgs();
+   	default: ;
    }
   };
   
@@ -679,6 +673,7 @@ $(function() {
   render_vis = function(csv) {
     chart = new BubbleChart(csv);
     chart.start();
+    this.state = -1
     root.display_all();
     return chart.display_init();
   };
