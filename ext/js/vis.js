@@ -17,6 +17,9 @@ BubbleChart = (function() {
 
    var org = {};
    this.radius = 280;
+   this.centerX = 550;
+   this.centerY = 300;
+ 
 	  i = 0;
       while (i < this.data.length) {
         org[i]={"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
@@ -67,9 +70,9 @@ BubbleChart = (function() {
 			org[i].startAngle = org[i].angle+Math.PI/2
 			//alert(org[i].angle)
 			//console.log(260*Math.sin(org[i].angle))
-			console.log((org[i].radius+org[i+1].radius)/(2*this.radius));
-			console.log(2*Math.asin((org[i].radius+org[i+1].radius)/(2*this.radius)));
-			curAngle+=2*Math.asin((org[i].radius+org[i+1].radius)/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
+		//	console.log((org[i].radius+org[i+1].radius)/(2*this.radius));
+			//console.log(2*Math.asin((org[i].radius+org[i+1].radius)/(2*this.radius)));
+			curAngle+=2*Math.asin((org[i].radius+org[i+1].radius+6)/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
 		}
 		org[i].angle = curAngle;
 		org[i].startAngle = org[i].angle+Math.PI/2
@@ -484,14 +487,12 @@ BubbleChart = (function() {
     return function(d) {
 		//console.log(d);
 	  //alert(d.radius);
-	   var position, targetX, targetY, delta, centerX, centerY;
-	  centerX = 550;
-	  centerY = 300;
+	   var position, targetX, targetY, delta;
 	 // delta = Math.PI/8;
       position = orgsArr.indexOf(d.org);
 	  var obj = orgs[position];
-	  targetX = centerX+Math.cos(obj.angle)*_this.radius;
-	  targetY = centerY+Math.sin(obj.angle)*_this.radius;
+	  targetX = _this.centerX+Math.cos(obj.angle)*_this.radius;
+	  targetY = _this.centerY+Math.sin(obj.angle)*_this.radius;
 	  if (alpha > 0.01) {
 		d.y = d.y +(targetY-d.y+Math.sin(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
 		return d.x = d.x + (targetX-d.x+Math.cos(d.angle+obj.startAngle)*(obj.radius-d.radius))*Math.pow((1-alpha)*100/99,50);
@@ -512,8 +513,8 @@ BubbleChart = (function() {
         .attr('class', 'group_circles')
         .attr('r', groups[i].radius + 10)
         .attr('class','group-circle')
-        .attr('cx', 550+Math.cos(groups[i].angle)*this.radius)
-        .attr('cy', 300+Math.sin(groups[i].angle)*this.radius)
+        .attr('cx', _this.centerX+Math.cos(groups[i].angle)*this.radius)
+        .attr('cy', _this.centerY+Math.sin(groups[i].angle)*this.radius)
         .style("opacity", 0.5);
       i++;
     };
