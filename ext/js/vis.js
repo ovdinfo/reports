@@ -222,10 +222,18 @@ BubbleChart = (function() {
     }).attr("id", function(d) {
       return "bubble_" + d.id;
     }).on("mouseover", function(d, i) {
+      if(_this.state == 3){
+      	that.mouseOverGroup(d.inOrgID);
+      }
       return that.show_details(d, i, this);
     }).on("mouseout", function(d, i) {
+      if(_this.state == 3){
+      	that.mouseOutGroup(d.inOrgID);
+      }
       return that.hide_details(d, i, this);
     });
+    
+    
     return this.circles.transition().duration(2000).attr("r", function(d) {
       return d.radius;
     });
@@ -545,13 +553,13 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_groups = function(groups) {
     var that = this;
     var i = 0;
-    d3.selectAll('circle').on("mouseover", function(d,i) {
+    /*d3.selectAll('circle').on("mouseover", function(d,i) {
       that.mouseOverGroup(d.inOrgID);
       return that.show_details(d, i, this);
     }).on("mouseout", function(d, i) {
       that.mouseOutGroup(d.inOrgID);
       return that.hide_details(d, i, this);
-    });
+    });*/
     
     //.data([d.inOrgId]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
     while (i < groups.length) {
@@ -570,12 +578,12 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.hide_orgs = function() {
     var that = this;
- 	this.vis.selectAll(".orgTotal,.orgLabel,.group-circle,.cell").remove();
- 	return d3.selectAll('circle').on("mouseover", function(d,i) {
+    return this.vis.selectAll(".orgTotal,.orgLabel,.group-circle,.cell").remove();
+ 	/*return d3.selectAll('circle').on("mouseover", function(d,i) {
       return that.show_details(d, i, this);
     }).on("mouseout", function(d, i) {
       return that.hide_details(d, i, this);
-    });
+    });*/
   };
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
@@ -648,7 +656,6 @@ BubbleChart = (function() {
    	default: ;
    };
    this.state = newState;
-   console.log('new2: ' + this.state);
    return true;
   };
 
