@@ -390,9 +390,9 @@ BubbleChart = (function() {
       //console.log(xScale);
       x = xScale(d.date2);
       y = yScale(d.value);
-      d.x = d.x + (x - d.x) * (0.005/alpha);
+      d.x = d.x + (x - d.x) * (1 - alpha);
       console.log(alpha);
-      return d.y = d.y + (y - d.y) * (0.005/alpha);
+      return d.y = d.y + (y - d.y) * (1 - alpha);
     };
   };
   
