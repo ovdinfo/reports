@@ -387,12 +387,10 @@ BubbleChart = (function() {
       var date, x, y;
       date = d3.time.format("%d.%m.%Y");
       d.date2 = date.parse(d.date);
-      //console.log(xScale);
       x = xScale(d.date2);
       y = yScale(d.value);
-      d.x = d.x + (x - d.x) * (0.005/alpha) * (1 - alpha);
-      console.log(alpha);
-      return d.y = d.y + (y - d.y) * (0.005/alpha) * (1 - alpha);
+      d.x = d.x + (x - d.x) * Math.cos(alpha);
+      return d.y = d.y + (y - d.y) * Math.cos(alpha);
     };
   };
   
