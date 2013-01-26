@@ -508,7 +508,11 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.display_groups = function(groups) {
     var i = 0;
-    d3.selectAll('circles').data([d.inOrgId]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+    d3.selectAll('circles').on("mouseover", function(d) {
+      return this.mouseOverGroup(d.inOrgId);
+      });
+    
+    //.data([d.inOrgId]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
     while (i < groups.length) {
       //console.log(groups[i]);
       d3.select("svg").insert("circle",":first-child")
