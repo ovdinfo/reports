@@ -399,8 +399,14 @@ BubbleChart = (function() {
       d.date2 = date.parse(d.date);
       x = xScale(d.date2);
       y = yScale(d.value);
-      d.x = d.x + (x - d.x) * (0.005/alpha);
-      return d.y = d.y + (y - d.y) * (0.005/alpha);
+      if(alpha > 0.01){
+      	d.x = d.x + (x - d.x) * (0.01/alpha);
+      	return d.y = d.y + (y - d.y) * (0.01/alpha);
+      }
+      else{
+	      d.x = x;
+	      return y;
+      }
     };
   };
   
