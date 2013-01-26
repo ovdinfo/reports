@@ -234,8 +234,8 @@ BubbleChart = (function() {
       return that.hide_details(d, i, this);
     });
     
-    
-    return this.circles.transition().duration(2000).on("complete",function(e){console.log("FIN"); _this.started = true;}).attr("r", function(d) {
+    _this.started = true;
+    return this.circles.transition().duration(2000).attr("r", function(d) {
       return d.radius;
     });
   };
