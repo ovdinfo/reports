@@ -391,7 +391,7 @@ BubbleChart = (function() {
       x = xScale(d.date2);
       y = yScale(d.value);
       d.x = d.x + (x - d.x) * (_this.damper + 0.02) * alpha;
-      console.log((y - d.y) * (_this.damper + 0.02) * alpha);
+      console.log(alpha);
       return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * alpha;
     };
   };
