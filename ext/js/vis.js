@@ -716,7 +716,7 @@ $(function() {
     	max: new Date(2012, 11, 21)
     }
     });
-    chart.changeState(this.state,this.state = 2);
+    //chart.changeState(this.state,this.state = 2);
     return chart.display_by_date();
   };
   root.display_orgs = function() {
