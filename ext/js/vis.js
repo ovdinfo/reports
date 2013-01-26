@@ -148,8 +148,7 @@ BubbleChart = (function() {
 	  }
 		_this.prevOrginizerRadius[node.org] = node.radius;
 		_this.prevOrginizerAngle[node.org] = node.angle;
-	 node.inOrgID = _this.orginizers[node.org];
-	         console.log(_this.getOrganizatorsArray.indexOf(node.org));
+	  node.inOrgID = _this.getOrganizatorsArray.indexOf(node.org);
 	
       return _this.nodes.push(node);
     });
@@ -474,7 +473,7 @@ BubbleChart = (function() {
         return d.x;
       }).attr("cy", function(d) {
         return d.y;
-      });
+      }).data([d.inOrgId]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
     });
     this.force.start();
     this.hide_label();
