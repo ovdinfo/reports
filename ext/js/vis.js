@@ -486,7 +486,7 @@ BubbleChart = (function() {
     this.vis.append("g").attr("class", "y axis").attr("transform", "translate(50,0)").call(yAxis);
     this.vis.append("text").attr("class", "x label").attr("text-anchor", "end").attr("x", this.width + 50).attr("y", this.height + 30).text("дата мониторинга");
     this.vis.append("text").attr("class", "y label").attr("text-anchor", "end").attr("y", 6).attr("dy", ".75em").attr("transform", "rotate(-90)").text("количество задержаний");
-    this.vis.insert('rect','.axis').attr('height','690').attr('width','50').attr('x','0').attr('y','0').style('fill','#fff');
+    this.vis.insert('rect','.axis').attr("class","clip").attr('height','690').attr('width','50').attr('x','0').attr('y','0').style('fill','#fff');
     return d3.selectAll('circle');
   };
 
@@ -510,10 +510,8 @@ BubbleChart = (function() {
       left: '35',
       top: '570'
     }, 600);
-    var axis, label;
-    axis = this.vis.selectAll(".axis").remove();
+    this.vis.selectAll(".axis,.label,.clip").remove();
     $("#det-slider,#date-slider,#dates,#count").remove();
-    label = this.vis.selectAll(".label").remove();
     return d3.selectAll('circle');//.attr('clip-path','');
   };
   
