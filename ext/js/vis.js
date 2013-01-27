@@ -318,7 +318,7 @@ BubbleChart = (function() {
     $('#data-sizeKey').fadeIn('slow');
     for (i=0;i<types.length;i++){
         if (i<3) {
-		  $('.data-type-label-' + i + ' h3').append(types[i].name);
+		  $('.data-type-label-' + i + ' h3').append(types[i].name + ' <span>' + types[i].total/(that.totalSum/100).toFixed(1) + '</span>');
 		}
 		else if (i<7) {
 		  $('.data-type-label-' + i + ' h4').append(types[i].name);
@@ -326,7 +326,7 @@ BubbleChart = (function() {
 		else {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
-		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных (' + parseInt(types[i].total/(that.totalSum/100)) + ')');
+		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных';
 	}
     return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
