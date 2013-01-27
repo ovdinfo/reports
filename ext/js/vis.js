@@ -322,7 +322,7 @@ BubbleChart = (function() {
 		else {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
-		$('.data-type-label-' + i + ' span').append(types[i].total);
+		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных');
 	}
     return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
