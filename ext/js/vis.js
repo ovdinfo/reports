@@ -367,24 +367,11 @@ BubbleChart = (function() {
   };  
 
   BubbleChart.prototype.display_agrs = function() {
-    var agrs, agrs_data, agrs_x,
-      _this = this;
-    agrs_x = {
-      "согласовано": 160,
-      "не согласовано": this.width - 160
-    };
-    agrs_data = d3.keys(agrs_x);
-    agrs = this.vis.selectAll(".agrs").data(agrs_data);
-    return agrs.enter().append("text").attr("class", "agrs").attr("x", function(d) {
-      return agrs_x[d];
-    }).attr("y", 40).attr("text-anchor", "middle").text(function(d) {
-      return d;
-    });
+    $('#data-agr-labels').show('slow');
   };
 
   BubbleChart.prototype.hide_agrs = function() {
-    var agrs;
-    return agrs = this.vis.selectAll(".agrs").remove();
+    $('#data-agr-labels').hide('slow');
   };
 
 /////////////////////////////////
