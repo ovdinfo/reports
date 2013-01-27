@@ -670,10 +670,10 @@ BubbleChart = (function() {
         case 5: x=600; y=345; break;
         case 6: x=800; y=360; break;
         case 7: x=400; y=470; break;
-        case 8: x=500; y=480; break;
-        case 9: x=600; y=490; break;
-        case 10: x=700; y=500; break;
-        case 11: x=800; y=510; break;
+        case 8: x=520; y=480; break;
+        case 9: x=640; y=490; break;
+        case 10: x=760; y=500; break;
+        case 11: x=880; y=510; break;
         default: x=500;y=500;
       }
       d.x = d.x + (x - d.x) * (_this.damper + 0.02) * alpha * 1.1;
