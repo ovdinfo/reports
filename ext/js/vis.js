@@ -682,26 +682,22 @@ BubbleChart = (function() {
   };  
   
   BubbleChart.prototype.display_type_labels = function() {
-    $('#data-type-labels').show('slow');
     this.vis.selectAll(".scaleKey-1").transition()
-      .attr("cx",120)
-      .attr("cy",600)
+      .attr("cy",585)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-2").transition()
-      .attr("cx",120)
-      .attr("cy",625)
+      .attr("cy",605)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-3").transition()
-      .attr("cx",120)
-      .attr("cy",660)
+      .attr("cy",640)
       .duration(500)
       .delay(100);
     $('#data-sizeKey').animate({
-      left: '35',
-      top: '670'
+      top: '650'
     }, 600);
+    $('#data-type-labels').show('slow');
   };
   
   BubbleChart.prototype.display_hide_labels = function() {
