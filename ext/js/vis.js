@@ -211,7 +211,6 @@ BubbleChart = (function() {
       _this = this;
     this.vis = d3.select("#vis").append("svg").attr("width", this.width + 200).attr("height", this.height).attr("id", "svg_vis");
     this.visCircles = this.vis.append("svg").attr("width", this.width + 200).attr("height", this.height).attr("id", "svg_vis_circles");
-    
     this.circles = this.visCircles.selectAll("circle").data(this.nodes, function(d) {
       return d.id;
     });
@@ -355,7 +354,6 @@ BubbleChart = (function() {
       });
     });
     this.force.start();
-    return this.display_agrs();
   };
 
   BubbleChart.prototype.move_towards_agr = function(alpha) {
