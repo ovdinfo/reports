@@ -512,7 +512,7 @@ BubbleChart = (function() {
     }, 600);
     this.vis.selectAll(".axis,.label,.clip").remove();
     $("#det-slider,#date-slider,#dates,#count").remove();
-    return d3.selectAll('circle');//.attr('clip-path','');
+    return d3.selectAll('circle');
   };
   
 /////////////////////////////////
