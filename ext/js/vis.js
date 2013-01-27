@@ -314,7 +314,6 @@ BubbleChart = (function() {
     $('#data-sizeKey').fadeIn('slow');
     for (i=0;i<types.length;i++){
 		$('.data-type-label-' + i + ' h3').append(types[i].name);
-		console.log(types[i].name);
 		$('.data-type-label-' + i + ' span').append(types[i].total);
 	}
     return this.vis.selectAll(".data-scaleKeyCircle")
