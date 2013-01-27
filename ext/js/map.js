@@ -22,7 +22,7 @@ var map = mapbox.map('map'),
 	mapHeight = ($(window).height()/100)*90-140,
     ovdData = {};
     
-$('#map').height(mapHeight+'px');
+$('#map,#loader').height(mapHeight+'px');
 
 map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
 
