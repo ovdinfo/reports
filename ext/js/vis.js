@@ -287,6 +287,7 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.display_init = function() {
     var legend;
+    var types = _this.getTypes;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(73,218)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(500))
@@ -313,6 +314,10 @@ BubbleChart = (function() {
     return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
     .transition().duration(600).style("opacity", 1);
+    for (i=0;i<types.length;i++){
+		$('data-type-label-' + i + ' h3').append(types[i].name);
+		$('data-type-label-' + i + ' span').append(types[i].total);
+	}
   };
   
   BubbleChart.prototype.display_label = function() {
@@ -632,7 +637,6 @@ BubbleChart = (function() {
 
   BubbleChart.prototype.display_by_type = function() {
     var _this = this, x, y;
-    var types = _this.getTypes;
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
         return d.x;
