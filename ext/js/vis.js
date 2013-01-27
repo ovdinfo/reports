@@ -674,11 +674,11 @@ BubbleChart = (function() {
   };  
   
   BubbleChart.prototype.display_type_labels = function() {
-    $('.data-type-labels').show('slow');
+    $('#data-type-labels').show('slow');
   };
   
   BubbleChart.prototype.display_hide_labels = function() {
-    $('.data-type-labels').hide('slow');
+    $('#data-type-labels').hide('slow');
   };
 
 /////////////////////////////////
