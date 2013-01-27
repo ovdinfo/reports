@@ -16,7 +16,7 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 	this.state = -1;
 	this.started = false;
-	this.totalSum;
+	this.totalSum = 0;
 
    var org = {},
        types = {};
@@ -120,13 +120,11 @@ BubbleChart = (function() {
 	////////////
 	
 	var curAngle = 0;
-	for (i=0;i<org.length-1;i++) {
+	for (i=0;i<org.length;i++) {
 		org[i].angle = curAngle
 		org[i].startAngle = org[i].angle+Math.PI/2
 		curAngle+=2*Math.asin(sides[i]/(2*this.radius));//(2*angleMargin+(org[i].radius+org[i+1].radius)/totalRadSum*withoutMargins)*2*Math.PI;
 	}
-	org[i].angle = curAngle;
-	org[i].startAngle = org[i].angle+Math.PI/2
 	
 	this.getOrganizators = org;
     this.getOrganizatorsArray = _.map(this.getOrganizators, function(group) { return group.name; });
@@ -137,6 +135,7 @@ BubbleChart = (function() {
     i = 0;
     while (i<types.length) {
       this.totalSum += types[i].total;
+      i++;
     }
     	
     this.tooltip = CustomTooltip("data-report", 240);
