@@ -683,7 +683,7 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.display_type_labels = function() {
     this.vis.selectAll(".scaleKey-1").transition()
-      .attr("cy",565)
+      .attr("cy",560)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-2").transition()
