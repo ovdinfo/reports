@@ -634,21 +634,21 @@ BubbleChart = (function() {
     var types = _this.getTypes;
 	for(i=0;i<types.length;i++){
 	  switch (i) {
-        case 0: x=300; y=200; break;
-        case 1: x=550; y=200; break;
-        case 2: x=800; y=200; break;
+        case 0: x=300; y=50; break;
+        case 1: x=550; y=50; break;
+        case 2: x=830; y=50; break;
         case 3: x=200; y=330; break;
         case 4: x=400; y=330; break;
-        case 5: x=600; y=345; break;
-        case 6: x=800; y=360; break;
-        case 7: x=400; y=470; break;
-        case 8: x=500; y=480; break;
-        case 9: x=600; y=490; break;
-        case 10: x=700; y=500; break;
-        case 11: x=800; y=510; break;
+        case 5: x=600; y=330; break;
+        case 6: x=830; y=330; break;
+        case 7: x=400; y=530; break;
+        case 8: x=500; y=530; break;
+        case 9: x=600; y=530; break;
+        case 10: x=700; y=530; break;
+        case 11: x=830; y=530; break;
         default: x=500;y=500;
       }
-	  this.vis.append('text').text(types[i].name).attr('x',x).attr('y',y);
+	  this.vis.append('text').text(types[i].name).attr('x',x).attr('y',y).style('font-size','16px').style('font-weight','bold');
 		//this.vis.append("text").attr("class", "orgTotal total_" + i).attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
