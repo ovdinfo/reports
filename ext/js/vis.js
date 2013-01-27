@@ -286,8 +286,9 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.display_init = function() {
-    var legend;
-    var types = this.getTypes;
+    var legend, 
+        types = this.getTypes,
+        i = 0;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(73,218)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(500))
