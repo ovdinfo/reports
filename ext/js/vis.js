@@ -326,7 +326,7 @@ BubbleChart = (function() {
 		else {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
-		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных (' + types[i].total/that.sumTotal + ')');
+		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных (' + types[i].total/that.totalSum + ')');
 	}
     return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
