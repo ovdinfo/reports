@@ -29,7 +29,7 @@ BubbleChart = (function() {
     while (i < this.data.length) {
         org[i] = {"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
         types[i] = {"name":this.data[i].event_type, "value":this.data[i].number_of_detentions};
-        if (this.data[i].agreement = 'согласовано') {
+        if (this.data[i].agreement == 'согласовано') {
           this.agr.y = this.agr.y + 1;
         }
         else {
