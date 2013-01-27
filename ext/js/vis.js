@@ -354,7 +354,7 @@ BubbleChart = (function() {
       });
     });
     this.force.start();
-    return display_agrs();
+    return this.display_agrs();
   };
 
   BubbleChart.prototype.move_towards_agr = function(alpha) {
