@@ -319,7 +319,7 @@ BubbleChart = (function() {
     for (i=0;i<types.length;i++){
     	percents = (types[i].total*100/this.totalSum).toFixed(1) + '%';
         if (i<3) {
-		  $('.data-type-label-' + i + ' h3').append(types[i].name + ' ' + percents);
+		  $('.data-type-label-' + i + ' h3').append(types[i].name);
 		}
 		else if (i<7) {
 		  $('.data-type-label-' + i + ' h4').append(types[i].name);
@@ -327,7 +327,7 @@ BubbleChart = (function() {
 		else {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
-		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных');
+		$('.data-type-label-' + i + ' span').append(types[i].total + ' (' + percents + ')задержанных');
 	}
     return this.vis.selectAll(".data-scaleKeyCircle")
       .style("opacity", 0)
