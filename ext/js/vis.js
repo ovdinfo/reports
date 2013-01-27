@@ -706,7 +706,7 @@ BubbleChart = (function() {
    	case 1: this.hide_agrs(); break;
    	case 2: this.hide_axis(); break;
    	case 3: this.hide_orgs(); break;
-   	case 4: this.display_hide_lables(); break;
+   	case 4: this.display_hide_labels(); break;
    	default: ;
    };
   };
@@ -836,7 +836,6 @@ $(function() {
   var main_width = $(window).width();
   
   $('#loader').css('height', main_height).css('width', main_width);
-  
   
   var opts = {
     lines: 13, // The number of lines to draw
