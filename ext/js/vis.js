@@ -292,19 +292,19 @@ BubbleChart = (function() {
         .attr('r', this.radius_scale(500))
         .attr('class',"data-scaleKeyCircle scaleKey-1")
         .attr('cx', 120)
-        .attr('cy', 500)
+        .attr('cy', 560)
         .style("opacity", 0);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(200))
         .attr('class',"data-scaleKeyCircle scaleKey-2")
         .attr('cx', 120)
-        .attr('cy', 525)
+        .attr('cy', 585)
         .style("opacity", 0);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(10))
         .attr('class',"data-scaleKeyCircle scaleKey-3")
         .attr('cx', 120)
-        .attr('cy', 560)
+        .attr('cy', 620)
         .style("opacity", 0);
     setTimeout((function() {
       return legend.call(d3.legend);
@@ -493,22 +493,22 @@ BubbleChart = (function() {
   BubbleChart.prototype.hide_axis = function() {
     this.vis.selectAll(".scaleKey-1").transition()
       .attr("cx",120)
-      .attr("cy",500)
+      .attr("cy",560)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-2").transition()
       .attr("cx",120)
-      .attr("cy",525)
+      .attr("cy",585)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-3").transition()
       .attr("cx",120)
-      .attr("cy",560)
+      .attr("cy",620)
       .duration(500)
       .delay(100);
     $('#data-sizeKey').animate({
       left: '35',
-      top: '570'
+      top: '630'
     }, 600);
     this.vis.selectAll(".axis,.label,.clip").remove();
     $("#det-slider,#date-slider,#dates,#count").remove();
@@ -671,17 +671,17 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_type_labels = function() {
     this.vis.selectAll(".scaleKey-1").transition()
       .attr("cx",120)
-      .attr("cy",500)
+      .attr("cy",560)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-2").transition()
       .attr("cx",120)
-      .attr("cy",525)
+      .attr("cy",585)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-3").transition()
       .attr("cx",120)
-      .attr("cy",560)
+      .attr("cy",620)
       .duration(500)
       .delay(100);
     $('#data-sizeKey').animate({
@@ -692,25 +692,6 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.display_hide_labels = function() {
     $('#data-type-labels').hide('slow');
-    this.vis.selectAll(".scaleKey-1").transition()
-      .attr("cx",120)
-      .attr("cy",500)
-      .duration(500)
-      .delay(100);
-    this.vis.selectAll(".scaleKey-2").transition()
-      .attr("cx",120)
-      .attr("cy",525)
-      .duration(500)
-      .delay(100);
-    this.vis.selectAll(".scaleKey-3").transition()
-      .attr("cx",120)
-      .attr("cy",560)
-      .duration(500)
-      .delay(100);
-    $('#data-sizeKey').animate({
-      left: '35',
-      top: '570'
-    }, 600);
   };
 
 /////////////////////////////////
