@@ -17,6 +17,7 @@ BubbleChart = (function() {
 	this.state = -1;
 	this.started = false;
 	this.totalSum = 0;
+	this.agr = {y:0,n:0};
 
    var org = {},
        types = {};
@@ -28,6 +29,12 @@ BubbleChart = (function() {
     while (i < this.data.length) {
         org[i] = {"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
         types[i] = {"name":this.data[i].event_type, "value":this.data[i].number_of_detentions};
+        if (this.data[i].agreement = 'согласовано') {
+          this.agr.y = this.agr.y + 1;
+        }
+        else {
+          this.agr.n = this.agr.n + 1;
+        }
         i++;
     }
       org = _.groupBy(org, function(num){ return num.name; });
@@ -317,7 +324,7 @@ BubbleChart = (function() {
     }), 100);
     $('#data-sizeKey').fadeIn('slow');
     for (i=0;i<types.length;i++){
-    	percents = (types[i].total*100/this.totalSum).toFixed(1) + '%';
+        percents = (types[i].total*100/this.totalSum).toFixed(1) + '%';
         if (i<3) {
 		  $('.data-type-label-' + i + ' h3').append(types[i].name);
 		}
@@ -330,6 +337,8 @@ BubbleChart = (function() {
 		$('.data-type-label-' + i + ' span.percents').append(percents);
 		$('.data-type-label-' + i + ' span.total').append(types[i].total + ' задержанных');
 	}
+	$('.agr p').append((this.agr.y*100/this.totalSum).toFixed(1) + '% задержаний произошло на согласованных с органами власти мероприятиях');
+	$('.non-agr p').append((this.agr.n*100/this.totalSum).toFixed(1) + '% задержаний произошло на не согласованных с органами власти мероприятиях');
     return this.vis.selectAll(".data-scaleKeyCircle")
       .style("opacity", 0)
       .transition().duration(600).style("opacity", 1);
