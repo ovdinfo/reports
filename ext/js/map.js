@@ -19,7 +19,7 @@ var target = document.getElementById('loader');
 var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map'),
-	mapHeight = window.height/100*90-140;
+	mapHeight = $(window).height/100*90-140;
     ovdData = {};
     
 $('#map').css('height',mapHeight);
