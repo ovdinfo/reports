@@ -292,7 +292,6 @@ BubbleChart = (function() {
     var legend, 
         types = this.getTypes,
         i = 0,
-        that = this;
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(73,230)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(500))
@@ -318,7 +317,7 @@ BubbleChart = (function() {
     $('#data-sizeKey').fadeIn('slow');
     for (i=0;i<types.length;i++){
         if (i<3) {
-		  $('.data-type-label-' + i + ' h3').append(types[i].name + ' <span>' + types[i].total/(that.totalSum/100).toFixed(1) + '</span>');
+		  $('.data-type-label-' + i + ' h3').append(types[i].name + ' <span>' + types[i].total/(this.totalSum/100).toFixed(1) + '</span>');
 		}
 		else if (i<7) {
 		  $('.data-type-label-' + i + ' h4').append(types[i].name);
