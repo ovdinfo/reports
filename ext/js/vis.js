@@ -631,6 +631,11 @@ BubbleChart = (function() {
 
   BubbleChart.prototype.display_by_type = function() {
     var _this = this;
+    var types = _this.getTypes;
+	for(i=0;i<types.length;i++){
+		this.vis.append.html(function(d,i){ '<p>' + types[i].name + '</p>' });
+		//this.vis.append("text").attr("class", "orgTotal total_" + i).attr("y",50+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+	}
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
         return d.x;
@@ -659,12 +664,7 @@ BubbleChart = (function() {
         case 10: x=700; y=500; break;
         case 11: x=800; y=510; break;
         default: x=500;y=500;
-      } 
-      
-      //x = (d.inTypeID%4)*200+200;
-      //y = parseInt(d.inTypeID/4)*100+200;
-      //alert(d.inTypeID + ', ' + y);
-
+      }
       d.x = d.x + (x - d.x) * (_this.damper + 0.02) * alpha * 1.1;
       return d.y = d.y + (y - d.y) * (_this.damper + 0.02) * alpha * 1.1;
     };
