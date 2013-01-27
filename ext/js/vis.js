@@ -317,6 +317,7 @@ BubbleChart = (function() {
     .transition().duration(600).style("opacity", 1);
     for (i=0;i<types.length;i++){
 		$('.data-type-label-' + i + ' h3').append(types[i].name);
+		console.log(types[i].name);
 		$('.data-type-label-' + i + ' span').append(types[i].total);
 	}
   };
