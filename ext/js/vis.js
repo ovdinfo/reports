@@ -638,7 +638,7 @@ BubbleChart = (function() {
 
   BubbleChart.prototype.display_by_type = function() {
     var _this = this;
-    this.display_type_labels;
+    this.display_type_labels();
     this.force.gravity(this.layout_gravity).charge(this.charge).friction(0.9).on("tick", function(e) {
       return _this.circles.each(_this.move_towards_type(e.alpha)).attr("cx", function(d) {
         return d.x;
@@ -674,11 +674,11 @@ BubbleChart = (function() {
   };  
   
   BubbleChart.prototype.display_type_labels = function() {
-    $('data-type-label').show('slow');
+    $('.data-type-label').show('slow');
   };
   
   BubbleChart.prototype.display_hide_labels = function() {
-    $('data-type-label').hide('slow');
+    $('.data-type-label').hide('slow');
   };
 
 /////////////////////////////////
