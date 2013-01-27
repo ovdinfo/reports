@@ -132,11 +132,7 @@ BubbleChart = (function() {
     this.getTypes = types;
     this.getTypesArray = _.map(this.getTypes, function(group) { return group.name; });
     
-    i = 0;
-    while (i<types.length) {
-      this.totalSum += types[i].total;
-      i++;
-    }
+
     	
     this.tooltip = CustomTooltip("data-report", 240);
 
