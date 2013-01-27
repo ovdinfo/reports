@@ -683,19 +683,19 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.display_type_labels = function() {
     this.vis.selectAll(".scaleKey-1").transition()
-      .attr("cy",585)
+      .attr("cy",565)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-2").transition()
-      .attr("cy",605)
+      .attr("cy",585)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-3").transition()
-      .attr("cy",640)
+      .attr("cy",620)
       .duration(500)
       .delay(100);
     $('#data-sizeKey').animate({
-      top: '650'
+      top: '630'
     }, 600);
     $('#data-type-labels').show('slow');
   };
