@@ -317,7 +317,7 @@ BubbleChart = (function() {
     $('#data-sizeKey').fadeIn('slow');
     for (i=0;i<types.length;i++){
         if (i<3) {
-		  $('.data-type-label-' + i + ' h3').append(types[i].name + ' <span>' + types[i].total/(this.totalSum/100).toFixed(1) + '</span>');
+		  $('.data-type-label-' + i + ' h3').append(types[i].name + ' <span>' + (types[i].total/(this.totalSum/100)).toFixed(1) + '</span>');
 		}
 		else if (i<7) {
 		  $('.data-type-label-' + i + ' h4').append(types[i].name);
