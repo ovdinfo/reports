@@ -325,11 +325,11 @@ BubbleChart = (function() {
 		else {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
-		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных';
+		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных');
 	}
     return this.vis.selectAll(".data-scaleKeyCircle")
-    .style("opacity", 0)
-    .transition().duration(600).style("opacity", 1);
+      .style("opacity", 0)
+      .transition().duration(600).style("opacity", 1);
   };
   
   BubbleChart.prototype.display_label = function() {
