@@ -18,11 +18,13 @@ var opts = {
 var target = document.getElementById('loader');
 var spinner = new Spinner(opts).spin(target);
 
-var map = mapbox.map('map');
-    map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
+var map = mapbox.map('map'),
+	mapHeight = window.height/100*90-140;
     ovdData = {};
+    
+$('#map').css('height',mapHeight);
 
-
+map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
 
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
