@@ -671,17 +671,17 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_type_labels = function() {
     this.vis.selectAll(".scaleKey-1").transition()
       .attr("cx",120)
-      .attr("cy",560)
+      .attr("cy",500)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-2").transition()
       .attr("cx",120)
-      .attr("cy",585)
+      .attr("cy",525)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-3").transition()
       .attr("cx",120)
-      .attr("cy",620)
+      .attr("cy",560)
       .duration(500)
       .delay(100);
     $('#data-sizeKey').animate({
