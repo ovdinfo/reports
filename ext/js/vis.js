@@ -245,7 +245,7 @@ BubbleChart = (function() {
         $(this).toggleClass('active');
         toggle_view(view_type);
         return false;
-      });  
+      });
     });
   };
 
@@ -663,7 +663,7 @@ BubbleChart = (function() {
       var x, y;
       switch (parseInt(d.inTypeID)) {
         case 0: x=300; y=200; break;
-        case 1: x=550; y=200; break;
+        case 1: x=550; y=220; break;
         case 2: x=800; y=200; break;
         case 3: x=200; y=330; break;
         case 4: x=400; y=330; break;
