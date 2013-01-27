@@ -486,7 +486,8 @@ BubbleChart = (function() {
     this.vis.append("g").attr("class", "y axis").attr("transform", "translate(50,0)").call(yAxis);
     this.vis.append("text").attr("class", "x label").attr("text-anchor", "end").attr("x", this.width + 50).attr("y", this.height + 30).text("дата мониторинга");
     this.vis.append("text").attr("class", "y label").attr("text-anchor", "end").attr("y", 6).attr("dy", ".75em").attr("transform", "rotate(-90)").text("количество задержаний");
-    return d3.selectAll('circle');//.attr('clip-path','url(#clip)');
+    this.vis.append("rect").attr('height','690').attr('width','50').attr('x','0').attr('y','0');
+    return d3.selectAll('circle');
   };
 
   BubbleChart.prototype.hide_axis = function() {
