@@ -30,10 +30,10 @@ BubbleChart = (function() {
         org[i] = {"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
         types[i] = {"name":this.data[i].event_type, "value":this.data[i].number_of_detentions};
         if (this.data[i].agreement == 'согласовано') {
-          this.agr.y = this.agr.y + this.data[i].number_of_detentions;
+          this.agr.y = this.agr.y + parseInt(this.data[i].number_of_detentions);
         }
         else {
-          this.agr.n = this.agr.n + this.data[i].number_of_detentions;
+          this.agr.n = this.agr.n + parseInt(this.data[i].number_of_detentions);
         }
         i++;
     }
