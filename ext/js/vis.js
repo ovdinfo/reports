@@ -16,6 +16,7 @@ BubbleChart = (function() {
 	this.prevOrginizerAngle = [];
 	this.state = -1;
 	this.started = false;
+	this.totalSum;
 
    var org = {},
        types = {};
@@ -132,6 +133,11 @@ BubbleChart = (function() {
     
     this.getTypes = types;
     this.getTypesArray = _.map(this.getTypes, function(group) { return group.name; });
+    
+    i = 0;
+    while (i<types.length) {
+      this.totalSum += types[i].total;
+    }
     	
     this.tooltip = CustomTooltip("data-report", 240);
 
@@ -320,7 +326,7 @@ BubbleChart = (function() {
 		else {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
-		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных');
+		$('.data-type-label-' + i + ' span').append(types[i].total + ' задержанных (' + this.sumTotal + ')');
 	}
     return this.vis.selectAll(".data-scaleKeyCircle")
     .style("opacity", 0)
