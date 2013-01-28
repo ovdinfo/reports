@@ -21,7 +21,7 @@ BubbleChart = (function() {
 
    var org = {},
        types = {};
-   this.centerX = 650;
+   this.centerX = 620;
    this.centerY = 300;
    this.circleMargin = 3;
  
