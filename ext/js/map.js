@@ -15,14 +15,15 @@ var opts = {
   top: 'auto', // Top position relative to parent in px
   left: 'auto' // Left position relative to parent in px
 };
+
+$('#map,#loader').height(mapHeight+'px');
+
 var target = document.getElementById('loader');
 var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map'),
 	mapHeight = ($(window).height()/100)*90-140,
     ovdData = {};
-    
-$('#map,#loader').height(mapHeight+'px');
 
 map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
 
