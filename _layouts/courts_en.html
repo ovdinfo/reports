@@ -1,0 +1,190 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OvdInfo Reports</title>
+    <link rel='shortcut icon' href='{{site.base_url}}/ext/img/favicon.ico'>
+    <meta name='viewport' content='width=960, initial-scale=1.0' />
+    <link href='{{site.base_url}}/ext/css/reset.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/css/global.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/libs/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='{{site.base_url}}/ext/css/style.css' rel='stylesheet' />
+    <link href='{{site.base_url}}/ext/libs/mapbox/mapbox.css' rel='stylesheet' />
+    <link href='{{site.base_url}}/ext/libs/mapbox/share.css' rel='stylesheet' />
+    <style>
+      body { margin:0; padding:0; }
+  	  .limiter {
+  		width: 960px;
+  		margin: 0 auto;
+  	  }
+  	  select {
+		width: 100%;
+	  }
+	  input {
+	    width: 80%;
+	  }
+	  td a {
+	  	width: 15px;
+		float: left;
+	  }
+	  #loader {
+	    width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 100000;
+		position: relative;
+	  }
+	  #prose {
+	    font-size: 20px;
+		margin-top: 10px;
+		line-height: 28px;
+		margin: 20px 0 0;
+		font-weight: normal;
+		color: #666;
+		max-width: 665px;
+	  }
+	  #data-list {
+	    position: relative;
+	    display: block;
+		float: right;
+		width: 260px;
+		margin: 20px;	  
+	  }
+	  .nav-list > .active > a, .nav-list > .active > a:hover {
+	    background-color: #F04E23;
+	  }
+	  .nav-list a {
+	    color: #000;
+	  }
+	  .nav-list a:hover {
+	    color: #F04E23;
+	  }
+    </style>
+  </head>
+  <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
+  <!--[if IE 7 ]>    <body class='ie ie7'> <![endif]-->
+  <!--[if IE 8 ]>    <body class='ie ie8'> <![endif]-->
+  <!--[if IE 9 ]>    <body class='ie ie9'> <![endif]-->
+  <!--[if IE 10 ]>   <body class='ie ie10'> <![endif]-->
+  <!--[if gt IE 10]><!-->
+  <body><!-- <body data-spy="scroll" data-target="#nav-side" data-offset="0"> -->
+    <!--<![endif]-->
+    <div id='container'>
+      <div id='header'>
+        <div class="navbar navbar-static-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li class="">
+                    <a href="http://ovdinfo.org">Home</a>
+                  </li>
+                  <li class="active">
+                    <a href="/2012/report">Report</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/statistics">Statistics</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/geo">Geo</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/data">Data</a>
+			      </li>
+			    </ul>
+			      <ul class="nav pull-right">
+			        <li class="">
+                      <a href="/about">About</a>
+			        </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='content'>
+            <a href='http://ovdinfo.org'>
+              <img class='logo png' src='{{site.base_url}}/ext/img/global/logo.png' alt='OvdInfo' />
+            </a>
+          <h2>Monitoring of political detentions</h2>
+          <h1 class='site-title'><a href='/'>Report 2012</a></h1>
+        </div>
+        <!-- end of .content -->
+      </div><!-- /#header -->
+      <div id="app">      
+        <div class="limiter">
+          <div id="data-list" class="popover right">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Данные</h3>
+            <div class="popover-content">
+              <ul class="nav nav-list">
+                <li><a href="/2012/data">Задержания</a></li>
+                <li class="active"><a href="/2012/data/courts">Мировые суды</a></li>
+                <li><a href="/2012/data/appeals">Апелляции</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id='prose'>{{content}}</div>
+        </div>
+        <div id='table-wrapper'>
+  			<div id='interactive-overviews'>
+    			<div class="limiter">
+      				<table class='clearfix tablesorter' style='display:none;'>
+      					<colgroup> 
+							<col width="100" /> 
+    						<col width="110" /> 
+    						<col width="100" /> 
+    						<col width="100" /> 
+    						<col width="150" />
+    						<col width="150" /> 
+    						<col width="150" />
+    						<col width="100" /> 
+  						</colgroup> 
+        				<thead>
+          					<tr>
+            					<th class="filter-select">Участок</th>
+            					<th>Номер дела</th>
+            					<th>Дата</th>
+            					<th class="filter-select">Статья</th>
+            					<th class="filter-select">Судья</th>
+            					<th class="filter-select">Статус дела</th>
+            					<th>Подсудимый</th>
+            					<th>Источник</th>
+          					</tr>
+        				</thead>
+        				<tbody>
+        					<!-- Content populates here -->
+        				</tbody>
+      				</table>
+    			</div>
+  			</div>
+		</div>
+      </div>
+      <div id='footer'>
+        <div id='contact'>
+          <div class='content'>
+            <div class='clearfix'>
+            </div>
+            <p>&copy; Copyright 2012 OvdInfo.org</p>
+          </div>
+          <!-- end of .content -->
+        </div>
+        <!-- end of #contact -->
+      </div><!-- #footer -->
+    </div>
+    <!-- Google Analytics -->
+    <script src='{{site.base_url}}/ext/libs/jquery/jquery.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/tablesorter/jquery.tablesorter.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/tablesorter/jquery.tablesorter.widgets.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/underscore/underscore-min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/bootstrap/js/bootstrap.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/spin/spin.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/moment/moment.min.js'></script>
+    <script src='{{site.base_url}}/ext/js/appeals.js'></script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>
