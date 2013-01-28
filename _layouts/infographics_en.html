@@ -84,10 +84,16 @@ width: 310px;
 top: 100px;
 left: 10px;
 }
-#data-overview h5 {
+#data-group-overview {
+position: absolute;
+width: 310px;
+top: 100px;
+left: 10px;
+}
+#data-overview h5, #data-groups-overview h5 {
 margin: 3px 0px;
 }
-#data-overview p {
+#data-overview p, #data-groups-overview p {
   font-style:italic;
 }
 #prose {
@@ -190,6 +196,10 @@ margin: 3px 0px;
             <p>С момента начала массового политического протеста 4 декабря 2011 года по 31 декабря 2012 года ОВД-Инфо зафиксировало 5166 политически мотивированных задержаний в Москве и ближнем Подмосковье в ходе 228 мероприятий, из них 1312 задержаний приходятся на декабрь 2011 года и 3854 - на 2012 год.</p>
             <p style=" -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); top: 275px; position: absolute; left: -43px; filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); ">Тематика акции</p>
             <p style="top: 390px; position: absolute; left: 0px; font-size: 10px; width: 140px; font-style: italic;">Цвет круга соответствует тематике мероприятия</p>
+          </div>
+          <div id="data-groups-overview" style="display:none;">
+            <h5>Организация мероприятий</h5>
+            <p>Приведенный ниже список организаторов соответствует группам окружностей справа. Навидите курсор на список или группу окружностей чтобы сопоставить данные.</p>  
           </div>
           <div id="data-agr-labels" style="display:none;">
 			<div style="left: 10px;" class="data-agr-label agr"><h3>Согласованно</h3><p></p></div>

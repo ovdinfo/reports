@@ -584,15 +584,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_groups = function(groups) {
     var that = this;
     var i = 0;
-    /*d3.selectAll('circle').on("mouseover", function(d,i) {
-      that.mouseOverGroup(d.inOrgID);
-      return that.show_details(d, i, this);
-    }).on("mouseout", function(d, i) {
-      that.mouseOutGroup(d.inOrgID);
-      return that.hide_details(d, i, this);
-    });*/
-    
-    //.data([d.inOrgId]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+    $('#data-group-overview').show('slow');
     while (i < groups.length) {
       //console.log(groups[i]);
       d3.select("svg").insert("circle",":first-child")
@@ -612,12 +604,8 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.hide_orgs = function() {
     var that = this;
+    $('#data-group-overview').hide('slow');
     return this.vis.selectAll(".orgTotal,.orgLabel,.group-circle,.cell").remove();
- 	/*return d3.selectAll('circle').on("mouseover", function(d,i) {
-      return that.show_details(d, i, this);
-    }).on("mouseout", function(d, i) {
-      return that.hide_details(d, i, this);
-    });*/
   };
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
