@@ -542,7 +542,7 @@ BubbleChart = (function() {
 	var orgs = _this.getOrganizators;
 	this.display_groups(orgs);
 	for(i=0;i<orgs.length;i++){
-		this.vis.insert("rect",":first-child").attr("class", "cell row_" + i).attr("y",108+15*i).attr("x", 50).attr("width","230").attr("height","15").style('cursor','pointer').style('fill','#F04E23').style('opacity','0').data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
+		this.vis.insert("rect",":first-child").attr("class", "cell row_" + i).attr("y",158+15*i).attr("x", 50).attr("width","230").attr("height","15").style('cursor','pointer').style('fill','#F04E23').style('opacity','0').data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 		this.vis.append("text").attr("class", "orgLabel label_" + i).attr("y",170+15*i).attr("x", 100).style('cursor','pointer').text(orgs[i].name).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 		this.vis.append("text").attr("class", "orgTotal total_" + i).attr("y",170+15*i).attr("x", 60).style('cursor','pointer').text(orgs[i].total).data([i]).on('mouseover', this.mouseOverGroup).on('mouseout', this.mouseOutGroup);
 	}
