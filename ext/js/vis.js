@@ -584,7 +584,7 @@ BubbleChart = (function() {
   BubbleChart.prototype.display_groups = function(groups) {
     var that = this;
     var i = 0;
-    $('#data-group-overview').show('slow');
+    $('#data-group-overview').fadeIn('slow');
     while (i < groups.length) {
       //console.log(groups[i]);
       d3.select("svg").insert("circle",":first-child")
@@ -604,7 +604,7 @@ BubbleChart = (function() {
   
   BubbleChart.prototype.hide_orgs = function() {
     var that = this;
-    $('#data-group-overview').hide('slow');
+    $('#data-group-overview').fadeOut('slow');
     return this.vis.selectAll(".orgTotal,.orgLabel,.group-circle,.cell").remove();
   };
   
