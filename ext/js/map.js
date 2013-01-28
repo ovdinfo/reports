@@ -98,7 +98,7 @@ function factory(f) {
       drawVisualization(ovdData[f.properties.id]);
   };
   marker.onmouseout = function() {
-     // $('.wax-tooltip').remove();
+      $('.wax-tooltip').remove();
   };
   marker.onclick = function() {
 	filterOvd(f.properties.id,f.properties.name);
