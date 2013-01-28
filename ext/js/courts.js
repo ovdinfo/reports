@@ -1,5 +1,5 @@
 $.ajax({
-	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od6/public/values?alt=json-in-script',
+	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od2/public/values?alt=json-in-script',
     dataType: 'jsonp',
     success: buildTable
 });
