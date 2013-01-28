@@ -9,7 +9,7 @@ BubbleChart = (function() {
 
     var i, max_amount, organizators;
     this.data = data;
-    this.width = 940;
+    this.width = 1050;
     this.height = 650;
 	this.orginizers = [];
 	this.prevOrginizerRadius = [];
@@ -221,8 +221,8 @@ BubbleChart = (function() {
   BubbleChart.prototype.create_vis = function() {
     var that,
       _this = this;
-    this.vis = d3.select("#vis").append("svg").attr("width", this.width + 200).attr("height", this.height).attr("id", "svg_vis");
-    this.visCircles = this.vis.append("svg").attr("width", this.width + 200).attr("height", this.height).attr("id", "svg_vis_circles");
+    this.vis = d3.select("#vis").append("svg").attr("width", this.width).attr("height", this.height).attr("id", "svg_vis");
+    this.visCircles = this.vis.append("svg").attr("width", this.width).attr("height", this.height).attr("id", "svg_vis_circles");
     this.circles = this.visCircles.selectAll("circle").data(this.nodes, function(d) {
       return d.id;
     });
@@ -249,7 +249,7 @@ BubbleChart = (function() {
       return d.radius;
     }).each("end",function() {
       _this.started = true;
-      $('#view_selection a').click(function() {
+      $('a.switcher').click(function() {
         var view_type = $(this).attr('id');
         $('#view_selection a').removeClass('active');
         $(this).toggleClass('active');
