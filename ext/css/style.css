@@ -379,6 +379,10 @@ text {
   fill: #333;
 }
 
+div#visualization text {
+  fill: #fff;
+}
+
 #count {
   font-size: 30px;
   line-height: 30px;
