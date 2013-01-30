@@ -11,10 +11,8 @@
     <link href='{{site.base_url}}/ext/css/reset.css' rel='stylesheet'>
     <link href='{{site.base_url}}/ext/css/global.css' rel='stylesheet'>
     <link href='{{site.base_url}}/ext/libs/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='{{site.base_url}}/ext/libs/tocify/jquery.tocify.css' rel='stylesheet' />
     <link href='{{site.base_url}}/ext/css/style.css' rel='stylesheet' />
-    <script src='{{site.base_url}}/ext/libs/jquery/jquery.min.js'></script>
-    <script src='{{site.base_url}}/ext/libs/bootstrap/js/bootstrap.min.js'></script>
-    <script src='{{site.base_url}}/ext/libs/toc/jquery.toc.min.js'></script>
   </head>
   <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
   <!--[if IE 7 ]>    <body class='ie ie7'> <![endif]-->
@@ -86,6 +84,15 @@
         <!-- end of #contact -->
       </div><!-- #footer -->
     </div>
+    <script src='{{site.base_url}}/ext/libs/jquery/jquery.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/bootstrap/js/bootstrap.min.js'></script>
+    <script src='{{site.base_url}}/ext/libs/tocify/jquery.tocify.min.js'></script>
+    <script type="text/javascript">
+          $(function() {
+                  //Calls the tocify method on your HTML div.
+                  $("#nav-side").tocify();
+              });
+    </script>
     <!-- Google Analytics -->
     <script type="text/javascript">
     </script>
