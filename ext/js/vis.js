@@ -16,7 +16,7 @@ requirejs.config({
     shim: {
         'bootstrap' : ['jquery'],
         'jQRangeSliders' : ['jquery','jquery-ui'],
-        'spin' : ['jquery']
+        'spin' : ['jquery'],
         'd3' : {exports: 'd3'}
     },
 });
@@ -24,7 +24,7 @@ requirejs.config({
 require([
     'jquery', 'jquery-ui', 'bootstrap', 'jQRangeSliders', 'd3', 'd3.legend', 'underscore', 'spin', 'moment', 'CustomTooltip'
 ],
-function($,jQuery,d3){
+function($,jQuery,ignore){
 
 var BubbleChart, root;
 
