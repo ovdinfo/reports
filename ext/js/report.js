@@ -7,7 +7,7 @@ requirejs.config({
         'jquery-ui': ['//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min','/libs/jquery-ui/jquery-ui.min'],
         /* Load bootstrap from cdn. On fail, load local file. */
         'bootstrap': ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min','/libs/bootstrap/js/bootstrap.min'],
-        'tocify': '/libs/tocify/jquery.tocify.min'
+        'tocify': 'libs/tocify/jquery.tocify.min'
     },
     shim: {
         /* Set bootstrap dependencies (just jQuery) */
