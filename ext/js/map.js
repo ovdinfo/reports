@@ -11,7 +11,8 @@ requirejs.config({
         'moment': 'libs/moment/moment.min',
         'mapbox': 'libs/mapbox/mapbox',
         'share': 'libs/mapbox/share',
-        'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs'
+        'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs',
+        'google': '//www.google.com/jsapi'
     },
     shim: {
         'bootstrap' : ['jquery'],
@@ -22,7 +23,7 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'google'
 ],
 function($,jQuery,tablesorter){
     var opts = {
@@ -42,6 +43,8 @@ function($,jQuery,tablesorter){
   top: 'auto', // Top position relative to parent in px
   left: 'auto' // Left position relative to parent in px
 };
+
+google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
 
 $('#map,#loader').height(mapHeight+'px');
 
