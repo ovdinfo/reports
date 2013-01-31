@@ -12,7 +12,10 @@ requirejs.config({
         'mapbox': 'libs/mapbox/mapbox',
         'share': 'libs/mapbox/share',
         'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs',
-        'google': '//www.google.com/jsapi'
+        'async': 'libs/require/async',
+        'goog': 'libs/require/goog',
+        'propertyParser': 'libs/require/propertyParser'
+
     },
     shim: {
         'bootstrap' : ['jquery'],
@@ -23,7 +26,7 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'google'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
 function($,jQuery,tablesorter){
     var opts = {
