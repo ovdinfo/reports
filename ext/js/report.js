@@ -11,7 +11,6 @@ requirejs.config({
     },
     shim: {
         /* Set bootstrap dependencies (just jQuery) */
-        'bootstrap' : ['jquery'],
         'tocify' : ['jquery','jquery-ui','bootstrap']
     }
 });
