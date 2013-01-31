@@ -1,4 +1,25 @@
-var opts = {
+requirejs.config({
+    appDir: ".",
+    baseUrl: "/ext",
+    paths: { 
+        'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min','libs/jquery/jquery.min'],
+        'bootstrap': ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min','libs/bootstrap/js/bootstrap.min'],
+        'tablesorter': 'libs/tablesorter/jquery.tablesorter.min',
+        'tablesorter.widgets': 'libs/tablesorter/jquery.tablesorter.widgets.min',
+        'underscore': 'libs/underscore/underscore-min',
+        'spin': 'libs/spin/spin.min',
+        'moment': 'libs/moment/moment.min',
+        'mapbox': 'libs/mapbox/mapbox',
+        'mapbox.jquery': 'libs/mapbox/mapbox.jquery',
+        'share': 'libs/mapbox/share',
+        'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs'
+});
+
+require([
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.jquery', 'mapbox.converters.googledocs'
+],
+function($){
+    var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
   width: 8, // The line thickness
@@ -36,8 +57,21 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
       success: buildTable
   });
 });
+  var formatter = {};  
+  
+  map.eventHandlers[3].remove();
+map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
+map.setZoomRange(9, 17);
+map.ui.zoomer.add();
+map.ui.zoombox.add();
+map.ui.fullscreen.add();
+map.interaction.auto();
+$("#show_data").click(function() {
+  filterOvd('all');
+});
+});
 
-var formatter = {};
+
 function factory(f) {
   var d = document.createElement('div'),
       marker = document.createElement('div');
@@ -201,14 +235,3 @@ function filterOvd(id, name) {
   });
   $('#table-wrapper table').removeClass('hider');
 }
-
-map.eventHandlers[3].remove();
-map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
-map.setZoomRange(9, 17);
-map.ui.zoomer.add();
-map.ui.zoombox.add();
-map.ui.fullscreen.add();
-map.interaction.auto();
-$("#show_data").click(function() {
-  filterOvd('all');
-});
