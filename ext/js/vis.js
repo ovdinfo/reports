@@ -17,6 +17,7 @@ requirejs.config({
         'bootstrap' : ['jquery'],
         'jQRangeSliders' : ['jquery','jquery-ui'],
         'spin' : ['jquery']
+        'd3' : {exports: 'd3'}
     },
 });
 
