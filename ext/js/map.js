@@ -45,7 +45,7 @@ function($,jQuery,tablesorter){
 
 $('#map,#loader').height(mapHeight+'px');
 
-var target = document.getElementById('loader').spin();
+$('#loader').spin();
 //var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map'),
