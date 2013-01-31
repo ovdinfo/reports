@@ -19,8 +19,7 @@ requirejs.config({
 require([
     'jquery', 'jquery-ui', 'bootstrap',
 ],
-function($){
-    $("#toc").tocify();
-    console.log("Loaded :)");    
-    return {};
-});
+$(function() {
+                  //Calls the tocify method on your HTML div.
+                  $("#toc").tocify();
+              });
