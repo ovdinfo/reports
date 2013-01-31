@@ -1,3 +1,31 @@
+requirejs.config({
+    appDir: ".",
+    baseUrl: "/ext",
+    paths: { 
+        'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min','libs/jquery/jquery.min'],
+        'jquery-ui': ['//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min','libs/jquery-ui/jquery-ui.min'],
+        'bootstrap': ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min','libs/bootstrap/js/bootstrap.min'],
+        'underscore': 'libs/underscore/underscore-min',
+        'spin': 'libs/spin/spin.min',
+        'moment': 'libs/moment/moment.min',
+        'jQRangeSliders': 'libs/jqrangeslider/jQAllRangeSliders-min',
+        'd3': 'libs/d3/d3.v2.min.js',
+        'd3.legend': 'libs/d3/d3.legend.js',
+        'CustomTooltip': 'js/CustomTooltip.js'
+
+    },
+    shim: {
+        'bootstrap' : ['jquery'],
+        'jQRangeSliders' : ['jquery','jquery-ui'],
+        'spin' : ['jquery']
+    }
+});
+
+require([
+    'jquery', 'jquery-ui', 'bootstrap' 'jQRangeSliders', 'd3', 'd3.legend', 'underscore', 'spin', 'moment', 'CustomTooltip'
+],
+function($,jQuery,d3,_){
+
 var BubbleChart, root;
 
 // MAIN FUNCTION
@@ -849,4 +877,6 @@ $(function() {
   var target = document.getElementById('loader');
   var spinner = new Spinner(opts).spin(target);
   return d3.csv("https://docs.google.com/spreadsheet/pub?key=0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc&single=true&gid=0&output=csv", render_vis);
+});
+
 });
