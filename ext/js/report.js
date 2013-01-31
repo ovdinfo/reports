@@ -21,5 +21,6 @@ require([
 ],
 $(function() {
                   //Calls the tocify method on your HTML div.
-                  $("#toc").tocify();
-              });
+  $("#toc").tocify();
+});
+);
