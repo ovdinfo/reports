@@ -1,3 +1,28 @@
+requirejs.config({
+    appDir: ".",
+    baseUrl: "/ext",
+    paths: { 
+        'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min','libs/jquery/jquery.min'],
+        'bootstrap': ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min','libs/bootstrap/js/bootstrap.min'],
+        'tablesorter': 'libs/tablesorter/jquery.tablesorter.min',
+        'tablesorter.widgets': 'libs/tablesorter/jquery.tablesorter.widgets.min',
+        'underscore': 'libs/underscore/underscore-min',
+        'spin': 'libs/spin/spin.min',
+        'moment': 'libs/moment/moment.min'
+
+    },
+    shim: {
+        'bootstrap' : ['jquery'],
+        'tablesorter' : ['jquery','bootstrap'],
+        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
+        'spin' : ['jquery']
+    }
+});
+
+require([
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment'
+],
+function($,tablesorter){
 $.ajax({
 	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od2/public/values?alt=json-in-script',
     dataType: 'jsonp',
@@ -69,4 +94,5 @@ function scrollToAnchor(target) {
 $(function(){
   var desiredHeight = $(window).height() - $('#header').height() - $('#footer').height();
   $("#app").css("min-height", desiredHeight );
+});
 });
