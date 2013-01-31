@@ -12,19 +12,18 @@ requirejs.config({
         'd3': 'libs/d3/d3.v2.min.js',
         'd3.legend': 'libs/d3/d3.legend.js',
         'CustomTooltip': 'js/CustomTooltip.js'
-
     },
     shim: {
         'bootstrap' : ['jquery'],
         'jQRangeSliders' : ['jquery','jquery-ui'],
         'spin' : ['jquery']
-    }
+    },
 });
 
 require([
     'jquery', 'jquery-ui', 'bootstrap' 'jQRangeSliders', 'd3', 'd3.legend', 'underscore', 'spin', 'moment', 'CustomTooltip'
 ],
-function($,jQuery,d3,_){
+function($,jQuery,d3){
 
 var BubbleChart, root;
 
