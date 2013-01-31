@@ -24,7 +24,7 @@ requirejs.config({
 require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.jquery', 'mapbox.converters.googledocs'
 ],
-function($,jQuery,tablesorter){
+function($,jQuery,tablesorter,spin){
     var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
@@ -46,7 +46,7 @@ function($,jQuery,tablesorter){
 $('#map,#loader').height(mapHeight+'px');
 
 var target = document.getElementById('loader');
-//var spinner = new Spinner(opts).spin(target);
+var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map'),
 	mapHeight = ($(window).height()/100)*90-140,
@@ -136,7 +136,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
 };
 
 function buildTable(data) {
-  //spinner.stop();
+  spinner.stop();
   $('#loader').remove();
   i = 0;
   while (i < data.feed.entry.length) {
