@@ -41,7 +41,7 @@ function($){
 $('#map,#loader').height(mapHeight+'px');
 
 var target = document.getElementById('loader');
-var spinner = new Spinner(opts).spin(target);
+//var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map'),
 	mapHeight = ($(window).height()/100)*90-140,
