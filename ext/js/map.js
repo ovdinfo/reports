@@ -14,6 +14,11 @@ requirejs.config({
         'share': 'libs/mapbox/share',
         'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs'
     },
+    shim: {
+        'bootstrap' : ['jquery'],
+        'tablesorter' : ['jquery','bootstrap'],
+        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter']
+    }
 });
 
 require([
