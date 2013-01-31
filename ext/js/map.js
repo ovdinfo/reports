@@ -59,21 +59,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
   });
 });
   var formatter = {};  
-  
-  map.eventHandlers[3].remove();
-map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
-map.setZoomRange(9, 17);
-map.ui.zoomer.add();
-map.ui.zoombox.add();
-map.ui.fullscreen.add();
-map.interaction.auto();
-$("#show_data").click(function() {
-  filterOvd('all');
-});
-});
-
-
-function factory(f) {
+  function factory(f) {
   var d = document.createElement('div'),
       marker = document.createElement('div');
       
@@ -236,3 +222,15 @@ function filterOvd(id, name) {
   });
   $('#table-wrapper table').removeClass('hider');
 }
+  
+  map.eventHandlers[3].remove();
+map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
+map.setZoomRange(9, 17);
+map.ui.zoomer.add();
+map.ui.zoombox.add();
+map.ui.fullscreen.add();
+map.interaction.auto();
+$("#show_data").click(function() {
+  filterOvd('all');
+});
+});
