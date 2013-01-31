@@ -17,7 +17,8 @@ requirejs.config({
     shim: {
         'bootstrap' : ['jquery'],
         'tablesorter' : ['jquery','bootstrap'],
-        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter']
+        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
+        'spin' : ['jquery']
     }
 });
 
@@ -46,7 +47,6 @@ function($,jQuery,tablesorter){
 $('#map,#loader').height(mapHeight+'px');
 
 $('#loader').spin(opts);
-//var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map'),
 	mapHeight = ($(window).height()/100)*90-140,
@@ -136,7 +136,6 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
 };
 
 function buildTable(data) {
-  spinner.stop();
   $('#loader').remove();
   i = 0;
   while (i < data.feed.entry.length) {
