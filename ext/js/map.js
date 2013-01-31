@@ -10,7 +10,6 @@ requirejs.config({
         'spin': 'libs/spin/spin',
         'moment': 'libs/moment/moment.min',
         'mapbox': 'libs/mapbox/mapbox',
-        'mapbox.jquery': 'libs/mapbox/mapbox.jquery',
         'share': 'libs/mapbox/share',
         'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs'
     },
@@ -23,7 +22,7 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.jquery', 'mapbox.converters.googledocs'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs'
 ],
 function($,jQuery,tablesorter){
     var opts = {
