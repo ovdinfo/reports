@@ -9,9 +9,9 @@ requirejs.config({
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
         'jQRangeSliders': 'libs/jqrangeslider/jQAllRangeSliders-min',
-        'd3': 'libs/d3/d3.v2.min.js',
-        'd3.legend': 'libs/d3/d3.legend.js',
-        'CustomTooltip': 'js/CustomTooltip.js'
+        'd3': 'libs/d3/d3.v2.min',
+        'd3.legend': 'libs/d3/d3.legend',
+        'CustomTooltip': 'js/CustomTooltip'
     },
     shim: {
         'bootstrap' : ['jquery'],
