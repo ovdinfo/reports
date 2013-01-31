@@ -7,7 +7,7 @@ requirejs.config({
         'tablesorter': 'libs/tablesorter/jquery.tablesorter.min',
         'tablesorter.widgets': 'libs/tablesorter/jquery.tablesorter.widgets.min',
         'underscore': 'libs/underscore/underscore-min',
-        'spin': 'libs/spin/spin.min',
+        'spin': 'libs/spin/spin',
         'moment': 'libs/moment/moment.min',
         'mapbox': 'libs/mapbox/mapbox',
         'mapbox.jquery': 'libs/mapbox/mapbox.jquery',
