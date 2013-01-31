@@ -131,7 +131,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
 };
 
 function buildTable(data) {
-  spinner.stop();
+  //spinner.stop();
   $('#loader').remove();
   i = 0;
   while (i < data.feed.entry.length) {
