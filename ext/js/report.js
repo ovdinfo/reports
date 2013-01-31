@@ -17,7 +17,7 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'jquery-ui', 'bootstrap',
+    'jquery', 'jquery-ui', 'bootstrap', 'tocify'
 ],
 function($){
     $(function() {
