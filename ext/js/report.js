@@ -17,6 +17,6 @@ require([
 ],
 function($){
     $(function() {
-    	$("#toc").tocify({context:'#app',selectors:'h2,h3'});
+    	$("#toc").tocify({context:'#app',selectors:'h2,h3',extendPage:false});
     });
 });
