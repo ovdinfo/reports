@@ -20,7 +20,7 @@ require([
     'jquery', 'jquery-ui', 'bootstrap',
 ],
 function($){
-    $("#toc").tocify();
-    console.log("Loaded :)");    
-    return {};
+    $(function() {
+    	$("#toc").tocify();
+    });
 });
