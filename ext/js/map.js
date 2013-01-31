@@ -13,6 +13,7 @@ requirejs.config({
         'mapbox.jquery': 'libs/mapbox/mapbox.jquery',
         'share': 'libs/mapbox/share',
         'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs'
+    },
 });
 
 require([
