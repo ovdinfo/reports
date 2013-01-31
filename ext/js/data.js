@@ -21,6 +21,7 @@ requirejs.config({
 
 require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment'
+],
 function($,tablesorter){
 $.ajax({
 	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od6/public/values?alt=json-in-script',
