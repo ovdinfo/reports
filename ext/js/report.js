@@ -17,6 +17,6 @@ require([
 ],
 function($){
     $(function() {
-    	$("#toc").tocify();
+    	$("#toc").tocify({context:"prose"});
     });
 });
