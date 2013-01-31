@@ -13,7 +13,7 @@ requirejs.config({
 });
 
 require([
-    'jQuery', 'jquery-ui', 'bootstrap', 'tocify'
+    'jquery', 'jquery-ui', 'bootstrap', 'tocify'
 ],
 function($){
     $(function() {
