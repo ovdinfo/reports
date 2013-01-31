@@ -21,7 +21,7 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'jquery-ui', 'bootstrap' 'jQRangeSliders', 'd3', 'd3.legend', 'underscore', 'spin', 'moment', 'CustomTooltip'
+    'jquery', 'jquery-ui', 'bootstrap', 'jQRangeSliders', 'd3', 'd3.legend', 'underscore', 'spin', 'moment', 'CustomTooltip'
 ],
 function($,jQuery,d3){
 
