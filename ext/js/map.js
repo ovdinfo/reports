@@ -24,7 +24,7 @@ requirejs.config({
 require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.jquery', 'mapbox.converters.googledocs'
 ],
-function($,jQuery,tablesorter,spin){
+function($,jQuery,tablesorter,window.spinner){
     var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
@@ -46,7 +46,7 @@ function($,jQuery,tablesorter,spin){
 $('#map,#loader').height(mapHeight+'px');
 
 var target = document.getElementById('loader');
-var spinner = new spin.Spinner(opts).spin(target);
+var spinner = new Spinner(opts).spin(target);
 
 var map = mapbox.map('map'),
 	mapHeight = ($(window).height()/100)*90-140,
