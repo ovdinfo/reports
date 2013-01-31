@@ -24,7 +24,7 @@ requirejs.config({
 require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.jquery', 'mapbox.converters.googledocs'
 ],
-function($,jQuery,tablesorter,spin){
+function($,jQuery,tablesorter,Spinner){
     var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
