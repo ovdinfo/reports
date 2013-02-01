@@ -239,14 +239,6 @@ nav-side-wrapper {
   width:200px;
 }
 
-#prose a {
-  color: #333;
-}
-
-#prose a:hover {
-  color: #333;
-}
-
 /*-----------------------------------
   Clearfix
 -------------------------------------*/
@@ -265,15 +257,25 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 
 body.ie .inner-shadow { display: none; }
 
-
-
-
-
-
 ul.nav li { font-size:13px; }
 .navbar-inner { min-height: 38px; }
 
 
+/*-----------------------------------
+  Report
+-------------------------------------*/
+
+.affix {
+  top: 20px;
+}
+
+#prose a {
+  color: #333;
+}
+
+#prose a:hover {
+  color: #333;
+}
 /*-----------------------------------
   Infographics
 -------------------------------------*/
