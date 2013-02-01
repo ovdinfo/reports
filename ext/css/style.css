@@ -20,10 +20,13 @@ h1 {
   }
 h2 {
   line-height:36px;
+  font-size: 25px;
+  padding-bottom: 10px;
   }
 h3 {
   font-size:18px;
   line-height:24px;
+  padding-bottom: 5px;
   }
 li {
   line-height:18px;
