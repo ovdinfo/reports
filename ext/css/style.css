@@ -277,6 +277,10 @@ ul.nav li { font-size:13px; }
 #prose a:hover {
   color: #333;
 }
+
+#toc a {
+  color: #333;
+}
 /*-----------------------------------
   Infographics
 -------------------------------------*/
