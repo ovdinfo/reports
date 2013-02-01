@@ -18,6 +18,7 @@ require([
     'jquery', 'jquery-ui', 'bootstrap', 'tocify'
 ],
 function($){
+	$('#header ul.nav a[href="'+ window.location.hostname +'"]').parent().addClass('active');
 	loadCss('/ext/libs/tocify/jquery.tocify.css');
     $(function() {
     	$("#toc").tocify({context:'#app',selectors:'h2,h3',extendPage:false});
