@@ -20,10 +20,10 @@ function($){
     	$("#toc").tocify({context:'#app',selectors:'h2,h3',extendPage:false});
     	$('#prose a').hover(
 			function () {
-    			$(this).animate({ color: '#F04E23' }, 400);
+    			$(this).animate({ color: '#F04E23' }, 'fast');
   			},
 			function () {
-    			$(this).animate({ color: '#333' }, 400);
+    			$(this).animate({ color: '#333' }, 'fast');
   			}
     	);		
     });
