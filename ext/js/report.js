@@ -18,6 +18,7 @@ require([
     'jquery', 'jquery-ui', 'bootstrap', 'tocify'
 ],
 function($){
+	loadCss('/ext/css/style.css');
     $(function() {
     	$("#toc").tocify({context:'#app',selectors:'h2,h3',extendPage:false});
     	$('#prose a').hover(
@@ -30,7 +31,6 @@ function($){
     	);
     	$('#toc').affix({'offset':160});
     });
-    loadCss('/ext/css/style.css');
 });
 
 function loadCss(url) {
