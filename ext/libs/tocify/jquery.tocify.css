@@ -9,7 +9,6 @@
     margin-left: 0px;
     border: 1px solid #eee;
 	padding: 20px 0px;
-	background-color: #FAFAFA;
 }
 
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
