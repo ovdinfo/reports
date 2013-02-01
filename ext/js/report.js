@@ -31,6 +31,7 @@ function($){
     	);
     	$('#toc').affix({'offset':160});
     });
+    $('#toc').fadeIn('slow');
 });
 
 function loadCss(url) {
