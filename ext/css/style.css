@@ -283,6 +283,7 @@ ul.nav li { font-size:13px; }
 
 #prose a {
   color: #333;
+  font-style: italic;
 }
 
 #prose a:hover {
