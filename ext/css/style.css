@@ -290,6 +290,11 @@ ul.nav li { font-size:13px; }
   color: #333;
 }
 
+#toc h3 {
+  padding: 10px 20px;
+  color: #555;
+}
+
 #toc a {
   color: #333;
 }
