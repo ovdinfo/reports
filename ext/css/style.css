@@ -281,6 +281,10 @@ ul.nav li { font-size:13px; }
 #toc a {
   color: #333;
 }
+
+#toc > .active > a {
+  color: #fff;
+}
 /*-----------------------------------
   Infographics
 -------------------------------------*/
