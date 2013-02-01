@@ -217,14 +217,6 @@ a:hover {
 	padding-top: 20px;
 }
 
-#footer a {
-	color:#0055aa;
-}
-
-#footer a:hover, #footer a.active {
-	color:#003366;
-}
-
 #footer h3 {
 	margin-bottom:18px;
 	line-height: 0.9em;
@@ -274,11 +266,6 @@ a:hover {
 
 .ie7 #contact .content,
 .ie6 #contact .content{ position: relative; }
-
-#contact a {
-	position: relative;
-	color:#66C2FF;
-}
 
 #contact a:hover {
 	color:#fff;
