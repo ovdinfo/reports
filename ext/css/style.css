@@ -267,6 +267,7 @@ ul.nav li { font-size:13px; }
 
 .affix {
   top: 20px;
+  position: fixed;
 }
 
 #prose a {
