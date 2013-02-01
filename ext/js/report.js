@@ -18,6 +18,7 @@ require([
     'jquery', 'jquery-ui', 'bootstrap', 'tocify'
 ],
 function($){
+	loadCss('/ext/libs/bootstrap/css/bootstrap.min.css');
 	loadCss('/ext/libs/tocify/jquery.tocify.css');
     $(function() {
     	$("#toc").tocify({context:'#app',selectors:'h2,h3',extendPage:false});
