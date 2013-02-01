@@ -30,7 +30,7 @@ function($){
     	);
     	$('#toc').affix({'offset':160});
     });
-    loadCss('./ext/css/style.css');
+    loadCss('/ext/css/style.css');
 });
 
 function loadCss(url) {
