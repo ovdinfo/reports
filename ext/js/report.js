@@ -27,6 +27,7 @@ function($){
 			function () {
     			$(this).animate({ color: '#333' }, 'fast');
   			}
-    	);		
+    	);
+    	$('#toc').affix({'offset':160});
     });
 });
