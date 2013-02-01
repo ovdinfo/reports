@@ -282,7 +282,7 @@ ul.nav li { font-size:13px; }
   color: #333;
 }
 
-#toc > .active > a {
+#toc li.active a {
   color: #fff;
 }
 /*-----------------------------------
