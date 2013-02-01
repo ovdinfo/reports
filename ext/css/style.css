@@ -129,10 +129,10 @@ table th.sort-down:after {
 a {
   color:#0055AA;
   }
-  a:hover {
+a:hover {
     color:#F04E23;
     text-decoration:none;
-    }
+}
 input.button {
   cursor:pointer;
   -webkit-appearance:button;
@@ -237,6 +237,14 @@ input[readonly] {
     }
 nav-side-wrapper {
   width:200px;
+}
+
+#prose a {
+  color: #333;
+}
+
+#prose a:hover {
+  color: #333;
 }
 
 /*-----------------------------------
