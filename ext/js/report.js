@@ -18,7 +18,7 @@ require([
     'jquery', 'jquery-ui', 'bootstrap', 'tocify'
 ],
 function($){
-	loadCss('/ext/css/style.css');
+	loadCss('/ext/libs/tocify/jquery.tocify.css');
     $(function() {
     	$("#toc").tocify({context:'#app',selectors:'h2,h3',extendPage:false});
     	$('#prose a').hover(
