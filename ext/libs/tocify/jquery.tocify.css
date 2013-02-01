@@ -65,6 +65,7 @@
     padding-left: 10px;
 }
 
-.nav-list > .active > a {
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
 	background-color: #F04E23;
 }
