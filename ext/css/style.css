@@ -31,6 +31,9 @@ h3 {
 li {
   line-height:18px;
   }
+p {
+  margin: 0 0 20px;
+}
 table {
   background:#fff;
   max-width:100%;
@@ -269,7 +272,7 @@ ul.nav li { font-size:13px; }
 -------------------------------------*/
 
 #prose {
-  font-size: 14px;
+  font: normal 14px/20px Helvetica,Arial,sans-serif;
 }
 
 .affix {
