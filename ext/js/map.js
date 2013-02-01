@@ -49,13 +49,13 @@ function($,tablesorter){
 
 google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
 
-$('#map,#loader').height(mapHeight+'px');
-
 $('#loader').spin(opts);
 
 var map = mapbox.map('map'),
 	mapHeight = ($(window).height()/100)*90-140,
     ovdData = {};
+
+$('#map,#loader').height(mapHeight+'px');
 
 map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
 
