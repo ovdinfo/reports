@@ -8,6 +8,8 @@ requirejs.config({
         'tocify': 'libs/tocify/jquery.tocify.min'
     },
     shim: {
+    	'bootstrap' : ['jquery'],
+    	'jquery-ui' : ['jquery'],
         'tocify' : ['jquery','jquery-ui','bootstrap']
     }
 });
