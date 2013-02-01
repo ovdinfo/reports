@@ -267,10 +267,6 @@ a:hover {
 .ie7 #contact .content,
 .ie6 #contact .content{ position: relative; }
 
-#contact a:hover {
-	color:#fff;
-}
-
 #contact ul li {
 	float:left;
 	margin-right:20px;
