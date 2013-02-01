@@ -61,3 +61,7 @@
     line-height:1em;
     text-indent: 0px;
 }
+
+.sub-header > li > a {
+    padding: 10px;
+}
