@@ -64,3 +64,7 @@
 .sub-header > li > a {
     padding-left: 10px;
 }
+
+.nav-list > .active > a {
+	background-color: #F04E23;
+}
