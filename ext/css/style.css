@@ -488,3 +488,7 @@ td a {
 .popover-content .nav-list a:hover {
   color: #F04E23;
 }
+
+.popover-content .nav-list .active a:hover {
+  color: #fff;
+}
