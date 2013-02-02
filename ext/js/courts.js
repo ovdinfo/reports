@@ -23,7 +23,7 @@ require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment'
 ],
 function($,tablesorter){
-$('#header ul.nav a[href="2012/data"],#header ul.nav a[href="2012/data/en"]').parent().addClass('active');
+$('#header ul.nav a[href="2012/data/"],#header ul.nav a[href="2012/data/en/"]').parent().addClass('active');
 $.ajax({
 	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/od2/public/values?alt=json-in-script',
     dataType: 'jsonp',
