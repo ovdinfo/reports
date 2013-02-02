@@ -479,8 +479,11 @@ td a {
   width: 260px;
   margin: 20px;	  
 }
-.popover-content .nav-list > .active > a, .nav-list > .active > a:hover {
+.popover-content .nav-list > .active > a, .popover-content .nav-list > .active > a:hover {
   background-color: #F04E23;
+}
+.popover-content .nav-list .active a {
+  color: #fff;
 }
 .popover-content .nav-list a {
   color: #000;
