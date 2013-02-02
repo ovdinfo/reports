@@ -28,6 +28,9 @@ requirejs.config({
 require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
+$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
+loadCss('/ext/libs/mapbox/mapbox.css');
+loadCss('/ext/libs/mapbox/share.css');
 function($,tablesorter){
     var opts = {
   lines: 13, // The number of lines to draw
@@ -244,3 +247,11 @@ $("#show_data").click(function() {
   filterOvd('all');
 });
 });
+
+function loadCss(url) {
+    var link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = url;
+    document.getElementsByTagName("head")[0].appendChild(link);
+}
