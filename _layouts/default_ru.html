@@ -1,0 +1,91 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Отчеты OvdInfo</title>
+    <link rel='shortcut icon' href='{{site.base_url}}/ext/img/favicon.ico'>
+    <meta name='viewport' content='width=960, initial-scale=1.0' />
+    <link href='{{site.base_url}}/ext/css/reset.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/css/global.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/libs/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='{{site.base_url}}/ext/css/style.css' rel='stylesheet' />
+  </head>
+  <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
+  <!--[if IE 7 ]>    <body class='ie ie7'> <![endif]-->
+  <!--[if IE 8 ]>    <body class='ie ie8'> <![endif]-->
+  <!--[if IE 9 ]>    <body class='ie ie9'> <![endif]-->
+  <!--[if IE 10 ]>   <body class='ie ie10'> <![endif]-->
+  <!--[if gt IE 10]><!-->
+  <body><!-- <body data-spy="scroll" data-target="#nav-side" data-offset="0"> -->
+    <!--<![endif]-->
+    <div id='container'>
+      <div id='header'>
+        <div class="navbar navbar-static-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li class="">
+                    <a href="http://ovdinfo.org">OvdInfo.org</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/report/">Отчет</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/statistics/">Инфографика</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/geo/">География</a>
+                  </li>
+                  <li class="">
+                    <a href="/2012/data/">Данные</a>
+			      </li>
+			    </ul>
+			      <ul class="nav pull-right">
+			        <li class="">
+                      <a href="/ru" style="padding: 7px 5px 7px 15px;"><img src="/ext/img/ru.png" style="height: 25px;"></a>
+			        </li>
+			        <li class="">
+                      <a href="/en" style="padding: 7px 15px 7px 5px;"><img src="/ext/img/en.png" style="height: 25px;"></a>
+			        </li>
+			        <li class="">
+                      <a href="/2012/about">О нас</a>
+			        </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='content'>
+            <a href='http://ovdinfo.org'>
+              <img class='logo png' src='{{site.base_url}}/ext/img/global/logo.png' alt='OvdInfo' />
+            </a>
+          <h2>Мониторинг политических задержаний</h2>
+          <h1 class='site-title'><a href='/'>Отчет 2012</a></h1>
+        </div>
+        <!-- end of .content -->
+      </div><!-- /#header -->
+      <div id="app">
+        {{content}}
+      </div>
+      <div id='footer'>
+        <div id='contact'>
+          <div class='content'>
+            <div class='clearfix'>
+            </div>
+            <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" style="float: left;padding: 9px 30px 0px 0px;"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Эта работа лицензирована в соответствии с <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
+          </div>
+          <!-- end of .content -->
+        </div>
+        <!-- end of #contact -->
+      </div><!-- #footer -->
+    </div>
+    <script data-main="/ext/js/{{ page.js }}.js" src="/ext/libs/require/require.min.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>
