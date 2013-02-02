@@ -438,3 +438,53 @@ div#visualization text {
 div.ui-rangeSlider-label {
   bottom:90px;
 }
+/*-----------------------------------
+  Data
+-------------------------------------*/
+
+.limiter {
+  width: 960px;
+  margin: 0 auto;
+}
+select {
+  width: 100%;
+}
+input {
+  width: 80%;
+}
+td a {
+  width: 15px;
+  float: left;
+}
+#loader {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100000;
+  position: relative;
+}
+#prose-data {
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 28px;
+  margin: 20px 0 0;
+  font-weight: normal;
+  color: #666;
+  max-width: 665px;
+}
+#data-list {
+  position: relative;
+  display: block;
+  float: right;
+  width: 260px;
+  margin: 20px;	  
+}
+.popover-content .nav-list > .active > a, .nav-list > .active > a:hover {
+  background-color: #F04E23;
+}
+.popover-content .nav-list a {
+  color: #000;
+}
+.popover-content .nav-list a:hover {
+  color: #F04E23;
+}
