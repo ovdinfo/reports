@@ -32,7 +32,7 @@ $.ajax({
 
 function buildTable(data) {
   $.each(data.feed.entry, function (key, val) {
-    var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a><a href="http"//http://mos-sud.ru/ms/' + val.gsx$court.$t + '">' + val.gsx$court.$t + '</a></td><td>' + val.gsx$case.$t + '</td><td>' + val.gsx$date.$t + '</td><td>' + val.gsx$article.$t + '</td><td>' + val.gsx$judge.$t + '</td><td>' + val.gsx$status.$t + '</td><td>' + val.gsx$defendant.$t + '</td><td><a href="' + val.gsx$source.$t + '" target="_blank" rel="nofollow">источник</a></td></tr>';
+    var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a><a href="http"//http://mos-sud.ru/ms/' + val.gsx$court.$t + '" target="_blank" rel="nofollow">' + val.gsx$court.$t + '</a></td><td>' + val.gsx$case.$t + '</td><td>' + val.gsx$date.$t + '</td><td>' + val.gsx$article.$t + '</td><td>' + val.gsx$judge.$t + '</td><td>' + val.gsx$status.$t + '</td><td>' + val.gsx$defendant.$t + '</td><td><a href="' + val.gsx$source.$t + '" target="_blank" rel="nofollow">источник</a></td></tr>';
     $('#table-wrapper table tbody').append(content);
   });
   $.extend($.tablesorter.themes.bootstrap, { 
