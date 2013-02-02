@@ -611,7 +611,7 @@ td a {
 .hider {
   display: none;
 }
-#prose, #ovtitle h2 {
+#prose-map, #ovtitle h2 {
 font-size: 20px;
   margin-top: 10px;
   line-height: 28px;
