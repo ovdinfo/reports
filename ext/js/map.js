@@ -28,11 +28,11 @@ requirejs.config({
 require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
+function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 loadCss('/ext/libs/mapbox/mapbox.css');
 loadCss('/ext/libs/mapbox/share.css');
-function($,tablesorter){
-    var opts = {
+var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
   width: 8, // The line thickness
