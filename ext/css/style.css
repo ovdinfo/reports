@@ -44,56 +44,56 @@ table {
   border-collapse:separate;
   *border-collapse:collapsed;
   -webkit-box-shadow:0 0 4px rgba(0,0,0,0.10);
-     -moz-box-shadow:0 0 4px rgba(0,0,0,0.10);
-          box-shadow:0 0 4px rgba(0,0,0,0.10);
+   -moz-box-shadow:0 0 4px rgba(0,0,0,0.10);
+      box-shadow:0 0 4px rgba(0,0,0,0.10);
   }
   table th,
   table td {
-    padding:8px;
-    line-height:18px;
-    text-align:left;
-    border-top:1px solid #ddd;
-    }
+  padding:8px;
+  line-height:18px;
+  text-align:left;
+  border-top:1px solid #ddd;
+  }
   table th {
-    background:#eee;
-    background:-webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eee));
-    background:-moz-linear-gradient(top, #f6f6f6, #eee);
-    text-shadow:0 1px 0 #fff;
-    font-weight:bold;
-    vertical-align:bottom;
-    }
+  background:#eee;
+  background:-webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eee));
+  background:-moz-linear-gradient(top, #f6f6f6, #eee);
+  text-shadow:0 1px 0 #fff;
+  font-weight:bold;
+  vertical-align:bottom;
+  }
   table td {
-    vertical-align:top;
-    }
+  vertical-align:top;
+  }
   table thead:first-child tr th,
   table thead:first-child tr td {
-    border-top:0;
-    }
+  border-top:0;
+  }
   table tbody + tbody {
-    border-top:2px solid #ddd;
-    }
+  border-top:2px solid #ddd;
+  }
   table th + th,
   table td + td,
   table th + td,
   table td + th {
-    border-left:1px solid #ddd;
-    }
+  border-left:1px solid #ddd;
+  }
   table thead:first-child tr:first-child th,
   table tbody:first-child tr:first-child th,
   table tbody:first-child tr:first-child td {
-    border-top:0;
-    }
+  border-top:0;
+  }
   tbody tr td a {
-    color:#333;
-    display:block;
+  color:#333;
+  display:block;
+  }
+  #project-list tbody tr td a:hover,
+  #project-list tbody tr:hover td {
+    background-color:#f2faff;
+    color:#003366;
+    text-decoration:none;
+    cursor:pointer;
     }
-    #project-list tbody tr td a:hover,
-    #project-list tbody tr:hover td {
-      background-color:#f2faff;
-      color:#003366;
-      text-decoration:none;
-      cursor:pointer;
-      }
 #projects td {
   text-align: right;
   }
@@ -136,8 +136,8 @@ a {
   color:#F04E23;
   }
 a:hover {
-    color:#F04E23;
-    text-decoration:none;
+  color:#F04E23;
+  text-decoration:none;
 }
 input.button {
   cursor:pointer;
@@ -164,16 +164,16 @@ input[readonly] {
   padding:10px 40px;
   margin:20px auto 0;
   -webkit-border-radius:20px;
-          border-radius:20px;
+      border-radius:20px;
   }
   .button.disabled:hover,
   .button.disabled {
-    background-color:#ccc;
-    }
+  background-color:#ccc;
+  }
   .button:hover {
-    background:#036;
-    color:#FFF;
-    }
+  background:#036;
+  color:#FFF;
+  }
 
 .load {
   text-align:center;
@@ -190,8 +190,8 @@ input[readonly] {
   line-height:normal;
   }
   #header h1 a:hover {
-    text-decoration:none;
-    }
+  text-decoration:none;
+  }
 #header h2 {
   font-size: 13px;
   color: #737373;
@@ -209,8 +209,8 @@ input[readonly] {
   margin:0;
   }
   #footer ul li {
-    line-height:normal;
-    }
+  line-height:normal;
+  }
 
 
 
@@ -228,8 +228,8 @@ input[readonly] {
   margin: 0;
   }
   #main-container .span2 {
-    padding-top: 20px;
-    }
+  padding-top: 20px;
+  }
 
 #app .view {
   float:left;
@@ -239,8 +239,8 @@ input[readonly] {
   margin-top:50px;
   }
   #nav-side ul {
-    margin:0;
-    }
+  margin:0;
+  }
 nav-side-wrapper {
   width:200px;
 }
@@ -477,7 +477,7 @@ td a {
   display: block;
   float: right;
   width: 260px;
-  margin: 20px;	  
+  margin: 20px;
 }
 .popover-content .nav-list > .active > a, .popover-content .nav-list > .active > a:hover {
   background-color: #F04E23;
@@ -494,4 +494,128 @@ td a {
 
 .popover-content .nav-list .active a:hover {
   color: #fff;
+}
+/*-----------------------------------
+  Map
+-------------------------------------*/
+
+#map { height: 500px;position: relative; }
+.marker {
+  background: url(/ext/img/markers.png) no-repeat 0 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  color:#fff;
+}
+.wax-legends {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
+.wax-legends .wax-legend {
+  padding: 10px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: normal;
+  width: 270px;
+  display:block;
+}
+.wax-legend .legend-title {
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 100%;
+}
+.wax-legend .legend-scale ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+}
+.wax-legend .legend-scale ul li {
+  display: block;
+  float: left;
+  width: 50px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 80%;
+  list-style: none;
+}
+.wax-legend ul.legend-labels li span {
+  display: block;
+  float: left;
+  height: 15px;
+  width: 50px;
+}
+.wax-legend .legend-source {
+  font-size: 70%;
+  color: #999;
+  clear: both;
+}
+.wax-legend a {
+  color: #777;
+}
+.wax-legend {
+  overflow: auto;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
+.wax-tooltip {
+  z-index: 99999999999;
+  position: absolute;
+  background: rgb(40,40,40);
+  background: rgba(40,40,40,.90);
+  color: #fff;
+  padding: 10px;
+  right: 10px;
+  top: 150px;
+  width: 340px;
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+}
+.wax-tooltip h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
+  color:#fff;
+}
+.wax-tooltip .int_chart img {
+  margin: 10px 0;
+}
+.wax-fade {
+  opacity: 0;
+}
+.wax-fade {
+  -webkit-animation-name: wax-fade;
+  -webkit-animation-iteration-count: 1;
+}
+.wax-tooltip.hide { opacity:0; }
+.wax-tooltip .close {
+  display:block;
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+.hider {
+  display: none;
+}
+#prose, #ovtitle h2 {
+font-size: 20px;
+  margin-top: 10px;
+  line-height: 28px;
+  margin: 20px 0 0;
+  font-weight: normal;
+  color: #666;
 }
