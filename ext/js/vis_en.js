@@ -364,10 +364,10 @@ BubbleChart = (function() {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
 		$('.data-type-label-' + i + ' span.percents').append(percents);
-		$('.data-type-label-' + i + ' span.total').append(types[i].total + ' задержанных');
+		$('.data-type-label-' + i + ' span.total').append(types[i].total + ' detainees');
 	}
-	$('.agr p').append((this.agr.y*100/this.totalSum).toFixed(1) + '% задержаний произошли на согласованных с органами власти мероприятиях');
-	$('.non-agr p').append((this.agr.n*100/this.totalSum).toFixed(1) + '% задержаний произошли на не согласованных с органами власти мероприятиях');
+	$('.agr p').append((this.agr.y*100/this.totalSum).toFixed(1) + '% detentions took place on the agreed arrangements with the authorities');
+	$('.non-agr p').append((this.agr.n*100/this.totalSum).toFixed(1) + '% detentions took place on the non-agreed arrangements with the authorities');
     return this.vis.selectAll(".data-scaleKeyCircle")
       .style("opacity", 0)
       .transition().duration(600).style("opacity", 1);
@@ -437,11 +437,11 @@ BubbleChart = (function() {
     this.force.start();
     $("#det-slider").bind("valuesChanged", function(e, data){ 
       _this.update();
-      $( "#count" ).empty().append( "задержания от " + Math.round(data.values.min) +  " до " + Math.round(data.values.max) + " человек" );
+      $( "#count" ).empty().append( "detentions from " + Math.round(data.values.min) +  " to " + Math.round(data.values.max) + " people" );
     });
     $("#date-slider").bind("valuesChanged", function(e, data){ 
     _this.update(); 
-    $( "#dates" ).empty().append( "задержания с " + moment(data.values.min).format("DD.MM.YYYY") + " по " + moment(data.values.max).format("DD.MM.YYYY"));
+    $( "#dates" ).empty().append( "detentions from " + moment(data.values.min).format("DD.MM.YYYY") + " to " + moment(data.values.max).format("DD.MM.YYYY"));
     });
     return this.display_axis();
   };
@@ -530,8 +530,8 @@ BubbleChart = (function() {
     this.vis.attr("width", this.width + margin.left + margin.right).attr("height", this.height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     this.vis.append("g").attr("class", "x axis").attr("transform", "translate(40," + this.height + ")").call(xAxis);
     this.vis.append("g").attr("class", "y axis").attr("transform", "translate(50,0)").call(yAxis);
-    this.vis.append("text").attr("class", "x label").attr("text-anchor", "end").attr("x", this.width + 50).attr("y", this.height + 30).text("дата мониторинга");
-    this.vis.append("text").attr("class", "y label").attr("text-anchor", "end").attr("y", 6).attr("dy", ".75em").attr("transform", "rotate(-90)").text("количество задержаний");
+    this.vis.append("text").attr("class", "x label").attr("text-anchor", "end").attr("x", this.width + 50).attr("y", this.height + 30).text("monitoring date");
+    this.vis.append("text").attr("class", "y label").attr("text-anchor", "end").attr("y", 6).attr("dy", ".75em").attr("transform", "rotate(-90)").text("number of detentions");
     this.vis.insert('rect','.axis').attr("class","clip").attr('height','690').attr('width','50').attr('x','0').attr('y','0').style('fill','#fff');
     return d3.selectAll('circle');
   };
@@ -744,7 +744,7 @@ BubbleChart = (function() {
     content += "<div class=\"data-type\">" + data.comment + "</div>";
     content += "<div class=\"data-rule\"></div>";
     content += "<div class=\"data-date\">" + data.date + "</div>";
-    content += "<div class=\"data-desc\">Количество задержанных</div>";
+    content += "<div class=\"data-desc\">Number of detentions</div>";
     content += "<div class=\"data-valuesContainer\"><span class=\"data-value\">" + data.value + "</span></div>";
     content += "<div class=\"data-tail\"></div>";
     content += "</div>";
@@ -812,7 +812,7 @@ $(function() {
 	    	max: 700
 	    }
 	    });
-	    $("#count").empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
+	    $("#count").empty().append( "detentions from " + $("#det-slider").rangeSlider("values").min + " to " + $("#det-slider").rangeSlider("values").max + " people" );
 	    $("#date-slider").dateRangeSlider({
 	      defaultValues:{
 	    	min: new Date(2011, 9, 4),

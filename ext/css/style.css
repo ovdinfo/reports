@@ -619,3 +619,118 @@ font-size: 20px;
   font-weight: normal;
   color: #666;
 }
+/*-----------------------------------
+  Infographics
+-------------------------------------*/
+
+#vis {
+  margin-left: -40px;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 196px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+.limiter {
+  width: 960px;
+  margin: 0 auto;
+}
+  	  
+#view_selection {
+  padding: 15px;
+}
+.data-scaleKeyCircle {
+  stroke-width: 1;
+  stroke: #999;
+  stroke-dasharray: 2 2;
+  fill: none;
+}
+#data-sizeKey {
+  position: absolute;
+  height: 110px;
+  width: 200px;
+  top: 630px;
+  left: 35px;
+}
+.data-circleKeyLabel {
+  position: absolute;
+  border-top: solid 1px #CCC;
+  width: 40px;
+}
+#data-sizeKey .data-circleKeyLabel span {
+  font-size: 10px;
+  color: #333;
+  position: absolute;
+  display: block;
+  left: 45px;
+  top: -11px;
+  width: 80px;
+  z-index: 100;
+}
+#data-overview {
+  position: absolute;
+  width: 310px;
+  top: 100px;
+  left: 10px;
+}
+#data-group-overview {
+  position: absolute;
+  width: 310px;
+  top: 70px;
+  left: 10px;
+}
+#data-overview h5, #data-group-overview h5 {
+  margin: 3px 0px;
+}
+#data-overview p, #data-group-overview p {
+  font-style:italic;
+}
+#prose-igraph {
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 28px;
+  margin: 20px 0 0;
+  font-weight: normal;
+  color: #666;
+}
+.data-type-label {
+  position:absolute;
+}
+.data-agr-label {
+  top: 150px;
+  position: absolute;
+  width: 200px; 
+}
+.data-agr-label p {
+  font-style: italic;
+}
+.type {
+  display: inline-block;
+}
+span.percents {
+  display: inline-block;
+  margin-left: 10px;
+}
+span.total {
+  display:block;
+}
