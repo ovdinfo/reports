@@ -34,7 +34,7 @@ BubbleChart = (function() {
   var B, J, xScale, yScale;
 
   function BubbleChart(data) {
-    $('#loader').remove();
+    $('#iloader').remove();
 
     var i, max_amount, organizators;
     this.data = data;
@@ -856,7 +856,7 @@ $(function() {
   var main_height = $('#main').height();
   var main_width = $(window).width();
   
-  $('#loader').css('height', main_height).css('width', main_width);
+  $('#iloader').css('height', main_height).css('width', main_width);
   
   var opts = {
     lines: 13, // The number of lines to draw
@@ -875,7 +875,7 @@ $(function() {
     top: 'auto', // Top position relative to parent in px
     left: 'auto' // Left position relative to parent in px
   };
-  var target = document.getElementById('loader');
+  var target = document.getElementById('iloader');
   var spinner = new Spinner(opts).spin(target);
   return d3.csv("https://docs.google.com/spreadsheet/pub?key=0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc&single=true&gid=0&output=csv", render_vis);
 });
