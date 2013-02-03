@@ -5,19 +5,23 @@ requirejs.config({
         'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min','libs/jquery/jquery.min'],
         'jquery-ui': ['//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min','libs/jquery-ui/jquery-ui.min'],
         'bootstrap': ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min','libs/bootstrap/js/bootstrap.min'],
+        'tablesorter': 'libs/tablesorter/jquery.tablesorter.min',
+        'tablesorter.widgets': 'libs/tablesorter/jquery.tablesorter.widgets.min',
         'tocify': 'libs/tocify/jquery.tocify.min'
     },
     shim: {
     	'bootstrap' : ['jquery'],
     	'jquery-ui' : ['jquery'],
-        'tocify' : ['jquery','jquery-ui','bootstrap']
+        'tocify' : ['jquery','jquery-ui','bootstrap'],
+        'tablesorter' : ['jquery','bootstrap'],
+        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter']
     }
 });
 
 require([
-    'jquery', 'jquery-ui', 'bootstrap', 'tocify'
+    'jquery', 'jquery-ui', 'bootstrap', 'tocify', 'tablesorter', 'tablesorter.widgets'
 ],
-function($){
+function($,tablesorter){
 	$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 	loadCss('/ext/libs/tocify/jquery.tocify.css');
     $(function() {
