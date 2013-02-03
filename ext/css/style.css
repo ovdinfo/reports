@@ -750,6 +750,7 @@ div.about #prose {
 
 div.about #prose p {
   padding-right: 50px;
+  margin: 0 0 10px;
 }
 div.about blockquote {
   font-style: italic;
