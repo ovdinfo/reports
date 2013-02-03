@@ -36,7 +36,7 @@ function($){
   $.ajax({
 	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/ocy/public/values?alt=json-in-script',
     dataType: 'jsonp',
-    success: buildTable
+    success: buildTableFormat
   });
   function buildTableFormat(data) {
     $.each(data.feed.entry, function (key, val) {
