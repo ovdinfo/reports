@@ -411,7 +411,7 @@ ul.nav li { font-size:13px; }
 
 text {
   font-size: 10px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   fill: #333;
 }
 
@@ -643,7 +643,7 @@ font-size: 20px;
 }
 
 .year.label {
-  font: 500 196px "Helvetica Neue";
+  font: 500 196px Helvetica;
   fill: #ddd;
 }
 
