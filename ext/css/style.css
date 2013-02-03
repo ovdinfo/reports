@@ -748,6 +748,9 @@ div.about #prose {
   font: normal 16px/20px Helvetica,Arial,sans-serif;
 }
 
+div.about #prose p {
+  padding-right: 50px;
+}
 div.about blockquote {
   font-style: italic;
 }
