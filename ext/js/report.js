@@ -44,8 +44,8 @@ function($,tablesorter){
   });
   function buildTableFormat(data) {
     $.each(data.feed.entry, function (key, val) {
-    var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cokwr.$t + '</td><td>' + val.gsx$_d5fpr.$t + '</td></tr>';
-    $('.event-format table tbody').append(content);
+      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cokwr.$t + '</td><td>' + val.gsx$_d5fpr.$t + '</td></tr>';
+      $('.event-format table tbody').append(content);
     });
     $('.event-format table').trigger('update');
   };
