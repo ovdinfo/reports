@@ -33,6 +33,61 @@ function($){
     	$('#toc').affix({'offset':160});
     });
     $('#toc').fadeIn('slow');
+  $.ajax({
+	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/ocy/public/values?alt=json-in-script',
+    dataType: 'jsonp',
+    success: buildTable
+  });
+  function buildTableFormat(data) {
+    $.each(data.feed.entry, function (key, val) {
+    var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cokwr.$t + '</td><td>' + val.sx$_d5fpr.$t + '</td></tr>';
+    $('.event-format table tbody').append(content);
+  });
+  $.extend($.tablesorter.themes.bootstrap, { 
+    // these classes are added to the table. To see other table classes available, 
+    // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
+    table      : 'table table-bordered', 
+    header     : 'bootstrap-header', // give the header a gradient background 
+    footerRow  : '', 
+    footerCells: '', 
+    icons      : '', // add "icon-white" to make them white; this icon class is added to the <i> in the header 
+    sortNone   : 'bootstrap-icon-unsorted', 
+    sortAsc    : 'icon-chevron-up', 
+    sortDesc   : 'icon-chevron-down', 
+    active     : '', // applied when column is sorted 
+    hover      : '', // use custom css here - bootstrap class may not override it 
+    filterRow  : '', // filter row class 
+    even       : '', // odd row zebra striping 
+    odd        : ''  // even row zebra striping 
+  });
+  $('#table-wrapper table').tablesorter({
+  	dateFormat : "ddmmyyyy",
+  	headers: { 
+      0: { sorter: "shortDate" }
+    },
+    theme : "bootstrap", // this will  
+ 
+    widthFixed: false, 
+ 
+    headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon! 
+ 
+    // widget code contained in the jquery.tablesorter.widgets.js file 
+    // use the zebra stripe widget if you plan on hiding any rows (filter widget) 
+    widgets : [ "uitheme", "filter", "zebra" ], 
+ 
+    widgetOptions : { 
+      // using the default zebra striping class name, so it actually isn't included in the theme variable above 
+      // this is ONLY needed for bootstrap theming if you are using the filter widget, because rows are hidden 
+      zebra : ["even", "odd"], 
+ 
+      // reset filters button 
+      filter_reset : ".reset", 
+ 
+      // set the uitheme widget to use the bootstrap theme class names 
+      // uitheme : "bootstrap" 
+    }
+  });
+};
 });
 
 function loadCss(url) {
