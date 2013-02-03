@@ -47,6 +47,11 @@ function($,tablesorter){
     dataType: 'jsonp',
     success: buildTableSubject
   });
+  $.ajax({
+	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc/ocw/public/values?alt=json-in-script',
+    dataType: 'jsonp',
+    success: buildTableOrganizer
+  });
   function buildTableFormat(data) {
     $.each(data.feed.entry, function (key, val) {
       var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cokwr.$t + '</td><td>' + val.gsx$_d5fpr.$t + '</td></tr>';
@@ -60,6 +65,13 @@ function($,tablesorter){
       $('.event-subject table tbody').append(content);
     });
     $('.event-subject table').trigger('update');
+  };
+  function buildTableOrganizer(data) {
+    $.each(data.feed.entry, function (key, val) {
+      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cokwr.$t + '</td><td>' + val.gsx$_cpzh4.$t + '</td></tr>';
+      $('.event-organizer table tbody').append(content);
+    });
+    $('.event-organizer table').trigger('update');
   };
   $.extend($.tablesorter.themes.bootstrap, { 
     // these classes are added to the table. To see other table classes available, 
