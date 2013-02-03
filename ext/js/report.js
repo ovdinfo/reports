@@ -11,15 +11,15 @@ requirejs.config({
     },
     shim: {
     	'bootstrap' : ['jquery'],
+    	'tablesorter' : ['jquery','bootstrap'],
+        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
     	'jquery-ui' : ['jquery'],
-        'tocify' : ['jquery','jquery-ui','bootstrap'],
-        'tablesorter' : ['jquery','bootstrap'],
-        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter']
+        'tocify' : ['jquery','jquery-ui','bootstrap']
     }
 });
 
 require([
-    'jquery', 'jquery-ui', 'bootstrap', 'tocify', 'tablesorter'
+    'jquery', 'jquery-ui', 'bootstrap', 'tocify', 'tablesorter', 'tablesorter.widgets'
 ],
 function($,tablesorter){
 	$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
