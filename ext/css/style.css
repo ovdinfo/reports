@@ -739,3 +739,15 @@ span.percents {
 span.total {
   display:block;
 }
+
+/*-----------------------------------
+  About
+-------------------------------------*/
+
+div.about #prose {
+  font: normal 16px/20px Helvetica,Arial,sans-serif;
+}
+
+div.about blockquote {
+  font-style: italic;
+}
