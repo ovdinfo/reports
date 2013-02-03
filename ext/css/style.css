@@ -747,10 +747,12 @@ span.total {
 div.about #prose {
   font: normal 16px/20px Helvetica,Arial,sans-serif;
 }
-
 div.about #prose p {
   padding-right: 50px;
   margin: 0 0 10px;
+}
+div.about #prose p:first {
+  line-height: 25px;
 }
 div.about blockquote {
   font-style: italic;
