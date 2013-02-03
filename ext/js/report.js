@@ -46,7 +46,8 @@ function($,tablesorter){
     $.each(data.feed.entry, function (key, val) {
     var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cokwr.$t + '</td><td>' + val.gsx$_d5fpr.$t + '</td></tr>';
     $('.event-format table tbody').append(content);
-  });
+    });
+  };
   $.extend($.tablesorter.themes.bootstrap, { 
     // these classes are added to the table. To see other table classes available, 
     // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
@@ -91,7 +92,6 @@ function($,tablesorter){
       // uitheme : "bootstrap" 
     }
   });
-};
 });
 
 function loadCss(url) {
