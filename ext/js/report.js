@@ -19,7 +19,7 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'jquery-ui', 'bootstrap', 'tocify', 'tablesorter', 'tablesorter.widgets'
+    'jquery', 'jquery-ui', 'bootstrap', 'tocify', 'tablesorter'
 ],
 function($,tablesorter){
 	$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
