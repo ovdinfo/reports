@@ -66,10 +66,7 @@ function($,tablesorter){
     odd        : ''  // even row zebra striping 
   });
   $('.table-wrapper table').tablesorter({
-  	dateFormat : "ddmmyyyy",
-  	headers: { 
-      0: { sorter: "shortDate" }
-    },
+  	
     theme : "bootstrap", // this will  
  
     widthFixed: false, 
