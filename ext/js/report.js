@@ -65,7 +65,7 @@ function($,tablesorter){
     even       : '', // odd row zebra striping 
     odd        : ''  // even row zebra striping 
   });
-  $('.table-wrapper table').tablesorter({
+  $('.event-format table').tablesorter({
   	
     theme : "bootstrap", // this will  
  
