@@ -10,6 +10,117 @@ published: true
   <meta http-equiv='X-UA-Compatible' content='IE=8;FF=3;OtherUA=4' />
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link type="text/css" rel="stylesheet" href="/ext/libs/mapbox/mapbox.css">
+  <style type="text/css">
+  #map { height: 500px;position: relative; }
+.marker {
+  background: url(/ext/img/markers.png) no-repeat 0 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  color:#fff;
+}
+.wax-legends {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
+.wax-legends .wax-legend {
+  padding: 10px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: normal;
+  width: 270px;
+  display:block;
+}
+.wax-legend .legend-title {
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 100%;
+}
+.wax-legend .legend-scale ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+}
+.wax-legend .legend-scale ul li {
+  display: block;
+  float: left;
+  width: 50px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 80%;
+  list-style: none;
+}
+.wax-legend ul.legend-labels li span {
+  display: block;
+  float: left;
+  height: 15px;
+  width: 50px;
+}
+.wax-legend .legend-source {
+  font-size: 70%;
+  color: #999;
+  clear: both;
+}
+.wax-legend a {
+  color: #777;
+}
+.wax-legend {
+  overflow: auto;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
+.wax-tooltip {
+  z-index: 99999999999;
+  position: absolute;
+  background: rgb(40,40,40);
+  background: rgba(40,40,40,.90);
+  color: #fff;
+  padding: 10px;
+  right: 10px;
+  top: 150px;
+  width: 340px;
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+}
+.wax-tooltip h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
+  color:#fff;
+}
+.wax-tooltip .int_chart img {
+  margin: 10px 0;
+}
+.wax-fade {
+  opacity: 0;
+}
+.wax-fade {
+  -webkit-animation-name: wax-fade;
+  -webkit-animation-iteration-count: 1;
+}
+.wax-tooltip.hide { opacity:0; }
+.wax-tooltip .close {
+  display:block;
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+</style>
 </head>
 <body>
   <div id="map" class="" style="padding: 0px; overflow: hidden;">

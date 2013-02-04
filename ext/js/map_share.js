@@ -16,8 +16,6 @@ requirejs.config({
     },
     shim: {
         'bootstrap' : ['jquery'],
-        'tablesorter' : ['jquery','bootstrap'],
-        'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
         'spin' : ['jquery'],
         'share': ['mapbox']
     }
@@ -26,7 +24,7 @@ requirejs.config({
 require([
     'jquery', 'bootstrap', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
-function($,tablesorter){
+function($){
 var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
@@ -46,10 +44,6 @@ var opts = {
 };
 
 google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
-
-var mapHeight = $(window).height();
-
-$('#map,#loader').height(mapHeight+'px');
 
 $('#loader').spin(opts);
 
