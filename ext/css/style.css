@@ -615,6 +615,7 @@ td a {
   -moz-transition: opacity .3s;
 }
 .map-fullscreen-map .wax-tooltip {
+  position: fixed;
   top: 10px;
 }
 .wax-tooltip h2 {
