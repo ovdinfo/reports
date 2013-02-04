@@ -1,5 +1,5 @@
 ---
-layout: appeals_en
+layout: appeals_ru
 permalink: 2012/data/appeals/en
 js: appeals
 ru: 2012/data/appeals
