@@ -308,8 +308,9 @@ ul.nav li { font-size:13px; }
 }
 
 #report-title {
-
-  top: 300px;
+float: left;
+height: 25px;
+margin-top: 15px;
 }
 #report-title h1 {
   font-size: 24px;
