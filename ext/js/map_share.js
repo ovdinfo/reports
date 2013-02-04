@@ -47,7 +47,7 @@ var opts = {
 
 google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
 
-var mapHeight = ($(window).height()/100)*90-140;
+var mapHeight = $(window).height();
 
 $('#map,#loader').height(mapHeight+'px');
 
