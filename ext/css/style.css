@@ -308,19 +308,24 @@ ul.nav li { font-size:13px; }
 }
 
 #report-title {
-float: left;
-height: 25px;
-margin-top: 15px;
-float:left;
+  float: left;
+  height: 0px;
+  margin-top: 15px;
+  float: left;
 }
 #report-title h1 {
-  font-size: 24px;
+  font-size: 19px;
+  letter-spacing: 0px;
 }
 #report-title h2 {
   font-size: 19px;
   color: #F04E23;
   top: 300px;
   line-height: 1;
+  letter-spacing: 1px;
+  font-style: italic;
+  margin: 0px;
+  padding: 0px;
 }
 /*-----------------------------------
   Infographics
