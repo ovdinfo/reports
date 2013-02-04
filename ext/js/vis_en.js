@@ -56,9 +56,9 @@ BubbleChart = (function() {
  
 	i = 0;
     while (i < this.data.length) {
-        org[i] = {"name":this.data[i].organizer, "value":this.data[i].number_of_detentions};
-        types[i] = {"name":this.data[i].event_type, "value":this.data[i].number_of_detentions};
-        if (this.data[i].agreement == 'согласовано') {
+        org[i] = {"name":this.data[i].organizer_eng, "value":this.data[i].number_of_detentions};
+        types[i] = {"name":this.data[i].event_type_eng, "value":this.data[i].number_of_detentions};
+        if (this.data[i].agreement == 'Authorised') {
           this.agr.y += parseInt(this.data[i].number_of_detentions);
         }
         else {
@@ -215,13 +215,13 @@ BubbleChart = (function() {
         id: d.Id,
         radius: _this.radius_scale(parseInt(d.number_of_detentions)),
         value: d.number_of_detentions,
-        name: d.subject,
-        org: d.organizer,
-        group: d.event_type,
-        agr: d.agreement,	
+        name: d.subject_eng,
+        org: d.organizer_eng,
+        group: d.event_type_eng,
+        agr: d.agreement_eng,	
         date: d.date,
-        comment: d.description,
-        subject: d.subject,
+        comment: d.description-translated,
+        subject: d.subject_eng,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
