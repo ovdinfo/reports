@@ -45,7 +45,7 @@ var opts = {
 
 google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
 
-$('#loader').height($(window).height());
+//$('#loader').height($(window).height());
 $('#loader').spin(opts);
 
 var map = mapbox.map('map'),
