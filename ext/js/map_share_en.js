@@ -22,7 +22,7 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'bootstrap', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:en'
 ],
 function($){
 var opts = {
@@ -42,8 +42,6 @@ var opts = {
   top: 'auto', // Top position relative to parent in px
   left: 'auto' // Left position relative to parent in px
 };
-
-google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
 
 $('#loader').spin(opts);
 
@@ -109,9 +107,9 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
   );
   formatter[f.properties.id] = function() {
   return '<div class="wax-tooltip"><div class="int_total">' +
-    '<h2>ОВД: <%= name %></h2>' +
-    '<p>Адрес: <i><%= address %></i></p>' +
-    '<p>Общее количество задержанных: <strong><%= value %></strong></p>' +
+    '<h2>Police station: <%= name %></h2>' +
+    '<p>Address: <i><%= address %></i></p>' +
+    '<p>The total number of arrests: <strong><%= value %></strong></p>' +
     '<div id="visualization"></div>' +
       '</div></div>';
   };
@@ -123,6 +121,9 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
   };
   marker.onmouseout = function() {
       $('.wax-tooltip').remove();
+  };
+  marker.onclick = function() {
+	filterOvd(f.properties.id,f.properties.name);
   };
   marker.style.pointerEvents = 'all';
   d.appendChild(marker);
