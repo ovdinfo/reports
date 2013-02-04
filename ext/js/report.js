@@ -61,7 +61,7 @@ function($,tablesorter){
   };
   function buildTableSubject(data) {
     $.each(data.feed.entry, function (key, val) {
-      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cpzh4.$t + '</td><td>' + val.gsx$_ciyn3.$t + '</td></tr>';
+      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cpzh4.$t + '</td><td>' + val.gsx$_cre1l.$t + '</td></tr>';
       $('.event-subject table tbody').append(content);
     });
     $('.event-subject table').trigger('update');
