@@ -311,6 +311,7 @@ ul.nav li { font-size:13px; }
 float: left;
 height: 25px;
 margin-top: 15px;
+float:left;
 }
 #report-title h1 {
   font-size: 24px;
