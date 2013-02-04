@@ -128,13 +128,17 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
       '</div></div>';
   };
   marker.innerHTML = (total > 0) ? total : '';
-  marker.onclick = function() {
+  marker.onmouseover = function() {
       $('.wax-tooltip').remove();
       $('body').append(_.template(formatter[f.properties.id](), f.properties));
       drawVisualization(ovdData[f.properties.id]);
   };
-  
-  
+  marker.onmouseout = function() {
+      $('.wax-tooltip').remove();
+  };
+  marker.onclick = function() {
+	filterOvd(f.properties.id,f.properties.name);
+  };
   marker.style.pointerEvents = 'all';
   d.appendChild(marker);
   d.style.position = 'absolute';
