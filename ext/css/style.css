@@ -302,6 +302,10 @@ ul.nav li { font-size:13px; }
 #toc li.active a {
   color: #fff;
 }
+
+#prose ul li {
+  list-style-type: circle;
+}
 /*-----------------------------------
   Infographics
 -------------------------------------*/
