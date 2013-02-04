@@ -25,7 +25,7 @@ function($,tablesorter){
 	$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 	loadCss('/ext/libs/tocify/jquery.tocify.css');
     $(function() {
-    	$("#toc").tocify({context:'#main',selectors:'h2,h3',extendPage:false});
+    	$("#toc").tocify({context:'#prose',selectors:'h2,h3',extendPage:false});
     	$('#prose a').hover(
 			function () {
     			$(this).animate({ color: '#F04E23' }, 'fast');
