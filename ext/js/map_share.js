@@ -4,8 +4,6 @@ requirejs.config({
     paths: { 
         'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min','libs/jquery/jquery.min'],
         'bootstrap': ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min','libs/bootstrap/js/bootstrap.min'],
-        'tablesorter': 'libs/tablesorter/jquery.tablesorter.min',
-        'tablesorter.widgets': 'libs/tablesorter/jquery.tablesorter.widgets.min',
         'underscore': 'libs/underscore/underscore-min',
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
@@ -15,7 +13,6 @@ requirejs.config({
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
-
     },
     shim: {
         'bootstrap' : ['jquery'],
@@ -27,12 +24,9 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
 function($,tablesorter){
-$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
-loadCss('/ext/libs/mapbox/mapbox.css');
-loadCss('/ext/libs/mapbox/share.css');
 var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
@@ -136,9 +130,6 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
   marker.onmouseout = function() {
       $('.wax-tooltip').remove();
   };
-  marker.onclick = function() {
-	filterOvd(f.properties.id,f.properties.name);
-  };
   marker.style.pointerEvents = 'all';
   d.appendChild(marker);
   d.style.position = 'absolute';
@@ -164,46 +155,6 @@ function buildTable(data) {
     }
     group.detentions = _.sortBy(group.detentions, function(obj){ return obj[0].getTime(); });
   });
-  $.each(data.feed.entry, function (key, val) {
-    var content = '<tr class="data ' + val.gsx$ovdid.$t + ' hider"><td>' + val.gsx$date.$t + '</td><td>' + val.gsx$ovd.$t + '</td><td>' + val.gsx$description.$t + '</td><td>' + val.gsx$ovdvalue.$t + '</td><td><a href="/2012/data/#' + val.gsx$ovdid.$t + '">источник</a></td></tr>';
-    $('#table-wrapper table tbody').append(content);
-  });
-  $.extend($.tablesorter.themes.bootstrap, { 
-    // these classes are added to the table. To see other table classes available, 
-    // look here: http://twitter.github.com/bootstrap/base-css.html#tables 
-    table      : 'table table-bordered', 
-    header     : 'bootstrap-header', // give the header a gradient background 
-    footerRow  : '', 
-    footerCells: '', 
-    icons      : '', // add "icon-white" to make them white; this icon class is added to the <i> in the header 
-    sortNone   : 'bootstrap-icon-unsorted', 
-    sortAsc    : 'icon-chevron-up', 
-    sortDesc   : 'icon-chevron-down', 
-    active     : '', // applied when column is sorted 
-    hover      : '', // use custom css here - bootstrap class may not override it 
-    filterRow  : '', // filter row class 
-    even       : '', // odd row zebra striping 
-    odd        : ''  // even row zebra striping 
-  });
-  $('#table-wrapper table').tablesorter({
-  	dateFormat : "ddmmyyyy",
-  	headers: { 
-      0: { sorter: "shortDate" }, 
-    },
-    theme : "bootstrap",
-  
-    headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon! 
- 
-    // widget code contained in the jquery.tablesorter.widgets.js file 
-    // use the zebra stripe widget if you plan on hiding any rows (filter widget) 
-    widgets : [ "uitheme", "zebra" ], 
- 
-    widgetOptions : { 
-      // using the default zebra striping class name, so it actually isn't included in the theme variable above 
-      // this is ONLY needed for bootstrap theming if you are using the filter widget, because rows are hidden 
-      zebra : ["even", "odd"], 
-    }
-  });
 };
 
 function drawVisualization(ovd) {
@@ -222,20 +173,6 @@ function drawVisualization(ovd) {
       
   new google.visualization.ScatterChart(document.getElementById('visualization')).draw(data, options);
 }
-
-function filterOvd(id, name) {
-  $('<h2 class="ovheader">Задержанные в ОВД ' + name + ' с 04.12.2011 по 31.12.2012</h2>').replaceAll('.ovheader');
-  $('tr.data').addClass('hider');
-  $('tr.data').each(function (i) {
-    if ($(this).hasClass(id)) {
-      $(this).removeClass('hider');
-    }
-    if (id=='all') {
-      $(this).removeClass('hider');
-    }
-  });
-  $('#table-wrapper table').removeClass('hider');
-}
   
 map.eventHandlers[3].remove();
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
@@ -245,15 +182,4 @@ map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
 mapbox.share();
-$("#show_data").click(function() {
-  filterOvd('all');
 });
-});
-
-function loadCss(url) {
-    var link = document.createElement("link");
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.href = url;
-    document.getElementsByTagName("head")[0].appendChild(link);
-}
