@@ -136,9 +136,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
   marker.onmouseout = function() {
       $('.wax-tooltip').remove();
   };
-  marker.onclick = function() {
-	filterOvd(f.properties.id,f.properties.name);
-  };
+  
   marker.style.pointerEvents = 'all';
   d.appendChild(marker);
   d.style.position = 'absolute';
