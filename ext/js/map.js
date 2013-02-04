@@ -244,7 +244,7 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
-map.share();
+mapbox.share();
 $("#show_data").click(function() {
   filterOvd('all');
 });
