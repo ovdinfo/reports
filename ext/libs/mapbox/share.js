@@ -12,8 +12,13 @@ mapbox.share = function() {
     var lang;
     //if (lastsegment == "en") { lang = "/en"; }
     tj.webpage = l.href;
-    tj.embed = (l.hash) ? l.href + '?embed' : l.href + 'source/?embed';
-
+    tj.embed = l.href + 'source/?embed';
+    if (l.href == "http://reports.ovdinfo.org/2012/geo/en/source/?embed") { 
+    	tj.embed = "http://reports.ovdinfo.org/2012/geo/en/source/?embed"; 
+    }
+    else if (l.href == "http://reports.ovdinfo.org/2012/geo/source/?embed") {
+		tj.embed = "http://reports.ovdinfo.org/2012/geo/source/?embed"; 
+    }
     var link = document.createElement('a');
     var close = document.createElement('a');
     var embed = document.createElement('textarea');
