@@ -437,11 +437,11 @@ BubbleChart = (function() {
     this.force.start();
     $("#det-slider").bind("valuesChanged", function(e, data){ 
       _this.update();
-      $( "#count" ).empty().append( "detentions from " + Math.round(data.values.min) +  " to " + Math.round(data.values.max) + " people" );
+      $( "#count" ).empty().append( "from " + Math.round(data.values.min) +  " to " + Math.round(data.values.max) + " arrests" );
     });
     $("#date-slider").bind("valuesChanged", function(e, data){ 
     _this.update(); 
-    $( "#dates" ).empty().append( "detentions from " + moment(data.values.min).format("DD.MM.YYYY") + " to " + moment(data.values.max).format("DD.MM.YYYY"));
+    $( "#dates" ).empty().append( "arrests from " + moment(data.values.min).format("DD.MM.YYYY") + " to " + moment(data.values.max).format("DD.MM.YYYY"));
     });
     return this.display_axis();
   };
@@ -530,8 +530,8 @@ BubbleChart = (function() {
     this.vis.attr("width", this.width + margin.left + margin.right).attr("height", this.height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     this.vis.append("g").attr("class", "x axis").attr("transform", "translate(40," + this.height + ")").call(xAxis);
     this.vis.append("g").attr("class", "y axis").attr("transform", "translate(50,0)").call(yAxis);
-    this.vis.append("text").attr("class", "x label").attr("text-anchor", "end").attr("x", this.width + 50).attr("y", this.height + 30).text("monitoring date");
-    this.vis.append("text").attr("class", "y label").attr("text-anchor", "end").attr("y", 6).attr("dy", ".75em").attr("transform", "rotate(-90)").text("number of detentions");
+    this.vis.append("text").attr("class", "x label").attr("text-anchor", "end").attr("x", this.width + 50).attr("y", this.height + 30).text("date of monitoring");
+    this.vis.append("text").attr("class", "y label").attr("text-anchor", "end").attr("y", 6).attr("dy", ".75em").attr("transform", "rotate(-90)").text("number of arrests");
     this.vis.insert('rect','.axis').attr("class","clip").attr('height','690').attr('width','50').attr('x','0').attr('y','0').style('fill','#fff');
     return d3.selectAll('circle');
   };
@@ -812,7 +812,7 @@ $(function() {
 	    	max: 700
 	    }
 	    });
-	    $("#count").empty().append( "detentions from " + $("#det-slider").rangeSlider("values").min + " to " + $("#det-slider").rangeSlider("values").max + " people" );
+	    $("#count").empty().append( "from " + $("#det-slider").rangeSlider("values").min + " to " + $("#det-slider").rangeSlider("values").max + " arrests" );
 	    $("#date-slider").dateRangeSlider({
 	      defaultValues:{
 	    	min: new Date(2011, 9, 4),
