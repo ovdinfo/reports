@@ -718,8 +718,6 @@ BubbleChart = (function() {
   //states:
   //-1 - start
   //0 - 
-   console.log('old: ' + this.state);
-   console.log('new: ' + newState);
    var oldState = this.state;
    this.state = newState;
    switch(oldState){
