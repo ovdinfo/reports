@@ -20,8 +20,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
     line-height: 1;
 }
-ol, ul {
+ol {
     list-style: none;
+}
+ul {
+    list-style: decimal;
 }
 blockquote, q {
     quotes: none;
