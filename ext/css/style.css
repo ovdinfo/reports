@@ -642,7 +642,7 @@ body.map-fullscreen-view .wax-tooltip {
   top:0px;
   right:0px;
 }
-.share {
+a.share {
   top: 170px;
 }
 .hider {
