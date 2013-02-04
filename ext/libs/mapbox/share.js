@@ -6,11 +6,6 @@ mapbox.share = function() {
 
     tj = {};
     var l = window.location;
-    var current = window.location.pathname;
-    var paths = current.split('/');
-    var lastsegment = paths[paths.length-2];
-    var lang;
-    //if (lastsegment == "en") { lang = "/en"; }
     tj.webpage = l.href;
     tj.embed = l.href + 'source/?embed';
     if (l.href == "http://reports.ovdinfo.org/2012/geo/en/source/?embed") { 
