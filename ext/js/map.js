@@ -21,12 +21,13 @@ requirejs.config({
         'bootstrap' : ['jquery'],
         'tablesorter' : ['jquery','bootstrap'],
         'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
-        'spin' : ['jquery']
+        'spin' : ['jquery'],
+        'share': ['mapbox']
     }
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
 function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
@@ -243,7 +244,7 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
-mapbox.share.add();
+map.share.add();
 $("#show_data").click(function() {
   filterOvd('all');
 });
