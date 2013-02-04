@@ -128,7 +128,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
       '</div></div>';
   };
   marker.innerHTML = (total > 0) ? total : '';
-  marker.onmouseover = function() {
+  marker.onclick = function() {
       $('.wax-tooltip').remove();
       $('body').append(_.template(formatter[f.properties.id](), f.properties));
       drawVisualization(ovdData[f.properties.id]);
