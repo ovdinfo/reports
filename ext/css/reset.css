@@ -26,6 +26,10 @@ ol {
 ul {
     list-style: none;
 }
+ol li {
+    list-style: decimal;
+    padding: 0 0 10px;
+}
 blockquote, q {
     quotes: none;
 }
