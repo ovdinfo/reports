@@ -366,8 +366,8 @@ BubbleChart = (function() {
 		$('.data-type-label-' + i + ' span.percents').append(percents);
 		$('.data-type-label-' + i + ' span.total').append(types[i].total + ' задержанных');
 	}
-	$('.agr p').append((this.agr.y*100/this.totalSum).toFixed(1) + '% задержаний произошли на согласованных с органами власти мероприятиях');
-	$('.non-agr p').append((this.agr.n*100/this.totalSum).toFixed(1) + '% задержаний произошли на не согласованных с органами власти мероприятиях');
+	$('.agr p').append('1079 человек (' + (this.agr.y*100/this.totalSum).toFixed(1) + '%) были задержаны входе 20 мероприятий, согласованных с местными властями');
+	$('.non-agr p').append('Входе 208 мероприятий, несогласованных с местными властями или не требующих согласования, было задержано 4090 человек (' + (this.agr.n*100/this.totalSum).toFixed(1) + '%)');
     return this.vis.selectAll(".data-scaleKeyCircle")
       .style("opacity", 0)
       .transition().duration(600).style("opacity", 1);

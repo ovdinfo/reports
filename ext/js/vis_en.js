@@ -366,8 +366,8 @@ BubbleChart = (function() {
 		$('.data-type-label-' + i + ' span.percents').append(percents);
 		$('.data-type-label-' + i + ' span.total').append(types[i].total + ' arrestees');
 	}
-	$('.agr p').append((this.agr.y*100/this.totalSum).toFixed(1) + '% detentions took place on the agreed arrangements with the authorities');
-	$('.non-agr p').append((this.agr.n*100/this.totalSum).toFixed(1) + '% detentions took place on the non-agreed arrangements with the authorities');
+	$('.agr p').append(('1079 people (' + this.agr.y*100/this.totalSum).toFixed(1) + '%) were detained at 20 events were authorised by local government');
+	$('.non-agr p').append('During 208 events that were either not authorised, or required no clearance, 4090 people (' + (this.agr.n*100/this.totalSum).toFixed(1) + '%) were detained');
     return this.vis.selectAll(".data-scaleKeyCircle")
       .style("opacity", 0)
       .transition().duration(600).style("opacity", 1);
