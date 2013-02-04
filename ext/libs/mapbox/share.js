@@ -12,7 +12,7 @@ mapbox.share = function() {
     var lang;
     if (lastsegment == "en") { lang = "/en"; }
     tj.webpage = l.href;
-    tj.embed = (l.hash) ? l.href + '?embed' : l.href + 'source' + lang +'#/?embed';
+    tj.embed = (l.hash) ? l.href + '?embed' : l.href + 'source' + lang + '#/?embed';
 
     var link = document.createElement('a');
     var close = document.createElement('a');
