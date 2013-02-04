@@ -51,8 +51,6 @@ var opts = {
   left: 'auto' // Left position relative to parent in px
 };
 
-google.load('visualization', '1', {packages: ['corechart'], 'language': 'ru'});
-
 var mapHeight = ($(window).height()/100)*90-140;
 
 $('#map,#loader').height(mapHeight+'px');
@@ -62,7 +60,7 @@ $('#loader').spin(opts);
 var map = mapbox.map('map'),
     ovdData = {};
 
-map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
+map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
@@ -244,7 +242,8 @@ map.ui.zoomer.add();
 map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
-mapbox.share();
+var share = mapbox.share();
+share.add();
 $("#show_data").click(function() {
   filterOvd('all');
 });
