@@ -122,7 +122,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
   return '<div class="wax-tooltip"><div class="int_total">' +
     '<h2>Police station: <%= name %></h2>' +
     '<p>Address: <i><%= address %></i></p>' +
-    '<p>The total number of detainees: <strong><%= value %></strong></p>' +
+    '<p>The total number of arrests: <strong><%= value %></strong></p>' +
     '<div id="visualization"></div>' +
       '</div></div>';
   };
