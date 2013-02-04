@@ -21,10 +21,10 @@ body {
     line-height: 1;
 }
 ol {
-    list-style: none;
+    list-style: decimal;
 }
 ul {
-    list-style: decimal;
+    list-style: none;
 }
 blockquote, q {
     quotes: none;
