@@ -320,7 +320,10 @@ ul.nav li { font-size:13px; }
   font-size: 24px;
 }
 #report-title h2 {
-  font-size: 20px;
+  font-size: 19px;
+  color: #F04E23;
+  top: 300px;
+  line-height: 1;
 }
 /*-----------------------------------
   Infographics
