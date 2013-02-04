@@ -364,7 +364,7 @@ BubbleChart = (function() {
 		  $('.data-type-label-' + i + ' h5').append(types[i].name);
 		}
 		$('.data-type-label-' + i + ' span.percents').append(percents);
-		$('.data-type-label-' + i + ' span.total').append(types[i].total + ' detainees');
+		$('.data-type-label-' + i + ' span.total').append(types[i].total + ' arrestees');
 	}
 	$('.agr p').append((this.agr.y*100/this.totalSum).toFixed(1) + '% detentions took place on the agreed arrangements with the authorities');
 	$('.non-agr p').append((this.agr.n*100/this.totalSum).toFixed(1) + '% detentions took place on the non-agreed arrangements with the authorities');
