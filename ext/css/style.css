@@ -614,6 +614,9 @@ td a {
   -webkit-transition: opacity .3s;
   -moz-transition: opacity .3s;
 }
+.map-fullscreen-map .wax-tooltip {
+  top: 10px;
+}
 .wax-tooltip h2 {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
