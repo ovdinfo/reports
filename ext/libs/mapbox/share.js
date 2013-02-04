@@ -12,7 +12,7 @@ mapbox.share = function() {
     var lang;
     if (lastsegment == "en") { lang = "/en"; }
     tj.webpage = l.href;
-    tj.embed = (l.hash) ? l.href + '?embed' : l.href + 'source' + lang + '#/?embed';
+    tj.embed = (l.hash) ? l.href + '?embed' : l.href + 'source/?embed';
 
     var link = document.createElement('a');
     var close = document.createElement('a');
@@ -47,7 +47,7 @@ mapbox.share = function() {
     embed.className = 'embed';
     embed.rows = 4;
     embed.setAttribute('readonly', 'readonly');
-    embed.value = '<iframe width="500" height="300" frameBorder="0" src="{{embed}}"></iframe>'
+    embed.value = '<iframe width="600" height="400" frameBorder="0" src="{{embed}}"></iframe>'
         .replace('{{embed}}', tj.embed);
     embed.onclick = function() {
         embed.focus();
