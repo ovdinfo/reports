@@ -133,9 +133,7 @@ mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'od
       $('body').append(_.template(formatter[f.properties.id](), f.properties));
       drawVisualization(ovdData[f.properties.id]);
   };
-  marker.onmouseout = function() {
-      $('.wax-tooltip').remove();
-  };
+  
   
   marker.style.pointerEvents = 'all';
   d.appendChild(marker);
