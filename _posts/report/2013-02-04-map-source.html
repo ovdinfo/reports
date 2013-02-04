@@ -6,12 +6,28 @@ published: true
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='UTF-8'/>
-<meta http-equiv='X-UA-Compatible' content='IE=8;FF=3;OtherUA=4' />
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-
+  <meta charset='UTF-8'/>
+  <meta http-equiv='X-UA-Compatible' content='IE=8;FF=3;OtherUA=4' />
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 </head>
 <body>
-<div id='map'></div>
+  <div id="map" class="" style="padding: 0px; overflow: hidden;">
+    <div id="loader"></div>
+      <div class='wax-legends'>
+        <div class='wax-legend'>
+		  <div class='legend-title'>Political arrestees distributed by police station, 4 December 2011 - 31 December 2012</div>
+		  <div class='legend-scale'>
+  			<ul class='legend-labels'>
+    		  <li><span style='background:#00E535;'></span>< 1 - 10</li>
+    		  <li><span style='background:#9BEE03;'></span>< 10 - 100</li>
+    		  <li><span style='background:#F3D205;'></span>< 100 - 200</li>
+    		  <li><span style='background:#F77807;'></span>< 200 - 300</li>
+    		  <li><span style='background:#FA1C08;'></span>300 +</li>
+  			</ul>
+		  </div>
+		<div class='legend-source'>Source: <a href="https://docs.google.com/file/d/0B-4PSkYLKeoTMS1mNDU1YTgxOS1lZTgzLTQ0ODMtYTdhYS05N2YwOTVhZGUzMDI/edit">OvdInfo's data</a><a href='http://ovdinfo.org' target=_blank><img align='right' src='{{site.base_url}}/ext/img/logo_oi.png' /></a></div>
+	  </div>
+	</div>
+  </div>
 </body>
 </html>
