@@ -642,6 +642,9 @@ body.map-fullscreen-view .wax-tooltip {
   top:0px;
   right:0px;
 }
+.share {
+  top: 170px;
+}
 .hider {
   display: none;
 }
