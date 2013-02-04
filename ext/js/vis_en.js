@@ -182,11 +182,11 @@ BubbleChart = (function() {
     };
 
     this.agr_centers = {
-      "согласовано": {
+      "Authorised": {
         x: this.width / 3,
         y: this.height / 2
       },
-      "не согласовано": {
+      "Unauthorised": {
         x: 2 * this.width / 3,
         y: this.height / 2
       }
@@ -220,7 +220,7 @@ BubbleChart = (function() {
         group: d.event_type_eng,
         agr: d.agreement_eng,	
         date: d.date,
-        comment: d.description-translated,
+        comment: d.description_eng,
         subject: d.subject_eng,
         x: Math.random() * 900,
         y: Math.random() * 800
