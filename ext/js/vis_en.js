@@ -58,7 +58,7 @@ BubbleChart = (function() {
     while (i < this.data.length) {
         org[i] = {"name":this.data[i].organizer_eng, "value":this.data[i].number_of_detentions};
         types[i] = {"name":this.data[i].event_type_eng, "value":this.data[i].number_of_detentions};
-        if (this.data[i].agreement == 'Authorised') {
+        if (this.data[i].agreement_eng == 'Authorised') {
           this.agr.y += parseInt(this.data[i].number_of_detentions);
         }
         else {
