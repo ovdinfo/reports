@@ -6,8 +6,13 @@ mapbox.share = function() {
 
     tj = {};
     var l = window.location;
+    var current = window.location.pathname;
+    var paths = current.split('/');
+    var lastsegment = paths[paths.length-2];
+    var lang;
+    if (lastsegment == "en") { lang = "/en"; }
     tj.webpage = l.href;
-    tj.embed = (l.hash) ? l.href + '?embed' : l.href + '#/?embed';
+    tj.embed = (l.hash) ? l.href + '?embed' : l.href + 'source' + lang +'#/?embed';
 
     var link = document.createElement('a');
     var close = document.createElement('a');
