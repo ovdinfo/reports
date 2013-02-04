@@ -10,7 +10,7 @@ mapbox.share = function() {
     var paths = current.split('/');
     var lastsegment = paths[paths.length-2];
     var lang;
-    if (lastsegment == "en") { lang = "/en"; }
+    //if (lastsegment == "en") { lang = "/en"; }
     tj.webpage = l.href;
     tj.embed = (l.hash) ? l.href + '?embed' : l.href + 'source/?embed';
 
