@@ -48,7 +48,7 @@ $('#loader').spin(opts);
 var map = mapbox.map('map'),
     ovdData = {};
 
-map.addLayer(mapbox.layer().id('lxbarth.map-mejpxnkf'));
+map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
 mapbox.converters.googledocs('0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc', 'odb', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
