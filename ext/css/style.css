@@ -312,6 +312,14 @@ ul.nav li { font-size:13px; }
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   writing-mode: lr-tb;
+  position: fixed;
+  left: -200px;
+}
+#report-title h1 {
+  font-size: 24px;
+}
+#report-title h2 {
+  font-size: 20px;
 }
 /*-----------------------------------
   Infographics
