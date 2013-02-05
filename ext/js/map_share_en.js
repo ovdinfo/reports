@@ -3,7 +3,6 @@ requirejs.config({
     baseUrl: "/ext",
     paths: { 
         'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min','libs/jquery/jquery.min'],
-        'bootstrap': ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min','libs/bootstrap/js/bootstrap.min'],
         'underscore': 'libs/underscore/underscore-min',
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
@@ -15,14 +14,13 @@ requirejs.config({
         'propertyParser': 'libs/require/propertyParser'
     },
     shim: {
-        'bootstrap' : ['jquery'],
         'spin' : ['jquery'],
         'share': ['mapbox']
     }
 });
 
 require([
-    'jquery', 'bootstrap', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:en'
+    'jquery', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:en'
 ],
 function($){
 var opts = {
