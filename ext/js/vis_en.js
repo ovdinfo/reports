@@ -710,6 +710,17 @@ BubbleChart = (function() {
     $('#data-type-labels').fadeOut('slow');
   };
 
+
+/////////////////////////////////
+
+// SHARE
+
+  BubbleChart.prototype.display_share= function() {
+    var _this = this;
+    $('body').append('sdjkfljskldj dklja slfkjasl fjlasdkfjklasdj fklaklsdfjlkasdjlfk alk');
+  };
+
+
 /////////////////////////////////
 
 // STATES SWITCHER
@@ -726,6 +737,7 @@ BubbleChart = (function() {
    	case 2: this.hide_axis(); break;
    	case 3: this.hide_orgs(); break;
    	case 4: this.display_hide_labels(); break;
+   	case 5: this.hide_share(); break;		
    	default: ;
    };
   };
@@ -835,6 +847,12 @@ $(function() {
     if(chart.started && chart.state != 4){
 	    chart.changeState(4);
 	    return chart.display_by_type();
+    }
+  };
+  root.share = function() {
+		if(chart.started && chart.state != 5){
+	    chart.changeState(5);
+	    return chart.display_share();
     }
   };
   root.toggle_view = function(view_type) {
