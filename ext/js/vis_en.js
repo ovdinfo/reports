@@ -889,8 +889,7 @@ function loadCss(url) {
 }
 
 function share() {
-    var share = {},
-        map;
+    var share = {};
 
     tj = {};
     var l = window.location;
@@ -907,12 +906,6 @@ function share() {
     var embed = document.createElement('textarea');
     var share = document.createElement('div');
     var popup = document.createElement('div');
-    var elements = [link, close, embed, share, popup];
-
-    for (var i = 0; i < elements.length; i++) {
-        MM.addEvent(elements[i], 'mousedown', MM.cancelEvent);
-        MM.addEvent(elements[i], 'dblclick', MM.cancelEvent);
-    }
 
     link.innerHTML = 'Share +';
     link.href = '#';
@@ -962,12 +955,6 @@ function share() {
     popup.style.display = 'none';
     popup.appendChild(share);
 
-    share.map = function(x) {
-        if (!x) return map;
-        map = x;
-        return this;
-    };
-
     share.add = function() {
         this.appendTo($('body')[0]);
         return this;
@@ -980,8 +967,8 @@ function share() {
     };
     
     share.appendTo = function(elem) {
-        wax.u.$(elem).appendChild(link);
-        wax.u.$(elem).appendChild(popup);
+        $(elem).appendChild(link);
+        $(elem).appendChild(popup);
         return this;
     };
 
