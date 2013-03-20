@@ -772,25 +772,25 @@ span.total {
   display:block;
 }
 
-#share_graph {
+#share_graphs {
   margin: 30px 100px;
   width: 528px;
   border: 1px solid #c5c5c5;
   padding: 30px;
 }
 
-#share_graph .twitter {
+#share_graphs .twitter {
   background:#0ac;
   border-color:#4ce;
 }
 
-#share_graph .facebook {
+#share_graphs .facebook {
   background:#359;
   border-color:#68c;
 }
 
-#share_graph .twitter,
-#share_graph .facebook {
+#share_graphs .twitter,
+#share_graphs .facebook {
   display:inline-block;
   position:relative;
   padding:2px 18px;
