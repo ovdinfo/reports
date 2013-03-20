@@ -948,8 +948,8 @@ vis.share = function () {
         .replace('{{facebook}}', facebook);
     share.innerHTML += '<strong>Get the embed code</strong><br />'
     share.innerHTML += '<small>Copy and paste this HTML into your website or blog.</small>';
-    share.append(embed);
-    share.append(close);
+    share.appendChild(embed);
+    share.appendChild(close);
 
     popup.className = 'map-share';
     popup.style.display = 'none';
@@ -967,8 +967,8 @@ vis.share = function () {
     };
     
     share.appendTo = function(elem) {
-        $(elem).append(link);
-        $(elem).append(popup);
+        $(elem).appendChild(link);
+        $(elem).appendChild(popup);
         return this;
     };
 
