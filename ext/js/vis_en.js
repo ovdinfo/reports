@@ -967,8 +967,8 @@ vis.share = function () {
     };
     
     share.appendTo = function(elem) {
-        $(elem).appendChild(link);
-        $(elem).appendChild(popup);
+        elem.appendChild(link);
+        elem.appendChild(popup);
         return this;
     };
 
