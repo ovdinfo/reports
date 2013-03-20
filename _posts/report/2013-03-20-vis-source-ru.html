@@ -1,7 +1,26 @@
 ---
-layout: default_ru
+permalink: 2012/infographics/source/ru
+published: true
 ---
-        <div id="iloader"></div>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Инфографика | Человек из автозака: политические задержания в Москве</title>
+    <link rel='shortcut icon' href='/ext/img/favicon.ico'>
+    <meta name='viewport' content='width=960, initial-scale=1.0' />
+    <link href='/ext/css/reset.css' rel='stylesheet'>
+    <link href='/ext/css/global.css' rel='stylesheet'>
+    <link href='/ext/libs/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='/ext/css/style.css' rel='stylesheet' />
+		<style type="text/css" media="screen">
+			#main {margin: 0px 0px 0px 40px;}
+		</style>
+  </head>
+<body>
+<div id="iloader"></div>
         <div id="main" role="main">
           <div id="view_selection" class="btn-group">
             <a href="#" id="all" class="btn active switcher">Все задержания</a>
@@ -47,4 +66,18 @@ layout: default_ru
 		  </div>
           <div id="vis"></div>
         </div>
-		<div class="limiter"><div id='prose-igraph'>{{content}}</div></div>
+    <script data-main="/ext/js/vis.js" src="/ext/libs/require/require.min.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-12551280-17']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+	</script>
+  </body>
+</html>
