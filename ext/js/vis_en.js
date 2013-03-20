@@ -848,7 +848,10 @@ $(function() {
       return root.display_orgs();
     } else if (view_type === 'format') {
       return root.display_types();
+    } else if (view_type === 'share') {
+      return root.share();
     }
+
   };
   
   var main_height = $('#main').height();
