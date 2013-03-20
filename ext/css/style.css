@@ -772,6 +772,46 @@ span.total {
   display:block;
 }
 
+#share_graph {
+  margin: 30px 100px;
+  width: 528px;
+  border: 1px solid #c5c5c5;
+  padding: 30px;
+}
+
+#share_graph .twitter {
+  background:#0ac;
+  border-color:#4ce;
+}
+
+#share_graph .facebook {
+  background:#359;
+  border-color:#68c;
+}
+
+#share_graph .twitter,
+#share_graph .facebook {
+  display:inline-block;
+  position:relative;
+  padding:2px 18px;
+  margin-right:10px;
+  background:#fff;
+  color:#fff;
+  font-weight:bold;
+  border:2px solid #ccc;
+  display:block;
+  position:absolute;
+  border:1px solid #ccc;
+  background:#fff;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+}
+
+
 /*-----------------------------------
   About
 -------------------------------------*/
