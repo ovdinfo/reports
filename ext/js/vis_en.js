@@ -888,7 +888,7 @@ function loadCss(url) {
     document.getElementsByTagName("head")[0].appendChild(link);
 }
 
-function share() {
+vis.share = function () {
     var share = {};
 
     tj = {};
