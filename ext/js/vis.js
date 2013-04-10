@@ -745,6 +745,7 @@ BubbleChart = (function() {
    	case 2: this.hide_axis(); break;
    	case 3: this.hide_orgs(); break;
    	case 4: this.display_hide_labels(); break;
+		case 5: this.hide_share(); break;
    	default: ;
    };
   };
