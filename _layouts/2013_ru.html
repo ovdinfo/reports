@@ -1,0 +1,91 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{page.title}} | Человек из автозака: политические задержания в Москве</title>
+    <link rel='shortcut icon' href='{{site.base_url}}/ext/img/favicon.ico'>
+    <meta name='viewport' content='width=960, initial-scale=1.0' />
+    <link href='{{site.base_url}}/ext/css/reset.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/css/global.css' rel='stylesheet'>
+    <link href='{{site.base_url}}/ext/libs/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='{{site.base_url}}/ext/css/style.css' rel='stylesheet' />
+  </head>
+  <!--[if lt IE 7 ]> <body class='ie ie6'> <![endif]-->
+  <!--[if IE 7 ]>    <body class='ie ie7'> <![endif]-->
+  <!--[if IE 8 ]>    <body class='ie ie8'> <![endif]-->
+  <!--[if IE 9 ]>    <body class='ie ie9'> <![endif]-->
+  <!--[if IE 10 ]>   <body class='ie ie10'> <![endif]-->
+  <!--[if gt IE 10]><!-->
+  <body><!-- <body data-spy="scroll" data-target="#nav-side" data-offset="0"> -->
+    <!--<![endif]-->
+    <div id='container'>
+      <div id='header'>
+        <div class="navbar navbar-static-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li class="">
+                    <a href="http://ovdinfo.org">OvdInfo.org</a>
+                  </li>
+                  <li class="">
+                    <a href="/2013/report/1">Квартал I</a>
+                  </li>
+                  <li class="">
+                    <a href="/2013/data/">Исходные данные</a>
+			      </li>
+			    </ul>
+			      <ul class="nav pull-right">
+			        <li class="">
+                      <a href="{{site.base_url}}/{{page.permalink}}" style="padding: 7px 5px 7px 15px;"><img src="/ext/img/ru.png" style="height: 25px;"></a>
+			        </li>
+			        <li class="">
+                      <a href="{{site.base_url}}/{{page.en}}" style="padding: 7px 15px 7px 5px;"><img src="/ext/img/en.png" style="height: 25px;"></a>
+			        </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='content'>
+            <a href='http://ovdinfo.org'>
+              <img class='logo png' src='{{site.base_url}}/ext/img/global/logo.png' alt='OvdInfo' />
+            </a>
+          <h2>Мониторинг политических задержаний</h2>
+          <h1 class='site-title'><a href='/2013/report/1'>Отчет 2013</a></h1>
+        </div>
+        <!-- end of .content -->
+      </div><!-- /#header -->
+      <div id="app">
+        {{content}}
+      </div>
+      <div id='footer'>
+        <div id='contact'>
+          <div class='content'>
+            <div class='clearfix'>
+            </div>
+            <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" style="float: left;padding: 15px 30px 0px 0px;"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Человек из автозака: политические задержания в Москве</span> от <a xmlns:cc="http://creativecommons.org/ns#" href="http://ovdinfo.org" property="cc:attributionName" rel="cc:attributionURL">ОВД-Инфо</a>, лицензировано в соответствии с <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.<br />Основано на работе <a xmlns:dct="http://purl.org/dc/terms/" href="http://reports.ovdinfo.org" rel="dct:source">http://reports.ovdinfo.org</a>. Опубликовано 05.02.2013</p>
+          </div>
+          <!-- end of .content -->
+        </div>
+        <!-- end of #contact -->
+      </div><!-- #footer -->
+    </div>
+    <script data-main="/ext/js/{{ page.js }}.js" src="/ext/libs/require/require.min.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-12551280-17']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+	</script>
+  </body>
+</html>
