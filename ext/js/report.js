@@ -1,6 +1,7 @@
 requirejs.config({
     appDir: ".",
     baseUrl: "/ext",
+    waitSeconds: 20000,
     paths: { 
         'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min','libs/jquery/jquery.min'],
         'jquery-ui': ['//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min','libs/jquery-ui/jquery-ui.min'],
