@@ -25,7 +25,7 @@ require([
 function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 $.ajax({
-	url: 'https://spreadsheets.google.com/feeds/list/0AqL_R49TiUuAdHlwaDVJb2kxQTBsSzBhUXdfN2lobGc/od6/public/values?alt=json-in-script',
+	url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdFEwWnZuNHNEYzJod2ZRREVLTERDT0E/od6/public/values?alt=json-in-script',
     dataType: 'jsonp',
     success: buildTable
 });
@@ -44,7 +44,7 @@ function buildTable(data) {
       }
       i++;
     }
-    var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a>' + val.gsx$date.$t + '</td><td>' + val.gsx$agreement.$t + '</td><td>' + val.gsx$eventtype.$t + '</td><td>' + val.gsx$subject.$t + '</td><td>' + val.gsx$organizer.$t + '</td><td>' + val.gsx$description.$t + '</td><td>' + val.gsx$numberofdetentions.$t + '</td><td>' + links + '</td></tr>';
+    var content = '<tr class="data ' + val.gsx$id.$t + '"><td><a id="' + val.gsx$id.$t +'"></a>' + val.gsx$date.$t + '</td><td>' + val.gsx$region.$t + '</td><td>' + val.gsx$agreement.$t + '</td><td>' + val.gsx$eventtype.$t + '</td><td>' + val.gsx$subject.$t + '</td><td>' + val.gsx$organizer.$t + '</td><td>' + val.gsx$description.$t + '</td><td>' + val.gsx$numberofdetentions.$t + '</td><td>' + links + '</td></tr>';
     $('#table-wrapper table tbody').append(content);
   });
   $.extend($.tablesorter.themes.bootstrap, { 
