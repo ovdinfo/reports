@@ -523,8 +523,8 @@ BubbleChart = (function() {
       left: '835',
       top: '150'
     }, 600);
-    B = new Date(2011, 9, 4);
-    J = new Date(2012, 12, 4);
+    B = new Date(2013, 01, 1);
+    J = new Date(2013, 12, 31);
     xScale.domain([$("#date-slider").dateRangeSlider("values").min, $("#date-slider").dateRangeSlider("values").max]);
     yScale.domain([$("#det-slider").rangeSlider("values").min, $("#det-slider").rangeSlider("values").max]);
     this.vis.attr("width", this.width + margin.left + margin.right).attr("height", this.height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
