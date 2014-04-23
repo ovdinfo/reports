@@ -198,7 +198,7 @@ BubbleChart = (function() {
     this.nodes = [];
     this.force = null;
     this.circles = null;
-    this.fill_color = d3.scale.ordinal().domain(["антипутин", "другое", "ЛГБТ", "политзеки", "Против антимагнитского закона", "социальная", "Стратегия-31", "экология"]).range(["#ecf8ff", "#fea61b", "#e4e4e4", "#fc78ea", "#323232", "#cc91f9", "#98a422", "#e33320"]);
+    this.fill_color = d3.scale.ordinal().domain(["активист", "антипутин", "антифа", "выборы", "другое", "ЛГБТ", "националистическая", "политзеки", "Против антимагнитского закона", "социальная", "Стратегия-31", "экология"]).range(["#ecf8ff", "#fea61b", "#e4e4e4", "#fc78ea", "#323232", "#cc91f9", "#98a422", "#e33320", "#20cc1a", "#f8fdb3", "#76f7fb", "#6e72f7"]);
 
     this.create_nodes();
     this.create_vis();
