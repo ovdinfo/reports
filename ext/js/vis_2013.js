@@ -638,11 +638,12 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
+    console.log(d)
     d3.select('#group_' + d).transition()
 	  .style('opacity', '0.1')
 	  .duration(300);
 	d3.select('.row_' + d).transition()
-	  .style('opacity', '0.9')
+	  .style('opacity', '0.7')
 	  .duration(300);
 	d3.selectAll('.total_' + d + ',.label_' + d).transition()
 	  .style('fill', '#fff')
