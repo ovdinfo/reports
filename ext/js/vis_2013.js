@@ -256,9 +256,9 @@ BubbleChart = (function() {
       return d.id;
     });
     that = this;
-    this.circles.enter().append("circle").attr("r", 0).attr("fill", function(d) {
+    this.circles.enter().append("circle").attr("r", 0).attr("fill-opacity", 0.3).attr("fill", function(d) {
       return _this.fill_color(d.subject);
-    }).attr("stroke-width", 2).attr("fill-opacity", 0.9).attr("stroke-opacity", 0.5).attr("stroke", function(d) {
+    }).attr("stroke-width", 1).attr("fill-stroke", rgba(0,0,0,.05)).attr("stroke", function(d) {
       return d3.rgb(_this.fill_color(d.subject)).darker();
     }).attr("id", function(d) {
       return "bubble_" + d.id;
