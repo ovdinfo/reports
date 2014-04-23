@@ -62,7 +62,7 @@ var map = mapbox.map('map'),
 
 map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
 
-mapbox.converters.googledocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'obh', function(features) {
+mapbox.converters.googledocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
   var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   map.addLayer(markerLayer);
   $.ajax({
