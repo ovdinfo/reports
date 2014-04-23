@@ -544,12 +544,12 @@ BubbleChart = (function() {
       .delay(100);
     this.vis.selectAll(".scaleKey-2").transition()
       .attr("cx",120)
-      .attr("cy",585)
+      .attr("cy",600)
       .duration(500)
       .delay(100);
     this.vis.selectAll(".scaleKey-3").transition()
       .attr("cx",120)
-      .attr("cy",620)
+      .attr("cy",627)
       .duration(500)
       .delay(100);
     $('#data-sizeKey').animate({
