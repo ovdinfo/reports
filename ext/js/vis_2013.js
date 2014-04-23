@@ -263,13 +263,13 @@ BubbleChart = (function() {
     }).attr("id", function(d) {
       return "bubble_" + d.id;
     }).on("mouseover", function(d, i) {
-      d3.select(this).transition().style("opacity", 0.9).duration(300);
+      d3.select(this).transition().attr("fill-opacity", 0.9).duration(300);
       if(_this.state == 3){
       	that.mouseOverGroup(d.inOrgID);
       }
       return that.show_details(d, i, this);
     }).on("mouseout", function(d, i) {
-      d3.select(this).transition().style("opacity", 0.7).duration(300);
+      d3.select(this).transition().attr("fill-opacity", 0.7).duration(300);
       if(_this.state == 3){
       	that.mouseOutGroup(d.inOrgID);
       }
