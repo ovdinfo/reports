@@ -823,11 +823,11 @@ $(function() {
 	    $("#det-slider").rangeSlider({
 	      defaultValues:{
 	    	min: 0,
-	    	max: 700
+	    	max: 300
 	  	  },
 	      bounds:{
 	    	min: 0,
-	    	max: 700
+	    	max: 300
 	    }
 	    });
 	    $("#count").empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
