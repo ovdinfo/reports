@@ -331,19 +331,19 @@ BubbleChart = (function() {
         percents = '';
     legend = d3.select("svg").append("g").attr("class", "legend").attr("transform", "translate(73,230)").style("font-size", "12px").call(d3.legend);
       d3.select("svg").append("circle")
-        .attr('r', this.radius_scale(500))
+        .attr('r', this.radius_scale(200))
         .attr('class',"data-scaleKeyCircle scaleKey-1")
         .attr('cx', 120)
         .attr('cy', 560)
         .style("opacity", 0);
       d3.select("svg").append("circle")
-        .attr('r', this.radius_scale(200))
+        .attr('r', this.radius_scale(50))
         .attr('class',"data-scaleKeyCircle scaleKey-2")
         .attr('cx', 120)
         .attr('cy', 585)
         .style("opacity", 0);
       d3.select("svg").append("circle")
-        .attr('r', this.radius_scale(10))
+        .attr('r', this.radius_scale(5))
         .attr('class',"data-scaleKeyCircle scaleKey-3")
         .attr('cx', 120)
         .attr('cy', 620)
