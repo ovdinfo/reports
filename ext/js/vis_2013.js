@@ -263,6 +263,8 @@ BubbleChart = (function() {
     }).attr("id", function(d) {
       return "bubble_" + d.id;
     }).on("mouseover", function(d, i) {
+      console.log(d)
+      console.log(i)
       if(_this.state == 3){
       	that.mouseOverGroup(d.inOrgID);
       }
@@ -638,7 +640,6 @@ BubbleChart = (function() {
   };
   
   BubbleChart.prototype.mouseOverGroup = function(d) {
-    console.log(d)
     d3.select('#group_' + d).transition()
 	  .style('opacity', '0.1')
 	  .duration(300);
