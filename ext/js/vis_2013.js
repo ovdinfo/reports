@@ -258,7 +258,7 @@ BubbleChart = (function() {
     that = this;
     this.circles.enter().append("circle").attr("r", 0).attr("fill", function(d) {
       return _this.fill_color(d.subject);
-    }).attr("stroke-width", 1).attr("fill-opacity", 0.3).attr("stroke-opacity", 0.1).attr("stroke", function(d) {
+    }).attr("stroke-width", 1).attr("fill-opacity", 0.7).attr("stroke-opacity", 0.1).attr("stroke", function(d) {
       return d3.rgb(_this.fill_color(d.subject)).darker();
     }).attr("id", function(d) {
       return "bubble_" + d.id;
@@ -340,13 +340,13 @@ BubbleChart = (function() {
         .attr('r', this.radius_scale(50))
         .attr('class',"data-scaleKeyCircle scaleKey-2")
         .attr('cx', 120)
-        .attr('cy', 585)
+        .attr('cy', 600)
         .style("opacity", 0);
       d3.select("svg").append("circle")
         .attr('r', this.radius_scale(5))
         .attr('class',"data-scaleKeyCircle scaleKey-3")
         .attr('cx', 120)
-        .attr('cy', 620)
+        .attr('cy', 627)
         .style("opacity", 0);
     setTimeout((function() {
       return legend.call(d3.legend);
@@ -833,12 +833,12 @@ $(function() {
 	    $("#count").empty().append( "задержания от " + $("#det-slider").rangeSlider("values").min + " до " + $("#det-slider").rangeSlider("values").max + " человек" );
 	    $("#date-slider").dateRangeSlider({
 	      defaultValues:{
-	    	min: new Date(2011, 9, 4),
-	    	max: new Date(2012, 11, 21)
+	    	min: new Date(2013, 1, 1),
+	    	max: new Date(2013, 12, 31)
 	  	  },
 	      bounds:{
-	    	min: new Date(2011, 9, 4),
-	    	max: new Date(2012, 11, 21)
+        min: new Date(2013, 1, 1),
+        max: new Date(2013, 12, 31)
 	    }
 	    });
 	    chart.changeState(2);
