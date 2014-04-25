@@ -4,11 +4,7 @@
   * https://github.com/ded/reqwest
   * license MIT
   */
-!function (name, definition) {
-  if (typeof module != 'undefined') module.exports = definition()
-  else if (typeof define == 'function' && define.amd) define(definition)
-  else this[name] = definition()
-}('reqwest', function () {
+var reqwest = function () {
 
   var win = window
     , doc = document
@@ -480,7 +476,7 @@
   }
 
   return reqwest
-});
+};
 
 // Takes a spreadsheet key, worksheet ID, and callback function with a
 // features argument. Use this to find the worksheet ID:
