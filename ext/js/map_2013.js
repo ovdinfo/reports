@@ -234,7 +234,7 @@ function filterOvd(id, name) {
   $('#table-wrapper table').removeClass('hider');
 }
   
-map.eventHandlers[3].remove();
+/*map.eventHandlers[3].remove();
 map.centerzoom({ lat: 55.7512419, lon: 37.6184217 }, 11);
 map.setZoomRange(9, 17);
 map.ui.zoomer.add();
@@ -242,7 +242,7 @@ map.ui.zoombox.add();
 map.ui.fullscreen.add();
 map.interaction.auto();
 var share = mapbox.share();
-share.add();
+share.add();*/
 $("#show_data").click(function() {
   filterOvd('all');
 });
