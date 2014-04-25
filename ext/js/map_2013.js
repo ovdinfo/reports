@@ -11,7 +11,6 @@ requirejs.config({
         'moment': 'libs/moment/moment.min',
         'mapbox': 'libs/mapbox/mapbox.new',
         'share': 'libs/mapbox/share',
-        'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs',
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
@@ -60,7 +59,7 @@ $('#loader').spin(opts);
 var map = L.mapbox.map('map','integral.map-asmf5yqy'),
     ovdData = {};
 
-mapbox.converters.googledocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
+L.mapbox.converters.googledocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
   //var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   //map.addLayer(markerLayer);
   L.mapbox.featureLayer(features).addTo(map);
@@ -255,3 +254,61 @@ function loadCss(url) {
     link.href = url;
     document.getElementsByTagName("head")[0].appendChild(link);
 }
+
+// Takes a spreadsheet key, worksheet ID, and callback function with a
+// features argument. Use this to find the worksheet ID:
+// https://spreadsheets.google.com/feeds/worksheets/[spreadsheet_key]/public/basic?alt=json
+
+if (typeof L.mapbox === 'undefined') mapbox = {};
+if (typeof L.mapbox.converters === 'undefined') mapbox.converters = {};
+
+L.mapbox.converters.googledocs = function(spreadsheet, sheet, callback) {
+    if (typeof reqwest === 'undefined') {
+        throw 'googledocs: reqwest required for mapbox.converters.googledocs';
+    }
+
+    function response(x) {
+        var features = [],
+            latfield = '',
+            lonfield = '';
+        if (!x || !x.feed) return features;
+
+        for (var f in x.feed.entry[0]) {
+            if (f.match(/\$Lat/i)) latfield = f;
+            if (f.match(/\$Lon/i)) lonfield = f;
+        }
+
+        for (var i = 0; i < x.feed.entry.length; i++) {
+            var entry = x.feed.entry[i];
+            var feature = {
+                geometry: {
+                    type: 'Point',
+                    coordinates: []
+                },
+                properties: {}
+            };
+            for (var y in entry) {
+                if (y === latfield) feature.geometry.coordinates[1] = parseFloat(entry[y].$t);
+                else if (y === lonfield) feature.geometry.coordinates[0] = parseFloat(entry[y].$t);
+                else if (y.indexOf('gsx$') === 0) {
+                    feature.properties[y.replace('gsx$', '')] = entry[y].$t;
+                }
+            }
+            if (feature.geometry.coordinates.length == 2) features.push(feature);
+        }
+
+        return callback(features);
+    }
+
+    // Get sheet id with this: 
+    var url = 'https://spreadsheets.google.com/feeds/list/' + spreadsheet +
+        '/' + sheet + '/public/values?alt=json-in-script&callback=callback';
+
+    reqwest({
+        url: url,
+        type: 'jsonp',
+        jsonpCallback: 'callback',
+        success: response,
+        error: response
+    });
+};
