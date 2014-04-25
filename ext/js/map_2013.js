@@ -63,6 +63,7 @@ var map = L.mapbox.map('map','integral.map-asmf5yqy'),
 googleDocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
   //var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   //map.addLayer(markerLayer);
+  console.log(features)
   L.mapbox.featureLayer(features).addTo(map);
   $.ajax({
       url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc/obh/public/values?alt=json-in-script',
