@@ -536,4 +536,3 @@ googleDocs = function(spreadsheet, sheet, callback) {
 
   return reqwest
 });
-}()
