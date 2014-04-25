@@ -57,14 +57,13 @@ $('#map,#loader').height(mapHeight+'px');
 
 $('#loader').spin(opts);
 
-var map = L.mapbox.map('map'),
+var map = L.mapbox.map('map','integral.map-asmf5yqy'),
     ovdData = {};
 
-map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
-
 mapbox.converters.googledocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
-  var markerLayer = mapbox.markers.layer().factory(factory).features(features);
-  map.addLayer(markerLayer);
+  //var markerLayer = mapbox.markers.layer().factory(factory).features(features);
+  //map.addLayer(markerLayer);
+  L.mapbox.featureLayer(features).addTo(map);
   $.ajax({
       url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc/obh/public/values?alt=json-in-script',
       dataType: 'jsonp',
