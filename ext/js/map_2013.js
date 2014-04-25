@@ -57,7 +57,7 @@ $('#map,#loader').height(mapHeight+'px');
 
 $('#loader').spin(opts);
 
-var map = mapbox.map('map'),
+var map = L.mapbox.map('map'),
     ovdData = {};
 
 map.addLayer(mapbox.layer().id('integral.map-asmf5yqy'));
