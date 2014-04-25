@@ -9,7 +9,7 @@ requirejs.config({
         'underscore': 'libs/underscore/underscore-min',
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
-        'mapbox': 'libs/mapbox/mapbox',
+        'mapbox': 'libs/mapbox/mapbox.new',
         'share': 'libs/mapbox/share',
         'mapbox.converters.googledocs': 'libs/mapbox/mapbox.converters.googledocs',
         'async': 'libs/require/async',
