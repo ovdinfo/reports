@@ -2,11 +2,7 @@
 // features argument. Use this to find the worksheet ID:
 // https://spreadsheets.google.com/feeds/worksheets/[spreadsheet_key]/public/basic?alt=json
 
-if (typeof L === 'undefined') L = {};
-if (typeof L.mapbox === 'undefined') L.mapbox = {};
-if (typeof L.mapbox.converters === 'undefined') L.mapbox.converters = {};
-
-L.mapbox.converters.googledocs = function(spreadsheet, sheet, callback) {
+googleDocs = function(spreadsheet, sheet, callback) {
     if (typeof reqwest === 'undefined') {
         throw 'googledocs: reqwest required for mapbox.converters.googledocs';
     }

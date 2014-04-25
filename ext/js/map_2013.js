@@ -60,7 +60,7 @@ $('#loader').spin(opts);
 var map = L.mapbox.map('map','integral.map-asmf5yqy'),
     ovdData = {};
 
-L.mapbox.converters.googledocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
+googleDocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
   //var markerLayer = mapbox.markers.layer().factory(factory).features(features);
   //map.addLayer(markerLayer);
   L.mapbox.featureLayer(features).addTo(map);
