@@ -162,6 +162,7 @@ ovds.on('mouseover',function(e) {
     drawVisualization(ovdData[feature.properties.id]);
     document.getElementById('info').innerHTML = info;
 });
+}
 
 function addLayer(layer, name, zIndex) {
     layer
