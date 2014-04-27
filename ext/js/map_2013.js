@@ -305,7 +305,7 @@ function drawVisualization(ovd) {
 }
 
 function filterOvd(id, name) {
-  $('<h2 class="ovheader">Задержанные в ОВД ' + name + ' с 01.01.2013 по 31.12.2013</h2>').replaceAll('.ovheader');
+  $('<h2 class="ovheader">Задержанные в ' + name + ' с 01.01.2013 по 31.12.2013</h2>').replaceAll('.ovheader');
   $('tr.data').addClass('hider');
   $('tr.data').each(function (i) {
     if ($(this).hasClass(id)) {
