@@ -172,6 +172,9 @@ ovds.on('mouseover',function(e) {
 ovds.on('mouseout',function(e) {
     $('.wax-tooltip').remove();
 });
+ovds.on('click',function(e) {
+    filterOvd(feature.properties.id,feature.properties.name);
+});
 
 function addLayer(layer, name, zIndex) {
     layer
