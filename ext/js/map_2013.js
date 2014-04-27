@@ -9,10 +9,10 @@ requirejs.config({
         'underscore': 'libs/underscore/underscore-min',
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
-        'mapbox': 'libs/mapbox/latest/mapbox',
+        'mapbox': ['//api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js','libs/mapbox/latest/mapbox'],
         'Leaflet.fullscreen': 'libs/mapbox/Leaflet.fullscreen.min',
         'leaflet-heat': 'libs/mapbox/leaflet-heat',
-        'omnivore': 'libs/mapbox/leaflet-omnivore.min',
+        'omnivore': ['//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.0.1/leaflet-omnivore.min.js','libs/mapbox/leaflet-omnivore.min'],
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
@@ -33,6 +33,7 @@ require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'moment', 'mapbox', 'Leaflet.fullscreen', 'omnivore', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
 function($,tablesorter,omnivore){
+  console.log(omnivore)
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 loadCss('/ext/libs/mapbox/latest/mapbox.css');
 loadCss('/ext/libs/mapbox/leaflet.fullscreen.css');
