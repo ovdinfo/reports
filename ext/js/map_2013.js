@@ -174,7 +174,7 @@ ovds.on('mouseout',function(e) {
 });
 ovds.on('click',function(e) {
     var feature = e.layer.feature;
-    filterOvd(feature.properties.id,feature.properties.name);
+    filterOvd(feature.properties.id,feature.properties.Name);
 });
 
 function addLayer(layer, name, zIndex) {
@@ -288,7 +288,6 @@ function buildTable(data) {
 };
 
 function drawVisualization(ovd) {
-  console.log(ovd)
   var data = new google.visualization.DataTable();
   
   data.addColumn('date', 'Date');
