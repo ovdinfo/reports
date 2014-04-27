@@ -12,7 +12,7 @@ requirejs.config({
         'mapbox': 'libs/mapbox/latest/mapbox',
         'Leaflet.fullscreen': 'libs/mapbox/Leaflet.fullscreen.min',
         'leaflet-heat': 'libs/mapbox/leaflet-heat',
-        'leaflet-omnivore': 'libs/mapbox/leaflet-omnivore.min',
+        'omnivore': 'libs/mapbox/leaflet-omnivore.min',
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
@@ -25,12 +25,12 @@ requirejs.config({
         'spin' : ['jquery'],
         'Leaflet.fullscreen': ['mapbox'],
         'leaflet-heat': ['mapbox'],
-        'leaflet-omnivore': ['mapbox'],
+        'omnivore': ['mapbox'],
     }
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'moment', 'mapbox', 'Leaflet.fullscreen', 'leaflet-omnivore', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'moment', 'mapbox', 'Leaflet.fullscreen', 'omnivore', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
 function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
