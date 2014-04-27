@@ -173,6 +173,7 @@ ovds.on('mouseout',function(e) {
     $('.wax-tooltip').remove();
 });
 ovds.on('click',function(e) {
+    var feature = e.layer.feature;
     filterOvd(feature.properties.id,feature.properties.name);
 });
 
