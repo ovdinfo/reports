@@ -24,7 +24,10 @@ requirejs.config({
         'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
         'spin' : ['jquery'],
         'Leaflet.fullscreen': ['mapbox'],
-        'leaflet-heat': ['mapbox']
+        'leaflet-heat': ['mapbox'],
+        'omnivore': {
+          exports: 'omni'
+        }
     }
 });
 
