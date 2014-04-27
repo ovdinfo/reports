@@ -32,8 +32,8 @@ requirejs.config({
 require([
     'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'moment', 'mapbox', 'Leaflet.fullscreen', 'leaflet-omnivore', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
-function($,tablesorter,omnivore){
-  console.log(omnivore)
+function($,tablesorter){
+  console.log(leaflet-omnivore)
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 loadCss('/ext/libs/mapbox/latest/mapbox.css');
 loadCss('/ext/libs/mapbox/leaflet.fullscreen.css');
