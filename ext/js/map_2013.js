@@ -9,9 +9,9 @@ requirejs.config({
         'underscore': 'libs/underscore/underscore-min',
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
-        'mapbox': 'libs/mapbox/v1.6.2/mapbox',
-        'Leaflet.fullscreen': 'libs/mapbox/Leaflet.fullscreen.min',
-        'leaflet-heat': 'libs/mapbox/leaflet-heat',
+        'mapbox': 'libs/mapbox/mapbox.new',
+        'share': 'libs/mapbox/share',
+        'mapbox.converters.googledocs': 'libs/mapbox/mapbox.googledocs',
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
@@ -27,12 +27,12 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'moment', 'mapbox', 'Leaflet.fullscreen', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
 function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
-loadCss('/ext/libs/mapbox/v1.6.2/mapbox.css');
-loadCss('/ext/libs/mapbox/leaflet.fullscreen.css');
+loadCss('/ext/libs/mapbox/mapbox.css');
+loadCss('/ext/libs/mapbox/share.css');
 var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
@@ -56,20 +56,6 @@ var mapHeight = ($(window).height()/100)*90-140;
 $('#map,#loader').height(mapHeight+'px');
 
 $('#loader').spin(opts);
-
-var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
-    .setView([55.7512419, 37.6184217], 11).addControl(L.mapbox.shareControl());
-    L.control.fullscreen().addTo(map);
-
-var ovdData = {};
-
-document.getElementById('navigation').onclick = function(e) {
-    var pos = e.target.getAttribute('data-position');
-    if (pos) {
-        var loc = pos.split(',');
-        map.setView(loc, 11);
-    }
-}
 
 var map = L.mapbox.map('map','integral.map-asmf5yqy'),
     ovdData = {};
