@@ -153,16 +153,21 @@ ovds.on('ready', function(){
   })
 });
 ovds.on('mouseover',function(e) {
-    // Force the popup closed.
+    $('.wax-tooltip').remove();
     e.layer.closePopup();
 
     var feature = e.layer.feature;
-    var info = '<h2>ОВД: ' + feature.properties.Name + '</h2>' +
+    var info = '<div class="wax-tooltip"><div class="int_total">' +
+               '<h2>ОВД: ' + feature.properties.Name + '</h2>' +
                '<p>Адрес: ' + feature.properties.Address + '</p>' +
                '<p>Общее количество задержанных: ' + feature.properties.value + '</p>' +
-               '<div id="visualization"></div>';
+               '<div id="visualization"></div>' +
+               '</div></div>';
     document.getElementById('info').innerHTML = info;
     drawVisualization(ovdData[feature.properties.id]);
+});
+ovds.on('mouseout',function(e) {
+    $('.wax-tooltip').remove();
 });
 
 function addLayer(layer, name, zIndex) {
