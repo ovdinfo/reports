@@ -9,10 +9,10 @@ requirejs.config({
         'underscore': 'libs/underscore/underscore-min',
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
-        'mapbox': ['//api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js','libs/mapbox/latest/mapbox'],
+        'mapbox': ['//api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox','libs/mapbox/latest/mapbox'],
         'Leaflet.fullscreen': 'libs/mapbox/Leaflet.fullscreen.min',
         'leaflet-heat': 'libs/mapbox/leaflet-heat',
-        'omnivore': ['//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.0.1/leaflet-omnivore.min.js','libs/mapbox/leaflet-omnivore.min'],
+        'omnivore': ['//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.0.1/leaflet-omnivore.min','libs/mapbox/leaflet-omnivore.min'],
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
