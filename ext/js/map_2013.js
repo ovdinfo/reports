@@ -161,7 +161,7 @@ ovds.on('mouseover',function(e) {
                '<p>Адрес: ' + feature.properties.Address + '</p>' +
                '<p>Общее количество задержанных: ' + feature.properties.value + '</p>' +
                '<div id="visualization"></div>';
-    //drawVisualization(ovdData[feature.properties.id]);
+    drawVisualization(ovdData[feature.properties.id]);
     document.getElementById('info').innerHTML = info;
 });
 
@@ -276,6 +276,7 @@ function buildTable(data) {
 };
 
 function drawVisualization(ovd) {
+  console.log(ovd)
   var data = new google.visualization.DataTable();
   
   data.addColumn('date', 'Date');
