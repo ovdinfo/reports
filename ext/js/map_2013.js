@@ -9,9 +9,9 @@ requirejs.config({
         'underscore': 'libs/underscore/underscore-min',
         'spin': 'libs/spin/spin.min',
         'moment': 'libs/moment/moment.min',
-        'mapbox': 'libs/mapbox/mapbox.new',
-        'share': 'libs/mapbox/share',
-        'mapbox.converters.googledocs': 'libs/mapbox/mapbox.googledocs',
+        'mapbox': 'libs/mapbox/latest/mapbox',
+        'Leaflet.fullscreen': 'libs/mapbox/Leaflet.fullscreen.min',
+        'leaflet-heat': 'libs/mapbox/leaflet-heat',
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
@@ -27,12 +27,12 @@ requirejs.config({
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'share', 'moment', 'mapbox', 'mapbox.converters.googledocs', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'moment', 'mapbox', 'Leaflet.fullscreen', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
 function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
-loadCss('/ext/libs/mapbox/mapbox.css');
-loadCss('/ext/libs/mapbox/share.css');
+loadCss('/ext/libs/mapbox/latest/mapbox.css');
+loadCss('/ext/libs/mapbox/leaflet.fullscreen.css');
 var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
@@ -57,54 +57,74 @@ $('#map,#loader').height(mapHeight+'px');
 
 $('#loader').spin(opts);
 
-var map = L.mapbox.map('map','integral.map-asmf5yqy'),
-    ovdData = {};
+var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+    .setView([55.7512419, 37.6184217], 11).addControl(L.mapbox.shareControl());
+    L.control.fullscreen().addTo(map);
 
-googleDocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(features) {
-  //var markerLayer = mapbox.markers.layer().factory(factory).features(features);
-  //map.addLayer(markerLayer);
-  console.log(features)
-  L.mapbox.featureLayer(features).addTo(map);
-  $.ajax({
-      url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc/obh/public/values?alt=json-in-script',
-      dataType: 'jsonp',
-      success: buildTable
-  });
-});
-  var formatter = {};  
-  function factory(f) {
-  var d = document.createElement('div'),
-      marker = document.createElement('div');
-      
-  var total = parseInt(f.properties.value);
-  var bgoffset = 0, size = 0;
-  
-  // Classification scale
-  if (total > 0 && total <=50) {
+var ovdData = {};
+
+document.getElementById('navigation').onclick = function(e) {
+    var pos = e.target.getAttribute('data-position');
+    if (pos) {
+        var loc = pos.split(',');
+        map.setView(loc, 11);
+    }
+}
+
+var ui = document.getElementById('map-ui');
+var ovds = omnivore.csv('https://docs.google.com/spreadsheet/pub?key=0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc&single=true&gid=72&output=csv',{latfield: 'lat',
+    lonfield: 'lon',
+    delimiter: ','}).on('ready', function() {
+      $.ajax({
+        url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc/obh/public/values?alt=json-in-script',
+        dataType: 'jsonp',
+        success: buildTable
+      });
+    });
+var heat = L.heatLayer([], { maxZoom: 14, blur: 30 });
+var heatLayer = omnivore.csv('https://docs.google.com/spreadsheet/pub?key=0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc&single=true&gid=77&output=csv',{latfield: 'lat',
+    lonfield: 'lon',
+    delimiter: ','}).on('ready', function() {
+        heatLayer.eachLayer(function(l) {
+            heat.addLatLng(l.getLatLng());
+        });
+    });
+addLayer(ovds, 'Отделения полиции', 1);
+addLayer(heat, 'Места задержаний', 2);
+
+ovds.on('ready', function(){
+_.each(ovds._layers,function(ovd){
+    var marker = document.createElement('div'),
+    total = parseInt(ovd.feature.properties.value),
+    bgoffset = 0,
+    size = 0;
+
+    // Classification scale
+  if (total > 0 && total <=10) {
       bgoffset = -362;
       size = 20;
   }
-  if (total > 50 && total <=100) {
+  if (total > 10 && total <=30) {
       bgoffset = -324;
       size = 22;
   }
-  if (total > 100 && total <=150) {
+  if (total > 30 && total <=70) {
       bgoffset = -276;
       size = 32;
   }
-  if (total > 150 && total <=200) {
+  if (total > 70 && total <=100) {
       bgoffset = -218;
       size = 42;
   }
-  if (total > 200 && total <=250) {
+  if (total > 100 && total <=130) {
       bgoffset = -151;
       size = 52;
   }
-  if (total > 250 && total <=300) {
+  if (total > 130 && total <=170) {
       bgoffset = -80;
       size = 57;
   }
-  if (total > 300) {
+  if (total > 170) {
       bgoffset = 0;
       size = 62;
   }
@@ -117,16 +137,67 @@ googleDocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(featu
       'line-height: ' + size + 'px; ' +
       'background-position: ' + bgoffset + 'px 100%;'
   );
-  formatter[f.properties.id] = function() {
-  return '<div class="wax-tooltip"><div class="int_total">' +
-    '<h2>ОВД: <%= name %></h2>' +
-    '<p>Адрес: <i><%= address %></i></p>' +
-    '<p>Общее количество задержанных: <strong><%= value %></strong></p>' +
-    '<div id="visualization"></div>' +
-      '</div></div>';
-  };
   marker.innerHTML = (total > 0) ? total : '';
-  marker.onmouseover = function() {
+    var ovdIcon = L.divIcon({
+            // specify a class name that we can refer to in styles, as we
+            // do above.
+            className: 'count-icon',
+            // html here defines what goes in the div created for each marker
+            html: marker.outerHTML,
+            // and the marker width and height
+            iconSize: [size, size]
+    })
+    ovd.setIcon(ovdIcon)
+})
+});
+ovds.on('mouseover',function(e) {
+    // Force the popup closed.
+    e.layer.closePopup();
+
+    var feature = e.layer.feature;
+    var info = '<h2>ОВД: ' + feature.properties.Name + '</h2>' +
+               '<p>Адрес: ' + feature.properties.Address + '</p>' +
+               '<p>Общее количество задержанных: ' + feature.properties.value + '</p>' +
+               '<div id="visualization"></div>';
+    drawVisualization(ovdData[feature.properties.id]);
+    document.getElementById('info').innerHTML = info;
+});
+}
+
+function addLayer(layer, name, zIndex) {
+    layer
+        //.setZIndex(zIndex)
+        .addTo(map);
+
+    // Create a simple layer switcher that toggles layers on
+    // and off.
+    var item = document.createElement('li');
+    var link = document.createElement('a');
+
+    link.href = '#';
+    link.className = 'active';
+    link.innerHTML = name;
+
+    link.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (map.hasLayer(layer)) {
+            map.removeLayer(layer);
+            this.className = '';
+        } else {
+            map.addLayer(layer);
+            this.className = 'active';
+        }
+    };
+
+    item.appendChild(link);
+    ui.appendChild(item);
+}
+
+
+ 
+/*  marker.onmouseover = function() {
       $('.wax-tooltip').remove();
       $('body').append(_.template(formatter[f.properties.id](), f.properties));
       drawVisualization(ovdData[f.properties.id]);
@@ -140,8 +211,7 @@ googleDocs('0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc', 'ob6', function(featu
   marker.style.pointerEvents = 'all';
   d.appendChild(marker);
   d.style.position = 'absolute';
-  return d;
-};
+  return d;*/
 
 function buildTable(data) {
   $('#loader').remove();
