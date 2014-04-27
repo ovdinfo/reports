@@ -93,7 +93,7 @@ addLayer(ovds, 'Отделения полиции', 1);
 addLayer(heat, 'Места задержаний', 2);
 
 ovds.on('ready', function(){
-_.each(ovds._layers,function(ovd){
+  _.each(ovds._layers,function(ovd){
     var marker = document.createElement('div'),
     total = parseInt(ovd.feature.properties.value),
     bgoffset = 0,
@@ -148,7 +148,7 @@ _.each(ovds._layers,function(ovd){
             iconSize: [size, size]
     })
     ovd.setIcon(ovdIcon)
-})
+  })
 });
 ovds.on('mouseover',function(e) {
     // Force the popup closed.
@@ -162,7 +162,6 @@ ovds.on('mouseover',function(e) {
     drawVisualization(ovdData[feature.properties.id]);
     document.getElementById('info').innerHTML = info;
 });
-}
 
 function addLayer(layer, name, zIndex) {
     layer
