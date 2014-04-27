@@ -606,7 +606,6 @@ googleDocs = function(spreadsheet, sheet, callback) {
     }
 
     function response(x) {
-    	console.log(x)
         var features = [],
             latfield = '',
             lonfield = '';
