@@ -12,7 +12,7 @@ requirejs.config({
         'mapbox': ['//api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox','libs/mapbox/latest/mapbox'],
         'Leaflet.fullscreen': 'libs/mapbox/Leaflet.fullscreen.min',
         'leaflet-heat': 'libs/mapbox/leaflet-heat',
-        'leaflet-omnivore': ['//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.0.1/leaflet-omnivore.min','libs/mapbox/leaflet-omnivore.min'],
+        'omnivore': ['//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.0.1/leaflet-omnivore.min','libs/mapbox/leaflet-omnivore.min'],
         'async': 'libs/require/async',
         'goog': 'libs/require/goog',
         'propertyParser': 'libs/require/propertyParser'
@@ -24,19 +24,15 @@ requirejs.config({
         'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
         'spin' : ['jquery'],
         'Leaflet.fullscreen': ['mapbox'],
-        'leaflet-heat': ['mapbox'],
-        'leaflet-omnivore': {
-          deps:['mapbox'], 
-          exports: 'omnivore'
-        }
+        'leaflet-heat': ['mapbox']
     }
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'moment', 'mapbox', 'Leaflet.fullscreen', 'leaflet-omnivore', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'omnivore', 'moment', 'mapbox', 'Leaflet.fullscreen', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
-function($,tablesorter,omnivore){
-  console.log(omnivore)
+function($,tablesorter){
+  console.log(window)
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 loadCss('/ext/libs/mapbox/latest/mapbox.css');
 loadCss('/ext/libs/mapbox/leaflet.fullscreen.css');
