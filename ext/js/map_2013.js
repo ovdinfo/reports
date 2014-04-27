@@ -60,7 +60,7 @@ $('#map,#loader').height(mapHeight+'px');
 
 $('#loader').spin(opts);
 
-var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+var map = L.mapbox.map('map', 'integral.map-asmf5yqy')
     .setView([55.7512419, 37.6184217], 11).addControl(L.mapbox.shareControl());
     L.control.fullscreen().addTo(map);
 

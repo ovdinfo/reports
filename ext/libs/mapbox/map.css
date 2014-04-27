@@ -81,3 +81,6 @@ z-index: 100;
 .wax-legends .wax-legend {
     width: 290px;
 }
+.wax-tooltip {
+    top: 12px;
+}
