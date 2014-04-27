@@ -24,18 +24,14 @@ requirejs.config({
         'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
         'spin' : ['jquery'],
         'Leaflet.fullscreen': ['mapbox'],
-        'leaflet-heat': ['mapbox'],
-        'omnivore': {
-          exports: 'omni'
-        }
+        'leaflet-heat': ['mapbox']
     }
 });
 
 require([
-    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'leaflet-heat', 'omnivore', 'moment', 'mapbox', 'Leaflet.fullscreen', 'goog!visualization,1,packages:[corechart],language:ru'
+    'jquery', 'bootstrap', 'tablesorter', 'tablesorter.widgets', 'underscore', 'spin', 'moment', 'mapbox', 'Leaflet.fullscreen', 'leaflet-heat', 'omnivore', 'goog!visualization,1,packages:[corechart],language:ru'
 ],
-function($,tablesorter){
-  console.log(window)
+function($,tablesorter,omnivore){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 loadCss('/ext/libs/mapbox/latest/mapbox.css');
 loadCss('/ext/libs/mapbox/leaflet.fullscreen.css');
