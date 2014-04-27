@@ -22,7 +22,8 @@ requirejs.config({
         'tablesorter' : ['jquery','bootstrap'],
         'tablesorter.widgets' : ['jquery','bootstrap','tablesorter'],
         'spin' : ['jquery'],
-        'share': ['mapbox']
+        'Leaflet.fullscreen': ['mapbox'],
+        'leaflet-heat': ['mapbox'],
     }
 });
 
