@@ -35,6 +35,7 @@ function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 loadCss('/ext/libs/mapbox/latest/mapbox.css');
 loadCss('/ext/libs/mapbox/leaflet.fullscreen.css');
+loadCss('/ext/libs/mapbox/map.css');
 var opts = {
   lines: 13, // The number of lines to draw
   length: 13, // The length of each line
@@ -62,6 +63,8 @@ $('#loader').spin(opts);
 var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
     .setView([55.7512419, 37.6184217], 11).addControl(L.mapbox.shareControl());
     L.control.fullscreen().addTo(map);
+
+map.options.scrollWheelZoom = false;
 
 var ovdData = {};
 
@@ -158,7 +161,7 @@ ovds.on('mouseover',function(e) {
 
     var feature = e.layer.feature;
     var info = '<div class="wax-tooltip"><div class="int_total">' +
-               '<h2>ОВД: ' + feature.properties.Name + '</h2>' +
+               '<h2>' + feature.properties.Name + '</h2>' +
                '<p>Адрес: ' + feature.properties.Address + '</p>' +
                '<p>Общее количество задержанных: ' + feature.properties.value + '</p>' +
                '<div id="visualization"></div>' +
