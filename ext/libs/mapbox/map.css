@@ -48,13 +48,16 @@
 }
 
 #map-ui a.active {
-    background: #3887BE;
-    border-color: #3887BE;
+    background: #F04E23;
+    border-color: #F04E23;
     border-top-color: #FFF;
     color: #FFF;
 }
 .leaflet-control {
   clear: none;
+}
+.leaflet-control a {
+    color: #F04E23;
 }
 .leaflet-control-zoom a {
   display: inline-block;
