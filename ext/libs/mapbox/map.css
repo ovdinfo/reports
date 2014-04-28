@@ -59,6 +59,12 @@
 .leaflet-container a {
     color: #F04E23;
 }
+.leaflet-container a:hover {
+    color:#fff;
+}
+.leaflet-source a:hover {
+    color:#000;
+}
 .leaflet-control-zoom a {
   display: inline-block;
   border-bottom: none;
