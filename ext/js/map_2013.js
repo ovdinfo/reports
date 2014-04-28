@@ -80,6 +80,7 @@ var ui = document.getElementById('map-ui');
 var ovds = omnivore.csv('https://docs.google.com/spreadsheet/pub?key=0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc&single=true&gid=72&output=csv',{latfield: 'lat',
     lonfield: 'lon',
     delimiter: ','}).on('ready', function() {
+      $('#navigation').fadeIn()
       $.ajax({
         url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc/obh/public/values?alt=json-in-script',
         dataType: 'jsonp',
