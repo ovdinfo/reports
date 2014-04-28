@@ -56,7 +56,7 @@
 .leaflet-control {
   clear: none;
 }
-.leaflet-control a {
+.leaflet-container a {
     color: #F04E23;
 }
 .leaflet-control-zoom a {
