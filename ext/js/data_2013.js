@@ -37,10 +37,10 @@ function buildTable(data) {
         i = 0;
     while (i < datalinks.length) {
       if (i + 1 != datalinks.length) {
-        links += '<a href=' + datalinks[i] + '>' + (i + 1) + ', </a>';
+        links += '<a href=' + datalinks[i] + ' target="blank">' + (i + 1) + ', </a>';
       }
       else {
-        links += '<a href=' + datalinks[i] + '>' + (i + 1) + '</a>';
+        links += '<a href=' + datalinks[i] + ' target="blank">' + (i + 1) + '</a>';
       }
       i++;
     }
