@@ -69,6 +69,7 @@ function buildTable(data) {
   	headers: { 
       0: { sorter: "shortDate" }
     },
+    sortList: [[0,0]],
     theme : "bootstrap", // this will  
  
     widthFixed: false, 
