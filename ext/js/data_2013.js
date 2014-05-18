@@ -25,7 +25,7 @@ require([
 function($,tablesorter){
 $('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 $.ajax({
-	url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdFEwWnZuNHNEYzJod2ZRREVLTERDT0E/od6/public/values?alt=json-in-script',
+	url: 'https://spreadsheets.google.com/feeds/list/0Au4PSkYLKeoTdHdRYV9SN3BGOVhJTEZtNnFLaWE4RXc/ob5/public/values?alt=json-in-script',
     dataType: 'jsonp',
     success: buildTable
 });
