@@ -318,6 +318,7 @@ a.anchor {
   color: #aaa;
   font-size: 14px;
   font-weight: bold;
+  float: left;
 }
 
 .level-2.anchor {
