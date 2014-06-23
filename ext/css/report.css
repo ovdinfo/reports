@@ -310,8 +310,7 @@ code {
 }
 
 a.anchor {
-  display: none;
-  position: absolute;
+  position: relative;
   left: 0px;
   width: 20px;
   top: 19px;
