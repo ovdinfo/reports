@@ -23,7 +23,7 @@ function($){
 	loadCss('/ext/libs/tocify/jquery.tocify.css');
   loadCss('/ext/css/report.css');
     $( document ).ready(function() {
-    	$("#toc").tocify({context:'.article',selectors:'h1,h2,h3',extendPage:false});
+    	$("#toc").tocify({context:'#article',selectors:'h1,h2,h3',extendPage:false});
     	$('.article a').hover(
 			function () {
     			$(this).animate({ color: '#F04E23' }, 'fast');
