@@ -22,7 +22,7 @@ function($){
 	$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 	loadCss('/ext/libs/tocify/jquery.tocify.css');
   loadCss('/ext/css/report.css');
-    $(function() {
+    $( document ).ready(function() {
     	$("#toc").tocify({context:'.article',selectors:'h1,h2,h3',extendPage:false});
     	$('.article a').hover(
 			function () {

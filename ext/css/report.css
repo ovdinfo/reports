@@ -1,78 +1,10 @@
-/*
-    Reset
-    http://meyerweb.com/eric/tools/css/reset/
-    v2.0 | 20110126
-    License: none (public domain)
-------------------------------------------------------- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, img, ins, kbd, q, s, samp,
-small, strike, var,
-b, u, i, center,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  font-size:100%;
-  font:inherit;
-  vertical-align:baseline;
-  }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display:block;
-  }
-body { line-height:1; }
-ol, ul { list-style:none;  }
-blockquote, q { quotes:none; }
-blockquote:before, blockquote:after,
-q:before, q:after { content:''; content:none; }
-/* tables still need 'cellspacing="0"' in the markup */
-table { border-collapse: collapse; border-spacing:0; }
-/* remember to define focus styles. Hee Haw */
-:focus { outline:0; }
 
-
-*, *:after, *:before {
-  -webkit-box-sizing:border-box;
-     -moz-box-sizing:border-box;
-          box-sizing:border-box;
-  }
-
-/*
-  This is a stripped down version of Mapbox base.css
-  https://www.mapbox.com/base/latest/base.css
-------------------------------------------------------- */
-
-
-/* Inline Elements: Defaults
-------------------------------------------------------- */
-body,
-input,
-textarea {
-  color:#404040;
-  color:rgba(0,0,0,0.75);
-  /*font: 18px 'Open Sans', sans-serif;*/
-  font-family: "Palatino", "Georgia";
-  font-size: 17px;
-  -webkit-font-smoothing:antialiased;
-  }
-
-body { background:#fff; }
-.dark { color:#fff; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
   /*font-family:'Open Sans', sans-serif;*/
   font-weight:600;
   margin:0;
@@ -81,26 +13,26 @@ h6 {
 
 
 
-h1 {
+.article h1 {
   font-size:22px;
   line-height:30px;
   /*padding-top: 5px;*/
   padding-bottom:10px;
   }
 
-h2 {
+.article h2 {
   font-size:17px;
   line-height:20px;
   padding-bottom:10px;
   }
 
-h3 {
+.article h3 {
   font-size:16px;
   line-height:20px;
   padding-bottom:10px;
   }
 
-h4, h5 {
+.article h4, .article h5 {
   font-size:12px;
   line-height:20px;
   padding-bottom:10px;
@@ -123,14 +55,14 @@ small { display:block; }
 
 
 /* Links */
-a,
+.article a,
 a code {
   color:#3887BE;
   text-decoration:none;
   }
   a:hover code,
-  a:hover { color:#63b6e5; }
-  a:focus {
+  .article a:hover { color:#63b6e5; }
+  .article a:focus {
     -webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);
             box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);
   }
@@ -194,7 +126,7 @@ code {
 
 .content-node.cover .content {
   max-width: 640px;
-  margin: 0px auto;
+  margin: 0px;
   padding-top: 40px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
@@ -264,7 +196,7 @@ code {
 
 .content-node.text .content {
   max-width: 640px;
-  margin: 0px auto;
+  margin: 0px;
   margin-bottom: 30px;
 }
 
@@ -273,7 +205,7 @@ code {
 
 .content-node.audio .content {
   max-width: 350px;
-  margin: 0px auto;
+  margin: 0px;
   margin-bottom: 30px;
   padding: 20px;
   color: rgba(255,255,255, 0.9);
@@ -298,7 +230,7 @@ code {
   max-width: 1000px;
   font-size: 13px;
   line-height: 18px;
-  margin: 0px auto;
+  margin: 0px;
   padding-top: 30px;
   padding-bottom: 30px;
   /*border-top: 1px solid #ccc;*/
@@ -310,7 +242,7 @@ code {
 
 .content-node.graph-block {
   max-width: 700px;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 /* Listitem
@@ -319,7 +251,7 @@ code {
 
 .content-node.list-item {
   max-width: 640px;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 .content-node.list-item .content {
@@ -358,7 +290,7 @@ code {
 
 .content-node.heading .content {
   max-width: 640px;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 
@@ -412,7 +344,7 @@ code {
 
 .content-node.publication-info .content {
   max-width: 640px;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 /* Publication info card */
@@ -497,7 +429,7 @@ code {
 
 .content-node.figure .content {
   max-width: 1000px;
-  margin: 0px auto;
+  margin: 0px;
   text-align: center;
 }
 
@@ -527,7 +459,7 @@ code {
 
 .content-node.web-page > .content {
   max-width: 1000px;
-  margin: 0px auto;
+  margin: 0px;
   text-align: center;
 }
 
@@ -554,7 +486,7 @@ code {
 
 .content-node.video .content {
   text-align: center;
-  margin: 0px auto;
+  margin: 0px;
   max-width: 1000px;
 }
 
