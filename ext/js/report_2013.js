@@ -21,7 +21,7 @@ require([
 function($){
 	$('#header ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
 	loadCss('/ext/libs/tocify/jquery.tocify.css');
-  //loadCss('/ext/css/report.css');
+  loadCss('/ext/css/report.css');
     $( document ).ready(function() {
     	$("#toc").tocify({context:'#prose',selectors:'h1,h2,h3',extendPage:false});
     	$('.article a').hover(
