@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=yes" />
+    <link href="data.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="navigator">
+      <nav>
+        <a class="" href="/2013">Доклад</a>
+        <a href="/2013/infographics/" class="active">Инфографика</a>
+        <a href="/2013/geo/">Картография</a>
+        <a href="/2013/data/">Исходные данные</a>
+        <a href="/2012">2012</a>
+      </nav>
+    </div>
+    <div id="view_selection" class="btn-group">
+      <a href="#" id="all" class="btn active switcher">Все задержания</a>
+      <a href="#" id="cons" class="btn switcher">Согласованность мероприятий</a>
+      <a href="#" id="chron" class="btn switcher">Хронология задержаний</a>
+      <a href="#" id="org" class="btn switcher">Организаторы мероприятий</a>
+      <a href="#" id="format" class="btn switcher">Формат мероприятий</a>
+      <a href="#" id="share" class="btn switcher">Поделиться</a>
+    </div>
+    <div id="data">
+      <div id="data-overview" style="display:none;">
+        <h3>Общий обзор задержаний</h3>
+        <p>В 2013 году в Москве и Московской области ОВД-Инфо зафиксировало 1463 задержания участников публичных мероприятий, а также отдельных активистов в ходе 169 мероприятий.</p>
+        <p style=" -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); top: 225px; position: absolute; left: -43px; filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); ">Тематика акции</p>
+        <p style="top: 350px; position: absolute; left: 0px; font-size: 10px; width: 140px;">Цвет круга соответствует тематике мероприятия</p>
+      </div>
+      <div id="data-group-overview" style="display:none;">
+        <h3>Организация мероприятий</h3>
+        <p>Приведенный ниже список организаторов соответствует группам окружностей справа. Наведите курсор на список или группу окружностей чтобы сопоставить данные.</p>  
+      </div>
+      <div id="data-agr-labels" style="display:none;">
+      <div style="left: 10px;" class="data-agr-label agr"><h3>Согласованно</h3><p></p></div>
+      <div style="left: 880px;" class="data-agr-label non-agr"><h3>Не согласованно</h3><p></p></div>
+      </div>
+      <div id="data-sizeKey" style="display:none;">
+      <div style="left:160px;top:6px;width:20px;" class="data-circleKeyLabel"><span style="left:25px;">200 человек</span></div>
+      <div style="left:120px;top:32px;width:47px;" class="data-circleKeyLabel"><span style="left:52px;">50 человек</span></div>
+      <div style="left:90px;top:57px;width:68px;" class="data-circleKeyLabel"><span style="left:72px;">5 человек</span></div>
+        <p style="top:80px;position:absolute;font-size:10px;width:145px;">Радиус круга соответствует количеству задержаний</p>
+      </div>
+      <div id="data-type-labels" style="display:none">
+      <div style="left:5px;top:70px;" class="data-type-label data-type-label-0"><h3 class='type'></h3><span class='percents'></span><span class='total'></span></div>
+      <div style="left:400px;top:70px;" class="data-type-label data-type-label-1"><h3 class='type'></h3><span class='percents'></span><span class='total'></span></div>
+      <div style="left:770px;top:70px;" class="data-type-label data-type-label-2"><h3 class='type'></h3><span class='percents'></span><span class='total'></span></div>
+      <div style="left:150px;top:400px;" class="data-type-label data-type-label-3"><h4 class='type'></h4><span class='percents'></span><span class='total'></span></div>
+      <div style="left:405px;top:400px;" class="data-type-label data-type-label-4"><h4 class='type'></h4><span class='percents'></span><span class='total'></span></div>
+      <div style="left:642px;top:400px;" class="data-type-label data-type-label-5"><h4 class='type'></h4><span class='percents'></span><span class='total'></span></div>
+      <div style="left:885px;top:400px;width: 150px;" class="data-type-label data-type-label-6"><h4 class='type'></h4><span class='percents'></span><span class='total'></span></div>
+      <div style="left:280px;top:580px;" class="data-type-label data-type-label-7"><h5 class='type'></h5><span class='percents'></span><span class='total'></span></div>
+      <div style="left:480px;top:580px;" class="data-type-label data-type-label-8"><h5 class='type'></h5><span class='percents'></span><span class='total'></span></div>
+      <div style="left:700px;top:580px;" class="data-type-label data-type-label-9"><h5 class='type'></h5><span class='percents'></span><span class='total'></span></div>
+      <div style="left:730px;top:580px;" class="data-type-label data-type-label-10"><h5 class='type'></h5><span class='percents'></span><span class='total'></span></div>
+      <div style="left:880px;top:580px;width: 150px;" class="data-type-label data-type-label-11"><h5 class='type'></h5><span class='percents'></span><span class='total'></span></div>
+      </div>
+      <div id="vis"></div>
+    </div>
+    <section id="footer">
+      <div class="credits">
+        <a class="logo" href="http://ovdinfo.org" target="_blank">
+          <img src="../oi-logo.png" />
+        </a>
+        Протест на тормозах: политические задержания в 2013 году от ОВД-Инфо, лицензировано в соответствии с <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Attribution 3.0 Unported License</a>. Основано на работе <a href="http://reports.ovdinfo.org/2013" target="_blank">http://reports.ovdinfo.org/2013</a>. Опубликовано 01.08.2014
+      </div>
+    </section>
+    <div id="loader">
+      <div id="circle"></div>
+    </div>
+    <script src="data.js"></script>
+  </body>
+</html>

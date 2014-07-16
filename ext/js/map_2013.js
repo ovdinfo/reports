@@ -1,4 +1,4 @@
-requirejs.config({
+  requirejs.config({
     appDir: ".",
     baseUrl: "/ext",
     paths: { 

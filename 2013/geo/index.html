@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=yes" />
+    <link href="geo.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="navigator">
+      <nav>
+        <a href="/2013">Доклад</a>
+        <a href="/2013/infographics/">Инфографика</a>
+        <a href="/2013/geo/" class="active">Картография</a>
+        <a href="/2013/data/">Исходные данные</a>
+        <a href="/2012">2012</a>
+      </nav>
+    </div>
+    <div id='legend' style='display:none;'>
+      <strong>Распределение задержанных по отделениям полиции в 2013 году.</strong>
+      <nav class='legend clearfix'>
+        <span style='background:#00E535;'></span>
+        <span style='background:#9BEE03;'></span>
+        <span style='background:#F3D205;'></span>
+        <span style='background:#F77807;'></span>
+        <span style='background:#FA1C08;'></span>
+        <label>< 1 - 10</label>
+        <label>< 10 - 70</label>
+        <label>< 70 - 130</label>
+        <label>< 130 - 170</label>
+        <label>170 +</label>
+        <small>Источник: <a href="https://docs.google.com/file/d/0B-4PSkYLKeoTMS1mNDU1YTgxOS1lZTgzLTQ0ODMtYTdhYS05N2YwOTVhZGUzMDI/edit">данные ОВД-Инфо</a><a class="logo" href="http://ovdinfo.org" target="_blank"></a></small>
+      </nav>
+    </div>
+    <section id="map">
+      <div id='info'></div>
+    </section>
+    <ul id='map-ui'></ul>
+    <div id='navigation'>
+      <a href='#' data-position='55.7512419,37.6184217'>Москва</a>
+      <a href='#' data-position='59.934280,30.335099'>Санкт-Петербург</a>
+      <a href='#' data-position='56.327358,43.985191'>Нижний Новгород</a>
+    </div>
+    <section id="data" style="display:none;">
+      <h1 class="ovdheader"></h1>
+    </section>
+    <section id="note">
+      В карте, представляющей распределение задержанных за отчетный период по отделениям полиции, число задержаний меньше, чем в общей статистике ОВД-Инфо в силу того, что мы не обладаем полнотой данных о доставлении задержанных в конкретные ОВД.
+    </section>
+    <section id="footer">
+      <div class="credits">
+        <a class="logo" href="http://ovdinfo.org" target="_blank">
+          <img src="../oi-logo.png" />
+        </a>
+        Протест на тормозах: политические задержания в 2013 году от ОВД-Инфо, лицензировано в соответствии с <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Attribution 3.0 Unported License</a>. Основано на работе <a href="http://reports.ovdinfo.org/2013" target="_blank">http://reports.ovdinfo.org/2013</a>. Опубликовано 01.08.2014
+      </div>
+    </section>
+    <div id="loader">
+      <div id="circle"></div>
+    </div>
+    <script src="geo.js"></script>
+  </body>
+</html>
