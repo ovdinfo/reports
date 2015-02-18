@@ -1,0 +1,9 @@
+{
+  "templateId": "oi-report",
+  "params": {
+    "include_toc": true,
+    "include_references": true,
+    "enable_section_numbering": false,
+    "include_remarks": true
+  }
+}
