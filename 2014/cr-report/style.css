@@ -248,14 +248,17 @@ body.toc-active .article {
 }*/
 
 
-.figure-caption {
-  font-size: 14px;
-  line-height: 21px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.figure-caption,
+.content-node.web-page .caption {
+  font-size: 13px;
+  line-height: 20px;
+  padding-top: 20px;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial';
   text-align: center;
-  margin-bottom: 20px;
+}
+
+.content-node.web-page .caption {
+  padding-top: 10px;
 }
 
 .remarks {
@@ -278,7 +281,7 @@ body.toc-active .article {
 /* Remark annotations */
 
 .content-node span.remark {
-  background: rgba(255, 120, 120, 0.3);
+  background: rgba(215, 215, 215, 0.3);
   padding: 1px 3px;
   transition: background .5s ease-in-out;
    -moz-transition: background .5s ease-in-out;
@@ -286,7 +289,7 @@ body.toc-active .article {
 }
 
 span.remark.active {
-  background: rgba(255, 120, 120, 0.5);
+  background: rgba(215, 215, 215, 0.5);
 }
 
 
@@ -443,7 +446,6 @@ a.oi img {
 }
 
 .cover-description {
-  margin: 0 auto 0 1em;
   line-height: 1.2;
   color: #dbdbdb;
 }
@@ -604,7 +606,7 @@ body.toc-active .toc {
 }
 
 .toc .toc-entry:hover, .toc .toc-entry.active {
-  background: #999;
+  background: #ccc;
 }
 
 .toc .toc-entry:hover a, .toc .toc-entry.active a {
@@ -768,20 +770,17 @@ body.toc-active .toc {
 
 }
 
-.content-node.list-item .content {
-
-}
-
 .content-node.list-item .content:before {
-  content: '· ';
 }
 
 .content-node.list-item .content {
-
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: outside;
 }
 
 .content-node.list-item.level-1 .content {
-  margin-left: 20px;
+  margin-left: 34px;
   margin-bottom: 10px;
 }
 
@@ -795,6 +794,14 @@ body.toc-active .toc {
 
 .content-node.list-item.level-4 .content {
   margin-left: 60px;
+}
+
+.content-node.list-item.last {
+  margin-bottom: 30px;
+}
+
+.content-node.list-item.last .content {
+  margin-bottom: 0px;
 }
 
 
@@ -875,21 +882,104 @@ body.toc-active .toc {
 }
 
 span.reference {
-  background: rgba(120, 160, 255, 0.3);
-  padding: 1px 3px;
+  padding: 2px 0px;
   transition: background .5s ease-in-out;
    -moz-transition: background .5s ease-in-out;
    -webkit-transition: background .25s ease-in-out;
 }
 
 span.reference.active {
-  background: rgba(120, 160, 255, 0.5);
+  background: rgba(120, 160, 255, 0.3);
+}
+
+sup { 
+  vertical-align: super;
+  font-size: smaller;
+  line-height: 0px;
+  padding: 0px 2px;
 }
 
 
 /* Publication Info
 ------------------------------------------------------- */
 
+a.pdf {
+  clear: both;
+  height: 60px;
+  display: block;
+  padding: 5px 0px;
+  margin: 25px 0px 20px;
+}
+
+a.pdf > span {
+  float: left;
+  width: 80%;
+}
+
+a.pdf > img {
+  float: right;
+  height: 50px;
+}
+
+
+.info .title h1 {
+  padding-top: 10px;
+  font-weight: normal;
+}
+
+.info .meta-data {
+  padding: 30px 0px 15px;
+  border-bottom: 1px solid #ddd;
+  margin: 20px 0px;
+  border-top: 1px solid #ddd;
+}
+
+.info .meta-data .container {
+  margin-bottom: 20px;
+  clear: both;
+}
+
+
+.info .meta-data .label {
+  float: left;
+  width: 150px;
+  font-size: 15px;
+  color: #999;
+}
+
+.info .meta-data .value {
+  margin-left: 200px;
+}
+
+.info .support {
+  clear: both;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  height: 100px;
+  margin-bottom: 20px; 
+}
+
+.info .support .value {
+  float: left;
+  display: inline-block;
+  width: 60%;
+}
+
+.info .support .logo {
+  float: right;
+  display: inline-block;
+  width: 20%;
+}
+
+.info .credits {
+  font-size: smaller;
+}
+
+.info .report-credits {
+  padding-top: 10px;
+  font-size: initial;
+  margin-bottom: 20px;
+}
 
 .content-node.publication-info {
   border-top: 2px solid #e6e6e6;
@@ -952,7 +1042,7 @@ span.reference.active {
 }
 
 .content-node.notes .notes .note.active {
-  border: 1px solid rgba(255, 120, 120, 0.5);
+  border: 1px solid rgba(134, 134, 134, 0.5);
   opacity: 1;
 }
 
@@ -968,9 +1058,9 @@ span.reference.active {
 }
 
 .content-node.references .citations .citation-description {
-  font-family: "Helvetica Neue";
-  padding-bottom: 20px;
-  font-size: 15px;
+  padding-bottom: 0px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .content-node.notes .notes .note {
@@ -1135,12 +1225,6 @@ span.reference.active {
   text-align: center;
   padding-bottom: 20px;
   padding-bottom: 50px;
-}
-
-.content-node.web-page .caption {
-  font-size: 14px;
-  text-align: left;
-  color: #777;
 }
 
 .content-node.web-page .page-wrapper {
@@ -1387,5 +1471,13 @@ body {
 @media screen and (max-width: 1300px) {
   .row {
     max-width: 700px;
+  }
+  .info .support .logo {
+    float: right;
+    display: inline-block;
+    width: 30%;
+  }
+  .info .meta-data .value {
+    margin-left: 160px;
   }
 }

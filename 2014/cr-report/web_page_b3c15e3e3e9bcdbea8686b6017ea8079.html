@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>уголовное преследование stats</title>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("visualization", "1", {packages:["imagesparkline"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+      var data_1 = google.visualization.arrayToDataTable([[''],[12],[16],[10],[7],[5]]),
+          data_2 = google.visualization.arrayToDataTable([[''],[900],[898],[751],[617],[534]]),
+          data_3 = google.visualization.arrayToDataTable([[''],[3807],[3529],[3511],[3029],[3090]]),
+          data_4 = google.visualization.arrayToDataTable([[''],[1772],[1904],[1937],[2051],[2218]]),
+          data_5 = google.visualization.arrayToDataTable([[''],[352],[354],[323],[336],[408]]),
+          data_6 = google.visualization.arrayToDataTable([[''],[868],[818],[775],[710],[909]]),
+          data_7 = google.visualization.arrayToDataTable([[''],[214],[207],[158],[129],[120]]),
+          data_8 = google.visualization.arrayToDataTable([[''],[85],[101],[44],[13],[8]]);
+
+      var chart_1 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_1')),
+          chart_2 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_2')),
+          chart_3 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_3')),
+          chart_4 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_4')),
+          chart_5 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_5')),
+          chart_6 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_6')),
+          chart_7 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_7')),
+          chart_8 = new google.visualization.ImageSparkLine(document.getElementById('sparkline_8'));
+
+      var options = {width: 80, height: 30, showAxisLines: false,  showValueLabels: false, labelPosition: 'left', title: [], color: '#78A0FF'};
+
+      chart_1.draw(data_1, options);
+      chart_2.draw(data_2, options);
+      chart_3.draw(data_3, options);
+      chart_4.draw(data_4, options);
+      chart_5.draw(data_5, options);
+      chart_6.draw(data_6, options);
+      chart_7.draw(data_7, options);
+      chart_8.draw(data_8, options);
+    }
+  </script>
+  <style>
+    body, html {
+      width: 630px;
+      height: 450px;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      empty-cells: show;
+      border: 1px solid #d7d7d7;
+      color: #999;
+      font-family: Arial, Helvetica, Geneva, sans-serif;
+      font-size: 13px;
+    }
+    thead {
+      background: #e0e0e0;
+      color: #000;
+      text-align: left;
+      vertical-align: bottom;
+    }
+    th {color: #fff;}
+    td, th {
+      border-left: 1px solid #d7d7d7;
+      border-width: 0 0 0 1px;
+      font-size: inherit;
+      margin: 0;
+      overflow: visible;
+      padding: .5em 1em;
+    }
+    tr {cursor: pointer;}
+    tr.first {
+      color: #666;
+    }
+    tr:hover {
+      background: #F2F2F2;
+    }
+    .google-visualization-sparkline-default {
+      border: none;
+    }
+    .google-visualization-sparkline-selected,
+    .google-visualization-sparkline-over {
+      background-color: transparent;
+      border-left: none; 
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>2009</th>
+        <th>2010</th>
+        <th>2011</th>
+        <th>2012</th>
+        <th>2013</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="first">
+        <td>оправдано (по отношению к обвинениям)</td>
+        <td>0.17%</td>
+        <td>0.23%</td>
+        <td>0.15%</td>
+        <td>0.11%</td>
+        <td>0.07%</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>оправдано</td>
+        <td>12</td>
+        <td>16</td>
+        <td>10</td>
+        <td>7</td>
+        <td>5</td>
+        <td><div id="sparkline_1"></div></td>
+      </tr>
+      <tr>
+        <td>произодство прекращено</td>
+        <td>900</td>
+        <td>898</td>
+        <td>751</td>
+        <td>617</td>
+        <td>534</td>
+        <td><div id="sparkline_2"></div></td>
+      </tr>
+      <tr>
+        <td>условное лишение свободы</td>
+        <td>3807</td>
+        <td>3529</td>
+        <td>3511</td>
+        <td>3029</td>
+        <td>3090</td>
+        <td><div id="sparkline_3"></div></td>
+      </tr>
+      <tr>
+        <td>штраф</td>
+        <td>1772</td>
+        <td>1904</td>
+        <td>1937</td>
+        <td>2051</td>
+        <td>2218</td>
+        <td><div id="sparkline_4"></div></td>
+      </tr>
+      <tr>
+        <td>лишение свободы до 1 года вкл.</td>
+        <td>352</td>
+        <td>354</td>
+        <td>323</td>
+        <td>336</td>
+        <td>408</td>
+        <td><div id="sparkline_5"></div></td>
+      </tr>
+      <tr>
+        <td>лишение свободы свыше 1 до 3 лет вкл.</td>
+        <td>868</td>
+        <td>818</td>
+        <td>775</td>
+        <td>710</td>
+        <td>909</td>
+        <td><div id="sparkline_6"></div></td>
+      </tr>
+      <tr>
+        <td>лишение свободы свыше 3 до 5 лет вкл.</td>
+        <td>214</td>
+        <td>207</td>
+        <td>158</td>
+        <td>129</td>
+        <td>120</td>
+        <td><div id="sparkline_7"></div></td>
+      </tr>
+      <tr>
+        <td>лишение свободы свыше 5 до 8 лет вкл.</td>
+        <td>85</td>
+        <td>101</td>
+        <td>44</td>
+        <td>13</td>
+        <td>8</td>
+        <td><div id="sparkline_8"></div></td>
+      </tr>
+      <tr>
+        <td>лишение свободы свыше 8 до 10 лет вкл.</td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

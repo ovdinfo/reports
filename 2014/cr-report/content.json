@@ -16,11 +16,11 @@
       "license": "licence",
       "guid": "eb468ffeb93f52dcd46dfc6806baa0f8",
       "creator": "",
-      "title": "Уголовное преследование по политическим мотивам в России в 2011—2014 годах",
+      "title": "Политические репрессии в 2011-2014 годах: уголовные преследования",
       "authors": [],
       "abstract": "Исследование ОВД-Инфо об уголовном преследовании в России",
       "created_at": "2015-02-04T10:28:09.284Z",
-      "updated_at": "2015-02-12T23:16:35.454Z",
+      "updated_at": "2015-02-18T02:39:35.641Z",
       "published_on": "2015-02-04T10:28:09.284Z"
     },
     "cover": {
@@ -73,10 +73,10 @@
         "figure_806400077f0ee464a5fdc5e344951ba2",
         "heading_bfe4cd131d76cb1f94c5d51c6f80f88c",
         "1e12f6de0b7302495b27329a32097d97",
-        "figure_cab1785a941d5f7748211d5b0889df8f",
-        "541a9b705ee46228f4a2359ef787c549",
+        "web_page_b3c15e3e3e9bcdbea8686b6017ea8079",
+        "4d3e7ef137b807637d82d9892e81c26a",
         "1afeaff43f214cf61012dd07ae3d76b3",
-        "4a6dcd0b56ccac440b9908a10201d2fa",
+        "list_item_c094f0d2810c0b42eacbd8619fe36a89",
         "8849c648df71b3f122c043030155253f",
         "list_item_fdabfd8830b983c6cd4a4810df7a286f",
         "list_item_1e875da33338b505cab441c35ba1944f",
@@ -123,6 +123,7 @@
         "f453c51d3d104f90698d7317bbba7cd2",
         "figure_0fe6bc3b1b8c0629385ceb95e91d9015",
         "994b5f3a0c6e88df97890d8c6cb6a70c",
+        "127efca6035c969f1f9a18f20b5d9457",
         "figure_090df0bcd0ee9e17fc7ea71bbedb7074",
         "figure_fd28c761cceda683c9d1518be260da50",
         "5c5b0c7baaa6c14950ad7935d66b072d",
@@ -176,12 +177,54 @@
         "web_resource_29b9ceaab5025b46885506a0dcf3f4a4",
         "web_resource_ccf732d9328ae488f98a9ec2105e8545",
         "web_resource_3b1afb00c1f7a71bb1dd3250bb0e30ca",
-        "web_resource_cd044e84459c48c301ba33d80737f840",
         "web_resource_f8ce618a7835882167c90d5482492dc9",
         "web_resource_140c121ed7c6a4a09f3bfeb159d55fd2",
         "web_resource_e5241e0f5c923f7f73ef35292fe4ec91",
         "web_resource_a24f5f71e1b9add898b9a09350eba816",
-        "web_resource_7559c585270007690e27aad7c63d35d4"
+        "web_resource_7559c585270007690e27aad7c63d35d4",
+        "web_resource_8ec7d16904284d01a7cc401ffa8fd517",
+        "web_resource_cb9b0b3c923a6e9c536eef11b56ab5d4",
+        "web_resource_dfd0898bf5b0b1a882c93aed1d7f84a7",
+        "web_resource_3c36fbf115530a25cf845df74121d90a",
+        "web_resource_8d75bd50a97a8a0af16e1432ae7dffcf",
+        "web_resource_34d429c36ca293850b8bff1d4a7e5ac8",
+        "web_resource_fcd0e12fedcd5e7343be3f760964f654",
+        "web_resource_682a4d73d0300d5ee39d7a80ff780a0d",
+        "web_resource_8855841a6c4a68e34fcd3b638b05165a",
+        "web_resource_bd657769050b8f935aa490780567940f",
+        "web_resource_34957c5d7a0d88a7da241b68d3355048",
+        "web_resource_566d8d0658416885e8390a2b63080072",
+        "web_resource_9adebc3b94e00dbf177644b0772b1be1",
+        "web_resource_d92e6e79af3197adfc9d5cd2cfe7a8f6",
+        "web_resource_20d9417c5c47a75bf0743669b4c98b16",
+        "web_resource_b27c004a57ee6760c5004a8180cf1b28",
+        "web_resource_aada80933e44658a83501404dc2cbc36",
+        "web_resource_03ba10bd593b3aacfef81de7044f193a",
+        "web_resource_ccce9e63324933c6776fab9f305ae5ad",
+        "web_resource_07b1568baf292cee4543656bdd2aef91",
+        "web_resource_c914ccab21e71dcff83e6b32fd6a5e13",
+        "web_resource_ed1df626b0f90c6ca5823091c155f47e",
+        "web_resource_f78971f9ee0b72eef8f7fb23faddb5af",
+        "web_resource_d1ec43a09120fadabc5e01432558c3cc",
+        "web_resource_64483d8f8b64f1f61927c283966ee9d7",
+        "web_resource_0b4ff648893555988654e6e242d2349f",
+        "web_resource_feecc9420badf4967d8ac5e097416fa3",
+        "web_resource_5025944b3fa99133751ec82c56bc9582",
+        "web_resource_b9d9bb5fa0db702547a9cf174d852c99",
+        "web_resource_d5fe353c550384f9348fee7a167a66ef",
+        "web_resource_14482cd9eb670af5f7cb659c8fd24752",
+        "web_resource_3ae6d426aeea43fb1f7dbd03a63fae62",
+        "web_resource_38069d7934fd134b05ab2172899f4338",
+        "web_resource_b961fe0561eb4211162eaae0a5204342",
+        "web_resource_15878e761487bb7cae56ff338cbe45d7",
+        "web_resource_2efd36c07b90a73b07ff3b3a26b7fc4e",
+        "web_resource_a10eaaadb53aa1f43b34fb1cae80276d",
+        "web_resource_49261c5b8f717cba1addfed7d84fa938",
+        "web_resource_35b29b1cebb52b4f52d7eba8901e0420",
+        "web_resource_940b1fd8aac5587cb1f8b889b73348ac",
+        "web_resource_28ce9ad7167b8a3884e4909509f0b72c",
+        "web_resource_de70a758e1bd7b62876bc82c012d606c",
+        "web_resource_f09bb912e60d175c0bc900b21429b65b"
       ]
     },
     "remarks": {
@@ -193,7 +236,11 @@
         "remark_a2a4e22bd430c3915659ba9270592ff4",
         "remark_04601d94851b5d471b4f22465b22540b",
         "remark_5a3a98cbe05255ac8520b9488ab6fc9e",
-        "remark_ff24edf98b2ad7a433583562f4379c1f"
+        "remark_ff24edf98b2ad7a433583562f4379c1f",
+        "remark_18f6b69453a7c77947b40f167bc2f49c",
+        "remark_3fe5cc87fecf7092908d3bd946f4a3b3",
+        "remark_474ece0ccb5ff093094f875046c8f58c",
+        "remark_c668b34b024439915b7737750c33a50f"
       ]
     },
     "errors": {
@@ -273,8 +320,8 @@
     "web_resource_3ef77bfca9574b9fdc865d8a8f5d463f": {
       "type": "web_resource",
       "id": "web_resource_3ef77bfca9574b9fdc865d8a8f5d463f",
-      "title": "Экоузник 2013. Годовой доклад.",
-      "description": "",
+      "title": "Хроника преследований защитников природы в России",
+      "description": "Экоузник-2013. Годовой доклад.",
       "url": "http://www.slideshare.net/OlegKozyrev/2013-29833622"
     },
     "citation_reference_42fa4d148673d8be6da7d0e7f6d917ef": {
@@ -347,8 +394,8 @@
     "web_resource_29b9ceaab5025b46885506a0dcf3f4a4": {
       "type": "web_resource",
       "id": "web_resource_29b9ceaab5025b46885506a0dcf3f4a4",
-      "title": "Критерии для определения статуса политического заключенного",
-      "description": "Критерии разработанные Парламентской ассамблеей Совета Европы для определения статуса политического заключенного (осень 2012г). ",
+      "title": "The definition of political prisoner",
+      "description": "Parliamentary Assembly of the Council of Europe (PACE), 2012",
       "url": "http://assembly.coe.int/nw/xml/XRef/Xref-XML2HTML-en.asp?fileid=19150&lang=en"
     },
     "citation_reference_8b81d4262905b2e547bc0acd4336fa86": {
@@ -417,8 +464,8 @@
     "web_resource_ccf732d9328ae488f98a9ec2105e8545": {
       "type": "web_resource",
       "id": "web_resource_ccf732d9328ae488f98a9ec2105e8545",
-      "title": "«по сути своей политизированно, поскольку предполагает наложение санкций за деяния, мотивированные идеологически»",
-      "description": "Информационно-аналитический центр «Сова». Неправомерное применение антиэкстремистского законодательства в России в 2012 году.",
+      "title": "Неправомерное применение антиэкстремистского законодательства в России в 2012 году",
+      "description": "Информационно-аналитический центр «Сова», годовой доклад за 2012 год.",
       "url": "http://www.sova-center.ru/misuse/publications/2013/04/d26952/"
     },
     "citation_reference_fbe1fdf5f0b3ebc9e9994d97b9aa0df1": {
@@ -438,7 +485,7 @@
       "type": "remark",
       "id": "remark_cc9b2b20bd00050c355b2b3a52fd7d2c",
       "title": "",
-      "description": "Публичные призывы к осуществлению экстремистской деятельности.",
+      "description": "Статья 280 УК РФ: Публичные призывы к осуществлению экстремистской деятельности.",
       "creator": "Michael Aufreiter",
       "created_at": "2015-02-10T17:11:23.836Z"
     },
@@ -459,7 +506,7 @@
       "type": "remark",
       "id": "remark_8d1212d4da0a7aef2f40d2e5a5708b99",
       "title": "",
-      "description": "Действия, направленные на возбуждение ненависти либо вражды, а также на унижение достоинства человека либо группы лиц по признакам пола, расы, национальности, языка, происхождения, отношения к религии, а равно принадлежности к какой-либо социальной группе, совершенные публично или с использованием средств массовой информации либо информационно-телекоммуникационных сетей, в том числе сети «Интернет».",
+      "description": "Статья 282 УК РФ: Действия, направленные на возбуждение ненависти либо вражды, а также на унижение достоинства человека либо группы лиц по признакам пола, расы, национальности, языка, происхождения, отношения к религии, а равно принадлежности к какой-либо социальной группе, совершенные публично или с использованием средств массовой информации либо информационно-телекоммуникационных сетей, в том числе сети «Интернет».",
       "creator": "Michael Aufreiter",
       "created_at": "2015-02-10T17:11:28.292Z"
     },
@@ -480,7 +527,7 @@
       "type": "remark",
       "id": "remark_a2a4e22bd430c3915659ba9270592ff4",
       "title": "",
-      "description": "Организация экстремистского сообщества.",
+      "description": "Статья 282.1 УК РФ: Организация экстремистского сообщества.",
       "creator": "Oliver Buchtala",
       "created_at": "2015-02-10T17:11:47.530Z"
     },
@@ -501,7 +548,7 @@
       "type": "remark",
       "id": "remark_04601d94851b5d471b4f22465b22540b",
       "title": "",
-      "description": "Организация деятельности экстремистской организации.",
+      "description": "Статья 282.1 УК РФ: Организация деятельности экстремистской организации.",
       "creator": "Michael Aufreiter",
       "created_at": "2015-02-10T17:12:00.996Z"
     },
@@ -522,7 +569,7 @@
       "type": "remark",
       "id": "remark_5a3a98cbe05255ac8520b9488ab6fc9e",
       "title": "",
-      "description": "Публичные призывы к осуществлению действий, направленных на нарушение территориальной целостности Российской Федерации.",
+      "description": "Статья 280.1 УК РФ: Публичные призывы к осуществлению действий, направленных на нарушение территориальной целостности Российской Федерации.",
       "creator": "Michael Aufreiter",
       "created_at": "2015-02-10T17:26:43.057Z"
     },
@@ -543,7 +590,7 @@
       "type": "remark",
       "id": "remark_ff24edf98b2ad7a433583562f4379c1f",
       "title": "",
-      "description": "Реабилитация нацизма.",
+      "description": "Статья 354.1 УК РФ: Реабилитация нацизма.",
       "creator": "Michael Aufreiter",
       "created_at": "2015-02-10T17:27:03.622Z"
     },
@@ -712,23 +759,11 @@
       "source_id": "",
       "content": "Против рядовых участников мирных массовых протестных мероприятий в последнее время используется несколько статей УК. В таких случаях могут применяться статьи 213 («Хулиганство»), а также 214 («Вандализм»), причем нередко в качестве квалифицирующего признака используются «мотивы  политической, идеологической, расовой, национальной или религиозной ненависти или вражды», либо «мотивы ненависти или вражды в отношении какой-либо социальной группы» (здесь преследование по следам массовых мероприятий соединяется с применением антиэкстремистского законодательства). Статья 212 УК («Массовые беспорядки») применяется в тех случаях, когда массовые мероприятия сопровождаются случаями насилия; однако, во-первых, сам факт массовых беспорядков может быть не доказан с юридической точки зрения; во-вторых, жертвами преследования могут стать более или менее случайные люди, просто пришедшие на массовое мероприятие, участие которых в насилии либо не доказано, либо несоразмерно наказанию; в-третьих, зачинщиками массовых беспорядков могут быть названы определенные оппоненты действующей власти без каких-либо оснований. В дополнение к участию в массовых беспорядках людям может быть инкриминировано применение насилия к представителю власти (статья 318 УК), причем избирается наказание часто более суровое, чем обычно."
     },
-    "541a9b705ee46228f4a2359ef787c549": {
-      "type": "text",
-      "id": "541a9b705ee46228f4a2359ef787c549",
-      "source_id": "",
-      "content": "Кроме того, в 2014 году в рамках мер по ужесточению наказания за нарушения на массовых мероприятиях (подробнее см. доклад об административном преследовании) в Уголовный кодекс была внесена статья 212.1 — «Неоднократное нарушение установленного порядка организации либо проведения собрания, митинга, демонстрации, шествия или пикетирования»; однако преследования по этой статье начались в январе 2015 года (первыми обвиняемыми стали гражданские активисты Владимир Ионов, Марк Гальперин и Ильдар Дадин; основой для их преследования стали решения по делам об административных правонарушениях в августе, сентябре и декабре 2014 и январе 2015 года; «Мемориал» признал Ионова и Гальперина лицами, преследуемыми по политическим мотивам — с них взята подписка о невыезде, — а Дадина, находящегося под домашним арестом, политзаключенным)."
-    },
     "1afeaff43f214cf61012dd07ae3d76b3": {
       "type": "text",
       "id": "1afeaff43f214cf61012dd07ae3d76b3",
       "source_id": "",
       "content": "Принято считать, что гражданские активисты и просто участники массовых мероприятий стали жертвами политического преследования только после серии крупных протестных митингов, стартовавшей в декабре 2011 года (речь прежде всего о людях, обвиненных в участии в массовых беспорядках, якобы имевших место 6 мая 2012 года на Болотной площади в Москве). Однако еще в 2011 году начались процессы по следам событий 11 декабря 2010 года на Манежной площади. Тогдашние массовые волнения стали реакцией на убийство футбольного болельщика Егора Свиридова и недостаточно активные действия милиции по расследованию преступления. На Манежной имели место и многочисленные столкновения с полицией, и избиения проходивших мимо людей «неславянской внешности», но при этом к ответственности были привлечены лишь десять человек, не являвшиеся ни организаторами, ни зачинщиками. Но самому событию власти тут же попытались придать политическую окраску. "
-    },
-    "4a6dcd0b56ccac440b9908a10201d2fa": {
-      "type": "text",
-      "id": "4a6dcd0b56ccac440b9908a10201d2fa",
-      "source_id": "",
-      "content": "Первыми из привлеченных к ответственности по «Манежному делу» стали активисты «Другой России» Игорь Березюк, Руслан Хубаев и Кирилл Унчук (они получили от трех до пяти с половиной лет лишения свободы), и их преследование выглядело как очередной эпизод в серии многолетних преследований сторонников Эдуарда Лимонова. Последним из осужденных по «Манежному делу» на сегодняшний день стал Павел Важенин: летом 2014 года он был приговорен к трем годам лишения свободы. Его случай уже следует описывать как пример преследования рядового участника мероприятия. Участники событий на Манежной обвинялись по всем упоминавшимся выше статьям, характерным для политических дел: призывы к массовым беспорядкам (ч. 3 ст. 212), хулиганство (ст. 213), применение насилия к представителю власти (ст. 318), возбуждение ненависти (ст. 282)."
     },
     "8849c648df71b3f122c043030155253f": {
       "type": "text",
@@ -740,7 +775,7 @@
       "type": "strong",
       "id": "strong_801ce68e31dee10d1f506228c1f8829c",
       "path": [
-        "4a6dcd0b56ccac440b9908a10201d2fa",
+        "list_item_c094f0d2810c0b42eacbd8619fe36a89",
         "content"
       ],
       "range": [
@@ -752,7 +787,7 @@
       "type": "strong",
       "id": "strong_6cf5355b293680af7778e3e71d0b1502",
       "path": [
-        "4a6dcd0b56ccac440b9908a10201d2fa",
+        "list_item_c094f0d2810c0b42eacbd8619fe36a89",
         "content"
       ],
       "range": [
@@ -764,7 +799,7 @@
       "type": "strong",
       "id": "strong_7cb7c8091ebb7ed0111cd81f03fa82b6",
       "path": [
-        "4a6dcd0b56ccac440b9908a10201d2fa",
+        "list_item_c094f0d2810c0b42eacbd8619fe36a89",
         "content"
       ],
       "range": [
@@ -776,7 +811,7 @@
       "type": "strong",
       "id": "strong_dcddc2426b09c6b20da6007bce63710c",
       "path": [
-        "4a6dcd0b56ccac440b9908a10201d2fa",
+        "list_item_c094f0d2810c0b42eacbd8619fe36a89",
         "content"
       ],
       "range": [
@@ -914,7 +949,7 @@
       "type": "list_item",
       "id": "list_item_cdb9db39d90088f14ac633027dd28f0d",
       "level": 1,
-      "content": "1 мая 2013 года в Твери на первомайской демонстрации были задержаны активисты «Другой России», впоследствии один из задержанных — Сергей Череповский — был избит и арестован по обвинению \tв причинении вреда здоровью сотрудника полиции, а позднее — приговорен к двум годам колонии."
+      "content": "1 мая 2013 года в Твери на первомайской демонстрации были задержаны активисты «Другой России», впоследствии один из задержанных — Сергей Череповский — был избит и арестован по обвинению в причинении вреда здоровью сотрудника полиции, а позднее — приговорен к двум годам колонии."
     },
     "strong_92a32a54279eb8ec514676a0d61cec09": {
       "type": "strong",
@@ -1395,7 +1430,7 @@
       "type": "list_item",
       "id": "list_item_8b6fee5360d89d3569208addbcb11858",
       "level": 1,
-      "content": "Против активиста из Северной Осетии Анатолия Колхидова, неоднократно выступавшего с требованиями закрыть завод «Электроцинк» и наказать виновных в загрязнении окружающей среды. В конце февраля 2014 года, незадолго до дня, когда должен был состояться запланированный им митинг, Колхидов был задержан по подозрению в грабеже (статья 161 УК): утверждалось, что он грабил бывшую жену, хотя та заявляла, что конфликт исчерпан и она не имеет к нему претензий. Колхидов был арестован, но 31 марта освобожден под подписку о невыезде."
+      "content": "Дело о грабеже было возбуждено против активиста из Северной Осетии Анатолия Колхидова, неоднократно выступавшего с требованиями закрыть завод «Электроцинк» и наказать виновных в загрязнении окружающей среды. В конце февраля 2014 года, незадолго до дня, когда должен был состояться запланированный им митинг, Колхидов был задержан по подозрению в грабеже (статья 161 УК): утверждалось, что он грабил бывшую жену, хотя та заявляла, что конфликт исчерпан и она не имеет к нему претензий. Колхидов был арестован, но 31 марта освобожден под подписку о невыезде."
     },
     "strong_5e188931ba7bd95532065d409c81ec08": {
       "type": "strong",
@@ -1405,8 +1440,8 @@
         "content"
       ],
       "range": [
-        36,
-        54
+        67,
+        85
       ]
     },
     "text_2e83cb930940abe82eb557173445763e": {
@@ -1424,8 +1459,8 @@
     "web_resource_3b1afb00c1f7a71bb1dd3250bb0e30ca": {
       "type": "web_resource",
       "id": "web_resource_3b1afb00c1f7a71bb1dd3250bb0e30ca",
-      "title": "обвинениям",
-      "description": "",
+      "title": "Ростовскому журналисту просят дать три года",
+      "description": "ОВД-Инфо, 25.11.2013",
       "url": "https://ovdinfo.org/news/2013/11/25/rostovskomu-zhurnalistu-prosyat-dat-tri-goda"
     },
     "citation_reference_a8586faeabc892416e09da834e6a4e4d": {
@@ -1513,26 +1548,6 @@
       "level": 1,
       "content": "Не исключено, что одним из поводов для возбуждения дела против антифашиста Алексея Сутуги, который был приговорен к трем годам и одному месяцу лишения свободы за драку с ультраправыми, в которой, по собственным словам, не участвовал, явилась его поездка на Майдан."
     },
-    "web_resource_cd044e84459c48c301ba33d80737f840": {
-      "type": "web_resource",
-      "id": "web_resource_cd044e84459c48c301ba33d80737f840",
-      "title": "Алексея Сутуги",
-      "description": "",
-      "url": "https://ovdinfo.org/news/2014/04/08/arest-alekseya-sutugi-ego-obeshchali-vse-ravno-posadit"
-    },
-    "citation_reference_fde102245efa827d1057257d836bf925": {
-      "type": "citation_reference",
-      "id": "citation_reference_fde102245efa827d1057257d836bf925",
-      "path": [
-        "list_item_6aef9def9ab13d76e7369f7d2075deae",
-        "content"
-      ],
-      "range": [
-        75,
-        89
-      ],
-      "target": "web_resource_cd044e84459c48c301ba33d80737f840"
-    },
     "list_item_1c84c314e13dcc1937247834fb7f123f": {
       "type": "list_item",
       "id": "list_item_1c84c314e13dcc1937247834fb7f123f",
@@ -1579,7 +1594,7 @@
       "type": "text",
       "id": "994b5f3a0c6e88df97890d8c6cb6a70c",
       "source_id": "",
-      "content": "Из этих 106 человек 49 были амнистированы (большинство на этапе следствия), дела 18 человек были закрыты (из них у семи в связи с истечением срока давности), 11 человек получили условные сроки (один из них также к штрафу), 10 человек были освобождены от наказания за истечением срока давности, восемь человек были приговорены к штрафам, пять человек вышли на свободу по истечении срока заключения, двое — условно-досрочно, двое человек были приговорены к исправительным работам, один — к обязательным работам, и у одного человека приговор был отменен за истечением срока давности. Еще у двух человек, дела которых были возбуждены до рассматриваемого периода, срок давности истек, однако производство было возобновлено."
+      "content": "Из преследований, начатых до 2011 года, не завершены 15%, из начатых в 2011—2014 — 36%."
     },
     "5c5b0c7baaa6c14950ad7935d66b072d": {
       "type": "text",
@@ -1609,9 +1624,9 @@
     "web_resource_f8ce618a7835882167c90d5482492dc9": {
       "type": "web_resource",
       "id": "web_resource_f8ce618a7835882167c90d5482492dc9",
-      "title": "Крымской полевой миссией по правам человека",
+      "title": "Сайт Крымской полевой миссии по правам человека",
       "description": "",
-      "url": "http://crimeahr.org/"
+      "url": "http://crimeahr.org"
     },
     "citation_reference_0f9afbd998e6aaba4eaef1961fbd8675": {
       "type": "citation_reference",
@@ -1993,7 +2008,7 @@
       "id": "web_resource_140c121ed7c6a4a09f3bfeb159d55fd2",
       "title": "Davenport, C., Johnston, H., and Mueller, C. Repression and Mobilization Minneapolis.",
       "description": "University of Minnesota Press, 2004; Davenport, C. State Repression and the Domestic Democratic Peace New York. – Cambridge University Press, 2007",
-      "url": "http://"
+      "url": ""
     },
     "citation_reference_cca82f16aa8ceb45633e5d45df441665": {
       "type": "citation_reference",
@@ -2011,8 +2026,8 @@
     "web_resource_e5241e0f5c923f7f73ef35292fe4ec91": {
       "type": "web_resource",
       "id": "web_resource_e5241e0f5c923f7f73ef35292fe4ec91",
-      "title": "P. M. Regan, E. A. Henderson. Third World Quarterly. Vol. 23, No. 1 (Feb., 2002)",
-      "description": "Democracy, Threats and Political Repression in Developing Countries: Are Democracies Internally Less Violent?",
+      "title": "Democracy, Threats and\nPolitical Repression in Developing Countries: Are Democracies Internally Less Violent?",
+      "description": "P. M. Regan, E. A. Henderson. Third World Quarterly. Vol. 23, No. 1 (Feb., 2002)",
       "url": "http://cdp.binghamton.edu/papers/threats-full.pdf"
     },
     "citation_reference_e2a432be864bbe45d24a62783a0cb51a": {
@@ -2032,7 +2047,7 @@
       "type": "web_resource",
       "id": "web_resource_a24f5f71e1b9add898b9a09350eba816",
       "title": "Руководство по определению понятия «политический заключенный» ",
-      "description": "Руководство подготовлено группой правозащитников из стран Восточной Европы и Южного Кавказа, опиравшихся на рекомендации экспертов Совета Европы.",
+      "description": "Документ подготовлен группой правозащитников из стран Восточной Европы и Южного Кавказа, опиравшихся на рекомендации экспертов Совета Европы.",
       "url": "http://www.memo.ru/uploads/files/1138.pdf"
     },
     "citation_reference_12f7ccb3727218bff51191f09a7d4bd2": {
@@ -2047,26 +2062,6 @@
         100
       ],
       "target": "web_resource_a24f5f71e1b9add898b9a09350eba816"
-    },
-    "web_resource_7559c585270007690e27aad7c63d35d4": {
-      "type": "web_resource",
-      "id": "web_resource_7559c585270007690e27aad7c63d35d4",
-      "title": "Григорий Охотин. Политические репрессии и политические преследования в России, 2012–2013 гг.",
-      "description": "Основные тенденции политического развития России в 2011 – 2013 гг. Кризис и трансформация российского авторитаризма Доклад Фонда «Либеральная миссия». М., 2014.",
-      "url": "http://www.liberal.ru/upload/files/Osnovnie%20tendentsii%20politicheskogo%20razvitiya.pdf"
-    },
-    "citation_reference_de9ba0ef25ddce44edcd919273350812": {
-      "type": "citation_reference",
-      "id": "citation_reference_de9ba0ef25ddce44edcd919273350812",
-      "path": [
-        "3eae40eda5aa9a7b2db07e34f1c0768d",
-        "content"
-      ],
-      "range": [
-        482,
-        495
-      ],
-      "target": "web_resource_7559c585270007690e27aad7c63d35d4"
     },
     "8737051078_6a087beefe_h.jpg": {
       "type": "file",
@@ -2084,12 +2079,12 @@
       "type": "text",
       "id": "text_450243a4c2729eddbbc5cbb9c2ee847b",
       "source_id": "",
-      "content": ""
+      "content": "Количество неправомерно осужденных с применением антиэкстремистского законодательства в России: 2011-2013гг\nИсточник данных: Информационно-аналитический центр «Сова»"
     },
     "figure_806400077f0ee464a5fdc5e344951ba2.png": {
       "type": "file",
       "id": "figure_806400077f0ee464a5fdc5e344951ba2.png",
-      "version": 0,
+      "version": 2,
       "content_type": "image/png"
     },
     "figure_806400077f0ee464a5fdc5e344951ba2": {
@@ -2104,46 +2099,22 @@
       "source_id": "",
       "content": ""
     },
-    "figure_cab1785a941d5f7748211d5b0889df8f.png": {
-      "type": "file",
-      "id": "figure_cab1785a941d5f7748211d5b0889df8f.png",
-      "version": 0,
-      "content_type": "image/png"
-    },
-    "figure_cab1785a941d5f7748211d5b0889df8f": {
-      "type": "figure",
-      "id": "figure_cab1785a941d5f7748211d5b0889df8f",
-      "image": "figure_cab1785a941d5f7748211d5b0889df8f.png",
-      "caption": "text_e7d17cff60fa70f7d291a889929320f5"
-    },
     "text_001802d1c6dfc1d104ae1eab62bec4cf": {
       "type": "text",
       "id": "text_001802d1c6dfc1d104ae1eab62bec4cf",
       "source_id": "",
-      "content": ""
-    },
-    "figure_8f11287dc01defdc88f7b6cad2c4ceba.png": {
-      "type": "file",
-      "id": "figure_8f11287dc01defdc88f7b6cad2c4ceba.png",
-      "version": 0,
-      "content_type": "image/png"
-    },
-    "figure_8f11287dc01defdc88f7b6cad2c4ceba": {
-      "type": "figure",
-      "id": "figure_8f11287dc01defdc88f7b6cad2c4ceba",
-      "image": "figure_8f11287dc01defdc88f7b6cad2c4ceba.png",
-      "caption": "text_001802d1c6dfc1d104ae1eab62bec4cf"
+      "content": "Количество уголовных дел возбужденных против участников публичных мероприятий в России.\nИсточние данных: «ОВД-Инфо»"
     },
     "text_c7692a5515559a101f289ce6a44dd001": {
       "type": "text",
       "id": "text_c7692a5515559a101f289ce6a44dd001",
       "source_id": "",
-      "content": "Из преследований, начатых до 2011 года, не завершены 15%, из начатых в 2011—2014 — 36%."
+      "content": "Уголовные политические преследования в России с 1999 года.\nИсточник данных: «Союз солидарности с политзаключенными»"
     },
     "figure_0fe6bc3b1b8c0629385ceb95e91d9015.png": {
       "type": "file",
       "id": "figure_0fe6bc3b1b8c0629385ceb95e91d9015.png",
-      "version": 1,
+      "version": 6,
       "content_type": "image/png"
     },
     "figure_0fe6bc3b1b8c0629385ceb95e91d9015": {
@@ -2156,12 +2127,12 @@
       "type": "text",
       "id": "text_19ee3fdffcc4ed06f89352b6d07ec4b4",
       "source_id": "",
-      "content": ""
+      "content": "Уголовные политические преследования, завершенные в 2011-2014 гг.\nИсточник данных: «Союз солидарности с политзаключенными» "
     },
     "figure_090df0bcd0ee9e17fc7ea71bbedb7074.png": {
       "type": "file",
       "id": "figure_090df0bcd0ee9e17fc7ea71bbedb7074.png",
-      "version": 0,
+      "version": 1,
       "content_type": "image/png"
     },
     "figure_090df0bcd0ee9e17fc7ea71bbedb7074": {
@@ -2174,12 +2145,12 @@
       "type": "text",
       "id": "text_1314213c09ee838b35ad2b5597d41c11",
       "source_id": "",
-      "content": ""
+      "content": "Статус преследуемых в настоящий момент.\nИсточник данных: «Союз солидарности с политзаключенными»"
     },
     "figure_fd28c761cceda683c9d1518be260da50.png": {
       "type": "file",
       "id": "figure_fd28c761cceda683c9d1518be260da50.png",
-      "version": 0,
+      "version": 4,
       "content_type": "image/png"
     },
     "figure_fd28c761cceda683c9d1518be260da50": {
@@ -2187,6 +2158,1088 @@
       "id": "figure_fd28c761cceda683c9d1518be260da50",
       "image": "figure_fd28c761cceda683c9d1518be260da50.png",
       "caption": "text_1314213c09ee838b35ad2b5597d41c11"
+    },
+    "web_resource_8ec7d16904284d01a7cc401ffa8fd517": {
+      "type": "web_resource",
+      "id": "web_resource_8ec7d16904284d01a7cc401ffa8fd517",
+      "title": "Алфавитный список политзаключенных",
+      "description": "Список составлен правозащитным центром «Мемориал»",
+      "url": "http://memo.ru/s/121.html"
+    },
+    "citation_reference_4457b5d6b4a044c2adf2aff59815bf9f": {
+      "type": "citation_reference",
+      "id": "citation_reference_4457b5d6b4a044c2adf2aff59815bf9f",
+      "path": [
+        "3428d1ed02bd6a3a82812d0cc2dc7591",
+        "content"
+      ],
+      "range": [
+        383,
+        404
+      ],
+      "target": "web_resource_8ec7d16904284d01a7cc401ffa8fd517"
+    },
+    "web_resource_cb9b0b3c923a6e9c536eef11b56ab5d4": {
+      "type": "web_resource",
+      "id": "web_resource_cb9b0b3c923a6e9c536eef11b56ab5d4",
+      "title": "Алфавитный список политзаключенных и преследуемых по политическим мотивам",
+      "description": "Список составлен «Союзом солидарности с политзаключенными»",
+      "url": "http://politzeky.ru/politzeki/ves-spisok/"
+    },
+    "citation_reference_2c4f4ea18af9984832483f713c7b3e46": {
+      "type": "citation_reference",
+      "id": "citation_reference_2c4f4ea18af9984832483f713c7b3e46",
+      "path": [
+        "3428d1ed02bd6a3a82812d0cc2dc7591",
+        "content"
+      ],
+      "range": [
+        524,
+        541
+      ],
+      "target": "web_resource_cb9b0b3c923a6e9c536eef11b56ab5d4"
+    },
+    "web_resource_8d75bd50a97a8a0af16e1432ae7dffcf": {
+      "type": "web_resource",
+      "id": "web_resource_8d75bd50a97a8a0af16e1432ae7dffcf",
+      "title": "Против поэта из Кром возбуждено второе уголовное дело",
+      "description": "Информационно-аналитический центр «Сова», 30.07.2014",
+      "url": "http://www.sova-center.ru/misuse/news/persecution/2014/07/d29974/"
+    },
+    "citation_reference_d8e2cd42969a6d660da42789ff751dd4": {
+      "type": "citation_reference",
+      "id": "citation_reference_d8e2cd42969a6d660da42789ff751dd4",
+      "path": [
+        "list_item_7537ba519885aef09f6e53ae2261024b",
+        "content"
+      ],
+      "range": [
+        114,
+        129
+      ],
+      "target": "web_resource_8d75bd50a97a8a0af16e1432ae7dffcf"
+    },
+    "web_resource_34d429c36ca293850b8bff1d4a7e5ac8": {
+      "type": "web_resource",
+      "id": "web_resource_34d429c36ca293850b8bff1d4a7e5ac8",
+      "title": "Неправомерное применение антиэкстремистского законодательства в России в 2013 году",
+      "description": "Информационно-аналитический центр «Сова», годовой доклад за 2013 год.",
+      "url": "http://www.sova-center.ru/misuse/publications/2014/04/d29446/"
+    },
+    "web_resource_682a4d73d0300d5ee39d7a80ff780a0d": {
+      "type": "web_resource",
+      "id": "web_resource_682a4d73d0300d5ee39d7a80ff780a0d",
+      "title": "Правовой анализ статьи 212.1 УК РФ",
+      "description": "ОВД-Инфо, 17.10.2014",
+      "url": "https://ovdinfo.org/articles/2014/10/17/v-predelah-kompetencii"
+    },
+    "citation_reference_3a4537fa7a1813201eb6fb9ddf3a47ac": {
+      "type": "citation_reference",
+      "id": "citation_reference_3a4537fa7a1813201eb6fb9ddf3a47ac",
+      "path": [
+        "4d3e7ef137b807637d82d9892e81c26a",
+        "content"
+      ],
+      "range": [
+        189,
+        201
+      ],
+      "target": "web_resource_682a4d73d0300d5ee39d7a80ff780a0d"
+    },
+    "web_resource_8855841a6c4a68e34fcd3b638b05165a": {
+      "type": "web_resource",
+      "id": "web_resource_8855841a6c4a68e34fcd3b638b05165a",
+      "title": "Ионов Владимир Иванович, справка политзаключенного",
+      "description": "Правозащитный центр «Мемориал», 27.01.2015",
+      "url": "http://www.memo.ru/d/224167.html"
+    },
+    "citation_reference_11e29a2d1f55ff07dcb9bf41a4492cbe": {
+      "type": "citation_reference",
+      "id": "citation_reference_11e29a2d1f55ff07dcb9bf41a4492cbe",
+      "path": [
+        "4d3e7ef137b807637d82d9892e81c26a",
+        "content"
+      ],
+      "range": [
+        663,
+        669
+      ],
+      "target": "web_resource_8855841a6c4a68e34fcd3b638b05165a"
+    },
+    "web_resource_bd657769050b8f935aa490780567940f": {
+      "type": "web_resource",
+      "id": "web_resource_bd657769050b8f935aa490780567940f",
+      "title": "Гальперин Марк Израилевич, справка политзаключенного",
+      "description": "Правозащитный центр «Мемориал», 27.01.2015",
+      "url": "http://memo.ru/d/224169.html"
+    },
+    "citation_reference_a66bd2acad9d1b92965d33b334d4ff44": {
+      "type": "citation_reference",
+      "id": "citation_reference_a66bd2acad9d1b92965d33b334d4ff44",
+      "path": [
+        "4d3e7ef137b807637d82d9892e81c26a",
+        "content"
+      ],
+      "range": [
+        672,
+        682
+      ],
+      "target": "web_resource_bd657769050b8f935aa490780567940f"
+    },
+    "web_resource_34957c5d7a0d88a7da241b68d3355048": {
+      "type": "web_resource",
+      "id": "web_resource_34957c5d7a0d88a7da241b68d3355048",
+      "title": "Дадин Ильдар Ильдусович, справка политзаключенного",
+      "description": "Правозащитный центр «Мемориал», 27.01.2015",
+      "url": "http://memo.ru/d/224168.html"
+    },
+    "citation_reference_a824359bef399d07843078715205a87d": {
+      "type": "citation_reference",
+      "id": "citation_reference_a824359bef399d07843078715205a87d",
+      "path": [
+        "4d3e7ef137b807637d82d9892e81c26a",
+        "content"
+      ],
+      "range": [
+        768,
+        774
+      ],
+      "target": "web_resource_34957c5d7a0d88a7da241b68d3355048"
+    },
+    "remark_18f6b69453a7c77947b40f167bc2f49c": {
+      "type": "remark",
+      "id": "remark_18f6b69453a7c77947b40f167bc2f49c",
+      "title": "",
+      "description": "Замглавы администрации президента Владислав Сурков заявил, что «11-е происходит от 31-го», имея в виду акции «Стратегии-31», а министр внутренних дел Рашид Нургалиев объявил, что «к массовому противостоянию и столкновениям», произошедшим на Манежной, собравшихся «подстрекала» «леворадикальная молодежь».",
+      "creator": "Oliver Buchtala",
+      "created_at": "2015-02-17T14:44:59.863Z"
+    },
+    "remark_reference_306e2955e019e1f6caadd0d2f271d2a2": {
+      "type": "remark_reference",
+      "id": "remark_reference_306e2955e019e1f6caadd0d2f271d2a2",
+      "path": [
+        "1afeaff43f214cf61012dd07ae3d76b3",
+        "content"
+      ],
+      "range": [
+        907,
+        927
+      ],
+      "target": "remark_18f6b69453a7c77947b40f167bc2f49c"
+    },
+    "list_item_c094f0d2810c0b42eacbd8619fe36a89": {
+      "type": "list_item",
+      "id": "list_item_c094f0d2810c0b42eacbd8619fe36a89",
+      "level": 1,
+      "content": "Первыми из привлеченных к ответственности по «Манежному делу» стали активисты «Другой России» Игорь Березюк, Руслан Хубаев и Кирилл Унчук (они получили от трех до пяти с половиной лет лишения свободы), и их преследование выглядело как очередной эпизод в серии многолетних преследований сторонников Эдуарда Лимонова. Последним из осужденных по «Манежному делу» на сегодняшний день стал Павел Важенин: летом 2014 года он был приговорен к трем годам лишения свободы. Его случай уже следует описывать как пример преследования рядового участника мероприятия. Участники событий на Манежной обвинялись по всем упоминавшимся выше статьям, характерным для политических дел: призывы к массовым беспорядкам (ч. 3 ст. 212), хулиганство (ст. 213), применение насилия к представителю власти (ст. 318), возбуждение ненависти (ст. 282)."
+    },
+    "web_resource_566d8d0658416885e8390a2b63080072": {
+      "type": "web_resource",
+      "id": "web_resource_566d8d0658416885e8390a2b63080072",
+      "title": "Последний в лотерее",
+      "description": "ОВД-Инфо, 01.07.2014",
+      "url": "http://ovdinfo.org/articles/2014/07/01/posledniy-v-loteree"
+    },
+    "citation_reference_023d295d2a136f8f5c6e6bd4e4886b4a": {
+      "type": "citation_reference",
+      "id": "citation_reference_023d295d2a136f8f5c6e6bd4e4886b4a",
+      "path": [
+        "list_item_c094f0d2810c0b42eacbd8619fe36a89",
+        "content"
+      ],
+      "range": [
+        464,
+        474
+      ],
+      "target": "web_resource_566d8d0658416885e8390a2b63080072"
+    },
+    "web_resource_d92e6e79af3197adfc9d5cd2cfe7a8f6": {
+      "type": "web_resource",
+      "id": "web_resource_d92e6e79af3197adfc9d5cd2cfe7a8f6",
+      "title": "Справка ОВД-Инфо: избиения задержанных и практика запугивания активистов",
+      "description": "ОВД-Инфо, 09.11.2012",
+      "url": "http://ovdinfo.org/documents/2012/09/11/spravka-ovd-info-izbieniya-zaderzhannyh-i-praktika-zapugivaniya-aktivistov"
+    },
+    "citation_reference_cdac009e92bc88a931831abb0f1e71b0": {
+      "type": "citation_reference",
+      "id": "citation_reference_cdac009e92bc88a931831abb0f1e71b0",
+      "path": [
+        "text_b08fe1416219d57c4ef717256ae7e24d",
+        "content"
+      ],
+      "range": [
+        41,
+        74
+      ],
+      "target": "web_resource_d92e6e79af3197adfc9d5cd2cfe7a8f6"
+    },
+    "web_resource_20d9417c5c47a75bf0743669b4c98b16": {
+      "type": "web_resource",
+      "id": "web_resource_20d9417c5c47a75bf0743669b4c98b16",
+      "title": "Поздняков Станислав Алексеевич, справка политзаключенного",
+      "description": "Правозащитный центр \"Мемориал\", 04.07.2012",
+      "url": "http://www.memo.ru/d/118996.html"
+    },
+    "citation_reference_ff2791d0e42c89eb0c62e9bfa31ab4f9": {
+      "type": "citation_reference",
+      "id": "citation_reference_ff2791d0e42c89eb0c62e9bfa31ab4f9",
+      "path": [
+        "list_item_57f2ebae5f6d84464f1300cd0bd3346b",
+        "content"
+      ],
+      "range": [
+        186,
+        237
+      ],
+      "target": "web_resource_20d9417c5c47a75bf0743669b4c98b16"
+    },
+    "web_resource_b27c004a57ee6760c5004a8180cf1b28": {
+      "type": "web_resource",
+      "id": "web_resource_b27c004a57ee6760c5004a8180cf1b28",
+      "title": "Насилие в виде царапины: активисту «Другой России» просят дать три года",
+      "description": "ОВД-Инфо, 28.11.2013",
+      "url": "http://ovdinfo.org/news/2013/11/28/nasilie-v-vide-carapiny-aktivistu-drugoy-rossii-prosyat-dat-tri-goda"
+    },
+    "citation_reference_5f4499c8286ea9be09d139fba22b08d9": {
+      "type": "citation_reference",
+      "id": "citation_reference_5f4499c8286ea9be09d139fba22b08d9",
+      "path": [
+        "list_item_cdb9db39d90088f14ac633027dd28f0d",
+        "content"
+      ],
+      "range": [
+        151,
+        232
+      ],
+      "target": "web_resource_b27c004a57ee6760c5004a8180cf1b28"
+    },
+    "web_resource_aada80933e44658a83501404dc2cbc36": {
+      "type": "web_resource",
+      "id": "web_resource_aada80933e44658a83501404dc2cbc36",
+      "title": "Дело Староверова: пресловутое насилие, не опасное для жизни",
+      "description": "ОВД-Инфо, 04.04.2014",
+      "url": "http://ovdinfo.org/articles/2014/04/04/delo-yuriya-staroverova-preslovutoe-nasilie-ne-opasnoe-dlya-zhizni"
+    },
+    "citation_reference_c0613ac111b89f5b9b10a18d52b8d6ce": {
+      "type": "citation_reference",
+      "id": "citation_reference_c0613ac111b89f5b9b10a18d52b8d6ce",
+      "path": [
+        "list_item_e67ead2386ba546c74fc8fc85cca6fad",
+        "content"
+      ],
+      "range": [
+        200,
+        274
+      ],
+      "target": "web_resource_aada80933e44658a83501404dc2cbc36"
+    },
+    "web_resource_03ba10bd593b3aacfef81de7044f193a": {
+      "type": "web_resource",
+      "id": "web_resource_03ba10bd593b3aacfef81de7044f193a",
+      "title": "Тюрьма за немецкий флаг",
+      "description": "ОВД-Инфо, 02.06.2014",
+      "url": "http://ovdinfo.org/articles/2014/06/03/tyurma-za-nemeckiy-flag\nhttp://"
+    },
+    "citation_reference_28c497f2b0a264f9d301d5209cdeec89": {
+      "type": "citation_reference",
+      "id": "citation_reference_28c497f2b0a264f9d301d5209cdeec89",
+      "path": [
+        "list_item_ec6fee377a87e2381fecdb31d955865c",
+        "content"
+      ],
+      "range": [
+        96,
+        159
+      ],
+      "target": "web_resource_03ba10bd593b3aacfef81de7044f193a"
+    },
+    "web_resource_ccce9e63324933c6776fab9f305ae5ad": {
+      "type": "web_resource",
+      "id": "web_resource_ccce9e63324933c6776fab9f305ae5ad",
+      "title": "С крыши заехал",
+      "description": "ОВД-Инфо, 30.08.2014",
+      "url": "http://ovdinfo.org/articles/2014/08/30/s-kryshi-zaehal"
+    },
+    "citation_reference_9eafe680e6b26524f03ac4752eb8092b": {
+      "type": "citation_reference",
+      "id": "citation_reference_9eafe680e6b26524f03ac4752eb8092b",
+      "path": [
+        "list_item_571a43906a0c21564ed817d2a82fc934",
+        "content"
+      ],
+      "range": [
+        468,
+        494
+      ],
+      "target": "web_resource_ccce9e63324933c6776fab9f305ae5ad"
+    },
+    "web_resource_07b1568baf292cee4543656bdd2aef91": {
+      "type": "web_resource",
+      "id": "web_resource_07b1568baf292cee4543656bdd2aef91",
+      "title": "Павленскому предъявлено обвинение в вандализме",
+      "description": "Информационно-аналитический центр «Сова», 06.10.2014",
+      "url": "http://www.sova-center.ru/misuse/news/persecution/2014/10/d30372/"
+    },
+    "citation_reference_255d49ff628ae124a8b640cb1d8c418f": {
+      "type": "citation_reference",
+      "id": "citation_reference_255d49ff628ae124a8b640cb1d8c418f",
+      "path": [
+        "list_item_91c53bc50b619ad1ca856034d5c725c9",
+        "content"
+      ],
+      "range": [
+        264,
+        290
+      ],
+      "target": "web_resource_07b1568baf292cee4543656bdd2aef91"
+    },
+    "web_resource_c914ccab21e71dcff83e6b32fd6a5e13": {
+      "type": "web_resource",
+      "id": "web_resource_c914ccab21e71dcff83e6b32fd6a5e13",
+      "title": "Хулиганством по федерализации",
+      "description": "ОВД-Инфо, 31.08.2014",
+      "url": "http://ovdinfo.org/articles/2014/08/31/huliganstvom-po-federalizacii"
+    },
+    "citation_reference_a566c5dbde855fd2484a00d3ddd6662b": {
+      "type": "citation_reference",
+      "id": "citation_reference_a566c5dbde855fd2484a00d3ddd6662b",
+      "path": [
+        "list_item_ceb5b115a7f7eaa278a5cf585e325861",
+        "content"
+      ],
+      "range": [
+        440,
+        472
+      ],
+      "target": "web_resource_c914ccab21e71dcff83e6b32fd6a5e13"
+    },
+    "web_resource_ed1df626b0f90c6ca5823091c155f47e": {
+      "type": "web_resource",
+      "id": "web_resource_ed1df626b0f90c6ca5823091c155f47e",
+      "title": "Аресты активистов в Краснодаре продолжаются",
+      "description": "Информационно-аналитический центр «Сова», 29.09.2014",
+      "url": "http://www.sova-center.ru/misuse/news/persecution/2014/09/d30316/"
+    },
+    "citation_reference_e858ca3a94c203968af868283d265be0": {
+      "type": "citation_reference",
+      "id": "citation_reference_e858ca3a94c203968af868283d265be0",
+      "path": [
+        "list_item_ceb5b115a7f7eaa278a5cf585e325861",
+        "content"
+      ],
+      "range": [
+        492,
+        517
+      ],
+      "target": "web_resource_ed1df626b0f90c6ca5823091c155f47e"
+    },
+    "figure_8f11287dc01defdc88f7b6cad2c4ceba.png": {
+      "type": "file",
+      "id": "figure_8f11287dc01defdc88f7b6cad2c4ceba.png",
+      "version": 3,
+      "content_type": "image/png"
+    },
+    "figure_8f11287dc01defdc88f7b6cad2c4ceba": {
+      "type": "figure",
+      "id": "figure_8f11287dc01defdc88f7b6cad2c4ceba",
+      "image": "figure_8f11287dc01defdc88f7b6cad2c4ceba.png",
+      "caption": "text_001802d1c6dfc1d104ae1eab62bec4cf"
+    },
+    "web_resource_f78971f9ee0b72eef8f7fb23faddb5af": {
+      "type": "web_resource",
+      "id": "web_resource_f78971f9ee0b72eef8f7fb23faddb5af",
+      "title": "Владимир Маркин: «Навальный сможет бороться с коррупцией и из тюрьмы»",
+      "description": "«Политика в этом деле присутствует исключительно в связи с фигурой и действиями обвиняемого. Со стороны следствия – только исполнение Уголовно-процессуального кодекса в связи с выявленными фактами злоупотреблений. <...> Но если фигурант всеми силами привлекает к себе внимание, можно даже сказать, дразнит власть – вот, мол, я какой весь в белом на общем фоне, то интерес к его прошлому увеличился и процесс выведения на чистую воду, естественно, ускорился».\n\nГазета «Известия», 12.04.2013",
+      "url": "http://izvestia.ru/news/548376#ixzz3KdJ35xI6"
+    },
+    "citation_reference_c38b9595b6742b90a84e00a55a517677": {
+      "type": "citation_reference",
+      "id": "citation_reference_c38b9595b6742b90a84e00a55a517677",
+      "path": [
+        "4e25dff82245aa0ed8fb0f4086c153d6",
+        "content"
+      ],
+      "range": [
+        199,
+        271
+      ],
+      "target": "web_resource_f78971f9ee0b72eef8f7fb23faddb5af"
+    },
+    "remark_3fe5cc87fecf7092908d3bd946f4a3b3": {
+      "type": "remark",
+      "id": "remark_3fe5cc87fecf7092908d3bd946f4a3b3",
+      "title": "",
+      "description": "Статья 165 УК РФ: Причинение имущественного ущерба путем обмана или злоупотребления доверием.",
+      "creator": "Michael Aufreiter",
+      "created_at": "2015-02-17T15:42:27.262Z"
+    },
+    "remark_reference_2ab5b65490bcefca7c1decf71163c010": {
+      "type": "remark_reference",
+      "id": "remark_reference_2ab5b65490bcefca7c1decf71163c010",
+      "path": [
+        "list_item_a7273536d67d38ecea0a1255b95f73cb",
+        "content"
+      ],
+      "range": [
+        68,
+        74
+      ],
+      "target": "remark_3fe5cc87fecf7092908d3bd946f4a3b3"
+    },
+    "web_resource_d1ec43a09120fadabc5e01432558c3cc": {
+      "type": "web_resource",
+      "id": "web_resource_d1ec43a09120fadabc5e01432558c3cc",
+      "title": "По второму разу",
+      "description": "ОВД-Инфо, 29.09.2014",
+      "url": "http://ovdinfo.org/articles/2014/09/29/po-vtoromu-razu"
+    },
+    "citation_reference_e1451d913712531694f2d0a967360b52": {
+      "type": "citation_reference",
+      "id": "citation_reference_e1451d913712531694f2d0a967360b52",
+      "path": [
+        "list_item_4784fc47d611b01d084a2bc5901b8746",
+        "content"
+      ],
+      "range": [
+        553,
+        596
+      ],
+      "target": "web_resource_d1ec43a09120fadabc5e01432558c3cc"
+    },
+    "remark_474ece0ccb5ff093094f875046c8f58c": {
+      "type": "remark",
+      "id": "remark_474ece0ccb5ff093094f875046c8f58c",
+      "title": "",
+      "description": "Статья 167 УК РФ: Умышленная порча имущества из хулиганских побуждений.",
+      "creator": "Michael Aufreiter",
+      "created_at": "2015-02-17T15:44:14.885Z"
+    },
+    "remark_reference_d3ab32f9bba663f10e68bddd99bd116f": {
+      "type": "remark_reference",
+      "id": "remark_reference_d3ab32f9bba663f10e68bddd99bd116f",
+      "path": [
+        "list_item_c67851b85fac4b2ca2095989228366ee",
+        "content"
+      ],
+      "range": [
+        585,
+        591
+      ],
+      "target": "remark_474ece0ccb5ff093094f875046c8f58c"
+    },
+    "web_resource_64483d8f8b64f1f61927c283966ee9d7": {
+      "type": "web_resource",
+      "id": "web_resource_64483d8f8b64f1f61927c283966ee9d7",
+      "title": "В Северной Осетии организатор пикетов против \"Электроцинка\" задержан по подозрению в грабеже",
+      "description": "«Кавказский узел», 09.03.2014",
+      "url": "http://www.kavkaz-uzel.ru/articles/239227/"
+    },
+    "citation_reference_fab464ac5b3e3b5f358013fc94797182": {
+      "type": "citation_reference",
+      "id": "citation_reference_fab464ac5b3e3b5f358013fc94797182",
+      "path": [
+        "list_item_8b6fee5360d89d3569208addbcb11858",
+        "content"
+      ],
+      "range": [
+        317,
+        369
+      ],
+      "target": "web_resource_64483d8f8b64f1f61927c283966ee9d7"
+    },
+    "web_resource_0b4ff648893555988654e6e242d2349f": {
+      "type": "web_resource",
+      "id": "web_resource_0b4ff648893555988654e6e242d2349f",
+      "title": "Все решает Кущевка",
+      "description": "ОВД-Инфо, 29.10.2014",
+      "url": "http://ovdinfo.org/articles/2014/10/29/vse-reshaet-kushchevka"
+    },
+    "citation_reference_320d4e4c93bba6336b3ec664a1ad6c23": {
+      "type": "citation_reference",
+      "id": "citation_reference_320d4e4c93bba6336b3ec664a1ad6c23",
+      "path": [
+        "list_item_ea5651560fe432fe861d5832fbfb4a69",
+        "content"
+      ],
+      "range": [
+        264,
+        371
+      ],
+      "target": "web_resource_0b4ff648893555988654e6e242d2349f"
+    },
+    "web_resource_feecc9420badf4967d8ac5e097416fa3": {
+      "type": "web_resource",
+      "id": "web_resource_feecc9420badf4967d8ac5e097416fa3",
+      "title": "За что осудили Руслана Кутаева. Репортаж из зала суда",
+      "description": "Комитет против пыток, 08.07.2014",
+      "url": "http://www.pytkam.net/press-centr.novosti/4067"
+    },
+    "citation_reference_ec3b7aea51b7307966d567c44bbee1f0": {
+      "type": "citation_reference",
+      "id": "citation_reference_ec3b7aea51b7307966d567c44bbee1f0",
+      "path": [
+        "list_item_c44a6e1d40cdbac8cc0b34b8e1fafc43",
+        "content"
+      ],
+      "range": [
+        637,
+        662
+      ],
+      "target": "web_resource_feecc9420badf4967d8ac5e097416fa3"
+    },
+    "remark_c668b34b024439915b7737750c33a50f": {
+      "type": "remark",
+      "id": "remark_c668b34b024439915b7737750c33a50f",
+      "title": "",
+      "description": "Статья 222УК РФ: Незаконное приобретение, хранение и ношение огнестрельного оружия и боеприпасов.",
+      "creator": "Michael Aufreiter",
+      "created_at": "2015-02-17T15:54:31.850Z"
+    },
+    "remark_reference_e8d286e91a0212c1ca518d462998c09e": {
+      "type": "remark_reference",
+      "id": "remark_reference_e8d286e91a0212c1ca518d462998c09e",
+      "path": [
+        "list_item_fe8159fd217e8d2a6ba7243a62fa9dee",
+        "content"
+      ],
+      "range": [
+        242,
+        248
+      ],
+      "target": "remark_c668b34b024439915b7737750c33a50f"
+    },
+    "web_resource_5025944b3fa99133751ec82c56bc9582": {
+      "type": "web_resource",
+      "id": "web_resource_5025944b3fa99133751ec82c56bc9582",
+      "title": "Бандеровец из рощи",
+      "description": "ОВД-Инфо, 15.06.2014",
+      "url": "http://ovdinfo.org/articles/2014/06/15/banderovec-iz-roshchi"
+    },
+    "citation_reference_3c6f977aa836377013f779a9114d3335": {
+      "type": "citation_reference",
+      "id": "citation_reference_3c6f977aa836377013f779a9114d3335",
+      "path": [
+        "list_item_fe8159fd217e8d2a6ba7243a62fa9dee",
+        "content"
+      ],
+      "range": [
+        463,
+        490
+      ],
+      "target": "web_resource_5025944b3fa99133751ec82c56bc9582"
+    },
+    "strong_36e1d112ab4f28b96c5a9fbb083fceb3": {
+      "type": "strong",
+      "id": "strong_36e1d112ab4f28b96c5a9fbb083fceb3",
+      "path": [
+        "list_item_6aef9def9ab13d76e7369f7d2075deae",
+        "content"
+      ],
+      "range": [
+        75,
+        89
+      ]
+    },
+    "web_resource_b9d9bb5fa0db702547a9cf174d852c99": {
+      "type": "web_resource",
+      "id": "web_resource_b9d9bb5fa0db702547a9cf174d852c99",
+      "title": "Арест Алексея Сутуги: его обещали «все равно посадить»",
+      "description": "ОВД-Инфо, 08.04.2014",
+      "url": "http://ovdinfo.org/news/2014/04/08/arest-alekseya-sutugi-ego-obeshchali-vse-ravno-posadit"
+    },
+    "citation_reference_59a0e62461b69dd33bd42f5e7eb000d4": {
+      "type": "citation_reference",
+      "id": "citation_reference_59a0e62461b69dd33bd42f5e7eb000d4",
+      "path": [
+        "list_item_6aef9def9ab13d76e7369f7d2075deae",
+        "content"
+      ],
+      "range": [
+        242,
+        263
+      ],
+      "target": "web_resource_b9d9bb5fa0db702547a9cf174d852c99"
+    },
+    "web_resource_d5fe353c550384f9348fee7a167a66ef": {
+      "type": "web_resource",
+      "id": "web_resource_d5fe353c550384f9348fee7a167a66ef",
+      "title": "Савченко Надежда Викторовна, справка политзаключенного",
+      "description": "Правозащитный центр «Мемориал», 14.10.2014",
+      "url": "http://www.memo.ru/d/212807.html"
+    },
+    "citation_reference_3762f8895edc044ba1cd675e19622fbb": {
+      "type": "citation_reference",
+      "id": "citation_reference_3762f8895edc044ba1cd675e19622fbb",
+      "path": [
+        "list_item_1c84c314e13dcc1937247834fb7f123f",
+        "content"
+      ],
+      "range": [
+        322,
+        510
+      ],
+      "target": "web_resource_d5fe353c550384f9348fee7a167a66ef"
+    },
+    "web_resource_14482cd9eb670af5f7cb659c8fd24752": {
+      "type": "web_resource",
+      "id": "web_resource_14482cd9eb670af5f7cb659c8fd24752",
+      "title": "Список лиц, признанных политическими заключенными Правозащитным центром «Мемориал» на 30 октября 2014 года",
+      "description": "Правозащитный центр \"Мемориал\", 30.10.2014",
+      "url": "http://memo.ru/d/214537.html"
+    },
+    "citation_reference_cdb129de6a5ec0d579ba5f4576728723": {
+      "type": "citation_reference",
+      "id": "citation_reference_cdb129de6a5ec0d579ba5f4576728723",
+      "path": [
+        "d8d1a2f98c219940ebf1c8c1a60f15df",
+        "content"
+      ],
+      "range": [
+        0,
+        42
+      ],
+      "target": "web_resource_14482cd9eb670af5f7cb659c8fd24752"
+    },
+    "citation_reference_14f6ccdf78abbe36a6046668302a2705": {
+      "type": "citation_reference",
+      "id": "citation_reference_14f6ccdf78abbe36a6046668302a2705",
+      "path": [
+        "d8d1a2f98c219940ebf1c8c1a60f15df",
+        "content"
+      ],
+      "range": [
+        397,
+        463
+      ],
+      "target": "web_resource_34d429c36ca293850b8bff1d4a7e5ac8"
+    },
+    "127efca6035c969f1f9a18f20b5d9457": {
+      "type": "text",
+      "id": "127efca6035c969f1f9a18f20b5d9457",
+      "source_id": "",
+      "content": "Из этих 106 человек 49 были амнистированы (большинство на этапе следствия), дела 18 человек были закрыты (из них у семи в связи с истечением срока давности), 11 человек получили условные сроки (один из них также к штрафу), 10 человек были освобождены от наказания за истечением срока давности, восемь человек были приговорены к штрафам, пять человек вышли на свободу по истечении срока заключения, двое — условно-досрочно, двое человек были приговорены к исправительным работам, один — к обязательным работам, и у одного человека приговор был отменен за истечением срока давности. Еще у двух человек, дела которых были возбуждены до рассматриваемого периода, срок давности истек, однако производство было возобновлено."
+    },
+    "web_resource_3ae6d426aeea43fb1f7dbd03a63fae62": {
+      "type": "web_resource",
+      "id": "web_resource_3ae6d426aeea43fb1f7dbd03a63fae62",
+      "title": "«Дело Сенцова»: ФСБ открыла первое политическое дело в Крыму ",
+      "description": "ОВД-Инфо, 27.05.2014",
+      "url": "http://ovdinfo.org/articles/2014/05/27/delo-sencova-fsb-otkryla-pervoe-politicheskoe-delo-v-krymu"
+    },
+    "citation_reference_c5c21fbcacf54fc9de35027d2f770779": {
+      "type": "citation_reference",
+      "id": "citation_reference_c5c21fbcacf54fc9de35027d2f770779",
+      "path": [
+        "7761befc537e3a28fc687dc91fa70611",
+        "content"
+      ],
+      "range": [
+        219,
+        265
+      ],
+      "target": "web_resource_3ae6d426aeea43fb1f7dbd03a63fae62"
+    },
+    "web_resource_38069d7934fd134b05ab2172899f4338": {
+      "type": "web_resource",
+      "id": "web_resource_38069d7934fd134b05ab2172899f4338",
+      "title": "Насилие с содействием иностранному гражданину",
+      "description": "ОВД-Инфо, 21.10.2014",
+      "url": "http://ovdinfo.org/articles/2014/10/21/nasilie-s-sodeystviem-inostrannomu-grazhdaninu"
+    },
+    "citation_reference_0d3f89b1dd300465bdf30692052adb35": {
+      "type": "citation_reference",
+      "id": "citation_reference_0d3f89b1dd300465bdf30692052adb35",
+      "path": [
+        "8cc6df9fa9cd5f32f86ff83195d38a00",
+        "content"
+      ],
+      "range": [
+        12,
+        120
+      ],
+      "target": "web_resource_38069d7934fd134b05ab2172899f4338"
+    },
+    "web_resource_b961fe0561eb4211162eaae0a5204342": {
+      "type": "web_resource",
+      "id": "web_resource_b961fe0561eb4211162eaae0a5204342",
+      "title": "«Как в случае с болотным делом, арестовываются обычные люди»: задержан четвертый участник майской акции крымских татар",
+      "description": "«Открытая Россия», 25.11.2014",
+      "url": "http://openrussia.org/post/view/1121/"
+    },
+    "citation_reference_78862debe9a26ab9c7086b0ba485ef75": {
+      "type": "citation_reference",
+      "id": "citation_reference_78862debe9a26ab9c7086b0ba485ef75",
+      "path": [
+        "8cc6df9fa9cd5f32f86ff83195d38a00",
+        "content"
+      ],
+      "range": [
+        289,
+        321
+      ],
+      "target": "web_resource_b961fe0561eb4211162eaae0a5204342"
+    },
+    "web_resource_15878e761487bb7cae56ff338cbe45d7": {
+      "type": "web_resource",
+      "id": "web_resource_15878e761487bb7cae56ff338cbe45d7",
+      "title": "Все четверо задержанных по делу о раскрашивании звезды отправлены под домашний арест",
+      "description": "ОВД-Инфо, 21.08.2014",
+      "url": "http://ovdinfo.org/express-news/2014/08/21/vse-chetvero-zaderzhannyh-po-delu-o-raskrashivanii-zvezdy-otpravleny-pod"
+    },
+    "citation_reference_9544dacb5888d85d6607d2b3c8e1bd84": {
+      "type": "citation_reference",
+      "id": "citation_reference_9544dacb5888d85d6607d2b3c8e1bd84",
+      "path": [
+        "list_item_52d33ac24b163348d760635f7f9dcdb1",
+        "content"
+      ],
+      "range": [
+        408,
+        452
+      ],
+      "target": "web_resource_15878e761487bb7cae56ff338cbe45d7"
+    },
+    "web_resource_2efd36c07b90a73b07ff3b3a26b7fc4e": {
+      "type": "web_resource",
+      "id": "web_resource_2efd36c07b90a73b07ff3b3a26b7fc4e",
+      "title": "Дмитрий Борко: опознатушки-перепрятушки",
+      "description": "«Грани.Ру», 14.01.2014",
+      "url": "http://anonymouse.org/cgi-bin/anon-www.cgi/http://grani.ru/blogs/free/entries/223364.html"
+    },
+    "citation_reference_27c5040d86ce0c6d81b947408d3f9a36": {
+      "type": "citation_reference",
+      "id": "citation_reference_27c5040d86ce0c6d81b947408d3f9a36",
+      "path": [
+        "list_item_dcb517dc4eeb6df9095ac4e482e9b35c",
+        "content"
+      ],
+      "range": [
+        0,
+        32
+      ],
+      "target": "web_resource_2efd36c07b90a73b07ff3b3a26b7fc4e"
+    },
+    "web_resource_a10eaaadb53aa1f43b34fb1cae80276d": {
+      "type": "web_resource",
+      "id": "web_resource_a10eaaadb53aa1f43b34fb1cae80276d",
+      "title": "Артем Савелов и его назначенные свидетели",
+      "description": "«Грани.Ру», 10.12.2013",
+      "url": "http://anonymouse.org/cgi-bin/anon-www.cgi/http://grani.ru/tags/may6/m.222052.html"
+    },
+    "citation_reference_33c7a5e60c1e4b9295d583fd5362a6c5": {
+      "type": "citation_reference",
+      "id": "citation_reference_33c7a5e60c1e4b9295d583fd5362a6c5",
+      "path": [
+        "list_item_89a3ec6e39966f841c4051902ecde5a7",
+        "content"
+      ],
+      "range": [
+        446,
+        535
+      ],
+      "target": "web_resource_a10eaaadb53aa1f43b34fb1cae80276d"
+    },
+    "web_resource_49261c5b8f717cba1addfed7d84fa938": {
+      "type": "web_resource",
+      "id": "web_resource_49261c5b8f717cba1addfed7d84fa938",
+      "title": "«Брат, куда ты дел мои итальянские тапочки?» ",
+      "description": "«Новая газета», выпуск № 61 от 6.06.2014",
+      "url": "http://www.novayagazeta.ru/inquests/63899.html"
+    },
+    "citation_reference_c75891beebddc1323b659993c79728fa": {
+      "type": "citation_reference",
+      "id": "citation_reference_c75891beebddc1323b659993c79728fa",
+      "path": [
+        "list_item_ac6121c81437a43348cbb11c56f79812",
+        "content"
+      ],
+      "range": [
+        120,
+        270
+      ],
+      "target": "web_resource_49261c5b8f717cba1addfed7d84fa938"
+    },
+    "web_resource_35b29b1cebb52b4f52d7eba8901e0420": {
+      "type": "web_resource",
+      "id": "web_resource_35b29b1cebb52b4f52d7eba8901e0420",
+      "title": "Последний в лотерее",
+      "description": "ОВД-Инфо, 01.07.2014",
+      "url": "http://ovdinfo.org/articles/2014/07/01/posledniy-v-loteree"
+    },
+    "citation_reference_2f4edeb78971098a514658104f441d02": {
+      "type": "citation_reference",
+      "id": "citation_reference_2f4edeb78971098a514658104f441d02",
+      "path": [
+        "list_item_cb1cdb49871e4f8f369c69edca972165",
+        "content"
+      ],
+      "range": [
+        121,
+        246
+      ],
+      "target": "web_resource_35b29b1cebb52b4f52d7eba8901e0420"
+    },
+    "web_resource_940b1fd8aac5587cb1f8b889b73348ac": {
+      "type": "web_resource",
+      "id": "web_resource_940b1fd8aac5587cb1f8b889b73348ac",
+      "title": "Олега Мешалкина, подозреваемого в организации игорного бизнеса, отпустили домой",
+      "description": "«Время Воронежа», 07.07.2014",
+      "url": "http://vrntimes.ru/news/view/11783-Olyega_Myeshalkina_podozryevayemogo.html"
+    },
+    "citation_reference_06eab235e3230e175c1a0c603e5d6446": {
+      "type": "citation_reference",
+      "id": "citation_reference_06eab235e3230e175c1a0c603e5d6446",
+      "path": [
+        "list_item_77c3e74cd4a7bd960e57bbafee890aae",
+        "content"
+      ],
+      "range": [
+        340,
+        375
+      ],
+      "target": "web_resource_940b1fd8aac5587cb1f8b889b73348ac"
+    },
+    "web_resource_28ce9ad7167b8a3884e4909509f0b72c": {
+      "type": "web_resource",
+      "id": "web_resource_28ce9ad7167b8a3884e4909509f0b72c",
+      "title": "Чечня: в своем последнем слове Р. Кутаев назвал имя человека, угрожавшего отрезать ему голову",
+      "description": "Правозащитный центр «Мемориал», 31.10.2014",
+      "url": "http://memo.ru/d/214538.html"
+    },
+    "citation_reference_1eb153dfcc9eba24c7ce29b050b52cf9": {
+      "type": "citation_reference",
+      "id": "citation_reference_1eb153dfcc9eba24c7ce29b050b52cf9",
+      "path": [
+        "list_item_76f101ea37bbaae57c252e387d7ed96b",
+        "content"
+      ],
+      "range": [
+        5,
+        52
+      ],
+      "target": "web_resource_28ce9ad7167b8a3884e4909509f0b72c"
+    },
+    "web_resource_de70a758e1bd7b62876bc82c012d606c": {
+      "type": "web_resource",
+      "id": "web_resource_de70a758e1bd7b62876bc82c012d606c",
+      "title": "Фигурант «болотного дела» Акименков заявил об избиении конвойным Никулинского суда",
+      "description": "«Русская планета», 01.10.2013",
+      "url": "http://rusplt.ru/news/figurant-bolotnogo-dela-akimenkov-zayavil-ob-izbienii-konvoynyim-nikulinskogo-suda.html"
+    },
+    "citation_reference_0eae3d6408fea99983451ae97860492b": {
+      "type": "citation_reference",
+      "id": "citation_reference_0eae3d6408fea99983451ae97860492b",
+      "path": [
+        "list_item_13e413d6367210c55b7714f017121d3c",
+        "content"
+      ],
+      "range": [
+        8,
+        17
+      ],
+      "target": "web_resource_de70a758e1bd7b62876bc82c012d606c"
+    },
+    "web_resource_f09bb912e60d175c0bc900b21429b65b": {
+      "type": "web_resource",
+      "id": "web_resource_f09bb912e60d175c0bc900b21429b65b",
+      "title": "Отец \"болотника\" Полиховича: Моего сына избили после суда",
+      "description": "«ЗакС.Ру», 26.02.2014",
+      "url": "http://www.zaks.ru/new/archive/view/122405"
+    },
+    "citation_reference_4721b925163dbd0e7423ed0a8e5c88ed": {
+      "type": "citation_reference",
+      "id": "citation_reference_4721b925163dbd0e7423ed0a8e5c88ed",
+      "path": [
+        "list_item_13e413d6367210c55b7714f017121d3c",
+        "content"
+      ],
+      "range": [
+        29,
+        85
+      ],
+      "target": "web_resource_f09bb912e60d175c0bc900b21429b65b"
+    },
+    "web_resource_7559c585270007690e27aad7c63d35d4": {
+      "type": "web_resource",
+      "id": "web_resource_7559c585270007690e27aad7c63d35d4",
+      "title": "Григорий Охотин. Политические репрессии и политические преследования в России, 2012–2013 гг. Формы, методы и масштабы",
+      "description": "Основные тенденции политического развития России в 2011 – 2013 гг.\nКризис и трансформация российского авторитаризма. \nДоклад Фонда «Либеральная миссия». М., 2014.",
+      "url": "http://www.liberal.ru/upload/files/Osnovnie%20tendentsii%20politicheskogo%20razvitiya.pdf"
+    },
+    "citation_reference_35032bc52423c3cb88efb0a7364af11e": {
+      "type": "citation_reference",
+      "id": "citation_reference_35032bc52423c3cb88efb0a7364af11e",
+      "path": [
+        "3eae40eda5aa9a7b2db07e34f1c0768d",
+        "content"
+      ],
+      "range": [
+        432,
+        495
+      ],
+      "target": "web_resource_7559c585270007690e27aad7c63d35d4"
+    },
+    "web_resource_9adebc3b94e00dbf177644b0772b1be1": {
+      "type": "web_resource",
+      "id": "web_resource_9adebc3b94e00dbf177644b0772b1be1",
+      "title": "Продолжается преследование лидера Ассоциации поморов.",
+      "description": "Информационно-аналитический центр «Сова», 05.09.2013",
+      "url": "http://www.sova-center.ru/misuse/news/persecution/2013/09/d27846/"
+    },
+    "citation_reference_7383c2c3c3a9b6b5dd3881e2c80d9d4f": {
+      "type": "citation_reference",
+      "id": "citation_reference_7383c2c3c3a9b6b5dd3881e2c80d9d4f",
+      "path": [
+        "list_item_ddd5ef9b779ed74bace0734ab57dcf70",
+        "content"
+      ],
+      "range": [
+        450,
+        512
+      ],
+      "target": "web_resource_9adebc3b94e00dbf177644b0772b1be1"
+    },
+    "web_resource_dfd0898bf5b0b1a882c93aed1d7f84a7": {
+      "type": "web_resource",
+      "id": "web_resource_dfd0898bf5b0b1a882c93aed1d7f84a7",
+      "title": "Константин Жаринов: «Нажмешь, а потом смотришь — там много лишнего»",
+      "description": "ОВД-Инфо, 06.10.2014",
+      "url": "http://ovdinfo.org/interviews/2014/10/06/konstantin-zharinov-nazhmesh-potom-smotrish-tam-mnogo-lishnego"
+    },
+    "citation_reference_1a6925807557b2065f8dc48139e76d86": {
+      "type": "citation_reference",
+      "id": "citation_reference_1a6925807557b2065f8dc48139e76d86",
+      "path": [
+        "list_item_c930843208caf5255b15ca15a038798e",
+        "content"
+      ],
+      "range": [
+        175,
+        238
+      ],
+      "target": "web_resource_dfd0898bf5b0b1a882c93aed1d7f84a7"
+    },
+    "web_resource_3c36fbf115530a25cf845df74121d90a": {
+      "type": "web_resource",
+      "id": "web_resource_3c36fbf115530a25cf845df74121d90a",
+      "title": "В Алтайском крае появился еще один подозреваемый в републикации текста \"Русофобии пост\"",
+      "description": "Информационно-аналитический центр «Сова», 15.08.2014",
+      "url": "http://www.sova-center.ru/racism-xenophobia/news/counteraction/2014/08/d30057/"
+    },
+    "citation_reference_0df92e6276293161529de9e3b3b927c7": {
+      "type": "citation_reference",
+      "id": "citation_reference_0df92e6276293161529de9e3b3b927c7",
+      "path": [
+        "list_item_556f9d6a6138a3e218c8b8e860533abc",
+        "content"
+      ],
+      "range": [
+        257,
+        335
+      ],
+      "target": "web_resource_3c36fbf115530a25cf845df74121d90a"
+    },
+    "citation_reference_6ec8abb594c984c8b6baa0128baef620": {
+      "type": "citation_reference",
+      "id": "citation_reference_6ec8abb594c984c8b6baa0128baef620",
+      "path": [
+        "text_aac60c562c0e4115f0b9ae9710746683",
+        "content"
+      ],
+      "range": [
+        17,
+        134
+      ],
+      "target": "web_resource_34d429c36ca293850b8bff1d4a7e5ac8"
+    },
+    "citation_reference_efd60248b18ae2e087ec502570fa9155": {
+      "type": "citation_reference",
+      "id": "citation_reference_efd60248b18ae2e087ec502570fa9155",
+      "path": [
+        "text_aac60c562c0e4115f0b9ae9710746683",
+        "content"
+      ],
+      "range": [
+        352,
+        468
+      ],
+      "target": "web_resource_ccf732d9328ae488f98a9ec2105e8545"
+    },
+    "web_resource_fcd0e12fedcd5e7343be3f760964f654": {
+      "type": "web_resource",
+      "id": "web_resource_fcd0e12fedcd5e7343be3f760964f654",
+      "title": "Неправомерное применение антиэкстремистского законодательства в России в 2011 году",
+      "description": "Информационно-аналитический центр «Сова», годовой доклад за 2011 год.",
+      "url": "http://www.sova-center.ru/misuse/publications/2012/03/d24014/"
+    },
+    "citation_reference_e81e8699d3727da05acf15fc52998f21": {
+      "type": "citation_reference",
+      "id": "citation_reference_e81e8699d3727da05acf15fc52998f21",
+      "path": [
+        "4661af06c81c12a44e4ec13f6025096a",
+        "content"
+      ],
+      "range": [
+        0,
+        105
+      ],
+      "target": "web_resource_fcd0e12fedcd5e7343be3f760964f654"
+    },
+    "text_cc5e14e99439d68813dc389ce64ca815": {
+      "type": "text",
+      "id": "text_cc5e14e99439d68813dc389ce64ca815",
+      "source_id": "",
+      "content": ""
+    },
+    "text_516f734a353ae96969d26dfa70a81c99": {
+      "type": "text",
+      "id": "text_516f734a353ae96969d26dfa70a81c99",
+      "source_id": "",
+      "content": "Решения судов по статье 318 УК РФ: 2009 - 2013 гг."
+    },
+    "text_f509ed51d08ecfda0c1f260af68f66d2": {
+      "type": "text",
+      "id": "text_f509ed51d08ecfda0c1f260af68f66d2",
+      "source_id": "",
+      "content": ""
+    },
+    "text_a2a3c7cc8d46d5906fe453a350945472": {
+      "type": "text",
+      "id": "text_a2a3c7cc8d46d5906fe453a350945472",
+      "source_id": "",
+      "content": ""
+    },
+    "text_06fde6c28ae94e0ab75a2a6438b24dbb": {
+      "type": "text",
+      "id": "text_06fde6c28ae94e0ab75a2a6438b24dbb",
+      "source_id": "",
+      "content": "Решения судов по статье 318 УК РФ: 2009-2013 гг."
+    },
+    "4d3e7ef137b807637d82d9892e81c26a": {
+      "type": "text",
+      "id": "4d3e7ef137b807637d82d9892e81c26a",
+      "source_id": "",
+      "content": "Кроме того, в 2014 году в рамках мер по ужесточению наказания за нарушения на массовых мероприятиях (подробнее см. доклад об административном преследовании) в Уголовный кодекс была внесена статья 212.1 — «Неоднократное нарушение установленного порядка организации либо проведения собрания, митинга, демонстрации, шествия или пикетирования»; однако преследования по этой статье начались в январе 2015 года (первыми обвиняемыми стали гражданские активисты Владимир Ионов, Марк Гальперин и Ильдар Дадин; основой для их преследования стали решения по делам об административных правонарушениях в августе, сентябре и декабре 2014 и январе 2015 года; «Мемориал» признал Ионова и Гальперина лицами, преследуемыми по политическим мотивам — с них взята подписка о невыезде, — а Дадина, находящегося под домашним арестом, политзаключенным)."
+    },
+    "web_page_b3c15e3e3e9bcdbea8686b6017ea8079.html": {
+      "type": "file",
+      "id": "web_page_b3c15e3e3e9bcdbea8686b6017ea8079.html",
+      "version": 0,
+      "content_type": "text/html"
+    },
+    "text_16154178e660423607b309c7948736b4": {
+      "type": "text",
+      "id": "text_16154178e660423607b309c7948736b4",
+      "source_id": "",
+      "content": "Решения судов по статье 318 УК РФ: 2009-2013 гг."
+    },
+    "web_page_b3c15e3e3e9bcdbea8686b6017ea8079": {
+      "type": "web_page",
+      "id": "web_page_b3c15e3e3e9bcdbea8686b6017ea8079",
+      "file": "web_page_b3c15e3e3e9bcdbea8686b6017ea8079.html",
+      "width": "400",
+      "height": "400",
+      "caption": "text_16154178e660423607b309c7948736b4"
     }
   }
 }
