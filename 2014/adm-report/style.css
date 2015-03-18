@@ -120,6 +120,7 @@ html, body {
   width: 65%;
   border-right: 1px solid #ddd;
   padding-top: 30px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .resources {
