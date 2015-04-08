@@ -20,7 +20,7 @@
       "authors": [],
       "abstract": "Доклад посвящен внесудебным преследованиям, которым подвергались гражданские и политические активисты в России с 2011 по 2014 годы. Это третья часть исследования ОВД-Инфо о современных российских политических репрессиях, задача которого в первом приближении описать, как они устроены, насколько масштабны и против кого направлены. Первый доклад был посвящен уголовным преследованиям, второй — административным.",
       "created_at": "2015-04-07T19:45:31.085Z",
-      "updated_at": "2015-04-08T00:12:53.904Z",
+      "updated_at": "2015-04-08T11:43:37.328Z",
       "published_on": "2015-04-07T19:45:31.085Z"
     },
     "cover": {
@@ -46,7 +46,6 @@
         "list_item_e03f9a0b0192096df8ef85ac4d5b1a5c",
         "list_item_72bddc71372b4837c30a4c095164920d",
         "list_item_5be68b8a7aef959183ad8d7d11c98b8e",
-        "list_item_25d0faa0986de66c48b6b7f3f9586350",
         "list_item_80b87db40229cb74de4ead3159d51319",
         "list_item_098f8455408a3b0f8450935d2ec57918",
         "list_item_d5482b82c9d2b73fd808b6672df892dd",
@@ -336,19 +335,13 @@
       "type": "list_item",
       "id": "list_item_72bddc71372b4837c30a4c095164920d",
       "level": 1,
-      "content": "угроз"
+      "content": "угроз насилия"
     },
     "list_item_5be68b8a7aef959183ad8d7d11c98b8e": {
       "type": "list_item",
       "id": "list_item_5be68b8a7aef959183ad8d7d11c98b8e",
       "level": 1,
       "content": "увольнений"
-    },
-    "list_item_25d0faa0986de66c48b6b7f3f9586350": {
-      "type": "list_item",
-      "id": "list_item_25d0faa0986de66c48b6b7f3f9586350",
-      "level": 1,
-      "content": "нарушения неприкосновенности жилища"
     },
     "list_item_80b87db40229cb74de4ead3159d51319": {
       "type": "list_item",
@@ -650,7 +643,7 @@
     "web_resource_92e468022e5469d2c642512cd25e8145": {
       "type": "web_resource",
       "id": "web_resource_92e468022e5469d2c642512cd25e8145",
-      "title": "Каждый четвертый хочет любить, остальные - воевать",
+      "title": "Каждый четвертый хочет любить, остальные — воевать",
       "description": "«Вечерняя Казань», 11.09.2014",
       "url": "http://www.evening-kazan.ru/articles/kazhdyy-chetvertyy-hochet-lyubit-ostalnye-voevat.html"
     },
@@ -676,7 +669,7 @@
     "web_resource_40caecbc9929ad464e4389c41a76e4c1": {
       "type": "web_resource",
       "id": "web_resource_40caecbc9929ad464e4389c41a76e4c1",
-      "title": "Посёлок воров охраняют совместные бригады полиции и бандитов",
+      "title": "Поселок воров охраняют совместные бригады полиции и бандитов",
       "description": "Блог Алексея Навального, 03.08.2014",
       "url": "https://navalny.com/p/3711/"
     },
@@ -1045,8 +1038,8 @@
     "web_resource_75e40a4fa324d45acf6d2125fa61d9d6": {
       "type": "web_resource",
       "id": "web_resource_75e40a4fa324d45acf6d2125fa61d9d6",
-      "title": "Алексей Глухов, «Грязные» технологии",
-      "description": "«Открытая Россия»",
+      "title": "Алексей Глухов. «Грязные» технологии",
+      "description": "«Открытая Россия», 24.01.2015",
       "url": "https://openrussia.org/post/view/2253/"
     },
     "citation_reference_241b4ebc450eebe588249955c454c9a8": {
@@ -1404,7 +1397,7 @@
     "web_resource_a1487e9342ca467eaf08c82e80984899": {
       "type": "web_resource",
       "id": "web_resource_a1487e9342ca467eaf08c82e80984899",
-      "title": "Алла Фролова: “Мне угрожали и перед митингом, и после”",
+      "title": "Алла Фролова: «Мне угрожали и перед митингом, и после»",
       "description": "«ОВД-Инфо\u001f», 13.11.2014",
       "url": "http://ovdinfo.org/stories/2014/11/13/alla-frolova-mne-ugrozhali-i-pered-mitingom-i-posle"
     },
@@ -1605,7 +1598,7 @@
       "type": "web_resource",
       "id": "web_resource_318b2c0badb79c36ac21e89fc8b5f034",
       "title": "«Грантоеды»",
-      "description": "«НТВ», 01.07.2013",
+      "description": "НТВ, 01.07.2013",
       "url": "http://www.ntv.ru/novosti/626116"
     },
     "citation_reference_3a89655b235667ad3f20eb072bc12d5e": {
@@ -1625,7 +1618,7 @@
       "type": "web_resource",
       "id": "web_resource_8304c93c57c525048d0126455336cdf7",
       "title": "«Левозащитники»",
-      "description": "«НТВ», 29.06.2014",
+      "description": "НТВ, 29.06.2014",
       "url": "http://www.ntv.ru/video/887002/"
     },
     "citation_reference_2c8ada81194040735a77bcb5cd9d3f70": {
@@ -1704,7 +1697,7 @@
       "type": "web_resource",
       "id": "web_resource_fc36034ef91d936230f6077fa07ab637",
       "title": "Как ко мне приходили органы опеки",
-      "description": "Блог Марии Бароновй, 25.06.2012",
+      "description": "блог Марии Бароновй, 25.06.2012",
       "url": "http://ponny1.livejournal.com/702101.html"
     },
     "citation_reference_1d17ad40e7319905168c1b6e6a790a22": {
@@ -1800,7 +1793,7 @@
     "web_resource_98ce9fa52c580b557db9e7a7cf698894": {
       "type": "web_resource",
       "id": "web_resource_98ce9fa52c580b557db9e7a7cf698894",
-      "title": "Анархист Антти Раутиайнен – о том, почему ему пришлось покинуть Россию",
+      "title": "Анархист Антти Раутиайнен — о том, почему ему пришлось покинуть Россию",
       "description": "Радио «Свобода», 14.04.2012",
       "url": "http://www.svoboda.org/content/article/24548489.html"
     },
@@ -2020,7 +2013,7 @@
     "web_resource_5cc96887d1e32a717996fb5ea0370bed": {
       "type": "web_resource",
       "id": "web_resource_5cc96887d1e32a717996fb5ea0370bed",
-      "title": "Qiwi и PayPal заблокировали счета \"РосУзника\"",
+      "title": "Qiwi и PayPal заблокировали счета «РосУзника»",
       "description": "Радио «Свобода», 29.05.2014",
       "url": "http://www.svoboda.org/content/article/25402444.html"
     },
@@ -2196,7 +2189,7 @@
     "web_resource_f155e307956780796a7b0ac76e6e5bd0": {
       "type": "web_resource",
       "id": "web_resource_f155e307956780796a7b0ac76e6e5bd0",
-      "title": "\"Дачинг-3\" в Акулинино",
+      "title": "«Дачинг-3» в Акулинино",
       "description": "«Радио Свобода», 26.10.2014",
       "url": "http://www.svoboda.org/media/video/26655940.html"
     },
@@ -2255,7 +2248,7 @@
     "web_resource_6fc41fb83e7ac87209bfb818c518e76d": {
       "type": "web_resource",
       "id": "web_resource_6fc41fb83e7ac87209bfb818c518e76d",
-      "title": "Тульские выборы по новой схеме обернулись задержанием наблюдателей и \"бесконтрольным подсчетом голосов\"",
+      "title": "Тульские выборы по новой схеме обернулись задержанием наблюдателей и «бесконтрольным подсчетом голосов»",
       "description": "«Newsru.com», 11.03.2013",
       "url": "http://www.newsru.com/arch/russia/11mar2013/uzlovaya.html"
     },
@@ -2276,7 +2269,7 @@
       "type": "web_resource",
       "id": "web_resource_58e236a8180254c93336af306f458569",
       "title": "Петербургская газета «Мой район» опубликовала интервью с «карусельщиком»",
-      "description": "Движение в защиту прав избирателей «Голос», 27.10.2014",
+      "description": "Движение в защиту прав избирателей «Голос», 27.10.2014\u0013",
       "url": "http://www.golosinfo.org/ru/articles/1112"
     },
     "citation_reference_baa992f8ac42faa48532abda3c4deedc": {
@@ -2418,6 +2411,18 @@
       "id": "cover.jpg",
       "version": 0,
       "content_type": "image/jpeg"
+    },
+    "strong_32bbffe216e853207e805ae6e2e182f0": {
+      "type": "strong",
+      "id": "strong_32bbffe216e853207e805ae6e2e182f0",
+      "path": [
+        "web_resource_a1487e9342ca467eaf08c82e80984899",
+        "title"
+      ],
+      "range": [
+        14,
+        15
+      ]
     }
   }
 }
