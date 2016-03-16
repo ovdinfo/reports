@@ -55,21 +55,21 @@ function($,tablesorter){
   });
   function buildTableFormat(data) {
     $.each(data.feed.entry, function (key, val) {
-      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_d5fpr.$t + '</td><td>' + val.gsx$_cre1l.$t + '</td></tr>';
+      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$countизid.$t + '</td><td>' + val.gsx$sumизnumberofdetentions.$t + '</td></tr>';
       $('.event-format table tbody').append(content);
     });
     $('.event-format table').trigger('update');
   };
   function buildTableSubject(data) {
     $.each(data.feed.entry, function (key, val) {
-      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cpzh4.$t + '</td><td>' + val.gsx$_cre1l.$t + '</td></tr>';
+      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$countизid.$t + '</td><td>' + val.gsx$sumизnumberofdetentions.$t + '</td></tr>';
       $('.event-subject table tbody').append(content);
     });
     $('.event-subject table').trigger('update');
   };
   function buildTableOrganizer(data) {
     $.each(data.feed.entry, function (key, val) {
-      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$_cpzh4.$t + '</td><td>' + val.gsx$_ciyn3.$t + '</td></tr>';
+      var content = '<tr><td>' + val.gsx$_cn6ca.$t + '</td><td>' + val.gsx$countизid.$t + '</td><td>' + val.gsx$sumизnumberofdetentions.$t + '</td></tr>';
       $('.event-organizer table tbody').append(content);
     });
     $('.event-organizer table').trigger('update');
