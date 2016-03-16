@@ -2,7 +2,7 @@
 layout: appeals_ru
 permalink: 2012/data/appeals/en
 js: appeals
-ru: 2012/data/appeals
+ru: 2012/data/appeals/ru
 title: Appeals data
 published: true
 ---
