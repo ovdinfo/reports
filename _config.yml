@@ -6,4 +6,4 @@ oauth_client_id: caf55c20366465a1332d
 gatekeeper_url: http://poole-oauth-staging.herokuapp.com
 future: true
 markdown: rdiscount
-highlighter: pygments
+highlighter: rouge
