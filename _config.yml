@@ -5,7 +5,5 @@ baseurl: "http://reports.ovdinfo.org"
 oauth_client_id: caf55c20366465a1332d
 gatekeeper_url: http://poole-oauth-staging.herokuapp.com
 future: true
-exclude:
-- .gitignore
-- .DS_Store
-- README.md
+markdown: rdiscount
+highlighter: pygments
