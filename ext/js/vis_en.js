@@ -903,7 +903,7 @@ $(function() {
   };
   var target = document.getElementById('iloader');
   var spinner = new Spinner(opts).spin(target);
-  return d3.csv("https://docs.google.com/spreadsheet/pub?key=0AqL_R49TiUuAdGpDMUphai0wemI4NXBkQ3BBUTJpYWc&single=true&gid=0&output=csv", render_vis);
+  return d3.csv("/ext/files/list_2012_en.csv", render_vis);
 });
 
 });
