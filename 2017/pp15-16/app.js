@@ -31360,11 +31360,11 @@ class Cover extends Component {
     let el = $$('footer').addClass('se-cover-footer');
 
     let icons = $$('ul').addClass('se-icons').append(
-      $$('li').append($$('a').attr('href', 'https://twitter.com/ovdinfo').addClass('se-icon fa-twitter')),
-      $$('li').append($$('a').attr('href', 'https://facebook.com/ovdinfo').addClass('se-icon fa-facebook')),
-      $$('li').append($$('a').attr('href', 'https://vk.com/ovdinfo').addClass('se-icon fa-vk')),
-      $$('li').append($$('a').attr('href', 'https://t.me/ovdinfo').addClass('se-icon fa-telegram')),
-      $$('li').append($$('a').attr('href', 'https://ovdinfo.org/rss.xml').addClass('se-icon fa-rss'))
+      $$('li').append($$('a').attr({'href': 'https://twitter.com/ovdinfo', target: '_blank'}).addClass('se-icon fa-twitter')),
+      $$('li').append($$('a').attr({'href': 'https://facebook.com/ovdinfo', target: '_blank'}).addClass('se-icon fa-facebook')),
+      $$('li').append($$('a').attr({'href': 'https://vk.com/ovdinfo', target: '_blank'}).addClass('se-icon fa-vk')),
+      $$('li').append($$('a').attr({'href': 'https://t.me/ovdinfo', target: '_blank'}).addClass('se-icon fa-telegram')),
+      $$('li').append($$('a').attr({'href': 'https://ovdinfo.org/rss.xml', target: '_blank'}).addClass('se-icon fa-rss'))
     );
 
     let copyright = $$('ul').addClass('se-copyright').append(
