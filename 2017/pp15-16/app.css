@@ -433,7 +433,7 @@ table {
   font-size: 0.8em;
   line-height: 1.4em;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .sc-image-grid {
     column-count: 1!important;
   }
@@ -441,7 +441,7 @@ table {
     margin-bottom: 0em!important;
   }
 }
-@media only screen and (max-width: 1024px) and (min-width: 600px) {
+@media only screen and (max-width: 1024px) and (min-width: 720px) {
   .sc-image-grid {
     column-count: 2;
     padding: 3em 0 0 0;
