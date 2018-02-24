@@ -441,7 +441,7 @@ table {
     margin-bottom: 0em!important;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
   .sc-image-grid {
     column-count: 2;
     padding: 3em 0 0 0;
@@ -454,7 +454,7 @@ table {
     margin-bottom: 1em;
   }
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) and (min-width: 1024px) {
   .sc-image-grid {
     column-count: 3;
     padding: 3em 0 0 0;
